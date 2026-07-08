@@ -1,2 +1,66 @@
-# english-learn
-Help people learn English(IELTS)
+# English Learn
+
+Full-stack English vocabulary learning system (IELTS focused).
+
+## Tech Stack
+
+- **Monorepo**: pnpm workspaces + Turbo
+- **Backend**: Express.js + TypeScript + Prisma + SQLite
+- **Frontend**: Next.js 14 (App Router) + TypeScript + Tailwind CSS + shadcn/ui
+- **Admin**: Built into the same Next.js app under `/admin/*`
+
+## Project Structure
+
+```
+english-learn/
+├── apps/
+│   ├── api/          # Express backend
+│   └── web/          # Next.js frontend (user + admin)
+├── packages/         # Shared packages (optional)
+└── package.json      # Workspace root
+```
+
+## Getting Started
+
+```bash
+# Enable pnpm via corepack
+corepack enable
+
+# Install dependencies
+pnpm install
+
+# Set up environment
+cp .env.example .env
+cp apps/api/.env.example apps/api/.env
+cp apps/web/.env.local.example apps/web/.env.local
+
+# Run database migrations and seed
+pnpm db:migrate
+pnpm db:seed
+
+# Start both apps in development
+pnpm dev
+```
+
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:4000
+
+## Default Admin Credentials
+
+- Email: `admin@example.com`
+- Password: `admin123`
+
+> **Note**: Change these in production by updating the seed script or creating a new admin user.
+
+## Useful Commands
+
+| Command | Description |
+|---|---|
+| `pnpm dev` | Start all apps in development mode |
+| `pnpm build` | Build all apps |
+| `pnpm typecheck` | Run TypeScript checks |
+| `pnpm lint` | Run linting |
+| `pnpm test` | Run tests |
+| `pnpm db:migrate` | Run Prisma migrations |
+| `pnpm db:seed` | Seed the database |
+| `pnpm db:reset` | Reset database and re-seed |
