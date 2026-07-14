@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Generated
+/dist/
+
+# SQLite database files
+*.db
+*.db-journal
+!prisma/dev.db
+
+# Local Prisma migration state
+prisma/migrations/migration_lock.toml

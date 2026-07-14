@@ -1,0 +1,44 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+.next
+out
+coverage
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Database
+*.sqlite
+*.sqlite-journal
+*.db
+*.db-journal
+prisma/*.db
+!db/prisma/dev.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Vocabulary import source file (user-provided)
+db/prisma/vocabulary.txt
+
+# Cached audio files fetched from Youdao
+apps/api/public/audio/
+

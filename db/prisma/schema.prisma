@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Word {
+  id           Int      @id @default(autoincrement())
+  word         String   @unique
+  phonetic     String?
+  meaning      String
+  partOfSpeech String?
+  difficulty   String?
+  tags         String?
+  audioUrl     String?
+
+  unit           Int?
+  needsSpelling  Boolean @default(false)
+  reviewCount    Int     @default(0)
+  masteryLevel   String  @default("NEW") // NEW | LEARNING | FAMILIAR | MASTERED
+
+  exampleSentences ExampleSentence[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([word])
+  @@index([difficulty])
+  @@index([partOfSpeech])
+  @@index([unit])
+  @@index([masteryLevel])
+}
+
+model ExampleSentence {
+  id      Int    @id @default(autoincrement())
+  english String
+  chinese String
+  order   Int    @default(0)
+
+  wordId Int
+  word   Word   @relation(fields: [wordId], references: [id], onDelete: Cascade)
+
+  @@index([wordId])
+}
+
+model AdminUser {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+}
