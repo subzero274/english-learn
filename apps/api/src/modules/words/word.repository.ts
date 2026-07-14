@@ -1,4 +1,4 @@
-import { Prisma } from '@prisma/client';
+import { Prisma } from '@english-learn/db';
 import { prisma } from '@/lib/prisma';
 import { CreateWordInput, UpdateWordInput, ListWordsQuery } from '@/modules/words/word.schema';
 

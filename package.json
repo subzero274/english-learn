@@ -9,11 +9,11 @@
     "build": "turbo run build",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
-    "db:migrate": "pnpm --filter api db:migrate",
-    "db:deploy": "pnpm --filter api db:deploy",
-    "db:seed": "pnpm --filter api db:seed",
-    "db:reset": "pnpm --filter api db:reset",
-    "db:generate": "pnpm --filter api db:generate",
+    "db:migrate": "pnpm --filter @english-learn/db db:migrate",
+    "db:deploy": "pnpm --filter @english-learn/db db:deploy",
+    "db:seed": "pnpm --filter @english-learn/db db:seed",
+    "db:reset": "pnpm --filter @english-learn/db db:reset",
+    "db:generate": "pnpm --filter @english-learn/db db:generate",
     "test": "turbo run test"
   },
   "devDependencies": {

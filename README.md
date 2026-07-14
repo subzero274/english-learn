@@ -16,7 +16,7 @@ english-learn/
 ├── apps/
 │   ├── api/          # Express backend
 │   └── web/          # Next.js frontend (user + admin)
-├── packages/         # Shared packages (optional)
+├── db/               # Shared Prisma schema + database scripts
 └── package.json      # Workspace root
 ```
 
@@ -38,8 +38,9 @@ cp apps/web/.env.local.example apps/web/.env.local
 pnpm db:migrate
 pnpm db:seed
 
-# Start both apps in development
-pnpm dev
+# (Optional) Import the full vocabulary list
+# Place your vocabulary.txt at db/prisma/vocabulary.txt, then:
+pnpm db:import-vocabulary
 ```
 
 - Frontend: http://localhost:3000
@@ -63,4 +64,5 @@ pnpm dev
 | `pnpm test` | Run tests |
 | `pnpm db:migrate` | Run Prisma migrations |
 | `pnpm db:seed` | Seed the database |
+| `pnpm db:import-vocabulary` | Import vocabulary.txt into the database |
 | `pnpm db:reset` | Reset database and re-seed |

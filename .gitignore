@@ -24,6 +24,7 @@ pnpm-debug.log*
 *.db
 *.db-journal
 prisma/*.db
+!db/prisma/dev.db
 
 # OS
 .DS_Store
@@ -35,5 +36,6 @@ Thumbs.db
 *.swp
 *.swo
 
-# Misc
-*.tsbuildinfo
+# Vocabulary import source file (user-provided)
+db/prisma/vocabulary.txt
+

@@ -8,10 +8,10 @@ datasource db {
 }
 
 model Word {
-  id        Int      @id @default(autoincrement())
-  word      String   @unique
-  phonetic  String?
-  meaning   String
+  id           Int      @id @default(autoincrement())
+  word         String   @unique
+  phonetic     String?
+  meaning      String
   partOfSpeech String?
   difficulty   String?
   tags         String?

@@ -4,9 +4,9 @@ import bcrypt from 'bcryptjs';
 import { prisma } from '@/lib/prisma';
 
 beforeAll(() => {
-  // Ensure test database is migrated
-  execSync('pnpm prisma migrate deploy', {
-    cwd: path.resolve(__dirname, '..'),
+  // Ensure test database is migrated using the shared db package
+  execSync('pnpm --filter @english-learn/db exec prisma migrate deploy', {
+    cwd: path.resolve(__dirname, '../..'),
     env: { ...process.env, DATABASE_URL: process.env.DATABASE_URL },
     stdio: 'ignore',
   });
