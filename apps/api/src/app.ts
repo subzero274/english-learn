@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import cors from 'cors';
 import { config } from '@/config';
 import { errorHandler } from '@/middleware/errorHandler';
@@ -16,6 +17,8 @@ export function createApp(): express.Express {
   );
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+
+  app.use('/audio', express.static(path.join(__dirname, '../public/audio')));
 
   app.get('/api/health', (_req, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });

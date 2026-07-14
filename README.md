@@ -66,3 +66,7 @@ pnpm db:import-vocabulary
 | `pnpm db:seed` | Seed the database |
 | `pnpm db:import-vocabulary` | Import vocabulary.txt into the database |
 | `pnpm db:reset` | Reset database and re-seed |
+
+## Audio Pronunciation
+
+Word detail pages show an audio player when a pronunciation URL is available. The first request for a word’s audio fetches it from Youdao, caches the MP3 file under `apps/api/public/audio/`, and stores the public path in the database. Subsequent requests serve the cached file directly. The `apps/api/public/audio/` directory is ignored by Git and is created automatically on the first audio request.

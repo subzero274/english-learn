@@ -39,3 +39,6 @@ Thumbs.db
 # Vocabulary import source file (user-provided)
 db/prisma/vocabulary.txt
 
+# Cached audio files fetched from Youdao
+apps/api/public/audio/
+

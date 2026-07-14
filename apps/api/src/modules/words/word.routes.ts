@@ -2,6 +2,7 @@ import { Router } from 'express';
 import {
   listWordsHandler,
   getWordHandler,
+  getWordAudioHandler,
   createWordHandler,
   updateWordHandler,
   deleteWordHandler,
@@ -18,6 +19,7 @@ const router: Router = Router();
 
 router.get('/', validateQuery(ListWordsQuerySchema), listWordsHandler);
 router.get('/:id', getWordHandler);
+router.get('/:id/audio', getWordAudioHandler);
 router.post('/', requireAdmin, validateBody(CreateWordSchema), createWordHandler);
 router.patch('/:id', requireAdmin, validateBody(UpdateWordSchema), updateWordHandler);
 router.delete('/:id', requireAdmin, deleteWordHandler);

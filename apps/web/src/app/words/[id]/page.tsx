@@ -68,7 +68,7 @@ export default async function WordDetailPage({ params }: WordDetailPageProps) {
             {word.audioUrl && (
               <div>
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Pronunciation</h3>
-                <audio controls src={word.audioUrl} className="w-full">
+                <audio controls src={`${process.env.NEXT_PUBLIC_API_URL}${word.audioUrl}`} className="w-full">
                   Your browser does not support the audio element.
                 </audio>
               </div>

@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import { Request, Response, NextFunction } from 'express';
 import { AppError } from '@/middleware/errorHandler';
 import * as service from '@/modules/words/word.service';
@@ -37,6 +38,27 @@ export async function getWordHandler(
     }
 
     res.json({ data: word });
+  } catch (error) {
+    next(error);
+  }
+}
+
+export async function getWordAudioHandler(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const id = parseInt(req.params.id, 10);
+    if (Number.isNaN(id)) {
+      throw new AppError(400, 'Invalid word id', 'BAD_REQUEST');
+    }
+
+    const { filePath } = await service.getWordAudio(id);
+
+    res.setHeader('Content-Type', 'audio/mpeg');
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    fs.createReadStream(filePath).pipe(res);
   } catch (error) {
     next(error);
   }
