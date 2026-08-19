@@ -59,7 +59,14 @@ I was wondering if it's possible to join the library
 
 ## 4. 输出格式模板
 
-每次批改生成 `{原文件名}-correction.md`，结构如下：
+每次批改生成两个文件：
+
+1. `{原文件名}-correction.md` — 完整批改报告
+2. `{原文件名}-errors.json` — 错误单词/短语本（便于导入 Anki、Quizlet 等工具复习）
+
+### 4.1 批改报告 `{原文件名}-correction.md`
+
+结构如下：
 
 ```markdown
 # {材料编号} 精听批改报告
@@ -124,6 +131,38 @@ I was wondering if it's possible to join the library
 3. ...
 ```
 
+### 4.2 错误单词本 `{原文件名}-errors.json`
+
+从批改报告中提取真正因「不会/不熟」而错的词，排除简单功能词（a/the/it/to）和已掌握的简单词，统一使用以下 JSON 格式：
+
+```json
+[
+  {
+    "phrase": "get along",
+    "phonetic": "/ɡet əˈlɒŋ/",
+    "pos": "v. phrase",
+    "meaning": "相处；进展",
+    "example": "Do you get along with him?"
+  }
+]
+```
+
+字段说明：
+
+| 字段 | 说明 | 示例 |
+|------|------|------|
+| `phrase` | 正确单词或短语 | `passport photo` |
+| `phonetic` | IPA 音标 | `/ˈpɑːspəʊt ˈfəʊtəʊ/` |
+| `pos` | 词性 | `n.`, `v.`, `adj.`, `n. phrase` |
+| `meaning` | 中文释义 | `护照照片` |
+| `example` | 来自原文或仿写的例句 | `You'll need two passport photos.` |
+
+入选标准：
+- 反复拼错的词
+- 因听不懂而完全写错的实词
+- 对做题/理解关键的短语搭配
+- 不收入：简单功能词、已掌握的基础词、纯专有名词（如人名 Grantingham 可单独记录）
+
 ---
 
 ## 5. 批改流程
@@ -133,7 +172,8 @@ I was wondering if it's possible to join the library
 3. **词级对比**：清洗大小写和标点后逐词对比，标记 equal / insert / delete / replace。
 4. **错误分类**：根据编辑距离和语义判断是拼写错误、听错还是漏听。
 5. **计算正确率**：正确词数 ÷ 参考词数。
-6. **生成报告**：按模板输出 Markdown，并给出训练建议。
+6. **生成报告**：按模板输出 Markdown 批改报告。
+7. **生成错误单词本**：从批改报告中筛选核心错误词，输出为 `{原文件名}-errors.json`。
 
 ---
 
@@ -150,8 +190,8 @@ I was wondering if it's possible to join the library
 
 建议每次批改后将关键数据汇总到 `listening/精听训练/progress.md`：
 
-| 日期 | 材料 | 正确率 | 主要错误类型 | 下次目标 |
-|------|------|--------|-------------|---------|
-| 2026-08-18 | 050201 | 60.5% | 拼写 + 漏听功能词 | ≥ 75% |
+| 日期 | 材料 | 正确率 | 主要错误类型 | 错误单词本 | 下次目标 |
+|------|------|--------|-------------|-----------|---------|
+| 2026-08-18 | 050201 | 57.8% | 拼写 + 漏听功能词 | `050201-errors.json` | ≥ 75% |
 
 通过长期对比，观察自己的进步曲线和顽固错误类型。

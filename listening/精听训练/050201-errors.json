@@ -1,0 +1,401 @@
+[
+  {
+    "phrase": "college",
+    "phonetic": "/ˈkɒlɪdʒ/",
+    "pos": "n.",
+    "meaning": "学院；大学",
+    "example": "Are you a student of this college?"
+  },
+  {
+    "phrase": "morning",
+    "phonetic": "/ˈmɔːnɪŋ/",
+    "pos": "n.",
+    "meaning": "早晨；上午",
+    "example": "Good morning, your college library."
+  },
+  {
+    "phrase": "wonder",
+    "phonetic": "/ˈwʌndə(r)/",
+    "pos": "v.",
+    "meaning": "想知道；想弄明白",
+    "example": "I was wondering if it's possible to join the library."
+  },
+  {
+    "phrase": "possible",
+    "phonetic": "/ˈpɒsəbl/",
+    "pos": "adj.",
+    "meaning": "可能的",
+    "example": "Is it possible to join the library?"
+  },
+  {
+    "phrase": "minimum",
+    "phonetic": "/ˈmɪnɪməm/",
+    "pos": "adj./n.",
+    "meaning": "最小的；最低限度",
+    "example": "That's our minimum joining age."
+  },
+  {
+    "phrase": "joining age",
+    "phonetic": "/ˈdʒɔɪnɪŋ eɪdʒ/",
+    "pos": "n. phrase",
+    "meaning": "入会年龄",
+    "example": "Are you over 18? That's our minimum joining age."
+  },
+  {
+    "phrase": "passport photo",
+    "phonetic": "/ˈpɑːspəʊt ˈfəʊtəʊ/",
+    "pos": "n. phrase",
+    "meaning": "护照照片",
+    "example": "You'll need to bring two passport photos with you."
+  },
+  {
+    "phrase": "document",
+    "phonetic": "/ˈdɒkjumənt/",
+    "pos": "n.",
+    "meaning": "文件；证件",
+    "example": "We also need two documents for ID."
+  },
+  {
+    "phrase": "driving licence",
+    "phonetic": "/ˈdraɪvɪŋ ˈlaɪsəns/",
+    "pos": "n. phrase",
+    "meaning": "驾驶执照",
+    "example": "A driving licence would be fine as ID."
+  },
+  {
+    "phrase": "credit card",
+    "phonetic": "/ˈkredɪt kɑːd/",
+    "pos": "n. phrase",
+    "meaning": "信用卡",
+    "example": "Can I pay by credit card?"
+  },
+  {
+    "phrase": "address",
+    "phonetic": "/əˈdres/",
+    "pos": "n.",
+    "meaning": "地址",
+    "example": "It needs to have your address on it."
+  },
+  {
+    "phrase": "bank statement",
+    "phonetic": "/bæŋk ˈsteɪtmənt/",
+    "pos": "n. phrase",
+    "meaning": "银行对账单",
+    "example": "Shall I bring a bank statement?"
+  },
+  {
+    "phrase": "otherwise",
+    "phonetic": "/ˈʌðəwaɪz/",
+    "pos": "adv.",
+    "meaning": "否则；除此以外",
+    "example": "It's free for students here but otherwise it's £125 per year."
+  },
+  {
+    "phrase": "per year",
+    "phonetic": "/pə(r) jɪə(r)/",
+    "pos": "adv. phrase",
+    "meaning": "每年",
+    "example": "It costs £125 per year."
+  },
+  {
+    "phrase": "local",
+    "phonetic": "/ˈləʊkl/",
+    "pos": "adj.",
+    "meaning": "当地的；本地的",
+    "example": "My local library is free."
+  },
+  {
+    "phrase": "range",
+    "phonetic": "/reɪndʒ/",
+    "pos": "n.",
+    "meaning": "范围；种类",
+    "example": "They don't have the range of reference books we have."
+  },
+  {
+    "phrase": "facility",
+    "phonetic": "/fəˈsɪləti/",
+    "pos": "n.",
+    "meaning": "设施；设备",
+    "example": "They don't have the facilities which we buy for our students."
+  },
+  {
+    "phrase": "external member",
+    "phonetic": "/ɪkˈstɜːnl ˈmembə(r)/",
+    "pos": "n. phrase",
+    "meaning": "外部会员",
+    "example": "That's why you have to pay to be an external member."
+  },
+  {
+    "phrase": "borrow",
+    "phonetic": "/ˈbɒrəʊ/",
+    "pos": "v.",
+    "meaning": "借入；借用",
+    "example": "How many books can I borrow?"
+  },
+  {
+    "phrase": "item",
+    "phonetic": "/ˈaɪtəm/",
+    "pos": "n.",
+    "meaning": "物品；项目",
+    "example": "We allow twelve items borrowed at any one time."
+  },
+  {
+    "phrase": "fiction",
+    "phonetic": "/ˈfɪkʃn/",
+    "pos": "n.",
+    "meaning": "小说；虚构作品",
+    "example": "You can have both fiction and reference books."
+  },
+  {
+    "phrase": "reference book",
+    "phonetic": "/ˈrefrəns bʊk/",
+    "pos": "n. phrase",
+    "meaning": "参考书",
+    "example": "You can have both fiction and reference books for four weeks."
+  },
+  {
+    "phrase": "fine",
+    "phonetic": "/faɪn/",
+    "pos": "n.",
+    "meaning": "罚款",
+    "example": "Like all libraries there's a fine system in place."
+  },
+  {
+    "phrase": "in place",
+    "phonetic": "/ɪn pleɪs/",
+    "pos": "adv. phrase",
+    "meaning": "已存在；已实施",
+    "example": "There's a fine system in place."
+  },
+  {
+    "phrase": "minimum fine",
+    "phonetic": "/ˈmɪnɪməm faɪn/",
+    "pos": "n. phrase",
+    "meaning": "最低罚款",
+    "example": "The minimum fine is £1.50."
+  },
+  {
+    "phrase": "higher",
+    "phonetic": "/ˈhaɪə(r)/",
+    "pos": "adj.",
+    "meaning": "更高的",
+    "example": "It can be much higher for some items."
+  },
+  {
+    "phrase": "booklet",
+    "phonetic": "/ˈbʊklət/",
+    "pos": "n.",
+    "meaning": "小册子",
+    "example": "We'll give you a booklet with all the details."
+  },
+  {
+    "phrase": "detail",
+    "phonetic": "/ˈdiːteɪl/",
+    "pos": "n.",
+    "meaning": "细节；详情",
+    "example": "A booklet with all the details."
+  },
+  {
+    "phrase": "always",
+    "phonetic": "/ˈɔːlweɪz/",
+    "pos": "adv.",
+    "meaning": "总是；一直",
+    "example": "You can always renew items if they're not required."
+  },
+  {
+    "phrase": "renew",
+    "phonetic": "/rɪˈnjuː/",
+    "pos": "v.",
+    "meaning": "续借；更新",
+    "example": "You can always renew items by telephoning or logging on."
+  },
+  {
+    "phrase": "require",
+    "phonetic": "/rɪˈkwaɪə(r)/",
+    "pos": "v.",
+    "meaning": "需要；要求",
+    "example": "If they're not required by anyone else."
+  },
+  {
+    "phrase": "anyone else",
+    "phonetic": "/ˈeniwʌn els/",
+    "pos": "pron. phrase",
+    "meaning": "其他任何人",
+    "example": "If they're not required by anyone else."
+  },
+  {
+    "phrase": "log on",
+    "phonetic": "/lɒɡ ˈɒn/",
+    "pos": "v. phrase",
+    "meaning": "登录（网站）",
+    "example": "You can renew items by logging on to our website."
+  },
+  {
+    "phrase": "free of charge",
+    "phonetic": "/friː əv ˈtʃɑːdʒ/",
+    "pos": "adj. phrase",
+    "meaning": "免费的",
+    "example": "Can I use them free of charge?"
+  },
+  {
+    "phrase": "nominal charge",
+    "phonetic": "/ˈnɒmɪnl ˈtʃɑːdʒ/",
+    "pos": "n. phrase",
+    "meaning": "象征性收费；小额收费",
+    "example": "We make a nominal charge of £1 per hour thereafter."
+  },
+  {
+    "phrase": "per hour",
+    "phonetic": "/pə(r) ˈaʊə(r)/",
+    "pos": "adv. phrase",
+    "meaning": "每小时",
+    "example": "A nominal charge of £1 per hour."
+  },
+  {
+    "phrase": "thereafter",
+    "phonetic": "/ˌðeərˈɑːftə(r)/",
+    "pos": "adv.",
+    "meaning": "此后；之后",
+    "example": "The first hour is free and then we charge £1 per hour thereafter."
+  },
+  {
+    "phrase": "in advance",
+    "phonetic": "/ɪn ədˈvɑːns/",
+    "pos": "adv. phrase",
+    "meaning": "提前；预先",
+    "example": "Do I have to book in advance for them?"
+  },
+  {
+    "phrase": "advisable",
+    "phonetic": "/ədˈvaɪzəbl/",
+    "pos": "adj.",
+    "meaning": "明智的；可取的",
+    "example": "Oh yes, it's advisable to book in advance."
+  },
+  {
+    "phrase": "twenty-four",
+    "phonetic": "/ˌtwenti ˈfɔː(r)/",
+    "pos": "num.",
+    "meaning": "二十四",
+    "example": "Most people tend to book twenty-four hours in advance."
+  },
+  {
+    "phrase": "notice",
+    "phonetic": "/ˈnəʊtɪs/",
+    "pos": "n.",
+    "meaning": "通知；提前期",
+    "example": "You can get one with only six hours' notice."
+  },
+  {
+    "phrase": "earliest",
+    "phonetic": "/ˈɜːliɪst/",
+    "pos": "adj.",
+    "meaning": "最早的",
+    "example": "The earliest you can book a computer is forty-eight hours before."
+  },
+  {
+    "phrase": "forty-eight",
+    "phonetic": "/ˌfɔːti ˈeɪt/",
+    "pos": "num.",
+    "meaning": "四十八",
+    "example": "Forty-eight hours before you need it."
+  },
+  {
+    "phrase": "no-one",
+    "phonetic": "/ˈnəʊ wʌn/",
+    "pos": "pron.",
+    "meaning": "没有人",
+    "example": "If no-one else has booked the computer out."
+  },
+  {
+    "phrase": "database",
+    "phonetic": "/ˈdeɪtəbeɪs/",
+    "pos": "n.",
+    "meaning": "数据库；资料库",
+    "example": "We have a wide range of databases."
+  },
+  {
+    "phrase": "access",
+    "phonetic": "/ˈækses/",
+    "pos": "v./n.",
+    "meaning": "获取；进入；使用权",
+    "example": "I might need to access national newspapers."
+  },
+  {
+    "phrase": "magazine",
+    "phonetic": "/ˌmæɡəˈziːn/",
+    "pos": "n.",
+    "meaning": "杂志",
+    "example": "A wide selection of magazines."
+  },
+  {
+    "phrase": "photocopying facility",
+    "phonetic": "/ˈfəʊtəʊkɒpiɪŋ fəˈsɪləti/",
+    "pos": "n. phrase",
+    "meaning": "复印设备",
+    "example": "I assume you have photocopying facilities?"
+  },
+  {
+    "phrase": "sheet",
+    "phonetic": "/ʃiːt/",
+    "pos": "n.",
+    "meaning": "（纸）张",
+    "example": "5p a sheet for black-and-white copies."
+  },
+  {
+    "phrase": "black-and-white",
+    "phonetic": "/ˌblæk ən ˈwaɪt/",
+    "pos": "adj.",
+    "meaning": "黑白的",
+    "example": "Black-and-white copies are 5p a sheet."
+  },
+  {
+    "phrase": "counter",
+    "phonetic": "/ˈkaʊntə(r)/",
+    "pos": "n.",
+    "meaning": "柜台；服务台",
+    "example": "You can get a card from the counter here."
+  },
+  {
+    "phrase": "coin",
+    "phonetic": "/kɔɪn/",
+    "pos": "n.",
+    "meaning": "硬币",
+    "example": "It doesn't take coins."
+  },
+  {
+    "phrase": "resident author",
+    "phonetic": "/ˈrezɪdənt ˈɔːθə(r)/",
+    "pos": "n. phrase",
+    "meaning": "驻馆作家",
+    "example": "He's our resident author."
+  },
+  {
+    "phrase": "creative writing",
+    "phonetic": "/kriˈeɪtɪv ˈraɪtɪŋ/",
+    "pos": "n. phrase",
+    "meaning": "创意写作",
+    "example": "He runs the creative writing classes."
+  },
+  {
+    "phrase": "certainly",
+    "phonetic": "/ˈsɜːtnli/",
+    "pos": "adv.",
+    "meaning": "当然；肯定地",
+    "example": "Certainly. G-R-A-N-T-I-N-G-H-A-M."
+  },
+  {
+    "phrase": "contact",
+    "phonetic": "/ˈkɒntækt/",
+    "pos": "v./n.",
+    "meaning": "联系；接触",
+    "example": "You can contact him by emailing the library."
+  },
+  {
+    "phrase": "email",
+    "phonetic": "/ˈiːmeɪl/",
+    "pos": "v./n.",
+    "meaning": "发电子邮件；电子邮件",
+    "example": "You can contact him by emailing the library."
+  }
+]
