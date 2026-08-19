@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictation Test - Buyer Beware (Baby Cots)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 40px;
+        }
+        .header h1 { font-size: 24px; font-weight: 600; }
+        .header p { font-size: 14px; opacity: 0.9; margin-top: 6px; }
+        .content { padding: 40px; }
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 28px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        h2:first-child { margin-top: 0; }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .vocab-table th, .vocab-table td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table th {
+            background: #f8f7ff;
+            color: #5a4fcf;
+            font-weight: 600;
+        }
+        .cloze-line {
+            margin-bottom: 14px;
+            font-size: 16px;
+            color: #333;
+        }
+        .cloze-line input {
+            width: 110px;
+            padding: 6px 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            text-align: center;
+            margin: 0 4px;
+        }
+        .cloze-line input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .error-item {
+            display: flex;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+            align-items: baseline;
+        }
+        .error-wrong {
+            color: #e74c3c;
+            text-decoration: line-through;
+            min-width: 160px;
+        }
+        .error-right {
+            color: #27ae60;
+            font-weight: 500;
+            min-width: 220px;
+        }
+        .error-note { color: #666; }
+        .controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            padding: 20px 40px 40px;
+        }
+        .btn {
+            padding: 12px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        .btn-secondary:hover { background: #e0e0e0; }
+        .result-msg {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .result-msg.correct { color: #27ae60; }
+        .result-msg.wrong { color: #e74c3c; }
+        .hidden { display: none; }
+        @media (max-width: 600px) {
+            .content { padding: 24px; }
+            .header { padding: 20px 24px; }
+            .header h1 { font-size: 18px; }
+            .cloze-line input { width: 90px; }
+            .error-wrong, .error-right { min-width: auto; }
+            .error-item { flex-direction: column; gap: 4px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Buyer Beware - Baby Cots 听写词汇训练</h1>
+            <p>整理拼写错误 + 核心词汇 + 填空练习</p>
+        </div>
+
+        <div class="content">
+            <h2>核心词汇 / Key Vocabulary</h2>
+            <table class="vocab-table">
+                <thead>
+                    <tr><th>单词 / 短语</th><th>中文释义</th><th>例句片段</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Buyer Beware</td><td>消费者当心 / 购买需谨慎</td><td>welcome to today's Buyer Beware programme</td></tr>
+                    <tr><td>spend money wisely</td><td>明智地花钱</td><td>tips on how to spend your money wisely</td></tr>
+                    <tr><td>baby cot</td><td>婴儿床</td><td>beds for children and babies / baby cots</td></tr>
+                    <tr><td>budget price range</td><td>预算价位</td><td>three different cots all in the budget price range</td></tr>
+                    <tr><td>good points</td><td>优点</td><td>feature the good points, the problems and our verdict</td></tr>
+                    <tr><td>verdict</td><td>评判；结论</td><td>given this one a verdict of 'satisfactory'</td></tr>
+                    <tr><td>recommend</td><td>推荐</td><td>had several good points to recommend it</td></tr>
+                    <tr><td>move around</td><td>移动；搬来搬去</td><td>easy to move around</td></tr>
+                    <tr><td>slight problems</td><td>小问题</td><td>the only slight problems with this cot</td></tr>
+                    <tr><td>brake</td><td>刹车；制动装置</td><td>it had no brakes</td></tr>
+                    <tr><td>matter too much</td><td>关系很大；太要紧</td><td>they didn't think that mattered too much</td></tr>
+                    <tr><td>be concerned about</td><td>担心；关注</td><td>at first they were a bit concerned about the side bar</td></tr>
+                    <tr><td>trap fingers</td><td>夹住手指</td><td>babies could trap their fingers in it</td></tr>
+                    <tr><td>unlikely to happen</td><td>不太可能发生</td><td>our testers felt that this was unlikely to happen</td></tr>
+                    <tr><td>satisfactory</td><td>令人满意的；合格的</td><td>a verdict of 'satisfactory'</td></tr>
+                    <tr><td>put together</td><td>组装</td><td>a cot which is simple to put together</td></tr>
+                    <tr><td>minus side</td><td>缺点；不足之处</td><td>on the minus side</td></tr>
+                    <tr><td>drop down</td><td>放下；降下</td><td>the side of the cot did not drop down</td></tr>
+                    <tr><td>pick up</td><td>抱起；捡起</td><td>making it difficult to pick up newborn babies</td></tr>
+                    <tr><td>space between the bars</td><td>栏杆之间的空隙</td><td>the space between the bars was too wide</td></tr>
+                    <tr><td>safety hazard</td><td>安全隐患</td><td>a real safety hazard</td></tr>
+                    <tr><td>dangerous</td><td>危险的</td><td>we have labelled this one dangerous</td></tr>
+                    <tr><td>I'm afraid</td><td>恐怕（委婉表达）</td><td>I'm afraid</td></tr>
+                </tbody>
+            </table>
+
+            <h2>填空练习 / Cloze Dictation</h2>
+            <p style="color:#666; margin-bottom:16px; font-size:14px;">根据听到的原文，填写空缺单词。</p>
+
+            <div class="cloze-line">1. Hello and welcome to today's '<input data-answer="Buyer Beware" type="text">' programme.</div>
+            <div class="cloze-line">2. We give you some tips on how to <input data-answer="spend" type="text"> your money <input data-answer="wisely" type="text">.</div>
+            <div class="cloze-line">3. We're looking at beds for children and <input data-answer="babies" type="text">.</div>
+            <div class="cloze-line">4. Let's start by looking at baby <input data-answer="cots" type="text">.</div>
+            <div class="cloze-line">5. Three different cots all in the <input data-answer="budget" type="text"> price range.</div>
+            <div class="cloze-line">6. We will feature the good points, the problems and our <input data-answer="verdict" type="text">.</div>
+            <div class="cloze-line">7. The first cot had several good points to <input data-answer="recommend" type="text"> it.</div>
+            <div class="cloze-line">8. It had four wheels, so it was easy to <input data-answer="move" type="text"> around.</div>
+            <div class="cloze-line">9. The only <input data-answer="slight" type="text"> problems were that it had no <input data-answer="brakes" type="text">.</div>
+            <div class="cloze-line">10. They were a bit <input data-answer="concerned" type="text"> about the side bar.</div>
+            <div class="cloze-line">11. Babies could <input data-answer="trap" type="text"> their fingers in it.</div>
+            <div class="cloze-line">12. They gave this one a <input data-answer="verdict" type="text"> of 'satisfactory'.</div>
+            <div class="cloze-line">13. A cot which is simple to <input data-answer="put together" type="text">.</div>
+            <div class="cloze-line">14. On the <input data-answer="minus" type="text"> side, the side did not <input data-answer="drop down" type="text">.</div>
+            <div class="cloze-line">15. Difficult to <input data-answer="pick up" type="text"> newborn babies.</div>
+            <div class="cloze-line">16. A real <input data-answer="safety" type="text"> <input data-answer="hazard" type="text">.</div>
+            <div class="cloze-line">17. We have labelled this one <input data-answer="dangerous" type="text">, I'm afraid.</div>
+
+            <h2>常见拼写错误 / Common Spelling Mistakes</h2>
+            <div class="error-item">
+                <span class="error-wrong">buy be way</span>
+                <span class="error-right">Buyer Beware</span>
+                <span class="error-note">节目名，注意连读 /aɪə/ + /ɪə/</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">speed money withly</span>
+                <span class="error-right">spend your money wisely</span>
+                <span class="error-note">spend 不是 speed；wisely 以 /li/ 结尾</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">coat / cop</span>
+                <span class="error-right">cot</span>
+                <span class="error-note">婴儿床 cot，注意 /ɒ/ 短音</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">project strings</span>
+                <span class="error-right">budget price range</span>
+                <span class="error-note">预算价位，连读导致误听</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">esay</span>
+                <span class="error-right">easy</span>
+                <span class="error-note">元音顺序 ea-sy</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">recommanded</span>
+                <span class="error-right">recommend it</span>
+                <span class="error-note">recommend 只有一个 m</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">sl problem</span>
+                <span class="error-right">slight problems</span>
+                <span class="error-note">slight 不要漏掉 g-h</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">awad of statifcatry</span>
+                <span class="error-right">a verdict of 'satisfactory'</span>
+                <span class="error-note">verdict / satisfactory 长单词需分段记</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">tpas</span>
+                <span class="error-right">trap</span>
+                <span class="error-note">trap 夹住，注意结尾 p</span>
+            </div>
+            <div class="error-item">
+                <span class="error-wrong">drangous / afarid</span>
+                <span class="error-right">dangerous / I'm afraid</span>
+                <span class="error-note">dangerous 中 g-e-r 顺序；afraid 是两个词 I'm afraid</span>
+            </div>
+
+            <div id="resultArea"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="checkAnswers()">检查答案 / Check</button>
+            <button class="btn btn-secondary" onclick="showAnswers()">显示答案 / Show</button>
+        </div>
+    </div>
+
+    <script>
+        function normalize(str) {
+            return str.toLowerCase().replace(/[\s']/g, '').trim();
+        }
+        function checkAnswers() {
+            const inputs = document.querySelectorAll('[data-answer]');
+            let correct = 0;
+            inputs.forEach(input => {
+                const answer = input.getAttribute('data-answer');
+                const user = input.value.trim();
+                if (normalize(user) === normalize(answer)) {
+                    input.style.borderColor = '#27ae60';
+                    input.style.background = '#f0fff4';
+                    correct++;
+                } else {
+                    input.style.borderColor = '#e74c3c';
+                    input.style.background = '#fff5f5';
+                }
+            });
+            const total = inputs.length;
+            const result = document.getElementById('resultArea');
+            result.className = 'result-msg ' + (correct === total ? 'correct' : 'wrong');
+            result.innerHTML = `得分 Score: ${correct} / ${total}`;
+        }
+        function showAnswers() {
+            const inputs = document.querySelectorAll('[data-answer]');
+            inputs.forEach(input => {
+                input.value = input.getAttribute('data-answer');
+                input.style.borderColor = '#667eea';
+                input.style.background = '#f8f7ff';
+            });
+        }
+    </script>
+</body>
+</html>

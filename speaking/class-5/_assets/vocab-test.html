@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Class 5 - Vocab & Sentence Patterns</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            flex-wrap: wrap;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #fff;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-size: 16px;
+        }
+        .tab.active {
+            border-bottom-color: #2196F3;
+            color: #2196F3;
+            font-weight: bold;
+        }
+        .section {
+            display: none;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section.active {
+            display: block;
+        }
+        .category {
+            margin-bottom: 20px;
+        }
+        .category h3 {
+            color: #2196F3;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .category h3 .toggle {
+            float: right;
+            color: #888;
+            font-size: 14px;
+        }
+        .vocab-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-item .phrase {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+        .vocab-item .phonetic {
+            color: #888;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .vocab-item .meaning {
+            color: #666;
+            margin-top: 4px;
+        }
+        .sentence-item {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            background: #fafafa;
+            margin-bottom: 8px;
+            border-radius: 6px;
+        }
+        .sentence-item .pattern {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+        .sentence-item .example {
+            color: #555;
+            margin-top: 6px;
+            font-style: italic;
+        }
+        .sentence-item .meaning {
+            color: #666;
+            margin-top: 4px;
+        }
+        .star { color: #ff9800; }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-left: 8px;
+            background: #e3f2fd;
+            color: #1976D2;
+        }
+        .badge.sentence-badge {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        .hidden { display: none; }
+
+        /* Test styles */
+        .test-container { text-align: center; }
+        .question-card {
+            background: #fafafa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .question-type {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .question {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .option {
+            padding: 15px;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+        .option:hover { border-color: #2196F3; }
+        .option.selected {
+            border-color: #2196F3;
+            background: #e3f2fd;
+        }
+        .option.correct {
+            background: #c8e6c9;
+            border-color: #4CAF50;
+        }
+        .option.wrong {
+            background: #ffcdd2;
+            border-color: #f44336;
+        }
+        .input-answer {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .btn {
+            padding: 12px 30px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .btn:hover { background: #1976D2; }
+        .btn:disabled { background: #ccc; cursor: not-allowed; }
+        .score {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .feedback {
+            font-size: 16px;
+            margin: 15px 0;
+            min-height: 24px;
+        }
+        .feedback.correct { color: #4CAF50; }
+        .feedback.wrong { color: #f44336; }
+        .mode-select {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .mode-select label {
+            display: block;
+            margin: 8px 0;
+        }
+        .progress {
+            height: 8px;
+            background: #ddd;
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #2196F3;
+            transition: width 0.3s;
+        }
+        .section-title {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>📍 Speaking Class 5</h1>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showSection('vocab')">词汇 Vocabulary</button>
+        <button class="tab" onclick="showSection('sentences')">句式 Sentence Patterns</button>
+        <button class="tab" onclick="showSection('test')">测试 Test</button>
+    </div>
+
+    <!-- Vocabulary Section -->
+    <div id="vocab" class="section active">
+        <div class="section-title">纯词汇/短语，可直接替换使用</div>
+        <div id="vocabList"></div>
+    </div>
+
+    <!-- Sentence Patterns Section -->
+    <div id="sentences" class="section">
+        <div class="section-title">完整句式和句型，可直接背诵套用</div>
+        <div id="sentenceList"></div>
+    </div>
+
+    <!-- Test Section -->
+    <div id="test" class="section">
+        <div class="mode-select">
+            <label><strong>测试内容：</strong></label>
+            <label><input type="radio" name="testType" value="vocab" checked onchange="startTest()"> 测词汇</label>
+            <label><input type="radio" name="testType" value="sentence" onchange="startTest()"> 测句式</label>
+            <label><input type="radio" name="testType" value="mixed" onchange="startTest()"> 混合测试</label>
+
+            <br><br>
+            <label><strong>答题方式：</strong></label>
+            <label><input type="radio" name="mode" value="choice" checked> 选择题（看中文选英文）</label>
+            <label><input type="radio" name="mode" value="input"> 填空题（看中文写英文）</label>
+        </div>
+
+        <div class="test-container">
+            <div class="score">Score: <span id="score">0</span> / <span id="total">0</span></div>
+
+            <div class="progress">
+                <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-type" id="questionType">Question 1</div>
+                <div class="question" id="questionText"></div>
+
+                <div id="optionsContainer" class="options"></div>
+
+                <input type="text" id="inputAnswer" class="input-answer hidden" placeholder="Type the English phrase or sentence...">
+
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <button class="btn" id="submitBtn" onclick="checkAnswer()">Submit</button>
+            <button class="btn hidden" id="nextBtn" onclick="nextQuestion()">Next</button>
+            <button class="btn" onclick="startTest()">Restart Test</button>
+        </div>
+    </div>
+
+    <script>
+        // ===== VOCABULARY DATA =====
+        const vocabulary = [
+            { phrase: "therapeutic", phonetic: "/ˌθerəˈpjuːtɪk/", meaning: "有疗效的；令人放松的", category: "Core Vocab", star: 3 },
+            { phrase: "unwind", phonetic: "/ʌnˈwaɪnd/", meaning: "放松；舒缓", category: "Core Vocab", star: 3 },
+            { phrase: "a shared bike", phonetic: "/ə ʃeəd baɪk/", meaning: "共享单车", category: "Transport & Exercise", star: 2 },
+            { phrase: "cardio training", phonetic: "/ˈkɑːdiəʊ ˈtreɪnɪŋ/", meaning: "有氧训练", category: "Transport & Exercise", star: 2 },
+            { phrase: "bike lanes", phonetic: "/baɪk leɪnz/", meaning: "自行车道", category: "Transport & Exercise", star: 2 },
+            { phrase: "spacious and practical", phonetic: "/ˈspeɪʃəs ənd ˈpræktɪkl/", meaning: "宽敞且实用的", category: "Cars & Driving", star: 2 },
+            { phrase: "the sound of the engine", phonetic: "/ðə saʊnd ɒv ðiː ˈendʒɪn/", meaning: "引擎声", category: "Cars & Driving", star: 2 },
+            { phrase: "easy to handle", phonetic: "/ˈiːzi tuː ˈhændl/", meaning: "好操控", category: "Cars & Driving", star: 2 },
+            { phrase: "easy to maneuver", phonetic: "/ˈiːzi tuː məˈnuːvə/", meaning: "容易 maneuver/灵活操控", category: "Cars & Driving", star: 2 },
+            { phrase: "instant torque", phonetic: "/ˈɪnstənt tɔːk/", meaning: "瞬时扭矩", category: "Cars & Driving", star: 2 },
+            { phrase: "four distinctive seasons", phonetic: "/fɔː dɪˈstɪŋktɪv ˈsiːznz/", meaning: "四季分明", category: "Weather & Seasons", star: 2 },
+            { phrase: "freezing cold", phonetic: "/ˈfriːzɪŋ kəʊld/", meaning: "极冷的", category: "Weather & Seasons", star: 2 },
+            { phrase: "boiling hot and humid", phonetic: "/ˈbɔɪlɪŋ hɒt ənd ˈhjuːmɪd/", meaning: "酷热潮湿的", category: "Weather & Seasons", star: 2 },
+            { phrase: "cold and damp", phonetic: "/kəʊld ənd dæmp/", meaning: "寒冷潮湿的", category: "Weather & Seasons", star: 2 },
+            { phrase: "hot and sticky", phonetic: "/hɒt ənd ˈstɪki/", meaning: "闷热黏腻的", category: "Weather & Seasons", star: 2 },
+            { phrase: "much more livable", phonetic: "/mʌtʃ mɔː ˈlɪvəbl/", meaning: "更宜居的", category: "Weather & Seasons", star: 2 },
+            { phrase: "countless museums and galleries", phonetic: "/ˈkaʊntləs mjuːˈziːəmz ənd ˈɡæləriz/", meaning: "无数的博物馆和画廊", category: "City & Travel", star: 2 },
+            { phrase: "hole-in-the-wall", phonetic: "/ˌhəʊl ɪn ðə ˈwɔːl/", meaning: "不起眼但很棒的小店", category: "City & Travel", star: 3 },
+            { phrase: "incredible", phonetic: "/ɪnˈkredəbl/", meaning: "难以置信的；极好的", category: "City & Travel", star: 2 },
+            { phrase: "wandering around", phonetic: "/ˈwɒndərɪŋ əˈraʊnd/", meaning: "闲逛；漫步", category: "City & Travel", star: 2 },
+            { phrase: "get lost in", phonetic: "/ɡet lɒst ɪn/", meaning: "沉浸于", category: "City & Travel", star: 3 },
+            { phrase: "discover hidden gems", phonetic: "/dɪˈskʌvə ˈhɪdn dʒemz/", meaning: "发现隐藏的宝藏/小众好地方", category: "City & Travel", star: 3 },
+            { phrase: "take tons of photos", phonetic: "/teɪk tʌnz ɒv ˈfəʊtəʊz/", meaning: "拍很多照片", category: "City & Travel", star: 2 },
+            { phrase: "photogenic", phonetic: "/ˌfəʊtəʊˈdʒenɪk/", meaning: "上镜的；出片的", category: "City & Travel", star: 3 },
+            { phrase: "desperate", phonetic: "/ˈdespərət/", meaning: "迫不及待的；极度渴望的", category: "Useful Words", star: 2 }
+        ];
+
+        // ===== SENTENCE PATTERNS DATA =====
+        const sentencePatterns = [
+            {
+                pattern: "To be fair, ...",
+                meaning: "说实话；公平地说",
+                example: "To be fair, the traffic there is quite bad.",
+                category: "表达观点"
+            },
+            {
+                pattern: "I've always been a fan of ...",
+                meaning: "我一直是……的粉丝",
+                example: "I've always been a fan of sports cars.",
+                category: "表达喜好"
+            },
+            {
+                pattern: "That is a huge plus.",
+                meaning: "这是一个很大的优点",
+                example: "It has free parking, and that is a huge plus.",
+                category: "评价事物"
+            },
+            {
+                pattern: "There's always something going on.",
+                meaning: "总有事情发生；这里很热闹",
+                example: "I love living in big cities because there's always something going on.",
+                category: "描述城市"
+            },
+            {
+                pattern: "Another great thing is ...",
+                meaning: "另一个好处是……",
+                example: "Another great thing is the public transport system.",
+                category: "补充优点"
+            },
+            {
+                pattern: "What I love most are ...",
+                meaning: "我最喜欢的是……",
+                example: "What I love most are the countless museums and galleries.",
+                category: "表达喜好"
+            },
+            {
+                pattern: "You've got ...",
+                meaning: "那里有……",
+                example: "You've got everything you need within walking distance.",
+                category: "描述地点"
+            },
+            {
+                pattern: "It's a paradise for people who ...",
+                meaning: "对……的人来说是天堂",
+                example: "It's a paradise for people who are into street and spicy food.",
+                category: "描述地点"
+            },
+            {
+                pattern: "The food scene is amazing too.",
+                meaning: "美食场景也很棒",
+                example: "The city has great museums, and the food scene is amazing too.",
+                category: "描述地点"
+            },
+            {
+                pattern: "My mind was blown away.",
+                meaning: "我被震撼到了",
+                example: "When I saw the view from the top, my mind was blown away.",
+                category: "表达感受"
+            },
+            {
+                pattern: "... blow my mind.",
+                meaning: "……让我震惊",
+                example: "The architecture there really blows my mind.",
+                category: "表达感受"
+            },
+            {
+                pattern: "... was actually the best part.",
+                meaning: "……其实是最棒的部分",
+                example: "The local food was actually the best part of the trip.",
+                category: "总结评价"
+            },
+            {
+                pattern: "I spent quite a bit of time just ...",
+                meaning: "我花了不少时间只是……",
+                example: "I spent quite a bit of time just wandering around the old town.",
+                category: "描述经历"
+            },
+            {
+                pattern: "Sitting there for ages.",
+                meaning: "坐在那儿很久",
+                example: "We ended up sitting there for ages, chatting and drinking coffee.",
+                category: "描述经历"
+            },
+            {
+                pattern: "I got used to it.",
+                meaning: "我习惯了",
+                example: "The weather was strange at first, but I got used to it.",
+                category: "表达适应"
+            },
+            {
+                pattern: "... is much more livable.",
+                meaning: "……更宜居",
+                example: "In spring, the city is much more livable.",
+                category: "描述城市"
+            },
+            {
+                pattern: "It's a great escape from the busy streets.",
+                meaning: "这是逃离繁忙街道的好去处",
+                example: "The park is a great escape from the busy streets.",
+                category: "描述地点"
+            },
+            {
+                pattern: "The way they look ...",
+                meaning: "它们的外观……",
+                example: "I don't really care about the way they look.",
+                category: "描述事物"
+            }
+        ];
+
+        // ===== RENDER VOCABULARY =====
+        function renderVocab() {
+            const grouped = {};
+            vocabulary.forEach(item => {
+                if (!grouped[item.category]) grouped[item.category] = [];
+                grouped[item.category].push(item);
+            });
+
+            const container = document.getElementById('vocabList');
+            container.innerHTML = Object.keys(grouped).map(cat => `
+                <div class="category">
+                    <h3 onclick="toggleNext(this)">
+                        ${cat} ${cat.includes('Core') ? '🔥' : ''}
+                        <span class="toggle">点击折叠</span>
+                    </h3>
+                    <div>
+                        ${grouped[cat].map(item => `
+                            <div class="vocab-item">
+                                <span class="phrase">${'⭐'.repeat(item.star)} ${item.phrase}</span>
+                                <span class="phonetic">${item.phonetic}</span>
+                                <div class="meaning">${item.meaning}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ===== RENDER SENTENCE PATTERNS =====
+        function renderSentences() {
+            const grouped = {};
+            sentencePatterns.forEach(item => {
+                if (!grouped[item.category]) grouped[item.category] = [];
+                grouped[item.category].push(item);
+            });
+
+            const container = document.getElementById('sentenceList');
+            container.innerHTML = Object.keys(grouped).map(cat => `
+                <div class="category">
+                    <h3 onclick="toggleNext(this)">
+                        ${cat}
+                        <span class="badge sentence-badge">句式</span>
+                        <span class="toggle">点击折叠</span>
+                    </h3>
+                    <div>
+                        ${grouped[cat].map(item => `
+                            <div class="sentence-item">
+                                <div class="pattern">${item.pattern}</div>
+                                <div class="meaning">${item.meaning}</div>
+                                <div class="example">💬 ${item.example}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleNext(element) {
+            element.nextElementSibling.classList.toggle('hidden');
+        }
+
+        // ===== TEST LOGIC =====
+        let currentQuestion = 0;
+        let score = 0;
+        let questions = [];
+        let answered = false;
+        let selectedAnswer = null;
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function getTestPool() {
+            const testType = document.querySelector('input[name="testType"]:checked').value;
+            if (testType === 'vocab') return vocabulary.map(v => ({ phrase: v.phrase, meaning: v.meaning, type: 'vocab' }));
+            if (testType === 'sentence') return sentencePatterns.map(s => ({ phrase: s.pattern, meaning: s.meaning, type: 'sentence' }));
+            return [
+                ...vocabulary.map(v => ({ phrase: v.phrase, meaning: v.meaning, type: 'vocab' })),
+                ...sentencePatterns.map(s => ({ phrase: s.pattern, meaning: s.meaning, type: 'sentence' }))
+            ];
+        }
+
+        function startTest() {
+            score = 0;
+            currentQuestion = 0;
+            answered = false;
+            selectedAnswer = null;
+
+            const pool = getTestPool();
+            const count = Math.min(20, pool.length);
+            questions = shuffle([...pool]).slice(0, count);
+
+            document.getElementById('score').textContent = '0';
+            document.getElementById('total').textContent = questions.length;
+            document.getElementById('submitBtn').classList.remove('hidden');
+            document.getElementById('nextBtn').classList.add('hidden');
+            document.getElementById('feedback').textContent = '';
+            document.getElementById('feedback').className = 'feedback';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            if (currentQuestion >= questions.length) {
+                showResult();
+                return;
+            }
+
+            const q = questions[currentQuestion];
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            const isChoice = mode === 'choice';
+            const typeLabel = q.type === 'sentence' ? '【句式】' : '【词汇】';
+
+            document.getElementById('questionType').textContent = `Question ${currentQuestion + 1} of ${questions.length} ${typeLabel}`;
+            document.getElementById('questionText').textContent = q.meaning;
+            document.getElementById('feedback').textContent = '';
+            document.getElementById('feedback').className = 'feedback';
+            document.getElementById('progressBar').style.width = `${(currentQuestion / questions.length) * 100}%`;
+
+            if (isChoice) {
+                document.getElementById('optionsContainer').classList.remove('hidden');
+                document.getElementById('inputAnswer').classList.add('hidden');
+
+                const pool = getTestPool();
+                const wrongOptions = shuffle(pool.filter(v => v.phrase !== q.phrase)).slice(0, 3);
+                const options = shuffle([q, ...wrongOptions]);
+
+                document.getElementById('optionsContainer').innerHTML = options.map(opt => `
+                    <div class="option" onclick="selectOption(this, '${opt.phrase.replace(/'/g, "\\'")}')">${opt.phrase}</div>
+                `).join('');
+            } else {
+                document.getElementById('optionsContainer').classList.add('hidden');
+                document.getElementById('inputAnswer').classList.remove('hidden');
+                document.getElementById('inputAnswer').value = '';
+                document.getElementById('inputAnswer').focus();
+            }
+
+            answered = false;
+            document.getElementById('submitBtn').disabled = false;
+            document.getElementById('submitBtn').classList.remove('hidden');
+            document.getElementById('nextBtn').classList.add('hidden');
+        }
+
+        function selectOption(element, answer) {
+            if (answered) return;
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedAnswer = answer;
+        }
+
+        function normalize(str) {
+            return str.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim().replace(/\s+/g, ' ');
+        }
+
+        function checkAnswer() {
+            if (answered) return;
+
+            const q = questions[currentQuestion];
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            let userAnswer;
+
+            if (mode === 'choice') {
+                if (!selectedAnswer) {
+                    document.getElementById('feedback').textContent = 'Please select an answer.';
+                    return;
+                }
+                userAnswer = selectedAnswer;
+            } else {
+                userAnswer = document.getElementById('inputAnswer').value;
+            }
+
+            const isCorrect = normalize(userAnswer) === normalize(q.phrase);
+            const feedback = document.getElementById('feedback');
+
+            if (isCorrect) {
+                score++;
+                feedback.textContent = '✅ Correct!';
+                feedback.className = 'feedback correct';
+            } else {
+                feedback.textContent = `❌ Wrong. The answer is: ${q.phrase}`;
+                feedback.className = 'feedback wrong';
+            }
+
+            document.getElementById('score').textContent = score;
+            answered = true;
+            document.getElementById('submitBtn').classList.add('hidden');
+            document.getElementById('nextBtn').classList.remove('hidden');
+
+            if (mode === 'choice') {
+                document.querySelectorAll('.option').forEach(opt => {
+                    opt.style.pointerEvents = 'none';
+                    if (opt.textContent === q.phrase) opt.classList.add('correct');
+                    else if (opt.classList.contains('selected')) opt.classList.add('wrong');
+                });
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            selectedAnswer = null;
+            showQuestion();
+        }
+
+        function showResult() {
+            document.getElementById('questionType').textContent = 'Test Complete!';
+            document.getElementById('questionText').textContent = `Your score: ${score} / ${questions.length}`;
+            document.getElementById('optionsContainer').innerHTML = '';
+            document.getElementById('inputAnswer').classList.add('hidden');
+            document.getElementById('submitBtn').classList.add('hidden');
+            document.getElementById('nextBtn').classList.add('hidden');
+            document.getElementById('progressBar').style.width = '100%';
+        }
+
+        function showSection(id) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(id).classList.add('active');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !document.getElementById('inputAnswer').classList.contains('hidden')) {
+                if (!answered) checkAnswer();
+                else nextQuestion();
+            }
+        });
+
+        renderVocab();
+        renderSentences();
+        startTest();
+    </script>
+</body>
+</html>

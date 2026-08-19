@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Class 4 词汇测试</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 15px;
+        }
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin: 18px 0;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+        }
+        .question p {
+            margin: 0 0 10px 0;
+            font-weight: 500;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+        .options label {
+            display: block;
+            padding: 8px;
+            margin: 5px 0;
+            background: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .options label:hover {
+            background: #e8f0fe;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        button:hover {
+            background: #357abd;
+        }
+        .result {
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .correct { background: #d4edda; color: #155724; }
+        .wrong { background: #f8d7da; color: #721c24; }
+        .answer-reveal {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .score-box {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎧 Listening Class 4 词汇测试</h1>
+    <p style="text-align: center; color: #666;">材料：Joining the Leisure Club + New Staff at Theatre</p>
+
+    <!-- 第一部分：中英互译 -->
+    <div class="section">
+        <h2>Part 1: 根据中文写出英文单词/短语</h2>
+
+        <div class="question" data-answer="on behalf of">
+            <p>1. 代表</p>
+            <input type="text" placeholder="请输入英文" data-key="q1">
+        </div>
+
+        <div class="question" data-answer="run through">
+            <p>2. 快速过一遍、概述</p>
+            <input type="text" placeholder="请输入英文" data-key="q2">
+        </div>
+
+        <div class="question" data-answer="expand">
+            <p>3. 扩建、扩展（动词）</p>
+            <input type="text" placeholder="请输入英文" data-key="q3">
+        </div>
+
+        <div class="question" data-answer="retractable">
+            <p>4. 可伸缩的</p>
+            <input type="text" placeholder="请输入英文" data-key="q4">
+        </div>
+
+        <div class="question" data-answer="refurbished">
+            <p>5. 翻新的、重新装修的</p>
+            <input type="text" placeholder="请输入英文" data-key="q5">
+        </div>
+
+        <div class="question" data-answer="cater for">
+            <p>6. 满足……的需求；照顾到</p>
+            <input type="text" placeholder="请输入英文" data-key="q6">
+        </div>
+
+        <div class="question" data-answer="tuition">
+            <p>7. 教学、培训课</p>
+            <input type="text" placeholder="请输入英文" data-key="q7">
+        </div>
+
+        <div class="question" data-answer="questionnaire">
+            <p>8. 问卷</p>
+            <input type="text" placeholder="请输入英文" data-key="q8">
+        </div>
+
+        <div class="question" data-answer="entitle">
+            <p>9. 使某人有权享受（动词）</p>
+            <input type="text" placeholder="请输入英文" data-key="q9">
+        </div>
+
+        <div class="question" data-answer="commitment">
+            <p>10. 承诺；工作安排</p>
+            <input type="text" placeholder="请输入英文" data-key="q10">
+        </div>
+
+        <div class="question" data-answer="refurbishment">
+            <p>11. 翻新、整修（名词）</p>
+            <input type="text" placeholder="请输入英文" data-key="q11">
+        </div>
+
+        <div class="question" data-answer="postpone">
+            <p>12. 推迟、延期</p>
+            <input type="text" placeholder="请输入英文" data-key="q12">
+        </div>
+
+        <div class="question" data-answer="legroom">
+            <p>13. 腿部空间</p>
+            <input type="text" placeholder="请输入英文" data-key="q13">
+        </div>
+
+        <div class="question" data-answer="backstage">
+            <p>14. 后台的</p>
+            <input type="text" placeholder="请输入英文" data-key="q14">
+        </div>
+
+        <div class="question" data-answer="amateur">
+            <p>15. 业余的</p>
+            <input type="text" placeholder="请输入英文" data-key="q15">
+        </div>
+
+        <div class="question" data-answer="workshop">
+            <p>16. 工作坊、研讨会</p>
+            <input type="text" placeholder="请输入英文" data-key="q16">
+        </div>
+
+        <div class="question" data-answer="specialise in">
+            <p>17. 专门从事、专营</p>
+            <input type="text" placeholder="请输入英文" data-key="q17">
+        </div>
+
+        <div class="question" data-answer="in due course">
+            <p>18. 在适当的时候</p>
+            <input type="text" placeholder="请输入英文" data-key="q18">
+        </div>
+
+        <div class="question" data-answer="happen to">
+            <p>19. 碰巧</p>
+            <input type="text" placeholder="请输入英文" data-key="q19">
+        </div>
+
+        <div class="question" data-answer="production">
+            <p>20. 演出、制作</p>
+            <input type="text" placeholder="请输入英文" data-key="q20">
+        </div>
+    </div>
+
+    <!-- 第二部分：选择题 -->
+    <div class="section">
+        <h2>Part 2: 选择正确释义</h2>
+
+        <div class="question" data-answer="B">
+            <p>21. "a couple of" 在文中是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="A"> A. 一对夫妻</label>
+                <label><input type="radio" name="q21" value="B"> B. 几个、两三个</label>
+                <label><input type="radio" name="q21" value="C"> C. 一对杯子</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="C">
+            <p>22. "on duty" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q22" value="A"> A. 下班</label>
+                <label><input type="radio" name="q22" value="B"> B. 休息</label>
+                <label><input type="radio" name="q22" value="C"> C. 值班、在岗</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="A">
+            <p>23. "draw up a plan" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q23" value="A"> A. 起草、制定计划</label>
+                <label><input type="radio" name="q23" value="B"> B. 放弃计划</label>
+                <label><input type="radio" name="q23" value="C"> C. 画一幅计划图</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="B">
+            <p>24. "running over budget" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q24" value="A"> A. 跑步超过预算</label>
+                <label><input type="radio" name="q24" value="B"> B. 超出预算</label>
+                <label><input type="radio" name="q24" value="C"> C. 按照预算运行</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="C">
+            <p>25. "in due course" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q25" value="A"> A. 由于课程</label>
+                <label><input type="radio" name="q25" value="B"> B. 在课程中</label>
+                <label><input type="radio" name="q25" value="C"> C. 在适当的时候</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="A">
+            <p>26. "happen to have" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q26" value="A"> A. 碰巧有</label>
+                <label><input type="radio" name="q26" value="B"> B. 发生有</label>
+                <label><input type="radio" name="q26" value="C"> C. 必须拥有</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="B">
+            <p>27. "peak times" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q27" value="A"> A. 休息时间</label>
+                <label><input type="radio" name="q27" value="B"> B. 高峰时段</label>
+                <label><input type="radio" name="q27" value="C"> C. 安静时间</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="C">
+            <p>28. "legroom" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q28" value="A"> A. 腿部力量</label>
+                <label><input type="radio" name="q28" value="B"> B. 腿部房间</label>
+                <label><input type="radio" name="q28" value="C"> C. 腿部空间</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="A">
+            <p>29. "reciprocal arrangements" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q29" value="A"> A. 互惠安排</label>
+                <label><input type="radio" name="q29" value="B"> B. 单方面决定</label>
+                <label><input type="radio" name="q29" value="C"> C. 临时协议</label>
+            </div>
+        </div>
+
+        <div class="question" data-answer="B">
+            <p>30. "cater for" 是什么意思？</p>
+            <div class="options">
+                <label><input type="radio" name="q30" value="A"> A. 为……做饭</label>
+                <label><input type="radio" name="q30" value="B"> B. 满足……的需求</label>
+                <label><input type="radio" name="q30" value="C"> C. 照顾病人</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第三部分：填空题 -->
+    <div class="section">
+        <h2>Part 3: 根据句意填空</h2>
+
+        <div class="question" data-answer="facilities">
+            <p>31. Before we start our tour, I'll run through some basic information about the _______ we have here.</p>
+            <input type="text" placeholder="请输入单词" data-key="q31">
+        </div>
+
+        <div class="question" data-answer="membership">
+            <p>32. I'll quickly run through the types of _______ we have available.</p>
+            <input type="text" placeholder="请输入单词" data-key="q32">
+        </div>
+
+        <div class="question" data-answer="expanded">
+            <p>33. But now we've _______ it to eight lanes, it's much wider.</p>
+            <input type="text" placeholder="请输入单词" data-key="q33">
+        </div>
+
+        <div class="question" data-answer="retractable">
+            <p>34. The glass roof on the swimming pool is partly _______, which means you can enjoy something of the open-air experience.</p>
+            <input type="text" placeholder="请输入单词" data-key="q34">
+        </div>
+
+        <div class="question" data-answer="refurbished">
+            <p>35. Our recently _______ fitness suite has all the latest exercise equipment.</p>
+            <input type="text" placeholder="请输入单词" data-key="q35">
+        </div>
+
+        <div class="question" data-answer="tuition">
+            <p>36. Older children continue to benefit from a wide range of _______; anything from trampolining to yoga.</p>
+            <input type="text" placeholder="请输入单词" data-key="q36">
+        </div>
+
+        <div class="question" data-answer="questionnaire">
+            <p>37. You are asked to fill in a _______ giving details of any health problems.</p>
+            <input type="text" placeholder="请输入单词" data-key="q37">
+        </div>
+
+        <div class="question" data-answer="injuries">
+            <p>38. It's very important to do this because we really do want to avoid having any sports _______.</p>
+            <input type="text" placeholder="请输入单词" data-key="q38">
+        </div>
+
+        <div class="question" data-answer="entitles">
+            <p>39. Gold membership _______ you to free entry at all LP Clubs.</p>
+            <input type="text" placeholder="请输入单词" data-key="q39">
+        </div>
+
+        <div class="question" data-answer="commitments">
+            <p>40. Premier membership is for professional people whose work _______ make it difficult for them to use the club during the day.</p>
+            <input type="text" placeholder="请输入单词" data-key="q40">
+        </div>
+
+        <div class="question" data-answer="modernised">
+            <p>41. It's an old building, and it's been _______ several times.</p>
+            <input type="text" placeholder="请输入单词" data-key="q41">
+        </div>
+
+        <div class="question" data-answer="postpone">
+            <p>42. The work's running over budget, so we've had to _______ installing an elevator.</p>
+            <input type="text" placeholder="请输入单词" data-key="q42">
+        </div>
+
+        <div class="question" data-answer="legroom">
+            <p>43. We've replaced them with larger seats, with more _______.</p>
+            <input type="text" placeholder="请输入单词" data-key="q43">
+        </div>
+
+        <div class="question" data-answer="storerooms">
+            <p>44. We've also turned a few _______ over to other purposes, like using them for meetings.</p>
+            <input type="text" placeholder="请输入单词" data-key="q44">
+        </div>
+
+        <div class="question" data-answer="involve">
+            <p>45. We try hard to _______ members of the public in the theatre.</p>
+            <input type="text" placeholder="请输入单词" data-key="q45">
+        </div>
+
+        <div class="question" data-answer="operates">
+            <p>46. People can be shown round the building and learn how a theatre _______.</p>
+            <input type="text" placeholder="请输入单词" data-key="q46">
+        </div>
+
+        <div class="question" data-answer="specialises">
+            <p>47. We have a bookshop, which _______ in books about drama.</p>
+            <input type="text" placeholder="请输入单词" data-key="q47">
+        </div>
+
+        <div class="question" data-answer="amateur">
+            <p>48. We're also considering hiring out costumes to _______ drama clubs.</p>
+            <input type="text" placeholder="请输入单词" data-key="q48">
+        </div>
+
+        <div class="question" data-answer="intend">
+            <p>49. Eventually we _______ to run courses in acting.</p>
+            <input type="text" placeholder="请输入单词" data-key="q49">
+        </div>
+
+        <div class="question" data-answer="production">
+            <p>50. There's a big demand to learn about the technical side of putting on a _______.</p>
+            <input type="text" placeholder="请输入单词" data-key="q50">
+        </div>
+    </div>
+
+    <button onclick="checkAnswers()">提交答案</button>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function normalizeAnswer(str) {
+            return str.toLowerCase().trim().replace(/\s+/g, ' ');
+        }
+
+        function checkAnswers() {
+            let correct = 0;
+            let total = 0;
+            let wrongList = [];
+
+            // 检查填空题
+            document.querySelectorAll('.question').forEach(q => {
+                const answer = q.getAttribute('data-answer');
+                if (!answer) return;
+
+                let userAnswer = '';
+                const input = q.querySelector('input[type="text"]');
+                const radios = q.querySelectorAll('input[type="radio"]');
+
+                if (input) {
+                    userAnswer = input.value;
+                } else if (radios.length > 0) {
+                    const checked = q.querySelector('input[type="radio"]:checked');
+                    if (checked) userAnswer = checked.value;
+                }
+
+                total++;
+                const normalizedUser = normalizeAnswer(userAnswer);
+                const normalizedAnswer = normalizeAnswer(answer);
+
+                // 清除之前的结果样式
+                q.classList.remove('correct', 'wrong');
+                const existingReveal = q.querySelector('.answer-reveal');
+                if (existingReveal) existingReveal.remove();
+
+                if (normalizedUser === normalizedAnswer) {
+                    correct++;
+                    q.classList.add('correct');
+                } else {
+                    q.classList.add('wrong');
+                    const reveal = document.createElement('div');
+                    reveal.className = 'answer-reveal';
+                    reveal.textContent = '正确答案：' + answer;
+                    q.appendChild(reveal);
+                }
+            });
+
+            const resultDiv = document.getElementById('result');
+            const percentage = Math.round((correct / total) * 100);
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div class="score-box">${correct} / ${total}（${percentage}%）</div>
+                <p>${percentage >= 80 ? ' excellent! 掌握得很好！' : percentage >= 60 ? ' 还不错，继续复习错题。' : ' 需要加强复习，建议再听一遍材料。'}</p>
+            `;
+            resultDiv.className = 'result ' + (percentage >= 60 ? 'correct' : 'wrong');
+
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+</html>

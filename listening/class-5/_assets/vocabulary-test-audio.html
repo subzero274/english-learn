@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Class 5 语音词汇学习 & 测试</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 10px;
+            line-height: 1.5;
+            background: #f0f0f0;
+            font-size: 14px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 8px;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .intro {
+            background: #e8f0fe;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 8px 0;
+            text-align: center;
+            font-size: 13px;
+        }
+        .mode-switch {
+            display: flex;
+            gap: 10px;
+            margin: 12px 0;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .mode-btn {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .mode-btn.active {
+            background: #4a90e2;
+            color: white;
+            border-color: #4a90e2;
+        }
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Import section */
+        .import-section {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+        .import-section h3 {
+            font-size: 14px;
+            color: #f57c00;
+            margin-bottom: 8px;
+        }
+        .import-section textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        .import-section .hint {
+            font-size: 12px;
+            color: #888;
+            margin-top: 6px;
+        }
+        .import-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .import-actions button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background: #f57c00;
+            color: white;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .import-actions button:hover { background: #e65100; }
+        .import-actions button.secondary {
+            background: #4a90e2;
+        }
+        .import-actions button.secondary:hover { background: #357abd; }
+
+        /* Test mode styles */
+        .word-item {
+            display: grid;
+            grid-template-columns: 28px 36px 1fr 1fr;
+            gap: 8px;
+            align-items: center;
+            padding: 6px 8px;
+            margin: 4px 0;
+            background: #fafafa;
+            border-radius: 5px;
+            border-left: 3px solid #4a90e2;
+        }
+        .word-item .number {
+            font-weight: bold;
+            color: #4a90e2;
+            font-size: 14px;
+            text-align: center;
+        }
+        .play-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            background: #4a90e2;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        .play-btn:hover { background: #357abd; }
+        .play-btn:disabled { background: #ccc; }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            height: 30px;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .input-label {
+            font-size: 10px;
+            color: #888;
+            line-height: 1.2;
+        }
+
+        /* Learn mode styles */
+        .learn-card {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 8px 0;
+            border-left: 4px solid #4a90e2;
+        }
+        .learn-card .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .learn-card .card-number {
+            font-weight: bold;
+            color: #4a90e2;
+            font-size: 16px;
+            min-width: 28px;
+        }
+        .learn-card .card-word {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .learn-card .card-phonetic {
+            font-size: 13px;
+            color: #888;
+            font-family: "Arial Unicode MS", "Lucida Sans Unicode", sans-serif;
+            margin: 4px 0;
+            padding: 3px 10px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .learn-card .card-meaning {
+            font-size: 14px;
+            color: #666;
+            margin: 6px 0;
+            padding: 6px 10px;
+            background: #e8f0fe;
+            border-radius: 5px;
+        }
+        .learn-card .card-example {
+            font-size: 13px;
+            color: #555;
+            margin-top: 8px;
+            padding: 8px 10px;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #28a745;
+        }
+        .learn-card .card-example-label {
+            font-size: 11px;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .learn-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        .learn-controls button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background: #4a90e2;
+            color: white;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .learn-controls button:hover { background: #357abd; }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #4a90e2;
+            transition: width 0.3s;
+        }
+
+        button.submit {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 12px 0;
+        }
+        button.submit:hover { background: #357abd; }
+        .result {
+            display: none;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 12px;
+            text-align: center;
+        }
+        .correct { background: #d4edda; color: #155724; }
+        .wrong { background: #f8d7da; color: #721c24; }
+        .word-item.correct-item { border-left-color: #28a745; background: #d4edda; }
+        .word-item.wrong-item { border-left-color: #dc3545; background: #f8d7da; }
+        .answer-reveal {
+            grid-column: 1 / -1;
+            color: #555;
+            font-size: 12px;
+            margin-top: 2px;
+            padding: 4px 6px;
+            background: white;
+            border-radius: 3px;
+            line-height: 1.5;
+        }
+        .score-box {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .progress {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin: 8px 0;
+        }
+        .hidden { display: none !important; }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        .error-msg {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            body { padding: 6px; }
+            .word-item {
+                grid-template-columns: 24px 32px 1fr 1fr;
+                gap: 5px;
+                padding: 5px;
+            }
+            .play-btn { width: 28px; height: 28px; font-size: 12px; }
+            input[type="text"] { height: 26px; font-size: 12px; }
+            .learn-card .card-word { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎧 Listening Class 5 语音词汇学习 & 测试</h1>
+
+    <div class="intro">
+        材料：Rocky Bay field trip（生物学实地考察）· 共 <span id="totalCount">0</span> 词
+        <br><small>已自动从 <code>vocabulary.md</code> 导入词汇</small>
+    </div>
+
+    <div class="mode-switch">
+        <button class="mode-btn active" onclick="switchMode('learn')" id="learnModeBtn">📖 学习模式</button>
+        <button class="mode-btn" onclick="switchMode('test')" id="testModeBtn">✏️ 测试模式</button>
+        <button class="mode-btn" onclick="switchMode('spot')" id="spotModeBtn">🎯 抽检模式</button>
+        <button class="mode-btn" onclick="switchMode('import')" id="importModeBtn">📥 导入词汇</button>
+    </div>
+
+    <!-- 学习模式 -->
+    <div id="learnMode" class="section">
+        <div class="learn-controls">
+            <button onclick="playAll()">▶️ 顺序播放全部</button>
+            <button onclick="stopPlayAll()">⏹ 停止播放</button>
+            <button onclick="toggleExampleVisibility()">👁 显示/隐藏例句</button>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <div id="learnList"></div>
+    </div>
+
+    <!-- 测试模式 -->
+    <div id="testMode" class="section hidden">
+        <div class="progress" id="testProgress">已答：0 / 0</div>
+        <div id="wordList"></div>
+
+        <button class="submit" onclick="checkAnswers()">提交答案</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <!-- 抽检模式 -->
+    <div id="spotMode" class="section hidden">
+        <div class="learn-controls">
+            <button onclick="generateSpotCheck()">🎲 重新抽检</button>
+            <button onclick="playSpotAll()">▶️ 顺序播放</button>
+            <button onclick="stopSpotPlay()">⏹ 停止</button>
+        </div>
+        <div class="progress" id="spotInfo">本次抽检 0 题 · 已答：0 / 0</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="spotProgressFill" style="width: 0%"></div>
+        </div>
+        <div id="spotWordList"></div>
+
+        <button class="submit" onclick="checkSpotAnswers()">提交抽检答案</button>
+
+        <div id="spotResult" class="result"></div>
+    </div>
+
+    <!-- 导入模式 -->
+    <div id="importMode" class="section hidden">
+        <div class="import-section">
+            <h3>📥 从 Markdown 导入词汇</h3>
+            <p class="hint">支持本页 <code>vocabulary.md</code> 中的表格格式。可粘贴任意包含「单词/短语、音标、含义、文中例句」列的 Markdown 表格。</p>
+            <textarea id="importText" placeholder="在此粘贴 Markdown 词汇表..."></textarea>
+            <div class="import-actions">
+                <button onclick="importFromText()">导入粘贴内容</button>
+                <button class="secondary" onclick="reloadFromFile()">重新加载 vocabulary.md</button>
+                <button class="secondary" onclick="resetToFallback()">恢复默认词汇</button>
+            </div>
+            <p class="hint">提示：若自动加载失败（如通过 file:// 协议打开），可手动复制 vocabulary.md 内容粘贴到上方导入。</p>
+        </div>
+        <div id="importResult"></div>
+    </div>
+
+    <script>
+        // 默认词汇（vocabulary.md 的兜底副本）
+        const FALLBACK_WORDS = [
+            { word: 'field trip', phonetic: '/fiːld trɪp/', pos: 'n.', meaning: '实地考察；野外旅行', example: 'Biology Field Trip to Rocky Bay' },
+            { word: 'aim', phonetic: '/eɪm/', pos: 'n.', meaning: '目的；目标', example: "Let's look at the aims of the trip first." },
+            { word: 'procedure', phonetic: '/prəˈsiːdʒə/', pos: 'n.', meaning: '程序；步骤；方法', example: 'different sorts of procedures used on a field trip' },
+            { word: 'organism', phonetic: '/ˈɔːɡənɪzəm/', pos: 'n.', meaning: '生物；有机体', example: 'what causes different organisms to choose particular habitats' },
+            { word: 'habitat', phonetic: '/ˈhæbɪtæt/', pos: 'n.', meaning: '栖息地；生存环境', example: 'particular habitats' },
+            { word: 'in danger of dying out', phonetic: '/ɪn ˈdeɪndʒər əv ˈdaɪɪŋ aʊt/', pos: '短语', meaning: '濒临灭绝', example: 'organisms in danger of dying out' },
+            { word: 'equipment', phonetic: '/ɪˈkwɪpmənt/', pos: 'n.', meaning: '设备；器材', example: 'the list of equipment we all had to bring' },
+            { word: 'draft', phonetic: '/drɑːft/', pos: 'n./v.', meaning: '草稿；起草', example: 'I sent you the draft of that.' },
+            { word: 'method of investigation', phonetic: '/ˈmeθəd əv ɪnˌvestɪˈɡeɪʃn/', pos: 'n.', meaning: '调查方法', example: 'describe our method of investigation in detail' },
+            { word: 'findings', phonetic: '/ˈfaɪndɪŋz/', pos: 'n.', meaning: '研究结果；发现', example: 'when we get to our findings' },
+            { word: 'sample', phonetic: '/ˈsɑːmpl/', pos: 'n.', meaning: '样本；样品', example: 'the size of the sample' },
+            { word: 'conclusion', phonetic: '/kənˈkluːʒn/', pos: 'n.', meaning: '结论', example: 'make any general conclusions from' },
+            { word: 'reliable', phonetic: '/rɪˈlaɪəbl/', pos: 'adj.', meaning: '可靠的', example: 'our general method of observation seemed quite reliable' },
+            { word: 'accurate', phonetic: '/ˈækjərət/', pos: 'adj.', meaning: '准确的', example: 'we might not be all that accurate' },
+            { word: 'adequate', phonetic: '/ˈædɪkwət/', pos: 'adj.', meaning: '足够的；适当的', example: 'they were adequate in this context' },
+            { word: 'context', phonetic: '/ˈkɒntekst/', pos: 'n.', meaning: '背景；语境', example: 'in this context' },
+            { word: 'species', phonetic: '/ˈspiːʃiːz/', pos: 'n.', meaning: '物种', example: 'we identified all the species correctly' },
+            { word: 'sources of possible error', phonetic: '/ˈsɔːsɪz əv ˈpɒsəbl ˈerə/', pos: 'n.', meaning: '可能的误差来源', example: 'the section of sources of possible error' },
+            { word: 'observation', phonetic: '/ˌɒbzəˈveɪʃn/', pos: 'n.', meaning: '观察', example: 'our general method of observation' },
+            { word: 'description', phonetic: '/dɪˈskrɪpʃn/', pos: 'n.', meaning: '描述', example: 'the descriptions we gave of the smaller organisms' },
+            { word: 'identify', phonetic: '/aɪˈdentɪfaɪ/', pos: 'v.', meaning: '识别；鉴定', example: 'we identified all the species correctly' },
+            { word: 'shellfish', phonetic: '/ˈʃelfɪʃ/', pos: 'n.', meaning: '贝类；有壳水生动物', example: 'tiny shellfish that have strong hard shells' },
+            { word: 'predator', phonetic: '/ˈpredətə/', pos: 'n.', meaning: '捕食者；天敌', example: 'other organisms that might eat them, predators' },
+            { word: 'protection', phonetic: '/prəˈtekʃn/', pos: 'n.', meaning: '保护', example: 'shells that act as protection' },
+            { word: 'dry out', phonetic: '/draɪ aʊt/', pos: 'v.', meaning: '变干；干枯', example: 'prevent them from drying out' },
+            { word: 'exposed', phonetic: '/ɪkˈspəʊzd/', pos: 'adj.', meaning: '暴露的；无遮蔽的', example: "since they're exposed" },
+            { word: 'shelter', phonetic: '/ˈʃeltə/', pos: 'n.', meaning: '庇护所；遮蔽处', example: 'they need to be able to find some sort of shelter' },
+            { word: 'cover up', phonetic: '/ˈkʌvə ʌp/', pos: 'v.', meaning: '遮盖；掩盖', example: 'cover themselves up' },
+            { word: 'wave action', phonetic: '/weɪv ˈækʃn/', pos: 'n.', meaning: '波浪作用；海浪冲击', example: 'discuss the effects of wave action' },
+            { word: 'structure', phonetic: '/ˈstrʌktʃə/', pos: 'n.', meaning: '结构', example: 'how organisms develop structures' },
+            { word: 'sweep away', phonetic: '/swiːp əˈweɪ/', pos: 'v.', meaning: '冲走；扫除', example: 'prevent themselves from being swept away' },
+            { word: 'smash against', phonetic: '/ˈsmæʃ əˈɡenst/', pos: 'v.', meaning: '撞击；猛撞', example: 'smashed against the rocks' },
+            { word: 'geological', phonetic: '/ˌdʒiːəˈlɒdʒɪkl/', pos: 'adj.', meaning: '地质的', example: 'the geological changes' },
+            { word: 'zone', phonetic: '/zəʊn/', pos: 'n.', meaning: '区域；地带', example: 'divide them up into the different zones' },
+            { word: 'splash zone', phonetic: '/ˈsplæʃ zəʊn/', pos: 'n.', meaning: '溅浪带；浪花区', example: 'the highest area ... the splash zone' },
+            { word: 'shore', phonetic: '/ʃɔː/', pos: 'n.', meaning: '海岸；岸边', example: 'the slope of the shore' },
+            { word: 'seashore', phonetic: '/ˈsiːʃɔː/', pos: 'n.', meaning: '海滨；海边', example: 'the map of the seashore' },
+            { word: 'beach', phonetic: '/biːtʃ/', pos: 'n.', meaning: '海滩', example: 'down on the beach' },
+            { word: 'tide', phonetic: '/taɪd/', pos: 'n.', meaning: '潮汐', example: 'while the tide was low' },
+            { word: 'rock pool', phonetic: '/ˈrɒk puːl/', pos: 'n.', meaning: '潮池；岩石池', example: 'In the water from the rock pools?' },
+            { word: 'wave speed', phonetic: '/weɪv spiːd/', pos: 'n.', meaning: '波速', example: 'how we measured wave speed' },
+            { word: 'wind direction', phonetic: '/wɪnd dɪˈrekʃn/', pos: 'n.', meaning: '风向', example: 'measuring wind direction' },
+            { word: 'slope', phonetic: '/sləʊp/', pos: 'n.', meaning: '斜坡；坡度', example: 'measuring the slope of the shore' },
+            { word: 'visibility', phonetic: '/ˌvɪzəˈbɪləti/', pos: 'n.', meaning: '可见度；视野', example: 'get better visibility' },
+            { word: 'scale', phonetic: '/skeɪl/', pos: 'n.', meaning: '比例；刻度', example: 'drawing it all to scale' },
+            { word: 'ruler', phonetic: '/ˈruːlə/', pos: 'n.', meaning: '尺子', example: 'What did they tell us to bring a ruler for?' },
+            { word: 'compass', phonetic: '/ˈkʌmpəs/', pos: 'n.', meaning: '指南针；罗盘', example: "we'd brought the compass" },
+            { word: 'string', phonetic: '/strɪŋ/', pos: 'n.', meaning: '绳子；线', example: 'the piece of string to hold up in the air' },
+            { word: 'high-tech device', phonetic: '/haɪ tek dɪˈvaɪs/', pos: 'n.', meaning: '高科技设备', example: 'some sort of high-tech device' },
+            { word: 'chemical', phonetic: '/ˈkemɪkl/', pos: 'n.', meaning: '化学品', example: 'the chemicals we used in the lab' },
+            { word: 'potassium chromate', phonetic: '/pəˈtæsiəm ˈkrəʊmeɪt/', pos: 'n.', meaning: '铬酸钾', example: 'potassium chromate and silver nitrate' },
+            { word: 'silver nitrate', phonetic: '/ˈsɪlvə ˈnaɪtreɪt/', pos: 'n.', meaning: '硝酸银', example: 'potassium chromate and silver nitrate' },
+            { word: 'squared paper', phonetic: '/skweəd ˈpeɪpə/', pos: 'n.', meaning: '方格纸', example: "I'd got the squared paper" },
+            { word: 'scan', phonetic: '/skæn/', pos: 'v.', meaning: '扫描', example: 'scan it into our report' },
+            { word: 'make a fuss about', phonetic: '/meɪk ə fʌs əˈbaʊt/', pos: '', meaning: '对……大惊小怪；抱怨', example: "Didn't Mr Blake make a fuss about us leaving that behind?" },
+            { word: 'go on', phonetic: '/ɡəʊ ɒn/', pos: '', meaning: '唠叨；继续说', example: 'He does go on.' },
+            { word: 'straightforward', phonetic: '/ˌstreɪtˈfɔːrwəd/', pos: '', meaning: '简单的；直接的', example: 'I was surprised how straightforward that was.' },
+            { word: 'count', phonetic: '/kaʊnt/', pos: '', meaning: '数；计数', example: 'count the number of waves per minute' },
+            { word: 'precise', phonetic: '/prɪˈsaɪs/', pos: '', meaning: '精确的', example: 'Not very precise' },
+            { word: 'analyse', phonetic: '/ˈænəlaɪz/', pos: '', meaning: '分析', example: 'when we analysed those samples' },
+            { word: 'start all over again', phonetic: '/stɑːt ɔːl ˈəʊvər əˈɡen/', pos: '', meaning: '重新开始', example: 'I had to start all over again' },
+            { word: 'make amendments', phonetic: '/meɪk əˈmendmənts/', pos: '', meaning: '修改；修订', example: "I'll make my amendments using those" },
+            { word: 'divide up', phonetic: '/dɪˈvaɪd ʌp/', pos: '', meaning: '分配；划分', example: 'divide them up into the different zones' },
+            { word: 'face', phonetic: '/feɪs/', pos: '', meaning: '面对', example: 'the problems organisms face in each zone' },
+            { word: 'prevent ... from', phonetic: '/prɪˈvent frɒm/', pos: '', meaning: '阻止……做某事', example: 'prevent them from drying out' },
+            { word: 'concentrate on', phonetic: '/ˈkɒnsntreɪt ɒn/', pos: '', meaning: '专注于', example: "we weren't concentrating on that" },
+            { word: 'Reading List', phonetic: '/ˈriːdɪŋ lɪst/', pos: '', meaning: '阅读书单', example: 'books on our Reading List' }
+        ];
+
+        const YOUDAO_AUDIO_URL = 'https://dict.youdao.com/dictvoice';
+        const EXCLUDED_WORDS = [
+            'in danger of dying out',
+            'method of investigation',
+            'sources of possible error',
+            'make a fuss about',
+            'start all over again',
+            'make amendments',
+            'prevent ... from',
+            'concentrate on'
+        ];
+        const SPOT_CHECK_COUNT = 10;
+
+        let words = [];
+        let currentMode = 'learn';
+        let playAllInterval = null;
+        let spotPlayInterval = null;
+        let examplesHidden = false;
+        let spotCheckWords = [];
+
+        function getAudioUrl(word) {
+            return `${YOUDAO_AUDIO_URL}?audio=${encodeURIComponent(word)}&type=2`;
+        }
+
+        // Markdown 表格解析
+        function parseMarkdownVocabulary(mdText) {
+            const lines = mdText.split(/\r?\n/);
+            const result = [];
+            let i = 0;
+
+            while (i < lines.length) {
+                const line = lines[i].trim();
+
+                // 识别表格起始行：以 | 开头和结尾
+                if (line.startsWith('|') && line.endsWith('|')) {
+                    const headerCells = splitTableRow(line);
+
+                    // 检查下一行是否为分隔符
+                    if (i + 1 < lines.length && /^\|[-:\|\s]+\|$/.test(lines[i + 1].trim())) {
+                        const headers = headerCells.map(h => h.replace(/\*/g, '').trim());
+
+                        // 确定列索引
+                        const wordIdx = headers.findIndex(h => h.includes('单词') || h.includes('短语'));
+                        const phoneticIdx = headers.findIndex(h => h.includes('音标'));
+                        const meaningIdx = headers.findIndex(h => h.includes('含义'));
+                        const exampleIdx = headers.findIndex(h => h.includes('例句'));
+
+                        if (wordIdx !== -1 && meaningIdx !== -1) {
+                            i += 2; // 跳过表头和分隔符
+
+                            // 读取表格行直到结束
+                            while (i < lines.length) {
+                                const rowLine = lines[i].trim();
+                                if (!rowLine.startsWith('|') || !rowLine.endsWith('|')) break;
+                                const cells = splitTableRow(rowLine);
+                                if (cells.length < Math.max(wordIdx, phoneticIdx, meaningIdx, exampleIdx) + 1) {
+                                    i++;
+                                    continue;
+                                }
+
+                                const rawWord = cells[wordIdx] || '';
+                                const word = rawWord.replace(/\*\*/g, '').trim();
+                                if (!word) {
+                                    i++;
+                                    continue;
+                                }
+
+                                const phonetic = phoneticIdx >= 0 ? (cells[phoneticIdx] || '').trim() : '';
+                                const meaning = (cells[meaningIdx] || '').trim();
+                                const example = exampleIdx >= 0 ? (cells[exampleIdx] || '').trim() : '';
+
+                                if (meaning) {
+                                    result.push({ word, phonetic, meaning, example });
+                                }
+                                i++;
+                            }
+                            continue;
+                        }
+                    }
+
+                    // 不是目标表格：跳过所有连续表格行
+                    i++;
+                    while (i < lines.length) {
+                        const nextLine = lines[i].trim();
+                        if (!nextLine.startsWith('|') || !nextLine.endsWith('|')) break;
+                        i++;
+                    }
+                    continue;
+                }
+                i++;
+            }
+
+            return result;
+        }
+
+        function splitTableRow(row) {
+            // 去掉首尾的 |
+            const content = row.slice(1, -1);
+            return content.split('|').map(cell => cell.trim());
+        }
+
+        function setWords(newWords) {
+            words = newWords;
+            document.getElementById('totalCount').textContent = words.length;
+            renderLearnList();
+            if (currentMode === 'test') {
+                renderTestList();
+            } else if (currentMode === 'spot') {
+                generateSpotCheck();
+            }
+        }
+
+        async function loadFromFile() {
+            try {
+                const response = await fetch('vocabulary.md');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const mdText = await response.text();
+                const parsed = parseMarkdownVocabulary(mdText);
+                if (parsed.length === 0) {
+                    throw new Error('未从 vocabulary.md 解析出词汇');
+                }
+                setWords(parsed);
+            } catch (error) {
+                console.warn('自动加载 vocabulary.md 失败：', error);
+                setWords([...FALLBACK_WORDS]);
+                showImportResult(`自动加载 vocabulary.md 失败（${error.message}），已使用默认词汇。可通过「导入词汇」模式手动粘贴。`, true);
+            }
+        }
+
+        function reloadFromFile() {
+            loadFromFile();
+            showImportResult('已重新加载 vocabulary.md', false);
+        }
+
+        function resetToFallback() {
+            setWords([...FALLBACK_WORDS]);
+            showImportResult('已恢复默认词汇', false);
+        }
+
+        function importFromText() {
+            const text = document.getElementById('importText').value.trim();
+            if (!text) {
+                showImportResult('请先粘贴 Markdown 内容', true);
+                return;
+            }
+            const parsed = parseMarkdownVocabulary(text);
+            if (parsed.length === 0) {
+                showImportResult('未解析到词汇，请检查表格格式是否包含「单词/短语」和「含义」列', true);
+                return;
+            }
+            setWords(parsed);
+            showImportResult(`成功导入 ${parsed.length} 个词汇`, false);
+        }
+
+        function showImportResult(message, isError) {
+            const resultDiv = document.getElementById('importResult');
+            resultDiv.innerHTML = `<div class="${isError ? 'error-msg' : 'correct'}" style="text-align:center;">${message}</div>`;
+        }
+
+        function switchMode(mode) {
+            currentMode = mode;
+            document.getElementById('learnModeBtn').classList.toggle('active', mode === 'learn');
+            document.getElementById('testModeBtn').classList.toggle('active', mode === 'test');
+            document.getElementById('spotModeBtn').classList.toggle('active', mode === 'spot');
+            document.getElementById('importModeBtn').classList.toggle('active', mode === 'import');
+            document.getElementById('learnMode').classList.toggle('hidden', mode !== 'learn');
+            document.getElementById('testMode').classList.toggle('hidden', mode !== 'test');
+            document.getElementById('spotMode').classList.toggle('hidden', mode !== 'spot');
+            document.getElementById('importMode').classList.toggle('hidden', mode !== 'import');
+            stopPlayAll();
+            stopSpotPlay();
+            if (mode === 'test') {
+                renderTestList();
+            } else if (mode === 'spot') {
+                generateSpotCheck();
+            }
+        }
+
+        function renderLearnList() {
+            const container = document.getElementById('learnList');
+            if (words.length === 0) {
+                container.innerHTML = '<div class="loading">正在加载词汇...</div>';
+                return;
+            }
+            container.innerHTML = words.map((item, index) => `
+                <div class="learn-card" data-index="${index}">
+                    <div class="card-header">
+                        <span class="card-number">${index + 1}</span>
+                        <button class="play-btn" onclick="playAudio(${index})" title="播放">🔊</button>
+                        <span class="card-word">${item.word}</span>
+                    </div>
+                    <div class="card-phonetic">${item.phonetic || ''}</div>
+                    <div class="card-meaning">${item.meaning}</div>
+                    <div class="card-example ${examplesHidden ? 'hidden' : ''}">
+                        <div class="card-example-label">例句</div>
+                        ${item.example}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderTestList() {
+            const container = document.getElementById('wordList');
+            if (words.length === 0) {
+                container.innerHTML = '<div class="loading">正在加载词汇...</div>';
+                document.getElementById('testProgress').textContent = '已答：0 / 0';
+                return;
+            }
+            container.innerHTML = words.map((item, index) => `
+                <div class="word-item" data-index="${index}">
+                    <div class="number">${index + 1}</div>
+                    <button class="play-btn" onclick="playAudio(${index})" title="播放">🔊</button>
+                    <div class="input-group">
+                        <div class="input-label">英文</div>
+                        <input type="text" placeholder="英文" data-type="word" data-index="${index}" oninput="updateProgress()">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">中文</div>
+                        <input type="text" placeholder="中文意思" data-type="meaning" data-index="${index}" oninput="updateProgress()">
+                    </div>
+                </div>
+            `).join('');
+            updateProgress();
+        }
+
+        function playAudio(index) {
+            const word = words[index].word;
+            const audio = new Audio(getAudioUrl(word));
+            audio.play().catch(e => {
+                console.error('Audio play error:', e);
+            });
+        }
+
+        function playAll() {
+            stopPlayAll();
+            let index = 0;
+            const playNext = () => {
+                if (index >= words.length) {
+                    document.getElementById('progressFill').style.width = '100%';
+                    return;
+                }
+                playAudio(index);
+                document.getElementById('progressFill').style.width = `${((index + 1) / words.length) * 100}%`;
+                index++;
+                playAllInterval = setTimeout(playNext, 3000);
+            };
+            playNext();
+        }
+
+        function stopPlayAll() {
+            if (playAllInterval) {
+                clearTimeout(playAllInterval);
+                playAllInterval = null;
+            }
+            document.getElementById('progressFill').style.width = '0%';
+        }
+
+        function stopSpotPlay() {
+            if (spotPlayInterval) {
+                clearTimeout(spotPlayInterval);
+                spotPlayInterval = null;
+            }
+            document.getElementById('spotProgressFill').style.width = '0%';
+        }
+
+        function toggleExampleVisibility() {
+            examplesHidden = !examplesHidden;
+            document.querySelectorAll('.card-example').forEach(el => {
+                el.classList.toggle('hidden', examplesHidden);
+            });
+        }
+
+        function updateProgress() {
+            const total = words.length * 2;
+            let count = 0;
+            document.querySelectorAll('#wordList input[type="text"]').forEach(input => {
+                if (input.value.trim()) count++;
+            });
+            document.getElementById('testProgress').textContent = `已答：${count} / ${total}`;
+        }
+
+        function normalize(str) {
+            return str.toLowerCase().trim().replace(/\s+/g, ' ');
+        }
+
+        function isMeaningCorrect(user, answer) {
+            const userNorm = user.replace(/[，。！？]/g, '').trim();
+            const answerNorm = answer.replace(/[，。！？]/g, '').trim();
+            const keywords = answerNorm.split(/[；;]/).map(s => s.trim()).filter(s => s);
+            return keywords.some(keyword => userNorm.includes(keyword)) ||
+                   answerNorm.includes(userNorm);
+        }
+
+        function getAvailableWords() {
+            return words.filter(w => !EXCLUDED_WORDS.includes(w.word));
+        }
+
+        function generateSpotCheck() {
+            const available = getAvailableWords();
+            const shuffled = [...available].sort(() => Math.random() - 0.5);
+            spotCheckWords = shuffled.slice(0, SPOT_CHECK_COUNT);
+            renderSpotCheckList();
+            document.getElementById('spotResult').style.display = 'none';
+        }
+
+        function renderSpotCheckList() {
+            document.getElementById('spotInfo').textContent = `本次抽检 ${spotCheckWords.length} 题 · 已答：0 / ${spotCheckWords.length * 2}`;
+            const container = document.getElementById('spotWordList');
+            container.innerHTML = spotCheckWords.map((item, index) => `
+                <div class="word-item" data-spot-index="${index}">
+                    <div class="number">${index + 1}</div>
+                    <button class="play-btn" onclick="playAudio(${words.indexOf(item)})" title="播放">🔊</button>
+                    <div class="input-group">
+                        <div class="input-label">英文</div>
+                        <input type="text" placeholder="英文" data-type="word" data-index="${index}" oninput="updateSpotProgress()">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">中文</div>
+                        <input type="text" placeholder="中文意思" data-type="meaning" data-index="${index}" oninput="updateSpotProgress()">
+                    </div>
+                </div>
+            `).join('');
+            updateSpotProgress();
+        }
+
+        function updateSpotProgress() {
+            const total = spotCheckWords.length * 2;
+            let count = 0;
+            document.querySelectorAll('#spotWordList input[type="text"]').forEach(input => {
+                if (input.value.trim()) count++;
+            });
+            document.getElementById('spotInfo').textContent = `本次抽检 ${spotCheckWords.length} 题 · 已答：${count} / ${total}`;
+        }
+
+        function playSpotAll() {
+            stopSpotPlay();
+            let index = 0;
+            const playNext = () => {
+                if (index >= spotCheckWords.length) {
+                    document.getElementById('spotProgressFill').style.width = '100%';
+                    return;
+                }
+                playAudio(words.indexOf(spotCheckWords[index]));
+                document.getElementById('spotProgressFill').style.width = `${((index + 1) / spotCheckWords.length) * 100}%`;
+                index++;
+                spotPlayInterval = setTimeout(playNext, 3000);
+            };
+            playNext();
+        }
+
+        function checkSpotAnswers() {
+            let wordCorrect = 0;
+            let meaningCorrect = 0;
+            let total = spotCheckWords.length;
+            let fullyCorrect = 0;
+
+            document.querySelectorAll('#spotWordList .word-item').forEach(item => {
+                const index = parseInt(item.getAttribute('data-spot-index'), 10);
+                const correctWord = spotCheckWords[index].word;
+                const correctMeaning = spotCheckWords[index].meaning;
+                const wordInput = item.querySelector('input[data-type="word"]');
+                const meaningInput = item.querySelector('input[data-type="meaning"]');
+                const userWord = normalize(wordInput.value);
+                const userMeaning = meaningInput.value.trim();
+
+                const isWordCorrect = userWord === normalize(correctWord);
+                const isMeaningCorrectResult = isMeaningCorrect(userMeaning, correctMeaning);
+
+                if (isWordCorrect) wordCorrect++;
+                if (isMeaningCorrectResult) meaningCorrect++;
+                if (isWordCorrect && isMeaningCorrectResult) fullyCorrect++;
+
+                item.classList.remove('correct-item', 'wrong-item');
+                const existingReveal = item.querySelector('.answer-reveal');
+                if (existingReveal) existingReveal.remove();
+
+                if (isWordCorrect && isMeaningCorrectResult) {
+                    item.classList.add('correct-item');
+                } else {
+                    item.classList.add('wrong-item');
+                    const reveal = document.createElement('div');
+                    reveal.className = 'answer-reveal';
+                    reveal.innerHTML = `正确答案：<strong>${correctWord}</strong> — ${correctMeaning}`;
+                    item.appendChild(reveal);
+                }
+            });
+
+            const wordPercentage = Math.round((wordCorrect / total) * 100);
+            const meaningPercentage = Math.round((meaningCorrect / total) * 100);
+            const totalPercentage = Math.round((fullyCorrect / total) * 100);
+
+            const resultDiv = document.getElementById('spotResult');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div class="score-box">${fullyCorrect} / ${total}</div>
+                <p>英文拼写：${wordCorrect}/${total}（${wordPercentage}%）</p>
+                <p>中文意思：${meaningCorrect}/${total}（${meaningPercentage}%）</p>
+                <p>完全正确：${totalPercentage}%</p>
+                <p>${totalPercentage >= 80 ? '🎉 抽检通过！' : totalPercentage >= 60 ? '👍 还可以，再抽一批试试。' : '💪 这批掌握不牢，先去学习模式复习。'}</p>
+            `;
+            resultDiv.className = 'result ' + (totalPercentage >= 60 ? 'correct' : 'wrong');
+
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function checkAnswers() {
+            let wordCorrect = 0;
+            let meaningCorrect = 0;
+            let total = words.length;
+            let fullyCorrect = 0;
+
+            document.querySelectorAll('#testMode .word-item').forEach(item => {
+                const index = parseInt(item.getAttribute('data-index'), 10);
+                const correctWord = words[index].word;
+                const correctMeaning = words[index].meaning;
+                const wordInput = item.querySelector('input[data-type="word"]');
+                const meaningInput = item.querySelector('input[data-type="meaning"]');
+                const userWord = normalize(wordInput.value);
+                const userMeaning = meaningInput.value.trim();
+
+                const isWordCorrect = userWord === normalize(correctWord);
+                const isMeaningCorrectResult = isMeaningCorrect(userMeaning, correctMeaning);
+
+                if (isWordCorrect) wordCorrect++;
+                if (isMeaningCorrectResult) meaningCorrect++;
+                if (isWordCorrect && isMeaningCorrectResult) fullyCorrect++;
+
+                item.classList.remove('correct-item', 'wrong-item');
+                const existingReveal = item.querySelector('.answer-reveal');
+                if (existingReveal) existingReveal.remove();
+
+                if (isWordCorrect && isMeaningCorrectResult) {
+                    item.classList.add('correct-item');
+                } else {
+                    item.classList.add('wrong-item');
+                    const reveal = document.createElement('div');
+                    reveal.className = 'answer-reveal';
+                    reveal.innerHTML = `正确答案：<strong>${correctWord}</strong> — ${correctMeaning}`;
+                    item.appendChild(reveal);
+                }
+            });
+
+            const wordPercentage = Math.round((wordCorrect / total) * 100);
+            const meaningPercentage = Math.round((meaningCorrect / total) * 100);
+            const totalPercentage = Math.round((fullyCorrect / total) * 100);
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div class="score-box">${fullyCorrect} / ${total}</div>
+                <p>英文拼写：${wordCorrect}/${total}（${wordPercentage}%）</p>
+                <p>中文意思：${meaningCorrect}/${total}（${meaningPercentage}%）</p>
+                <p>完全正确：${totalPercentage}%</p>
+                <p>${totalPercentage >= 80 ? '🎉 太棒了！掌握得很扎实！' : totalPercentage >= 60 ? '👍 还不错，重点复习标红的单词。' : '💪 需要加强，建议在学习模式下再听一遍。'}</p>
+            `;
+            resultDiv.className = 'result ' + (totalPercentage >= 60 ? 'correct' : 'wrong');
+
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        // Initialize
+        loadFromFile();
+    </script>
+</body>
+</html>

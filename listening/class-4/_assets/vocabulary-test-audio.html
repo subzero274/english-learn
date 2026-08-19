@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Class 4 语音词汇学习 & 测试</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 10px;
+            line-height: 1.5;
+            background: #f0f0f0;
+            font-size: 14px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 8px;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .intro {
+            background: #e8f0fe;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 8px 0;
+            text-align: center;
+            font-size: 13px;
+        }
+        .mode-switch {
+            display: flex;
+            gap: 10px;
+            margin: 12px 0;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .mode-btn {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .mode-btn.active {
+            background: #4a90e2;
+            color: white;
+            border-color: #4a90e2;
+        }
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Test mode styles */
+        .word-item {
+            display: grid;
+            grid-template-columns: 28px 36px 1fr 1fr;
+            gap: 8px;
+            align-items: center;
+            padding: 6px 8px;
+            margin: 4px 0;
+            background: #fafafa;
+            border-radius: 5px;
+            border-left: 3px solid #4a90e2;
+        }
+        .word-item .number {
+            font-weight: bold;
+            color: #4a90e2;
+            font-size: 14px;
+            text-align: center;
+        }
+        .play-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            background: #4a90e2;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        .play-btn:hover { background: #357abd; }
+        .play-btn:disabled { background: #ccc; }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            height: 30px;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .input-label {
+            font-size: 10px;
+            color: #888;
+            line-height: 1.2;
+        }
+
+        /* Learn mode styles */
+        .learn-card {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 8px 0;
+            border-left: 4px solid #4a90e2;
+        }
+        .learn-card .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .learn-card .card-number {
+            font-weight: bold;
+            color: #4a90e2;
+            font-size: 16px;
+            min-width: 28px;
+        }
+        .learn-card .card-word {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .learn-card .card-phonetic {
+            font-size: 13px;
+            color: #888;
+            font-family: "Arial Unicode MS", "Lucida Sans Unicode", sans-serif;
+            margin: 4px 0;
+            padding: 3px 10px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .learn-card .card-meaning {
+            font-size: 14px;
+            color: #666;
+            margin: 6px 0;
+            padding: 6px 10px;
+            background: #e8f0fe;
+            border-radius: 5px;
+        }
+        .learn-card .card-example {
+            font-size: 13px;
+            color: #555;
+            margin-top: 8px;
+            padding: 8px 10px;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #28a745;
+        }
+        .learn-card .card-example-label {
+            font-size: 11px;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .learn-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        .learn-controls button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background: #4a90e2;
+            color: white;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .learn-controls button:hover { background: #357abd; }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #4a90e2;
+            transition: width 0.3s;
+        }
+
+        button.submit {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 12px 0;
+        }
+        button.submit:hover { background: #357abd; }
+        .result {
+            display: none;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 12px;
+            text-align: center;
+        }
+        .correct { background: #d4edda; color: #155724; }
+        .wrong { background: #f8d7da; color: #721c24; }
+        .word-item.correct-item { border-left-color: #28a745; background: #d4edda; }
+        .word-item.wrong-item { border-left-color: #dc3545; background: #f8d7da; }
+        .answer-reveal {
+            grid-column: 1 / -1;
+            color: #555;
+            font-size: 12px;
+            margin-top: 2px;
+            padding: 4px 6px;
+            background: white;
+            border-radius: 3px;
+            line-height: 1.5;
+        }
+        .score-box {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .progress {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin: 8px 0;
+        }
+        .hidden { display: none !important; }
+        @media (max-width: 600px) {
+            body { padding: 6px; }
+            .word-item {
+                grid-template-columns: 24px 32px 1fr 1fr;
+                gap: 5px;
+                padding: 5px;
+            }
+            .play-btn { width: 28px; height: 28px; font-size: 12px; }
+            input[type="text"] { height: 26px; font-size: 12px; }
+            .learn-card .card-word { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎧 Listening Class 4 语音词汇学习 & 测试</h1>
+
+    <div class="intro">
+        材料：Joining the Leisure Club + New Staff at Theatre · 共 <span id="totalCount">0</span> 词
+    </div>
+
+    <div class="mode-switch">
+        <button class="mode-btn active" onclick="switchMode('learn')" id="learnModeBtn">📖 学习模式</button>
+        <button class="mode-btn" onclick="switchMode('test')" id="testModeBtn">✏️ 测试模式</button>
+        <button class="mode-btn" onclick="switchMode('spot')" id="spotModeBtn">🎯 抽检模式</button>
+    </div>
+
+    <!-- 学习模式 -->
+    <div id="learnMode" class="section">
+        <div class="learn-controls">
+            <button onclick="playAll()">▶️ 顺序播放全部</button>
+            <button onclick="stopPlayAll()">⏹ 停止播放</button>
+            <button onclick="toggleExampleVisibility()">👁 显示/隐藏例句</button>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <div id="learnList"></div>
+    </div>
+
+    <!-- 测试模式 -->
+    <div id="testMode" class="section hidden">
+        <div class="progress" id="testProgress">已答：0 / 0</div>
+        <div id="wordList"></div>
+
+        <button class="submit" onclick="checkAnswers()">提交答案</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <!-- 抽检模式 -->
+    <div id="spotMode" class="section hidden">
+        <div class="learn-controls">
+            <button onclick="generateSpotCheck()">🎲 重新抽检</button>
+            <button onclick="playSpotAll()">▶️ 顺序播放</button>
+            <button onclick="stopSpotPlay()">⏹ 停止</button>
+        </div>
+        <div class="progress" id="spotInfo">本次抽检 0 题 · 已答：0 / 0</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="spotProgressFill" style="width: 0%"></div>
+        </div>
+        <div id="spotWordList"></div>
+
+        <button class="submit" onclick="checkSpotAnswers()">提交抽检答案</button>
+
+        <div id="spotResult" class="result"></div>
+    </div>
+
+    <script>
+        const words = [
+            { word: 'on behalf of', phonetic: '/ɒn bɪˈhɑːf əv/', meaning: '代表', example: "On behalf of LP Clubs, I'd like to welcome you all here today." },
+            { word: 'run through', phonetic: '/rʌn θruː/', meaning: '快速过一遍；概述', example: "Before we start our tour of the club I'll just run through some basic information." },
+            { word: 'on duty', phonetic: '/ɒn ˈdjuːti/', meaning: '值班；在岗', example: "There is always a trainer on duty to offer help and advice." },
+            { word: 'cater for', phonetic: '/ˈkeɪtə fɔː/', meaning: '满足……的需求；照顾到', example: "Although we do have adult-only times, children are well catered for." },
+            { word: 'a couple of', phonetic: '/ə ˈkʌpl əv/', meaning: '几个；两三个', example: "There are rarely more than a couple of people at a time in each lane." },
+            { word: 'go through', phonetic: '/ɡəʊ θruː/', meaning: '仔细检查；逐条讲解', example: "One of our personal trainers will then go through this with you." },
+            { word: 'take through', phonetic: '/teɪk θruː/', meaning: '带……了解/学习', example: "The trainer will then take you through the safety rules for using the equipment." },
+            { word: 'draw up', phonetic: '/drɔː ʌp/', meaning: '起草；制定', example: "The trainer will draw up a plan, outlining what you should try to achieve." },
+            { word: 'entitle to', phonetic: '/ɪnˈtaɪtl tuː/', meaning: '使……有权享受', example: "Gold membership entitles you to free entry at all LP Clubs." },
+            { word: 'in addition to', phonetic: '/ɪn əˈdɪʃn tuː/', meaning: '除……之外', example: "All members must pay a joining fee of 90 in addition to the monthly membership fees." },
+            { word: 'booking preferences', phonetic: '/ˈbʊkɪŋ ˈprefrənsɪz/', meaning: '预订优先权', example: "LP gives booking preferences to Premier members at peak times." },
+            { word: 'peak times', phonetic: '/piːk taɪmz/', meaning: '高峰时段', example: "LP gives booking preferences to Premier members at peak times." },
+            { word: 'reciprocal arrangements', phonetic: '/rɪˈsɪprəkl əˈreɪndʒmənts/', meaning: '互惠安排', example: "Reciprocal arrangements with other LP Clubs are available to Premier members." },
+            { word: 'suit you', phonetic: '/suːt juː/', meaning: '适合你', example: "This means you will find it easier to book the sessions at times that suit you." },
+            { word: 'fitness manager', phonetic: '/ˈfɪtnəs ˈmænɪdʒə/', meaning: '健身经理', example: "My name's Sandy Fisher and I'm one of the fitness managers here." },
+            { word: 'facilities', phonetic: '/fəˈsɪlətiz/', meaning: '设施；设备', example: "I'll run through some basic information about the facilities we have here." },
+            { word: 'membership', phonetic: '/ˈmembəʃɪp/', meaning: '会员资格；会员身份', example: "I'll explain the types of membership available." },
+            { word: 'asset', phonetic: '/ˈæset/', meaning: '资产；优势', example: "Our greatest asset is probably our swimming pool." },
+            { word: 'expand', phonetic: '/ɪkˈspænd/', meaning: '扩建；扩展', example: "But now we've expanded it to eight lanes, it's much wider." },
+            { word: 'lane', phonetic: '/leɪn/', meaning: '泳道', example: "There are rarely more than a couple of people at a time in each lane." },
+            { word: 'retractable', phonetic: '/rɪˈtræktəbl/', meaning: '可伸缩的', example: "The glass roof on the swimming pool is partly retractable." },
+            { word: 'open-air', phonetic: '/ˈəʊpən eə/', meaning: '露天的', example: "You can enjoy something of the open-air experience on warmer days." },
+            { word: 'refurbished', phonetic: '/ˌriːˈfɜːbɪʃt/', meaning: '翻新的；重新装修的', example: "Our recently refurbished fitness suite has all the latest exercise equipment." },
+            { word: 'fitness suite', phonetic: '/ˈfɪtnəs swiːt/', meaning: '健身区', example: "Our recently refurbished fitness suite has all the latest exercise equipment." },
+            { word: 'exercise equipment', phonetic: '/ˈeksəsaɪz ɪˈkwɪpmənt/', meaning: '健身器材', example: "Our fitness suite has all the latest exercise equipment." },
+            { word: 'running machines', phonetic: '/ˈrʌnɪŋ məˈʃiːnz/', meaning: '跑步机', example: "The fitness suite includes ten new running machines." },
+            { word: 'weight-training', phonetic: '/ˈweɪt ˈtreɪnɪŋ/', meaning: '力量训练', example: "There is a wide range of weight-training machines." },
+            { word: 'full training', phonetic: '/fʊl ˈtreɪnɪŋ/', meaning: '完整培训', example: "Each member is given full training in how to operate the equipment." },
+            { word: 'adult-only times', phonetic: '/ˈædʌlt ˈəʊnli taɪmz/', meaning: '仅限成人的时段', example: "We do have adult-only times after 6 and at certain times at weekends." },
+            { word: 'certain', phonetic: '/ˈsɜːtn/', meaning: '特定的；某些的', example: "Adult-only times are available after 6 and at certain times at weekends." },
+            { word: 'a wide range', phonetic: '/ə waɪd reɪndʒ/', meaning: '广泛的种类', example: "Older children benefit from a wide range of tuition." },
+            { word: 'tuition', phonetic: '/tjuˈɪʃn/', meaning: '教学；培训课', example: "Older children continue to benefit from a wide range of tuition." },
+            { word: 'trampolining', phonetic: '/ˌtræmpəˈliːnɪŋ/', meaning: '蹦床运动', example: "Tuition includes anything from trampolining to yoga." },
+            { word: 'yoga', phonetic: '/ˈjəʊɡə/', meaning: '瑜伽', example: "Tuition includes anything from trampolining to yoga." },
+            { word: 'assessment', phonetic: '/əˈsesmənt/', meaning: '评估', example: "This starts on day one with your personal assessment." },
+            { word: 'questionnaire', phonetic: '/ˌkwestʃəˈneə/', meaning: '问卷', example: "You are asked to fill in a questionnaire giving details of any health problems." },
+            { word: 'personal trainer', phonetic: '/ˈpɜːsənl ˈtreɪnə/', meaning: '私人教练', example: "One of our personal trainers will then go through this with you." },
+            { word: 'safety rules', phonetic: '/ˈseɪfti ruːlz/', meaning: '安全规则', example: "The trainer will take you through the safety rules for using the equipment." },
+            { word: 'session', phonetic: '/ˈseʃn/', meaning: '一次训练/会议', example: "During your next exercise session a personal trainer will work with you." },
+            { word: 'injury', phonetic: '/ˈɪndʒəri/', meaning: '受伤', example: "We really do want to avoid having any sports injuries." },
+            { word: 'lift weights', phonetic: '/lɪft weɪts/', meaning: '举重', example: "There's a lot more to looking after yourself than simply lifting weights." },
+            { word: 'outline', phonetic: '/ˈaʊtlaɪn/', meaning: '概述', example: "The trainer will draw up a plan, outlining what you should try to achieve." },
+            { word: 'achieve', phonetic: '/əˈtʃiːv/', meaning: '达到；实现', example: "The plan outlines what you should try to achieve within a six-week period." },
+            { word: 'review', phonetic: '/rɪˈvjuː/', meaning: '回顾；复查', example: "This will then be reviewed at the end of the six weeks." },
+            { word: 'joining fee', phonetic: '/ˈdʒɔɪnɪŋ fiː/', meaning: '入会费', example: "All members must pay a joining fee of 90." },
+            { word: 'monthly fee', phonetic: '/ˈmʌnθli fiː/', meaning: '月费', example: "All members pay the rates for the monthly membership fees." },
+            { word: 'joint membership', phonetic: '/dʒɔɪnt ˈmembəʃɪp/', meaning: '双人会员', example: "Joint membership for you and your partner will cost 75." },
+            { word: 'partner', phonetic: '/ˈpɑːtnə/', meaning: '伴侣；搭档', example: "Joint membership for you and your partner will cost 75." },
+            { word: 'professional', phonetic: '/prəˈfeʃənl/', meaning: '职业的；专业的', example: "Premier membership is for professional people whose work commitments make it difficult to use the club during the day." },
+            { word: 'commitment', phonetic: '/kəˈmɪtmənt/', meaning: '承诺；工作安排', example: "Premier membership is for people whose work commitments make it difficult to use the club during the day." },
+            { word: 'guest', phonetic: '/ɡest/', meaning: '客人', example: "Premier members will be sent passes for guests every month." },
+            { word: 'robe', phonetic: '/rəʊb/', meaning: '浴袍', example: "We provide robes and hairdryers in the changing rooms." },
+            { word: 'hairdryer', phonetic: '/ˈheədraɪə/', meaning: '吹风机', example: "We provide robes and hairdryers in the changing rooms." },
+            { word: 'changing room', phonetic: '/ˈtʃeɪndʒɪŋ ruːm/', meaning: '更衣室', example: "We provide robes and hairdryers in the changing rooms." },
+            { word: 'photo card', phonetic: '/ˈfəʊtəʊ kɑːd/', meaning: '照片卡', example: "It's very important to remember your photo card because you won't be able to get in without it." },
+            { word: 'look after', phonetic: '/lʊk ˈɑːftə/', meaning: '照顾；负责', example: "I'll be looking after both of you for the first month you're working here." },
+            { word: 'carry out', phonetic: '/ˈkæri aʊt/', meaning: '实施；进行', example: "We're carrying out a major refurbishment at the moment." },
+            { word: 'run over budget', phonetic: '/rʌn ˈəʊvə ˈbʌdʒɪt/', meaning: '超出预算', example: "The work's running over budget, so we've had to postpone installing an elevator." },
+            { word: 'take the opportunity', phonetic: '/teɪk ði ˌɒpəˈtjuːnəti/', meaning: '抓住机会', example: "We've taken the opportunity to install seats that can easily be moved." },
+            { word: 'turn over to', phonetic: '/tɜːn ˈəʊvə tuː/', meaning: '把……改作他用', example: "We've turned a few storerooms over to other purposes, like using them for meetings." },
+            { word: 'show round', phonetic: '/ʃəʊ raʊnd/', meaning: '带……参观', example: "People can be shown round the building and learn how a theatre operates." },
+            { word: 'in due course', phonetic: '/ɪn djuː kɔːs/', meaning: '在适当的时候', example: "We're looking into the possibility of opening a cafe in due course." },
+            { word: 'specialise in', phonetic: '/ˈspeʃəlaɪz ɪn/', meaning: '专门从事；专营', example: "We have a bookshop, which specialises in books about drama." },
+            { word: 'available for hire', phonetic: '/əˈveɪləbl fɔː ˈhaɪə/', meaning: '可供租用', example: "There are two large rooms that will be available for hire for conferences." },
+            { word: 'hire out', phonetic: '/ˈhaɪə aʊt/', meaning: '出租', example: "We're considering hiring out costumes to amateur drama clubs." },
+            { word: 'intend to', phonetic: '/ɪnˈtend tuː/', meaning: '打算；意欲', example: "Eventually we intend to run courses in acting." },
+            { word: 'in place', phonetic: '/ɪn pleɪs/', meaning: '到位', example: "We're waiting until we've got the right people in place as trainers." },
+            { word: 'put on a production', phonetic: '/pʊt ɒn ə prəˈdʌkʃn/', meaning: '上演一出戏', example: "There's a big demand to learn about the technical side of putting on a production." },
+            { word: 'happen to', phonetic: '/ˈhæpən tuː/', meaning: '碰巧', example: "We happen to have someone working here who does it as a hobby." },
+            { word: 'offer to', phonetic: '/ˈɒfə tuː/', meaning: '主动提出做', example: "She offered to run a workshop." },
+            { word: 'modernise', phonetic: '/ˈmɒdənaɪz/', meaning: '使现代化', example: "It's an old building, and it's been modernised several times." },
+            { word: 'refurbishment', phonetic: '/rɪˈfɜːbɪʃmənt/', meaning: '翻新；整修', example: "We're carrying out a major refurbishment at the moment." },
+            { word: 'interior', phonetic: '/ɪnˈtɪəriə/', meaning: '内部；室内的', example: "The interior has just been repainted." },
+            { word: 'exterior', phonetic: '/ɪkˈstɪəriə/', meaning: '外部；室外的', example: "We're about to start on the exterior of the building." },
+            { word: 'repaint', phonetic: '/ˌriːˈpeɪnt/', meaning: '重新粉刷', example: "The interior has just been repainted." },
+            { word: 'postpone', phonetic: '/pəˈspəʊn/', meaning: '推迟；延期', example: "We've had to postpone installing an elevator." },
+            { word: 'elevator', phonetic: '/ˈelɪveɪtə/', meaning: '电梯', example: "We've had to postpone installing an elevator." },
+            { word: 'legroom', phonetic: '/ˈleɡruːm/', meaning: '腿部空间', example: "We've replaced them with larger seats, with more legroom." },
+            { word: 'acting spaces', phonetic: '/ˈæktɪŋ ˈspeɪsɪz/', meaning: '表演空间', example: "We've installed seats that can easily be moved to create different acting spaces." },
+            { word: 'storeroom', phonetic: '/ˈstɔːruːm/', meaning: '储藏室', example: "We've turned a few storerooms over to other purposes." },
+            { word: 'involve', phonetic: '/ɪnˈvɒlv/', meaning: '使参与；涉及', example: "We try hard to involve members of the public in the theatre." },
+            { word: 'backstage tours', phonetic: '/ˌbækˈsteɪdʒ tʊəz/', meaning: '后台参观', example: "One way is by organising backstage tours." },
+            { word: 'operate', phonetic: '/ˈɒpəreɪt/', meaning: '运营；操作', example: "People can learn how a theatre operates." },
+            { word: 'function', phonetic: '/ˈfʌŋkʃn/', meaning: '功能；社交聚会', example: "The rooms will be available for hire for conferences and private functions, such as parties." },
+            { word: 'amateur', phonetic: '/ˈæmətə/', meaning: '业余的', example: "We're considering hiring out costumes to amateur drama clubs." },
+            { word: 'costume', phonetic: '/ˈkɒstjuːm/', meaning: '戏服；服装', example: "We're considering hiring out costumes to amateur drama clubs." },
+            { word: 'workshop', phonetic: '/ˈwɜːkʃɒp/', meaning: '工作坊；研讨会', example: "We recently started a programme of workshops that anyone can join." },
+            { word: 'programme', phonetic: '/ˈprəʊɡræm/', meaning: '项目；计划', example: "We recently started a programme of workshops." },
+            { word: 'eventually', phonetic: '/ɪˈventʃuəli/', meaning: '最终', example: "Eventually we intend to run courses in acting." },
+            { word: 'course', phonetic: '/kɔːs/', meaning: '课程', example: "Eventually we intend to run courses in acting." },
+            { word: 'trainer', phonetic: '/ˈtreɪnə/', meaning: '培训师', example: "We're waiting until we've got the right people in place as trainers." },
+            { word: 'prove', phonetic: '/pruːv/', meaning: '证明是；结果是', example: "That's proving more difficult than we'd expected." },
+            { word: 'demand', phonetic: '/dɪˈmɑːnd/', meaning: '需求', example: "There's a big demand to learn about the technical side." },
+            { word: 'technical', phonetic: '/ˈteknɪkl/', meaning: '技术的', example: "There's a big demand to learn about the technical side of putting on a production." },
+            { word: 'production', phonetic: '/prəˈdʌkʃn/', meaning: '演出；制作', example: "There's a big demand to learn about the technical side of putting on a production." },
+            { word: 'lighting', phonetic: '/ˈlaɪtɪŋ/', meaning: '灯光', example: "Our lighting workshop has already started, with great success." },
+            { word: 'sound', phonetic: '/saʊnd/', meaning: '声音', example: "We're going to start one on sound next month." },
+            { word: 'make-up', phonetic: '/ˈmeɪk ʌp/', meaning: '化妆', example: "A number of people have enquired about workshops on make-up." },
+            { word: 'enquire', phonetic: '/ɪnˈkwaɪə/', meaning: '询问；咨询', example: "A number of people have enquired about workshops on make-up." },
+            { word: 'puppet', phonetic: '/ˈpʌpɪt/', meaning: '木偶', example: "A surprise success is the workshop on making puppets." },
+            { word: 'hobby', phonetic: '/ˈhɒbi/', meaning: '爱好', example: "We happen to have someone working here who does it as a hobby." }
+        ];
+
+        const YOUDAO_AUDIO_URL = 'https://dict.youdao.com/dictvoice';
+        const EXCLUDED_WORDS = [
+            'acting spaces',
+            'put on a production',
+            'available for hire',
+            'show round',
+            'adult-only times',
+            'running machines',
+            'booking preferences',
+            'full training'
+        ];
+        const SPOT_CHECK_COUNT = 10;
+        let currentMode = 'learn';
+        let playAllInterval = null;
+        let spotPlayInterval = null;
+        let examplesHidden = false;
+        let spotCheckWords = [];
+
+        function getAudioUrl(word) {
+            return `${YOUDAO_AUDIO_URL}?audio=${encodeURIComponent(word)}&type=2`;
+        }
+
+        function switchMode(mode) {
+            currentMode = mode;
+            document.getElementById('learnModeBtn').classList.toggle('active', mode === 'learn');
+            document.getElementById('testModeBtn').classList.toggle('active', mode === 'test');
+            document.getElementById('spotModeBtn').classList.toggle('active', mode === 'spot');
+            document.getElementById('learnMode').classList.toggle('hidden', mode !== 'learn');
+            document.getElementById('testMode').classList.toggle('hidden', mode !== 'test');
+            document.getElementById('spotMode').classList.toggle('hidden', mode !== 'spot');
+            stopPlayAll();
+            stopSpotPlay();
+            if (mode === 'test') {
+                renderTestList();
+            } else if (mode === 'spot') {
+                generateSpotCheck();
+            }
+        }
+
+        function renderLearnList() {
+            const container = document.getElementById('learnList');
+            container.innerHTML = words.map((item, index) => `
+                <div class="learn-card" data-index="${index}">
+                    <div class="card-header">
+                        <span class="card-number">${index + 1}</span>
+                        <button class="play-btn" onclick="playAudio(${index})" title="播放">🔊</button>
+                        <span class="card-word">${item.word}</span>
+                    </div>
+                    <div class="card-phonetic">${item.phonetic || ''}</div>
+                    <div class="card-meaning">${item.meaning}</div>
+                    <div class="card-example ${examplesHidden ? 'hidden' : ''}">
+                        <div class="card-example-label">例句</div>
+                        ${item.example}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderTestList() {
+            document.getElementById('totalCount').textContent = words.length;
+            const container = document.getElementById('wordList');
+            container.innerHTML = words.map((item, index) => `
+                <div class="word-item" data-index="${index}" data-word="${item.word}" data-meaning="${item.meaning}">
+                    <div class="number">${index + 1}</div>
+                    <button class="play-btn" onclick="playAudio(${index})" title="播放">🔊</button>
+                    <div class="input-group">
+                        <div class="input-label">英文</div>
+                        <input type="text" placeholder="英文" data-type="word" data-index="${index}" oninput="updateProgress()">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">中文</div>
+                        <input type="text" placeholder="中文意思" data-type="meaning" data-index="${index}" oninput="updateProgress()">
+                    </div>
+                </div>
+            `).join('');
+            updateProgress();
+        }
+
+        function playAudio(index) {
+            const word = words[index].word;
+            const audio = new Audio(getAudioUrl(word));
+            audio.play().catch(e => {
+                console.error('Audio play error:', e);
+            });
+        }
+
+        function playAll() {
+            stopPlayAll();
+            let index = 0;
+            const playNext = () => {
+                if (index >= words.length) {
+                    document.getElementById('progressFill').style.width = '100%';
+                    return;
+                }
+                playAudio(index);
+                document.getElementById('progressFill').style.width = `${((index + 1) / words.length) * 100}%`;
+                index++;
+                playAllInterval = setTimeout(playNext, 3000);
+            };
+            playNext();
+        }
+
+        function stopPlayAll() {
+            if (playAllInterval) {
+                clearTimeout(playAllInterval);
+                playAllInterval = null;
+            }
+            document.getElementById('progressFill').style.width = '0%';
+        }
+
+        function stopSpotPlay() {
+            if (spotPlayInterval) {
+                clearTimeout(spotPlayInterval);
+                spotPlayInterval = null;
+            }
+            document.getElementById('spotProgressFill').style.width = '0%';
+        }
+
+        function toggleExampleVisibility() {
+            examplesHidden = !examplesHidden;
+            document.querySelectorAll('.card-example').forEach(el => {
+                el.classList.toggle('hidden', examplesHidden);
+            });
+        }
+
+        function updateProgress() {
+            const total = words.length * 2;
+            const answered = document.querySelectorAll('#wordList input[type="text"]').length;
+            const filled = document.querySelectorAll('#wordList input[type="text"]').length;
+            let count = 0;
+            document.querySelectorAll('#wordList input[type="text"]').forEach(input => {
+                if (input.value.trim()) count++;
+            });
+            document.getElementById('testProgress').textContent = `已答：${count} / ${total}`;
+        }
+
+        function normalize(str) {
+            return str.toLowerCase().trim().replace(/\s+/g, ' ');
+        }
+
+        function isMeaningCorrect(user, answer) {
+            const userNorm = user.replace(/[，。！？]/g, '').trim();
+            const answerNorm = answer.replace(/[，。！？]/g, '').trim();
+            const keywords = answerNorm.split(/[；;]/).map(s => s.trim()).filter(s => s);
+            return keywords.some(keyword => userNorm.includes(keyword)) ||
+                   answerNorm.includes(userNorm);
+        }
+
+
+        function getAvailableWords() {
+            return words.filter(w => !EXCLUDED_WORDS.includes(w.word));
+        }
+
+        function generateSpotCheck() {
+            const available = getAvailableWords();
+            const shuffled = [...available].sort(() => Math.random() - 0.5);
+            spotCheckWords = shuffled.slice(0, SPOT_CHECK_COUNT);
+            renderSpotCheckList();
+            document.getElementById('spotResult').style.display = 'none';
+        }
+
+        function renderSpotCheckList() {
+            document.getElementById('spotInfo').textContent = `本次抽检 ${spotCheckWords.length} 题 · 已答：0 / ${spotCheckWords.length * 2}`;
+            const container = document.getElementById('spotWordList');
+            container.innerHTML = spotCheckWords.map((item, index) => `
+                <div class="word-item" data-spot-index="${index}" data-word="${item.word}" data-meaning="${item.meaning}">
+                    <div class="number">${index + 1}</div>
+                    <button class="play-btn" onclick="playAudio(${words.indexOf(item)})" title="播放">🔊</button>
+                    <div class="input-group">
+                        <div class="input-label">英文</div>
+                        <input type="text" placeholder="英文" data-type="word" data-index="${index}" oninput="updateSpotProgress()">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">中文</div>
+                        <input type="text" placeholder="中文意思" data-type="meaning" data-index="${index}" oninput="updateSpotProgress()">
+                    </div>
+                </div>
+            `).join('');
+            updateSpotProgress();
+        }
+
+        function updateSpotProgress() {
+            const total = spotCheckWords.length * 2;
+            let count = 0;
+            document.querySelectorAll('#spotWordList input[type="text"]').forEach(input => {
+                if (input.value.trim()) count++;
+            });
+            document.getElementById('spotInfo').textContent = `本次抽检 ${spotCheckWords.length} 题 · 已答：${count} / ${total}`;
+        }
+
+        function playSpotAll() {
+            stopSpotPlay();
+            let index = 0;
+            const playNext = () => {
+                if (index >= spotCheckWords.length) {
+                    document.getElementById('spotProgressFill').style.width = '100%';
+                    return;
+                }
+                playAudio(words.indexOf(spotCheckWords[index]));
+                document.getElementById('spotProgressFill').style.width = `${((index + 1) / spotCheckWords.length) * 100}%`;
+                index++;
+                spotPlayInterval = setTimeout(playNext, 3000);
+            };
+            playNext();
+        }
+
+        function checkSpotAnswers() {
+            let wordCorrect = 0;
+            let meaningCorrect = 0;
+            let total = spotCheckWords.length;
+            let fullyCorrect = 0;
+
+            document.querySelectorAll('#spotWordList .word-item').forEach(item => {
+                const correctWord = item.getAttribute('data-word');
+                const correctMeaning = item.getAttribute('data-meaning');
+                const wordInput = item.querySelector('input[data-type="word"]');
+                const meaningInput = item.querySelector('input[data-type="meaning"]');
+                const userWord = normalize(wordInput.value);
+                const userMeaning = meaningInput.value.trim();
+
+                const isWordCorrect = userWord === normalize(correctWord);
+                const isMeaningCorrectResult = isMeaningCorrect(userMeaning, correctMeaning);
+
+                if (isWordCorrect) wordCorrect++;
+                if (isMeaningCorrectResult) meaningCorrect++;
+                if (isWordCorrect && isMeaningCorrectResult) fullyCorrect++;
+
+                item.classList.remove('correct-item', 'wrong-item');
+                const existingReveal = item.querySelector('.answer-reveal');
+                if (existingReveal) existingReveal.remove();
+
+                if (isWordCorrect && isMeaningCorrectResult) {
+                    item.classList.add('correct-item');
+                } else {
+                    item.classList.add('wrong-item');
+                    const reveal = document.createElement('div');
+                    reveal.className = 'answer-reveal';
+                    reveal.innerHTML = `正确答案：<strong>${correctWord}</strong> — ${correctMeaning}`;
+                    item.appendChild(reveal);
+                }
+            });
+
+            const wordPercentage = Math.round((wordCorrect / total) * 100);
+            const meaningPercentage = Math.round((meaningCorrect / total) * 100);
+            const totalPercentage = Math.round((fullyCorrect / total) * 100);
+
+            const resultDiv = document.getElementById('spotResult');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div class="score-box">${fullyCorrect} / ${total}</div>
+                <p>英文拼写：${wordCorrect}/${total}（${wordPercentage}%）</p>
+                <p>中文意思：${meaningCorrect}/${total}（${meaningPercentage}%）</p>
+                <p>完全正确：${totalPercentage}%</p>
+                <p>${totalPercentage >= 80 ? '🎉 抽检通过！' : totalPercentage >= 60 ? '👍 还可以，再抽一批试试。' : '💪 这批掌握不牢，先去学习模式复习。'}</p>
+            `;
+            resultDiv.className = 'result ' + (totalPercentage >= 60 ? 'correct' : 'wrong');
+
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function checkAnswers() {
+            let wordCorrect = 0;
+            let meaningCorrect = 0;
+            let total = words.length;
+            let fullyCorrect = 0;
+
+            document.querySelectorAll('.word-item').forEach(item => {
+                const correctWord = item.getAttribute('data-word');
+                const correctMeaning = item.getAttribute('data-meaning');
+                const wordInput = item.querySelector('input[data-type="word"]');
+                const meaningInput = item.querySelector('input[data-type="meaning"]');
+                const userWord = normalize(wordInput.value);
+                const userMeaning = meaningInput.value.trim();
+
+                const isWordCorrect = userWord === normalize(correctWord);
+                const isMeaningCorrectResult = isMeaningCorrect(userMeaning, correctMeaning);
+
+                if (isWordCorrect) wordCorrect++;
+                if (isMeaningCorrectResult) meaningCorrect++;
+                if (isWordCorrect && isMeaningCorrectResult) fullyCorrect++;
+
+                item.classList.remove('correct-item', 'wrong-item');
+                const existingReveal = item.querySelector('.answer-reveal');
+                if (existingReveal) existingReveal.remove();
+
+                if (isWordCorrect && isMeaningCorrectResult) {
+                    item.classList.add('correct-item');
+                } else {
+                    item.classList.add('wrong-item');
+                    const reveal = document.createElement('div');
+                    reveal.className = 'answer-reveal';
+                    reveal.innerHTML = `正确答案：<strong>${correctWord}</strong> — ${correctMeaning}`;
+                    item.appendChild(reveal);
+                }
+            });
+
+            const wordPercentage = Math.round((wordCorrect / total) * 100);
+            const meaningPercentage = Math.round((meaningCorrect / total) * 100);
+            const totalPercentage = Math.round((fullyCorrect / total) * 100);
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div class="score-box">${fullyCorrect} / ${total}</div>
+                <p>英文拼写：${wordCorrect}/${total}（${wordPercentage}%）</p>
+                <p>中文意思：${meaningCorrect}/${total}（${meaningPercentage}%）</p>
+                <p>完全正确：${totalPercentage}%</p>
+                <p>${totalPercentage >= 80 ? '🎉 太棒了！掌握得很扎实！' : totalPercentage >= 60 ? '👍 还不错，重点复习标红的单词。' : '💪 需要加强，建议在学习模式下再听一遍。'}</p>
+            `;
+            resultDiv.className = 'result ' + (totalPercentage >= 60 ? 'correct' : 'wrong');
+
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        // Initialize
+        document.getElementById('totalCount').textContent = words.length;
+        renderLearnList();
+        renderTestList();
+    </script>
+</body>
+</html>

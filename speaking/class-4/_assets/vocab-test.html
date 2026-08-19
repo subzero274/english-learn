@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Class 4 - Vocabulary Test</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #fff;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-size: 16px;
+        }
+        .tab.active {
+            border-bottom-color: #4CAF50;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .section {
+            display: none;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section.active {
+            display: block;
+        }
+        .category {
+            margin-bottom: 20px;
+        }
+        .category h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .vocab-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-item .phrase {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+        .vocab-item .phonetic {
+            color: #888;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .vocab-item .meaning {
+            color: #666;
+            margin-top: 4px;
+        }
+        .star {
+            color: #ff9800;
+        }
+
+        /* Test styles */
+        .test-container {
+            text-align: center;
+        }
+        .question-card {
+            background: #fafafa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .question-type {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .question {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .option {
+            padding: 15px;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .option:hover {
+            border-color: #4CAF50;
+        }
+        .option.correct {
+            background: #c8e6c9;
+            border-color: #4CAF50;
+        }
+        .option.wrong {
+            background: #ffcdd2;
+            border-color: #f44336;
+        }
+        .input-answer {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .btn {
+            padding: 12px 30px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #45a049;
+        }
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .score {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .feedback {
+            font-size: 16px;
+            margin: 15px 0;
+            min-height: 24px;
+        }
+        .feedback.correct {
+            color: #4CAF50;
+        }
+        .feedback.wrong {
+            color: #f44336;
+        }
+        .mode-select {
+            margin-bottom: 20px;
+        }
+        .mode-select label {
+            margin-right: 15px;
+        }
+        .hidden {
+            display: none;
+        }
+        .result-item {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .result-item.wrong-answer {
+            background: #fff3f3;
+        }
+        .progress {
+            height: 8px;
+            background: #ddd;
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #4CAF50;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Speaking Class 4 Vocabulary</h1>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showSection('vocab')">词汇表</button>
+        <button class="tab" onclick="showSection('test')">测试</button>
+    </div>
+
+    <!-- Vocabulary Section -->
+    <div id="vocab" class="section active">
+        <div id="vocabList"></div>
+    </div>
+
+    <!-- Test Section -->
+    <div id="test" class="section">
+        <div class="mode-select">
+            <label><input type="radio" name="mode" value="choice" checked> 选择题（看中文选英文）</label>
+            <label><input type="radio" name="mode" value="input"> 填空题（看中文写英文）</label>
+        </div>
+        <div class="test-container">
+            <div class="score">Score: <span id="score">0</span> / <span id="total">0</span></div>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+            </div>
+            <div class="question-card">
+                <div class="question-type" id="questionType">Question 1</div>
+                <div class="question" id="questionText"></div>
+                <div id="optionsContainer" class="options"></div>
+                <input type="text" id="inputAnswer" class="input-answer hidden" placeholder="Type the English phrase...">
+                <div class="feedback" id="feedback"></div>
+            </div>
+            <button class="btn" id="submitBtn" onclick="checkAnswer()">Submit</button>
+            <button class="btn hidden" id="nextBtn" onclick="nextQuestion()">Next</button>
+            <button class="btn" onclick="startTest()">Restart Test</button>
+        </div>
+        <div id="resultSummary" class="hidden"></div>
+    </div>
+
+    <script>
+        const vocabulary = [
+            // 核心必背
+            { phrase: "stay in the loop", phonetic: "/steɪ ɪn ðə luːp/", meaning: "跟上时代；了解最新动态", category: "⭐ Core", star: 3 },
+            { phrase: "be blown away", phonetic: "/biː ˈbləʊn əˈweɪ/", meaning: "被……震撼", category: "⭐ Core", star: 3 },
+            { phrase: "be totally hooked from start to finish", phonetic: "/biː ˈtəʊtəli hʊkt frɒm stɑːt tə ˈfɪnɪʃ/", meaning: "从头到尾都着迷", category: "⭐ Core", star: 3 },
+            { phrase: "on the edge of my seat", phonetic: "/ɒn ðiː edʒ ɒv maɪ siːt/", meaning: "内心紧张，全程高能", category: "⭐ Core", star: 3 },
+            { phrase: "completely immersive", phonetic: "/kəmˈpliːtli ɪˈmɜːsɪv/", meaning: "完全沉浸式的", category: "⭐ Core", star: 3 },
+            { phrase: "breathtaking special effects", phonetic: "/ˈbreθteɪkɪŋ ˈspeʃəl ɪˈfekts/", meaning: "令人惊叹的特效", category: "⭐ Core", star: 3 },
+            { phrase: "stunning visuals", phonetic: "/ˈstʌnɪŋ ˈvɪʒuəlz/", meaning: "令人惊叹的视觉效果", category: "⭐ Core", star: 3 },
+            { phrase: "bring the character to life", phonetic: "/brɪŋ ðə ˈkærɪktə tə laɪf/", meaning: "让角色活起来", category: "⭐ Core", star: 3 },
+            { phrase: "mislead the public", phonetic: "/ˌmɪsˈliːd ðə ˈpʌblɪk/", meaning: "误导公众", category: "⭐ Core", star: 3 },
+            { phrase: "give ordinary people a voice", phonetic: "/ɡɪv ˈɔːdnri ˈpiːpl ə vɔɪs/", meaning: "让普通人有发言权", category: "⭐ Core", star: 3 },
+
+            // 新闻与社交媒体
+            { phrase: "scroll through news headlines", phonetic: "/skrəʊl θruː njuːz ˈhedlaɪnz/", meaning: "浏览新闻标题", category: "News & Social Media", star: 2 },
+            { phrase: "scroll on phone", phonetic: "/skrəʊl ɒn fəʊn/", meaning: "刷手机", category: "News & Social Media", star: 2 },
+            { phrase: "get updates", phonetic: "/ɡet ˈʌpdeɪts/", meaning: "获取最新信息", category: "News & Social Media", star: 2 },
+            { phrase: "put me in a bad mood", phonetic: "/pʊt miː ɪn ə bæd muːd/", meaning: "让我心情不好", category: "News & Social Media", star: 2 },
+            { phrase: "overwhelming", phonetic: "/ˌəʊvəˈwelmɪŋ/", meaning: "令人不堪重负的", category: "News & Social Media", star: 2 },
+            { phrase: "pop up online", phonetic: "/pɒp ʌp ˈɒnlaɪn/", meaning: "在网上弹出", category: "News & Social Media", star: 1 },
+            { phrase: "one-sided", phonetic: "/ˌwʌn ˈsaɪdɪd/", meaning: "片面的", category: "News & Social Media", star: 2 },
+            { phrase: "neutral", phonetic: "/ˈnjuːtrəl/", meaning: "中立的", category: "News & Social Media", star: 2 },
+            { phrase: "misinformation", phonetic: "/ˌmɪsɪnfəˈmeɪʃn/", meaning: "错误信息", category: "News & Social Media", star: 2 },
+            { phrase: "major time-waster", phonetic: "/ˈmeɪdʒə ˈtaɪm ˌweɪstə/", meaning: "浪费时间的事", category: "News & Social Media", star: 2 },
+            { phrase: "on the upside", phonetic: "/ɒn ðiː ˈʌpsaɪd/", meaning: "从好的方面看", category: "News & Social Media", star: 2 },
+            { phrase: "mindfully", phonetic: "/ˈmaɪndfəli/", meaning: "谨慎地；有意识地", category: "News & Social Media", star: 1 },
+            { phrase: "food safety scare", phonetic: "/fuːd ˈseɪfti skeə/", meaning: "食品安全恐慌", category: "News & Social Media", star: 1 },
+            { phrase: "health emergency", phonetic: "/helθ ɪˈmɜːdʒənsi/", meaning: "健康紧急情况", category: "News & Social Media", star: 1 },
+            { phrase: "follow news", phonetic: "/ˈfɒləʊ njuːz/", meaning: "关注新闻", category: "News & Social Media", star: 1 },
+            { phrase: "join groups around your interests", phonetic: "/dʒɔɪn ɡruːps əˈraʊnd jɔː ˈɪntrəsts/", meaning: "加入兴趣小组", category: "News & Social Media", star: 1 },
+
+            // 电影与电视
+            { phrase: "sci-fi movies", phonetic: "/ˈsaɪ faɪ ˈmuːviz/", meaning: "科幻电影", category: "Movies & TV", star: 1 },
+            { phrase: "action movies", phonetic: "/ˈækʃn ˈmuːviz/", meaning: "动作片", category: "Movies & TV", star: 1 },
+            { phrase: "light-hearted comedies", phonetic: "/ˌlaɪt ˈhɑːtɪd ˈkɒmədiz/", meaning: "轻松喜剧", category: "Movies & TV", star: 2 },
+            { phrase: "exciting plots", phonetic: "/ɪkˈsaɪtɪŋ plɒts/", meaning: "扣人心弦的情节", category: "Movies & TV", star: 2 },
+            { phrase: "cool special effects", phonetic: "/kuːl ˈspeʃəl ɪˈfekts/", meaning: "炫酷特效", category: "Movies & TV", star: 1 },
+            { phrase: "fast-paced", phonetic: "/ˌfɑːst ˈpeɪst/", meaning: "快节奏的", category: "Movies & TV", star: 2 },
+            { phrase: "unpredictable", phonetic: "/ʌnprɪˈdɪktəbl/", meaning: "不可预测的", category: "Movies & TV", star: 2 },
+            { phrase: "twist", phonetic: "/twɪst/", meaning: "反转", category: "Movies & TV", star: 2 },
+            { phrase: "bittersweet", phonetic: "/ˌbɪtəˈswiːt/", meaning: "苦乐参半的", category: "Movies & TV", star: 2 },
+            { phrase: "catchy theme", phonetic: "/ˈkætʃi θiːm/", meaning: "朗朗上口的主题曲", category: "Movies & TV", star: 2 },
+            { phrase: "memorable soundtracks", phonetic: "/ˈmemərəbl ˈsaʊndtræks/", meaning: "令人难忘的原声带", category: "Movies & TV", star: 2 },
+            { phrase: "be obsessed with", phonetic: "/biː əbˈsest wɪð/", meaning: "痴迷于", category: "Movies & TV", star: 2 },
+            { phrase: "so gripping", phonetic: "/səʊ ˈɡrɪpɪŋ/", meaning: "非常引人入胜", category: "Movies & TV", star: 2 },
+            { phrase: "get over the ending", phonetic: "/ɡet ˈəʊvə ðiː ˈendɪŋ/", meaning: "从结局中走出来", category: "Movies & TV", star: 2 },
+            { phrase: "wasn't into it", phonetic: "/ˈwɒznt ˈɪntu ɪt/", meaning: "不喜欢；没兴趣", category: "Movies & TV", star: 2 },
+            { phrase: "entertained", phonetic: "/ˌentəˈteɪnd/", meaning: "感到愉悦的", category: "Movies & TV", star: 1 },
+            { phrase: "concentrate every second", phonetic: "/ˈkɒnsntreɪt ˈevri ˈsekənd/", meaning: "每秒都集中注意力", category: "Movies & TV", star: 2 },
+
+            // 演员与表演
+            { phrase: "acting skill", phonetic: "/ˈæktɪŋ skɪl/", meaning: "演技", category: "Acting & Performance", star: 1 },
+            { phrase: "outstanding acting skill", phonetic: "/aʊtˈstændɪŋ ˈæktɪŋ skɪl/", meaning: "出色的演技", category: "Acting & Performance", star: 2 },
+            { phrase: "did an amazing job", phonetic: "/dɪd ən əˈmeɪzɪŋ dʒɒb/", meaning: "做得非常出色", category: "Acting & Performance", star: 2 },
+            { phrase: "which stars", phonetic: "/wɪtʃ stɑːz/", meaning: "由……主演", category: "Acting & Performance", star: 2 },
+
+            // 广告
+            { phrase: "TV commercials", phonetic: "/ˌtiː ˈviː kəˈmɜːʃlz/", meaning: "电视广告", category: "Advertising", star: 1 },
+            { phrase: "public service ads", phonetic: "/ˌpʌblɪk ˈsɜːvɪs ædz/", meaning: "公益广告", category: "Advertising", star: 1 },
+            { phrase: "tell a mini-story", phonetic: "/tel ə ˈmɪni ˈstɔːri/", meaning: "讲一个小故事", category: "Advertising", star: 2 },
+            { phrase: "repetitive ads", phonetic: "/rɪˈpetətɪv ædz/", meaning: "重复播放的广告", category: "Advertising", star: 2 },
+            { phrase: "pop into my head", phonetic: "/pɒp ˈɪntu maɪ hed/", meaning: "突然出现在我脑海里", category: "Advertising", star: 2 },
+
+            // 电影院体验
+            { phrase: "big screen", phonetic: "/bɪɡ skriːn/", meaning: "大屏幕", category: "Cinema Experience", star: 1 },
+            { phrase: "high brightness", phonetic: "/haɪ ˈbraɪtnəs/", meaning: "高亮度", category: "Cinema Experience", star: 1 },
+            { phrase: "surround sound", phonetic: "/səˈraʊnd saʊnd/", meaning: "环绕声", category: "Cinema Experience", star: 2 },
+            { phrase: "completely immersive environment", phonetic: "/kəmˈpliːtli ɪˈmɜːsɪv ɪnˈvaɪrənmənt/", meaning: "完全沉浸式的环境", category: "Cinema Experience", star: 2 },
+
+            // 连接词
+            { phrase: "pros and cons", phonetic: "/prəʊz ənd kɒnz/", meaning: "优缺点", category: "Connectors", star: 2 },
+            { phrase: "but then again", phonetic: "/bʌt ðen əˈɡen/", meaning: "不过话说回来", category: "Connectors", star: 2 },
+            { phrase: "go for", phonetic: "/ɡəʊ fɔː/", meaning: "选择", category: "Connectors", star: 1 },
+            { phrase: "desperate", phonetic: "/ˈdespərət/", meaning: "迫不及待的；极度渴望的", category: "Connectors", star: 2 }
+        ];
+
+        // Render vocabulary list
+        function renderVocab() {
+            const grouped = {};
+            vocabulary.forEach(item => {
+                if (!grouped[item.category]) grouped[item.category] = [];
+                grouped[item.category].push(item);
+            });
+
+            const container = document.getElementById('vocabList');
+            container.innerHTML = Object.keys(grouped).map(cat => `
+                <div class="category">
+                    <h3 onclick="this.nextElementSibling.classList.toggle('hidden')">${cat} ${cat.includes('Core') ? '🔥' : ''}</h3>
+                    <div>
+                        ${grouped[cat].map(item => `
+                            <div class="vocab-item">
+                                <span class="phrase">${'⭐'.repeat(item.star)} ${item.phrase}</span>
+                                <span class="phonetic">${item.phonetic}</span>
+                                <div class="meaning">${item.meaning}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Test logic
+        let currentQuestion = 0;
+        let score = 0;
+        let questions = [];
+        let answered = false;
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function startTest() {
+            score = 0;
+            currentQuestion = 0;
+            answered = false;
+            questions = shuffle([...vocabulary]).slice(0, 20);
+            document.getElementById('score').textContent = '0';
+            document.getElementById('total').textContent = questions.length;
+            document.getElementById('resultSummary').classList.add('hidden');
+            document.getElementById('submitBtn').classList.remove('hidden');
+            document.getElementById('nextBtn').classList.add('hidden');
+            document.getElementById('feedback').textContent = '';
+            document.getElementById('feedback').className = 'feedback';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            if (currentQuestion >= questions.length) {
+                showResult();
+                return;
+            }
+
+            const q = questions[currentQuestion];
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            const isChoice = mode === 'choice';
+
+            document.getElementById('questionType').textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+            document.getElementById('questionText').textContent = q.meaning;
+            document.getElementById('feedback').textContent = '';
+            document.getElementById('feedback').className = 'feedback';
+            document.getElementById('progressBar').style.width = `${(currentQuestion / questions.length) * 100}%`;
+
+            if (isChoice) {
+                document.getElementById('optionsContainer').classList.remove('hidden');
+                document.getElementById('inputAnswer').classList.add('hidden');
+
+                const wrongOptions = shuffle(vocabulary.filter(v => v.phrase !== q.phrase)).slice(0, 3);
+                const options = shuffle([q, ...wrongOptions]);
+
+                document.getElementById('optionsContainer').innerHTML = options.map(opt => `
+                    <div class="option" onclick="selectOption(this, '${opt.phrase.replace(/'/g, "\\'")}')">${opt.phrase}</div>
+                `).join('');
+            } else {
+                document.getElementById('optionsContainer').classList.add('hidden');
+                document.getElementById('inputAnswer').classList.remove('hidden');
+                document.getElementById('inputAnswer').value = '';
+                document.getElementById('inputAnswer').focus();
+            }
+
+            answered = false;
+            document.getElementById('submitBtn').disabled = false;
+            document.getElementById('nextBtn').classList.add('hidden');
+        }
+
+        let selectedAnswer = null;
+
+        function selectOption(element, answer) {
+            if (answered) return;
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedAnswer = answer;
+        }
+
+        function normalize(str) {
+            return str.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim().replace(/\s+/g, ' ');
+        }
+
+        function checkAnswer() {
+            if (answered) return;
+
+            const q = questions[currentQuestion];
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            let userAnswer;
+
+            if (mode === 'choice') {
+                if (!selectedAnswer) {
+                    document.getElementById('feedback').textContent = 'Please select an answer.';
+                    return;
+                }
+                userAnswer = selectedAnswer;
+            } else {
+                userAnswer = document.getElementById('inputAnswer').value;
+            }
+
+            const isCorrect = normalize(userAnswer) === normalize(q.phrase);
+            const feedback = document.getElementById('feedback');
+
+            if (isCorrect) {
+                score++;
+                feedback.textContent = '✅ Correct!';
+                feedback.className = 'feedback correct';
+            } else {
+                feedback.textContent = `❌ Wrong. The answer is: ${q.phrase}`;
+                feedback.className = 'feedback wrong';
+            }
+
+            document.getElementById('score').textContent = score;
+            answered = true;
+            document.getElementById('submitBtn').classList.add('hidden');
+            document.getElementById('nextBtn').classList.remove('hidden');
+
+            if (mode === 'choice') {
+                document.querySelectorAll('.option').forEach(opt => {
+                    opt.style.pointerEvents = 'none';
+                    if (opt.textContent === q.phrase) opt.classList.add('correct');
+                    else if (opt.classList.contains('selected')) opt.classList.add('wrong');
+                });
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            selectedAnswer = null;
+            showQuestion();
+        }
+
+        function showResult() {
+            document.getElementById('questionType').textContent = 'Test Complete!';
+            document.getElementById('questionText').textContent = `Your score: ${score} / ${questions.length}`;
+            document.getElementById('optionsContainer').innerHTML = '';
+            document.getElementById('inputAnswer').classList.add('hidden');
+            document.getElementById('submitBtn').classList.add('hidden');
+            document.getElementById('nextBtn').classList.add('hidden');
+            document.getElementById('progressBar').style.width = '100%';
+
+            const wrongItems = questions.filter((q, i) => {
+                // We don't track per-question wrong answers in detail for choice mode,
+                // but we can show all questions for review.
+                return false;
+            });
+        }
+
+        function showSection(id) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(id).classList.add('active');
+        }
+
+        // Enter key for input mode
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !document.getElementById('inputAnswer').classList.contains('hidden')) {
+                if (!answered) checkAnswer();
+                else nextQuestion();
+            }
+        });
+
+        renderVocab();
+        startTest();
+    </script>
+</body>
+</html>
