@@ -1,0 +1,5077 @@
+[
+  {
+    "phrase": "presumption",
+    "pos": "n.",
+    "meaning": "假定；推定",
+    "phonetic": "/prɪˈzʌmpʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "predominant",
+    "pos": "adj.",
+    "meaning": "占主导地位的；普遍的",
+    "phonetic": "/prɪˈdɒmɪnənt/",
+    "example": ""
+  },
+  {
+    "phrase": "precipitate",
+    "pos": "v./adj.",
+    "meaning": "加速；促成；仓促的",
+    "phonetic": "/prɪˈsɪpɪteɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "ponderous",
+    "pos": "adj.",
+    "meaning": "笨重的；沉闷的",
+    "phonetic": "/ˈpɒndərəs/",
+    "example": ""
+  },
+  {
+    "phrase": "plumage",
+    "pos": "n.",
+    "meaning": "羽毛",
+    "phonetic": "/ˈpluːmɪdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "pivotal",
+    "pos": "adj.",
+    "meaning": "关键的；核心的",
+    "phonetic": "/ˈpɪvətl/",
+    "example": ""
+  },
+  {
+    "phrase": "platitude",
+    "pos": "n.",
+    "meaning": "陈词滥调",
+    "phonetic": "/ˈplætɪtjuːd/",
+    "example": ""
+  },
+  {
+    "phrase": "paradigm",
+    "pos": "n.",
+    "meaning": "范例；模式",
+    "phonetic": "/ˈpærədaɪm/",
+    "example": ""
+  },
+  {
+    "phrase": "pathos",
+    "pos": "n.",
+    "meaning": "悲怆；感染力",
+    "phonetic": "/ˈpeɪθɒs/",
+    "example": ""
+  },
+  {
+    "phrase": "ostensible",
+    "pos": "adj.",
+    "meaning": "表面的；假装的",
+    "phonetic": "/ɒˈstensəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "orthodox",
+    "pos": "adj.",
+    "meaning": "正统的；传统的",
+    "phonetic": "/ˈɔːθədɒks/",
+    "example": ""
+  },
+  {
+    "phrase": "opaque",
+    "pos": "adj.",
+    "meaning": "不透明的；难懂的",
+    "phonetic": "/əʊˈpeɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "ominous",
+    "pos": "adj.",
+    "meaning": "不祥的；预兆的",
+    "phonetic": "/ˈɒmɪnəs/",
+    "example": ""
+  },
+  {
+    "phrase": "nullify",
+    "pos": "v.",
+    "meaning": "使无效；废除",
+    "phonetic": "/ˈnʌlɪfaɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "nuance",
+    "pos": "n.",
+    "meaning": "细微差别",
+    "phonetic": "/ˈnjuːɑːns/",
+    "example": ""
+  },
+  {
+    "phrase": "noxious",
+    "pos": "adj.",
+    "meaning": "有害的；有毒的",
+    "phonetic": "/ˈnɒkʃəs/",
+    "example": ""
+  },
+  {
+    "phrase": "notwithstanding",
+    "pos": "prep./adv./conj.",
+    "meaning": "尽管；虽然",
+    "phonetic": "/ˌnɒtwɪθˈstændɪŋ/",
+    "example": ""
+  },
+  {
+    "phrase": "negligence",
+    "pos": "n.",
+    "meaning": "疏忽；过失",
+    "phonetic": "/ˈneɡlɪdʒəns/",
+    "example": ""
+  },
+  {
+    "phrase": "mercenary",
+    "pos": "adj./n.",
+    "meaning": "唯利是图的；雇佣兵",
+    "phonetic": "/ˈmɜːsənəri/",
+    "example": ""
+  },
+  {
+    "phrase": "marginal",
+    "pos": "adj.",
+    "meaning": "边缘的；微不足道的",
+    "phonetic": "/ˈmɑːdʒɪnl/",
+    "example": ""
+  },
+  {
+    "phrase": "malleable",
+    "pos": "adj.",
+    "meaning": "可塑的；易受影响的",
+    "phonetic": "/ˈmæliəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "magnate",
+    "pos": "n.",
+    "meaning": "大亨；权贵",
+    "phonetic": "/ˈmæɡneɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "magnanimous",
+    "pos": "adj.",
+    "meaning": "宽宏大量的",
+    "phonetic": "/mæɡˈnænɪməs/",
+    "example": ""
+  },
+  {
+    "phrase": "lucrative",
+    "pos": "adj.",
+    "meaning": "获利丰厚的",
+    "phonetic": "/ˈluːkrətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "lofty",
+    "pos": "adj.",
+    "meaning": "高耸的；崇高的",
+    "phonetic": "/ˈlɒfti/",
+    "example": ""
+  },
+  {
+    "phrase": "legislate",
+    "pos": "v.",
+    "meaning": "立法",
+    "phonetic": "/ˈledʒɪsleɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "lavish",
+    "pos": "adj./v.",
+    "meaning": "奢侈的；慷慨给予",
+    "phonetic": "/ˈlævɪʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "laudable",
+    "pos": "adj.",
+    "meaning": "值得称赞的",
+    "phonetic": "/ˈlɔːdəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "kindle",
+    "pos": "v.",
+    "meaning": "点燃；激起",
+    "phonetic": "/ˈkɪndl/",
+    "example": ""
+  },
+  {
+    "phrase": "juxtaposition",
+    "pos": "n.",
+    "meaning": "并置；并列",
+    "phonetic": "/ˌdʒʌkstəpəˈzɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "justification",
+    "pos": "n.",
+    "meaning": "理由；辩护",
+    "phonetic": "/ˌdʒʌstɪfɪˈkeɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "infrastructure",
+    "pos": "n.",
+    "meaning": "基础设施",
+    "phonetic": "/ˈɪnfrəstrʌktʃə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "incorporate",
+    "pos": "v.",
+    "meaning": "包含；合并",
+    "phonetic": "/ɪnˈkɔːpəreɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "incline",
+    "pos": "v./n.",
+    "meaning": "倾斜；倾向于",
+    "phonetic": "/ɪnˈklaɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "incipient",
+    "pos": "adj.",
+    "meaning": "开始的；初期的",
+    "phonetic": "/ɪnˈsɪpiənt/",
+    "example": ""
+  },
+  {
+    "phrase": "impromptu",
+    "pos": "adj./adv.",
+    "meaning": "即兴的；临时地",
+    "phonetic": "/ɪmˈprɒmptjuː/",
+    "example": ""
+  },
+  {
+    "phrase": "implicate",
+    "pos": "v.",
+    "meaning": "牵涉；暗示",
+    "phonetic": "/ˈɪmplɪkeɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "homogeneous",
+    "pos": "adj.",
+    "meaning": "同类的；同质的",
+    "phonetic": "/ˌhɒməˈdʒiːniəs/",
+    "example": ""
+  },
+  {
+    "phrase": "hierarchy",
+    "pos": "n.",
+    "meaning": "等级制度；层级",
+    "phonetic": "/ˈhaɪərɑːki/",
+    "example": ""
+  },
+  {
+    "phrase": "headstrong",
+    "pos": "adj.",
+    "meaning": "倔强的；任性的",
+    "phonetic": "/ˈhedstrɒŋ/",
+    "example": ""
+  },
+  {
+    "phrase": "guarantee",
+    "pos": "n./v.",
+    "meaning": "保证；担保",
+    "phonetic": "/ˌɡærənˈtiː/",
+    "example": ""
+  },
+  {
+    "phrase": "genial",
+    "pos": "adj.",
+    "meaning": "友好的；和蔼的",
+    "phonetic": "/ˈdʒiːniəl/",
+    "example": ""
+  },
+  {
+    "phrase": "gaunt",
+    "pos": "adj.",
+    "meaning": "憔悴的；瘦削的",
+    "phonetic": "/ɡɔːnt/",
+    "example": ""
+  },
+  {
+    "phrase": "finite",
+    "pos": "adj.",
+    "meaning": "有限的；限定的",
+    "phonetic": "/ˈfaɪnaɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "fervent",
+    "pos": "adj.",
+    "meaning": "热情的；热烈的",
+    "phonetic": "/ˈfɜːvənt/",
+    "example": ""
+  },
+  {
+    "phrase": "feasible",
+    "pos": "adj.",
+    "meaning": "可行的；行得通的",
+    "phonetic": "/ˈfiːzəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "fanatical",
+    "pos": "adj.",
+    "meaning": "狂热的；入迷的",
+    "phonetic": "/fəˈnætɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "fallacy",
+    "pos": "n.",
+    "meaning": "谬误；谬论",
+    "phonetic": "/ˈfæləsi/",
+    "example": ""
+  },
+  {
+    "phrase": "fabricate",
+    "pos": "v.",
+    "meaning": "捏造；制造",
+    "phonetic": "/ˈfæbrɪkeɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "erratic",
+    "pos": "adj.",
+    "meaning": "不稳定的；古怪的",
+    "phonetic": "/ɪˈrætɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "equivalent",
+    "pos": "adj./n.",
+    "meaning": "相等的；等价物",
+    "phonetic": "/ɪˈkwɪvələnt/",
+    "example": ""
+  },
+  {
+    "phrase": "equitable",
+    "pos": "adj.",
+    "meaning": "公平的；公正的",
+    "phonetic": "/ˈekwɪtəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "ephemeral",
+    "pos": "adj.",
+    "meaning": "短暂的；瞬息即逝的",
+    "phonetic": "/ɪˈfemərəl/",
+    "example": ""
+  },
+  {
+    "phrase": "enormous",
+    "pos": "adj.",
+    "meaning": "巨大的；庞大的",
+    "phonetic": "/ɪˈnɔːməs/",
+    "example": ""
+  },
+  {
+    "phrase": "endorse",
+    "pos": "v.",
+    "meaning": "支持；认可；背书",
+    "phonetic": "/ɪnˈdɔːs/",
+    "example": ""
+  },
+  {
+    "phrase": "elusive",
+    "pos": "adj.",
+    "meaning": "难以捉摸的；难理解的",
+    "phonetic": "/ɪˈluːsɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "differentiate",
+    "pos": "v.",
+    "meaning": "区分；区别",
+    "phonetic": "/ˌdɪfəˈrenʃieɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "devoid",
+    "pos": "adj.",
+    "meaning": "缺乏的；没有的",
+    "phonetic": "/dɪˈvɔɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "detrimental",
+    "pos": "adj.",
+    "meaning": "有害的；不利的",
+    "phonetic": "/ˌdetrɪˈmentl/",
+    "example": ""
+  },
+  {
+    "phrase": "deteriorate",
+    "pos": "v.",
+    "meaning": "恶化；退化",
+    "phonetic": "/dɪˈtɪəriəreɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "detect",
+    "pos": "v.",
+    "meaning": "察觉；探测",
+    "phonetic": "/dɪˈtekt/",
+    "example": ""
+  },
+  {
+    "phrase": "derive",
+    "pos": "v.",
+    "meaning": "得到；源于",
+    "phonetic": "/dɪˈraɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "derivative",
+    "pos": "adj./n.",
+    "meaning": "派生的；衍生物",
+    "phonetic": "/dɪˈrɪvətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "depict",
+    "pos": "v.",
+    "meaning": "描绘；描述",
+    "phonetic": "/dɪˈpɪkt/",
+    "example": ""
+  },
+  {
+    "phrase": "deny",
+    "pos": "v.",
+    "meaning": "否认；拒绝",
+    "phonetic": "/dɪˈnaɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "denounce",
+    "pos": "v.",
+    "meaning": "谴责；告发",
+    "phonetic": "/dɪˈnaʊns/",
+    "example": ""
+  },
+  {
+    "phrase": "compensate",
+    "pos": "v.",
+    "meaning": "补偿；赔偿",
+    "phonetic": "/ˈkɒmpenseɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "compatible",
+    "pos": "adj.",
+    "meaning": "兼容的；能共处的",
+    "phonetic": "/kəmˈpætəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "coincide",
+    "pos": "v.",
+    "meaning": "同时发生；一致",
+    "phonetic": "/ˌkəʊɪnˈsaɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "coalesce",
+    "pos": "v.",
+    "meaning": "合并；联合",
+    "phonetic": "/ˌkəʊəˈles/",
+    "example": ""
+  },
+  {
+    "phrase": "clause",
+    "pos": "n.",
+    "meaning": "条款；从句",
+    "phonetic": "/klɔːz/",
+    "example": ""
+  },
+  {
+    "phrase": "clarify",
+    "pos": "v.",
+    "meaning": "澄清；阐明",
+    "phonetic": "/ˈklærəfaɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "chagrin",
+    "pos": "n.",
+    "meaning": "懊恼；失望",
+    "phonetic": "/ˈʃæɡrɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "cease",
+    "pos": "v./n.",
+    "meaning": "停止；终止",
+    "phonetic": "/siːs/",
+    "example": ""
+  },
+  {
+    "phrase": "caustic",
+    "pos": "adj.",
+    "meaning": "腐蚀性的；尖刻的",
+    "phonetic": "/ˈkɔːstɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "catalyst",
+    "pos": "n.",
+    "meaning": "催化剂；诱因",
+    "phonetic": "/ˈkætəlɪst/",
+    "example": ""
+  },
+  {
+    "phrase": "buoyant",
+    "pos": "adj.",
+    "meaning": "有浮力的；繁荣的",
+    "phonetic": "/ˈbɔɪənt/",
+    "example": ""
+  },
+  {
+    "phrase": "bureaucracy",
+    "pos": "n.",
+    "meaning": "官僚机构；官僚主义",
+    "phonetic": "/bjʊəˈrɒkrəsi/",
+    "example": ""
+  },
+  {
+    "phrase": "buffet",
+    "pos": "n./v.",
+    "meaning": "自助餐；打击",
+    "phonetic": "/ˈbʊfeɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "boon",
+    "pos": "n.",
+    "meaning": "恩惠；好处",
+    "phonetic": "/buːn/",
+    "example": ""
+  },
+  {
+    "phrase": "bias",
+    "pos": "n./v.",
+    "meaning": "偏见；使偏向",
+    "phonetic": "/ˈbaɪəs/",
+    "example": ""
+  },
+  {
+    "phrase": "belie",
+    "pos": "v.",
+    "meaning": "掩饰；证明…虚假",
+    "phonetic": "/bɪˈlaɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "beleaguer",
+    "pos": "v.",
+    "meaning": "围困；使烦恼",
+    "phonetic": "/bɪˈliːɡə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "behalf",
+    "pos": "n.",
+    "meaning": "代表；利益",
+    "phonetic": "/bɪˈhɑːf/",
+    "example": ""
+  },
+  {
+    "phrase": "amend",
+    "pos": "v.",
+    "meaning": "修改；修订",
+    "phonetic": "/əˈmend/",
+    "example": ""
+  },
+  {
+    "phrase": "accomplishment",
+    "pos": "n.",
+    "meaning": "成就；完成",
+    "phonetic": "/əˈkʌmplɪʃmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "accommodate",
+    "pos": "v.",
+    "meaning": "容纳；适应；提供住宿",
+    "phonetic": "/əˈkɒmədeɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "access",
+    "pos": "n./v.",
+    "meaning": "进入；使用权；访问",
+    "phonetic": "/ˈækses/",
+    "example": ""
+  },
+  {
+    "phrase": "abrupt",
+    "pos": "adj.",
+    "meaning": "突然的；唐突的",
+    "phonetic": "/əˈbrʌpt/",
+    "example": ""
+  },
+  {
+    "phrase": "symbol",
+    "pos": "n.",
+    "meaning": "象征；符号",
+    "phonetic": "/ˈsɪmbl/",
+    "example": ""
+  },
+  {
+    "phrase": "persuade",
+    "pos": "v.",
+    "meaning": "说服；劝说",
+    "phonetic": "/pəˈsweɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "campaign",
+    "pos": "n./v.",
+    "meaning": "运动；战役；参加活动",
+    "phonetic": "/kæmˈpeɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "receipt",
+    "pos": "n.",
+    "meaning": "收据；收到",
+    "phonetic": "/rɪˈsiːt/",
+    "example": ""
+  },
+  {
+    "phrase": "reserve",
+    "pos": "v./n.",
+    "meaning": "保留；预订；储备",
+    "phonetic": "/rɪˈzɜːv/",
+    "example": ""
+  },
+  {
+    "phrase": "deliver",
+    "pos": "v.",
+    "meaning": "递送；发表；交付",
+    "phonetic": "/dɪˈlɪvə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "volume",
+    "pos": "n.",
+    "meaning": "体积；音量；卷",
+    "phonetic": "/ˈvɒljuːm/",
+    "example": ""
+  },
+  {
+    "phrase": "quantity",
+    "pos": "n.",
+    "meaning": "数量；大量",
+    "phonetic": "/ˈkwɒntəti/",
+    "example": ""
+  },
+  {
+    "phrase": "somewhat",
+    "pos": "adv.",
+    "meaning": "稍微；有点",
+    "phonetic": "/ˈsʌmwɒt/",
+    "example": ""
+  },
+  {
+    "phrase": "evaluate",
+    "pos": "v.",
+    "meaning": "评估；评价",
+    "phonetic": "/ɪˈvæljueɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "widespread",
+    "pos": "adj.",
+    "meaning": "广泛的；普遍的",
+    "phonetic": "/ˈwaɪdspred/",
+    "example": ""
+  },
+  {
+    "phrase": "score",
+    "pos": "n./v.",
+    "meaning": "分数；得分；二十",
+    "phonetic": "/skɔː(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "gap",
+    "pos": "n.",
+    "meaning": "差距；缺口；间隔",
+    "phonetic": "/ɡæp/",
+    "example": ""
+  },
+  {
+    "phrase": "individualism",
+    "pos": "n.",
+    "meaning": "个人主义",
+    "phonetic": "/ˌɪndɪˈvɪdʒuəlɪzəm/",
+    "example": ""
+  },
+  {
+    "phrase": "index",
+    "pos": "n./v.",
+    "meaning": "索引；指数；编索引",
+    "phonetic": "/ˈɪndeks/",
+    "example": ""
+  },
+  {
+    "phrase": "measure",
+    "pos": "v./n.",
+    "meaning": "测量；措施",
+    "phonetic": "/ˈmeʒə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "equality",
+    "pos": "n.",
+    "meaning": "平等；相等",
+    "phonetic": "/iˈkwɒləti/",
+    "example": ""
+  },
+  {
+    "phrase": "respect",
+    "pos": "n./v.",
+    "meaning": "尊重；方面",
+    "phonetic": "/rɪˈspekt/",
+    "example": ""
+  },
+  {
+    "phrase": "donation",
+    "pos": "n.",
+    "meaning": "捐赠；捐款",
+    "phonetic": "/dəʊˈneɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "pension",
+    "pos": "n.",
+    "meaning": "养老金；退休金",
+    "phonetic": "/ˈpenʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "loan",
+    "pos": "n./v.",
+    "meaning": "贷款；借出",
+    "phonetic": "/ləʊn/",
+    "example": ""
+  },
+  {
+    "phrase": "debt",
+    "pos": "n.",
+    "meaning": "债务；欠款",
+    "phonetic": "/det/",
+    "example": ""
+  },
+  {
+    "phrase": "worth",
+    "pos": "adj./n.",
+    "meaning": "值得的；价值",
+    "phonetic": "/wɜːθ/",
+    "example": ""
+  },
+  {
+    "phrase": "pay",
+    "pos": "v.",
+    "meaning": "支付；付出",
+    "phonetic": "/peɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "back",
+    "pos": "adv./n.",
+    "meaning": "向后；背部",
+    "phonetic": "/bæk/",
+    "example": ""
+  },
+  {
+    "phrase": "latter",
+    "pos": "adj./n.",
+    "meaning": "后者的；后者",
+    "phonetic": "/ˈlætə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "former",
+    "pos": "adj./n.",
+    "meaning": "前者的；前者",
+    "phonetic": "/ˈfɔːmə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "entrepreneur",
+    "pos": "n.",
+    "meaning": "企业家；创业者",
+    "phonetic": "/ˌɒntrəprəˈnɜː(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "self-esteem",
+    "pos": "n.",
+    "meaning": "自尊",
+    "phonetic": "/ˌself ɪˈstiːm/",
+    "example": ""
+  },
+  {
+    "phrase": "competition",
+    "pos": "n.",
+    "meaning": "竞争；比赛",
+    "phonetic": "/ˌkɒmpəˈtɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "succeed",
+    "pos": "v.",
+    "meaning": "成功；继承",
+    "phonetic": "/səkˈsiːd/",
+    "example": ""
+  },
+  {
+    "phrase": "in",
+    "pos": "prep./adv.",
+    "meaning": "在…里；进入",
+    "phonetic": "/ɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "blame",
+    "pos": "v./n.",
+    "meaning": "责备；责任",
+    "phonetic": "/bleɪm/",
+    "example": ""
+  },
+  {
+    "phrase": "for",
+    "pos": "prep./conj.",
+    "meaning": "为了；因为",
+    "phonetic": "/fɔː(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "exceed",
+    "pos": "v.",
+    "meaning": "超过；超出",
+    "phonetic": "/ɪkˈsiːd/",
+    "example": ""
+  },
+  {
+    "phrase": "dramatic",
+    "pos": "adj.",
+    "meaning": "戏剧性的；显著的",
+    "phonetic": "/drəˈmætɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "add",
+    "pos": "v.",
+    "meaning": "添加；增加",
+    "phonetic": "/æd/",
+    "example": ""
+  },
+  {
+    "phrase": "to",
+    "pos": "prep.",
+    "meaning": "到；向；对于",
+    "phonetic": "/tuː/",
+    "example": ""
+  },
+  {
+    "phrase": "co-operation",
+    "pos": "n.",
+    "meaning": "合作；协作",
+    "phonetic": "/kəʊˌɒpəˈreɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "sample",
+    "pos": "n./v.",
+    "meaning": "样本；抽样",
+    "phonetic": "/ˈsɑːmpl/",
+    "example": ""
+  },
+  {
+    "phrase": "elite",
+    "pos": "n./adj.",
+    "meaning": "精英；精英的",
+    "phonetic": "/eɪˈliːt/",
+    "example": ""
+  },
+  {
+    "phrase": "manipulate",
+    "pos": "v.",
+    "meaning": "操纵；控制",
+    "phonetic": "/məˈnɪpjuleɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "amateur",
+    "pos": "n./adj.",
+    "meaning": "业余爱好者；业余的",
+    "phonetic": "/ˈæmətə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "state",
+    "pos": "n./v.",
+    "meaning": "状态；陈述；国家",
+    "phonetic": "/steɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "register",
+    "pos": "v./n.",
+    "meaning": "登记；注册",
+    "phonetic": "/ˈredʒɪstə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "transplant",
+    "pos": "v./n.",
+    "meaning": "移植；移栽",
+    "phonetic": "/trænsˈplɑːnt/",
+    "example": ""
+  },
+  {
+    "phrase": "shortage",
+    "pos": "n.",
+    "meaning": "短缺；不足",
+    "phonetic": "/ˈʃɔːtɪdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "heal",
+    "pos": "v.",
+    "meaning": "治愈；痊愈",
+    "phonetic": "/hiːl/",
+    "example": ""
+  },
+  {
+    "phrase": "alternative",
+    "pos": "adj./n.",
+    "meaning": "替代的；选择",
+    "phonetic": "/ɔːlˈtɜːnətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "mental",
+    "pos": "adj.",
+    "meaning": "精神的；心理的",
+    "phonetic": "/ˈmentl/",
+    "example": ""
+  },
+  {
+    "phrase": "scheme",
+    "pos": "n./v.",
+    "meaning": "计划；方案；阴谋",
+    "phonetic": "/skiːm/",
+    "example": ""
+  },
+  {
+    "phrase": "lifestyle",
+    "pos": "n.",
+    "meaning": "生活方式",
+    "phonetic": "/ˈlaɪfstaɪl/",
+    "example": ""
+  },
+  {
+    "phrase": "nerve",
+    "pos": "n.",
+    "meaning": "神经；勇气",
+    "phonetic": "/nɜːv/",
+    "example": ""
+  },
+  {
+    "phrase": "gut",
+    "pos": "n.",
+    "meaning": "肠道；直觉",
+    "phonetic": "/ɡʌt/",
+    "example": ""
+  },
+  {
+    "phrase": "accelerate",
+    "pos": "v.",
+    "meaning": "加速；促进",
+    "phonetic": "/əkˈseləreɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "install",
+    "pos": "v.",
+    "meaning": "安装；安置",
+    "phonetic": "/ɪnˈstɔːl/",
+    "example": ""
+  },
+  {
+    "phrase": "virus",
+    "pos": "n.",
+    "meaning": "病毒",
+    "phonetic": "/ˈvaɪrəs/",
+    "example": ""
+  },
+  {
+    "phrase": "deal",
+    "pos": "n./v.",
+    "meaning": "交易；处理",
+    "phonetic": "/diːl/",
+    "example": ""
+  },
+  {
+    "phrase": "with",
+    "pos": "prep.",
+    "meaning": "和；具有；用",
+    "phonetic": "/wɪð/",
+    "example": ""
+  },
+  {
+    "phrase": "come",
+    "pos": "v.",
+    "meaning": "来；来到",
+    "phonetic": "/kʌm/",
+    "example": ""
+  },
+  {
+    "phrase": "up",
+    "pos": "adv./prep.",
+    "meaning": "向上；在…之上",
+    "phonetic": "/ʌp/",
+    "example": ""
+  },
+  {
+    "phrase": "break",
+    "pos": "v./n.",
+    "meaning": "打破；休息",
+    "phonetic": "/breɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "down",
+    "pos": "adv./prep./adj.",
+    "meaning": "向下；沿着；沮丧的",
+    "phonetic": "/daʊn/",
+    "example": ""
+  },
+  {
+    "phrase": "work",
+    "pos": "n./v.",
+    "meaning": "工作；运转",
+    "phonetic": "/wɜːk/",
+    "example": ""
+  },
+  {
+    "phrase": "out",
+    "pos": "adv./prep.",
+    "meaning": "向外；在外面",
+    "phonetic": "/aʊt/",
+    "example": ""
+  },
+  {
+    "phrase": "conduct",
+    "pos": "v./n.",
+    "meaning": "进行；行为；指挥",
+    "phonetic": "/kənˈdʌkt/",
+    "example": ""
+  },
+  {
+    "phrase": "advance",
+    "pos": "n./v./adj.",
+    "meaning": "前进；提前；预先的",
+    "phonetic": "/ədˈvɑːns/",
+    "example": ""
+  },
+  {
+    "phrase": "restore",
+    "pos": "v.",
+    "meaning": "恢复；修复",
+    "phonetic": "/rɪˈstɔː(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "remarkable",
+    "pos": "adj.",
+    "meaning": "显著的；非凡的",
+    "phonetic": "/rɪˈmɑːkəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "insert",
+    "pos": "v./n.",
+    "meaning": "插入；插入物",
+    "phonetic": "/ɪnˈsɜːt/",
+    "example": ""
+  },
+  {
+    "phrase": "device",
+    "pos": "n.",
+    "meaning": "装置；设备",
+    "phonetic": "/dɪˈvaɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "cure",
+    "pos": "v./n.",
+    "meaning": "治愈；疗法",
+    "phonetic": "/kjʊə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "flexibility",
+    "pos": "n.",
+    "meaning": "灵活性；弹性",
+    "phonetic": "/ˌfleksəˈbɪləti/",
+    "example": ""
+  },
+  {
+    "phrase": "paralysed",
+    "pos": "adj.",
+    "meaning": "瘫痪的；惊呆的",
+    "phonetic": "/ˈpærəlaɪzd/",
+    "example": ""
+  },
+  {
+    "phrase": "deaf",
+    "pos": "adj.",
+    "meaning": "聋的",
+    "phonetic": "/def/",
+    "example": ""
+  },
+  {
+    "phrase": "ingredient",
+    "pos": "n.",
+    "meaning": "原料；成分",
+    "phonetic": "/ɪnˈɡriːdiənt/",
+    "example": ""
+  },
+  {
+    "phrase": "manufacture",
+    "pos": "v./n.",
+    "meaning": "制造；制造业",
+    "phonetic": "/ˌmænjuˈfæktʃə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "retailer",
+    "pos": "n.",
+    "meaning": "零售商",
+    "phonetic": "/ˈriːteɪlə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "dependent",
+    "pos": "adj.",
+    "meaning": "依赖的；取决于…的",
+    "phonetic": "/dɪˈpendənt/",
+    "example": ""
+  },
+  {
+    "phrase": "field",
+    "pos": "n./v.",
+    "meaning": "领域；田野；使上场",
+    "phonetic": "/fiːld/",
+    "example": ""
+  },
+  {
+    "phrase": "agricultural",
+    "pos": "adj.",
+    "meaning": "农业的",
+    "phonetic": "/ˌæɡrɪˈkʌltʃərəl/",
+    "example": ""
+  },
+  {
+    "phrase": "import",
+    "pos": "v./n.",
+    "meaning": "进口；输入；重要意义",
+    "phonetic": "/ɪmˈpɔːt/",
+    "example": ""
+  },
+  {
+    "phrase": "scientific",
+    "pos": "adj.",
+    "meaning": "科学的",
+    "phonetic": "/ˌsaɪənˈtɪfɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "informative",
+    "pos": "adj.",
+    "meaning": "提供有用信息的；增长见闻的",
+    "phonetic": "/ɪnˈfɔːmətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "quality",
+    "pos": "n./adj.",
+    "meaning": "质量；品质；优质的",
+    "phonetic": "/ˈkwɒləti/",
+    "example": ""
+  },
+  {
+    "phrase": "export",
+    "pos": "v./n.",
+    "meaning": "出口；输出",
+    "phonetic": "/ɪkˈspɔːt/",
+    "example": ""
+  },
+  {
+    "phrase": "variety",
+    "pos": "n.",
+    "meaning": "多样性；种类",
+    "phonetic": "/vəˈraɪəti/",
+    "example": ""
+  },
+  {
+    "phrase": "consume",
+    "pos": "v.",
+    "meaning": "消费；消耗",
+    "phonetic": "/kənˈsjuːm/",
+    "example": ""
+  },
+  {
+    "phrase": "react",
+    "pos": "v.",
+    "meaning": "反应；起化学反应",
+    "phonetic": "/riˈækt/",
+    "example": ""
+  },
+  {
+    "phrase": "supply",
+    "pos": "n./v.",
+    "meaning": "供应；供给",
+    "phonetic": "/səˈplaɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "reaction",
+    "pos": "n.",
+    "meaning": "反应；回应",
+    "phonetic": "/riˈækʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "broad",
+    "pos": "adj.",
+    "meaning": "宽阔的；广泛的",
+    "phonetic": "/brɔːd/",
+    "example": ""
+  },
+  {
+    "phrase": "awareness",
+    "pos": "n.",
+    "meaning": "意识；认识",
+    "phonetic": "/əˈweənəs/",
+    "example": ""
+  },
+  {
+    "phrase": "frozen",
+    "pos": "adj.",
+    "meaning": "冷冻的；冻僵的",
+    "phonetic": "/ˈfrəʊzn/",
+    "example": ""
+  },
+  {
+    "phrase": "processed",
+    "pos": "adj.",
+    "meaning": "加工过的",
+    "phonetic": "/ˈprəʊsest/",
+    "example": ""
+  },
+  {
+    "phrase": "disease",
+    "pos": "n.",
+    "meaning": "疾病",
+    "phonetic": "/dɪˈziːz/",
+    "example": ""
+  },
+  {
+    "phrase": "thread",
+    "pos": "n.",
+    "meaning": "线；线索",
+    "phonetic": "/θred/",
+    "example": ""
+  },
+  {
+    "phrase": "confused",
+    "pos": "adj.",
+    "meaning": "困惑的；混乱的",
+    "phonetic": "/kənˈfjuːzd/",
+    "example": ""
+  },
+  {
+    "phrase": "cell",
+    "pos": "n.",
+    "meaning": "细胞；小房间",
+    "phonetic": "/sel/",
+    "example": ""
+  },
+  {
+    "phrase": "organic",
+    "pos": "adj.",
+    "meaning": "有机的；器官的",
+    "phonetic": "/ɔːˈɡænɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "certain",
+    "pos": "adj.",
+    "meaning": "确定的；某个",
+    "phonetic": "/ˈsɜːtn/",
+    "example": ""
+  },
+  {
+    "phrase": "crop",
+    "pos": "n./v.",
+    "meaning": "庄稼；收成；修剪",
+    "phonetic": "/krɒp/",
+    "example": ""
+  },
+  {
+    "phrase": "mineral",
+    "pos": "n.",
+    "meaning": "矿物；矿物质",
+    "phonetic": "/ˈmɪnərəl/",
+    "example": ""
+  },
+  {
+    "phrase": "vitamin",
+    "pos": "n.",
+    "meaning": "维生素",
+    "phonetic": "/ˈvɪtəmɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "underestimate",
+    "pos": "v.",
+    "meaning": "低估",
+    "phonetic": "/ˌʌndərˈestɪmeɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "destroy",
+    "pos": "v.",
+    "meaning": "破坏；毁灭",
+    "phonetic": "/dɪˈstrɔɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "transform",
+    "pos": "v.",
+    "meaning": "改变；转化",
+    "phonetic": "/trænsˈfɔːm/",
+    "example": ""
+  },
+  {
+    "phrase": "disaster",
+    "pos": "n.",
+    "meaning": "灾难；灾祸",
+    "phonetic": "/dɪˈzɑːstə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "retirement",
+    "pos": "n.",
+    "meaning": "退休；退役",
+    "phonetic": "/rɪˈtaɪəmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "congestion",
+    "pos": "n.",
+    "meaning": "拥挤；充血",
+    "phonetic": "/kənˈdʒestʃən/",
+    "example": ""
+  },
+  {
+    "phrase": "reversible",
+    "pos": "adj.",
+    "meaning": "可逆的；可翻转的",
+    "phonetic": "/rɪˈvɜːsəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "component",
+    "pos": "n.",
+    "meaning": "组成部分；元件",
+    "phonetic": "/kəmˈpəʊnənt/",
+    "example": ""
+  },
+  {
+    "phrase": "monitor",
+    "pos": "v./n.",
+    "meaning": "监控；监视器",
+    "phonetic": "/ˈmɒnɪtə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "assess",
+    "pos": "v.",
+    "meaning": "评估；评定",
+    "phonetic": "/əˈses/",
+    "example": ""
+  },
+  {
+    "phrase": "suburban",
+    "pos": "adj.",
+    "meaning": "郊区的",
+    "phonetic": "/səˈbɜːbən/",
+    "example": ""
+  },
+  {
+    "phrase": "cycle",
+    "pos": "n./v.",
+    "meaning": "周期；循环；骑自行车",
+    "phonetic": "/ˈsaɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "fresh",
+    "pos": "adj.",
+    "meaning": "新鲜的；新近的",
+    "phonetic": "/freʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "rural",
+    "pos": "adj.",
+    "meaning": "乡村的；农村的",
+    "phonetic": "/ˈrʊərəl/",
+    "example": ""
+  },
+  {
+    "phrase": "figure",
+    "pos": "n./v.",
+    "meaning": "数字；人物；认为",
+    "phonetic": "/ˈfɪɡə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "demand",
+    "pos": "n./v.",
+    "meaning": "要求；需求",
+    "phonetic": "/dɪˈmɑːnd/",
+    "example": ""
+  },
+  {
+    "phrase": "appeal",
+    "pos": "n./v.",
+    "meaning": "呼吁；吸引力；上诉",
+    "phonetic": "/əˈpiːl/",
+    "example": ""
+  },
+  {
+    "phrase": "workplace",
+    "pos": "n.",
+    "meaning": "工作场所",
+    "phonetic": "/ˈwɜːkpleɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "commit",
+    "pos": "v.",
+    "meaning": "承诺；犯（罪）",
+    "phonetic": "/kəˈmɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "eyewitness",
+    "pos": "n.",
+    "meaning": "目击者",
+    "phonetic": "/ˈaɪwɪtnəs/",
+    "example": ""
+  },
+  {
+    "phrase": "victim",
+    "pos": "n.",
+    "meaning": "受害者；牺牲品",
+    "phonetic": "/ˈvɪktɪm/",
+    "example": ""
+  },
+  {
+    "phrase": "arrest",
+    "pos": "v./n.",
+    "meaning": "逮捕；阻止",
+    "phonetic": "/əˈrest/",
+    "example": ""
+  },
+  {
+    "phrase": "judge",
+    "pos": "n./v.",
+    "meaning": "法官；判断",
+    "phonetic": "/dʒʌdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "jury",
+    "pos": "n.",
+    "meaning": "陪审团",
+    "phonetic": "/ˈdʒʊəri/",
+    "example": ""
+  },
+  {
+    "phrase": "obviously",
+    "pos": "adv.",
+    "meaning": "明显地；显然",
+    "phonetic": "/ˈɒbviəsli/",
+    "example": ""
+  },
+  {
+    "phrase": "publish",
+    "pos": "v.",
+    "meaning": "出版；发表",
+    "phonetic": "/ˈpʌblɪʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "select",
+    "pos": "v./adj.",
+    "meaning": "选择；精选的",
+    "phonetic": "/sɪˈlekt/",
+    "example": ""
+  },
+  {
+    "phrase": "perceive",
+    "pos": "v.",
+    "meaning": "感知；认为",
+    "phonetic": "/pəˈsiːv/",
+    "example": ""
+  },
+  {
+    "phrase": "principle",
+    "pos": "n.",
+    "meaning": "原则；原理",
+    "phonetic": "/ˈprɪnsəpl/",
+    "example": ""
+  },
+  {
+    "phrase": "basically",
+    "pos": "adv.",
+    "meaning": "基本上；从根本上说",
+    "phonetic": "/ˈbeɪsɪkli/",
+    "example": ""
+  },
+  {
+    "phrase": "define",
+    "pos": "v.",
+    "meaning": "定义；界定",
+    "phonetic": "/dɪˈfaɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "theory",
+    "pos": "n.",
+    "meaning": "理论；学说",
+    "phonetic": "/ˈθɪəri/",
+    "example": ""
+  },
+  {
+    "phrase": "scene",
+    "pos": "n.",
+    "meaning": "场景；现场",
+    "phonetic": "/siːn/",
+    "example": ""
+  },
+  {
+    "phrase": "tension",
+    "pos": "n.",
+    "meaning": "紧张；张力",
+    "phonetic": "/ˈtenʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "improvement",
+    "pos": "n.",
+    "meaning": "改进；改善",
+    "phonetic": "/ɪmˈpruːvmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "category",
+    "pos": "n.",
+    "meaning": "类别；种类",
+    "phonetic": "/ˈkætəɡəri/",
+    "example": ""
+  },
+  {
+    "phrase": "broadcast",
+    "pos": "v./n.",
+    "meaning": "广播；播送",
+    "phonetic": "/ˈbrɔːdkɑːst/",
+    "example": ""
+  },
+  {
+    "phrase": "factual",
+    "pos": "adj.",
+    "meaning": "事实的；真实的",
+    "phonetic": "/ˈfæktʃuəl/",
+    "example": ""
+  },
+  {
+    "phrase": "powerful",
+    "pos": "adj.",
+    "meaning": "强大的；有影响力的",
+    "phonetic": "/ˈpaʊəfl/",
+    "example": ""
+  },
+  {
+    "phrase": "specific",
+    "pos": "adj.",
+    "meaning": "具体的；特定的",
+    "phonetic": "/spəˈsɪfɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "promotion",
+    "pos": "n.",
+    "meaning": "促销；晋升；推广",
+    "phonetic": "/prəˈməʊʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "creativity",
+    "pos": "n.",
+    "meaning": "创造力",
+    "phonetic": "/ˌkriːeɪˈtɪvəti/",
+    "example": ""
+  },
+  {
+    "phrase": "literacy",
+    "pos": "n.",
+    "meaning": "识字；读写能力",
+    "phonetic": "/ˈlɪtərəsi/",
+    "example": ""
+  },
+  {
+    "phrase": "overlook",
+    "pos": "v.",
+    "meaning": "忽视；俯瞰",
+    "phonetic": "/ˌəʊvəˈlʊk/",
+    "example": ""
+  },
+  {
+    "phrase": "deliberate",
+    "pos": "adj./v.",
+    "meaning": "故意的；深思熟虑；仔细考虑",
+    "phonetic": "/dɪˈlɪbərət/",
+    "example": ""
+  },
+  {
+    "phrase": "characteristic",
+    "pos": "n./adj.",
+    "meaning": "特征；特有的",
+    "phonetic": "/ˌkærəktəˈrɪstɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "compose",
+    "pos": "v.",
+    "meaning": "组成；创作；作曲",
+    "phonetic": "/kəmˈpəʊz/",
+    "example": ""
+  },
+  {
+    "phrase": "warning",
+    "pos": "n.",
+    "meaning": "警告；警示",
+    "phonetic": "/ˈwɔːnɪŋ/",
+    "example": ""
+  },
+  {
+    "phrase": "link",
+    "pos": "n./v.",
+    "meaning": "联系；链接",
+    "phonetic": "/lɪŋk/",
+    "example": ""
+  },
+  {
+    "phrase": "craft",
+    "pos": "n./v.",
+    "meaning": "工艺；手艺；精心制作",
+    "phonetic": "/krɑːft/",
+    "example": ""
+  },
+  {
+    "phrase": "technology",
+    "pos": "n.",
+    "meaning": "技术；科技",
+    "phonetic": "/tekˈnɒlədʒi/",
+    "example": ""
+  },
+  {
+    "phrase": "reflect",
+    "pos": "v.",
+    "meaning": "反映；反射；反思",
+    "phonetic": "/rɪˈflekt/",
+    "example": ""
+  },
+  {
+    "phrase": "make",
+    "pos": "v.",
+    "meaning": "制作；使",
+    "phonetic": "/meɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "role",
+    "pos": "n.",
+    "meaning": "角色；作用",
+    "phonetic": "/rəʊl/",
+    "example": ""
+  },
+  {
+    "phrase": "relevant",
+    "pos": "adj.",
+    "meaning": "相关的；切题的",
+    "phonetic": "/ˈreləvənt/",
+    "example": ""
+  },
+  {
+    "phrase": "range",
+    "pos": "n./v.",
+    "meaning": "范围；一系列；变化",
+    "phonetic": "/reɪndʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "immigration",
+    "pos": "n.",
+    "meaning": "移民；移居",
+    "phonetic": "/ˌɪmɪˈɡreɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "economy",
+    "pos": "n.",
+    "meaning": "经济；节约",
+    "phonetic": "/ɪˈkɒnəmi/",
+    "example": ""
+  },
+  {
+    "phrase": "destination",
+    "pos": "n.",
+    "meaning": "目的地；终点",
+    "phonetic": "/ˌdestɪˈneɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "flight",
+    "pos": "n.",
+    "meaning": "航班；飞行",
+    "phonetic": "/flaɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "set",
+    "pos": "v./n.",
+    "meaning": "设置；一套；集合",
+    "phonetic": "/set/",
+    "example": ""
+  },
+  {
+    "phrase": "off",
+    "pos": "adv./prep.",
+    "meaning": "离开；关闭",
+    "phonetic": "/ɒf/",
+    "example": ""
+  },
+  {
+    "phrase": "route",
+    "pos": "n.",
+    "meaning": "路线；航线",
+    "phonetic": "/ruːt/",
+    "example": ""
+  },
+  {
+    "phrase": "distribution",
+    "pos": "n.",
+    "meaning": "分配；分布",
+    "phonetic": "/ˌdɪstrɪˈbjuːʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "originally",
+    "pos": "adv.",
+    "meaning": "最初；本来",
+    "phonetic": "/əˈrɪdʒənəli/",
+    "example": ""
+  },
+  {
+    "phrase": "label",
+    "pos": "n./v.",
+    "meaning": "标签；贴标签",
+    "phonetic": "/ˈleɪbl/",
+    "example": ""
+  },
+  {
+    "phrase": "feature",
+    "pos": "n./v.",
+    "meaning": "特征；以…为特色",
+    "phonetic": "/ˈfiːtʃə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "disappear",
+    "pos": "v.",
+    "meaning": "消失；不见",
+    "phonetic": "/ˌdɪsəˈpɪə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "disadvantage",
+    "pos": "n.",
+    "meaning": "不利条件；劣势",
+    "phonetic": "/ˌdɪsədˈvɑːntɪdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "unlikely",
+    "pos": "adj.",
+    "meaning": "不太可能的",
+    "phonetic": "/ʌnˈlaɪkli/",
+    "example": ""
+  },
+  {
+    "phrase": "disability",
+    "pos": "n.",
+    "meaning": "残疾；缺陷",
+    "phonetic": "/ˌdɪsəˈbɪləti/",
+    "example": ""
+  },
+  {
+    "phrase": "inexpensive",
+    "pos": "adj.",
+    "meaning": "便宜的；不贵的",
+    "phonetic": "/ˌɪnɪkˈspensɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "structure",
+    "pos": "n./v.",
+    "meaning": "结构；构造；组织",
+    "phonetic": "/ˈstrʌktʃə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "feed",
+    "pos": "v./n.",
+    "meaning": "喂养；饲料",
+    "phonetic": "/fiːd/",
+    "example": ""
+  },
+  {
+    "phrase": "leader",
+    "pos": "n.",
+    "meaning": "领导者；领袖",
+    "phonetic": "/ˈliːdə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "analyse",
+    "pos": "v.",
+    "meaning": "分析",
+    "phonetic": "/ˈænəlaɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "approach",
+    "pos": "n./v.",
+    "meaning": "方法；接近",
+    "phonetic": "/əˈprəʊtʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "discovery",
+    "pos": "n.",
+    "meaning": "发现",
+    "phonetic": "/dɪˈskʌvəri/",
+    "example": ""
+  },
+  {
+    "phrase": "laboratory",
+    "pos": "n.",
+    "meaning": "实验室",
+    "phonetic": "/ləˈbɒrətri/",
+    "example": ""
+  },
+  {
+    "phrase": "drop",
+    "pos": "v./n.",
+    "meaning": "下降；滴；放下",
+    "phonetic": "/drɒp/",
+    "example": ""
+  },
+  {
+    "phrase": "turn",
+    "pos": "v./n.",
+    "meaning": "转动；转弯",
+    "phonetic": "/tɜːn/",
+    "example": ""
+  },
+  {
+    "phrase": "into",
+    "pos": "prep.",
+    "meaning": "进入；变成",
+    "phonetic": "/ˈɪntuː/",
+    "example": ""
+  },
+  {
+    "phrase": "damage",
+    "pos": "n./v.",
+    "meaning": "损害；损坏",
+    "phonetic": "/ˈdæmɪdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "predictable",
+    "pos": "adj.",
+    "meaning": "可预测的",
+    "phonetic": "/prɪˈdɪktəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "transportation",
+    "pos": "n.",
+    "meaning": "运输；交通工具",
+    "phonetic": "/ˌtrænspɔːˈteɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "creative",
+    "pos": "adj.",
+    "meaning": "有创造力的",
+    "phonetic": "/kriˈeɪtɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "eventually",
+    "pos": "adv.",
+    "meaning": "最终；终于",
+    "phonetic": "/ɪˈventʃuəli/",
+    "example": ""
+  },
+  {
+    "phrase": "store",
+    "pos": "v./n.",
+    "meaning": "储存；商店",
+    "phonetic": "/stɔː(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "indeed",
+    "pos": "adv.",
+    "meaning": "确实；实际上",
+    "phonetic": "/ɪnˈdiːd/",
+    "example": ""
+  },
+  {
+    "phrase": "ton",
+    "pos": "n.",
+    "meaning": "吨；大量",
+    "phonetic": "/tʌn/",
+    "example": ""
+  },
+  {
+    "phrase": "design",
+    "pos": "n./v.",
+    "meaning": "设计；图案",
+    "phonetic": "/dɪˈzaɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "remove",
+    "pos": "v.",
+    "meaning": "移除；去掉",
+    "phonetic": "/rɪˈmuːv/",
+    "example": ""
+  },
+  {
+    "phrase": "from",
+    "pos": "prep.",
+    "meaning": "从；来自",
+    "phonetic": "/frɒm/",
+    "example": ""
+  },
+  {
+    "phrase": "environmental",
+    "pos": "adj.",
+    "meaning": "环境的；有关环境的",
+    "phonetic": "/ɪnˌvaɪrənˈmentl/",
+    "example": ""
+  },
+  {
+    "phrase": "benefit",
+    "pos": "n./v.",
+    "meaning": "好处；受益",
+    "phonetic": "/ˈbenɪfɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "inheritance",
+    "pos": "n.",
+    "meaning": "继承；遗产",
+    "phonetic": "/ɪnˈherɪtəns/",
+    "example": ""
+  },
+  {
+    "phrase": "expectation",
+    "pos": "n.",
+    "meaning": "期望；预期",
+    "phonetic": "/ˌekspekˈteɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "reduce",
+    "pos": "v.",
+    "meaning": "减少；降低",
+    "phonetic": "/rɪˈdjuːs/",
+    "example": ""
+  },
+  {
+    "phrase": "insignificant",
+    "pos": "adj.",
+    "meaning": "微不足道的；无足轻重的",
+    "phonetic": "/ˌɪnsɪɡˈnɪfɪkənt/",
+    "example": ""
+  },
+  {
+    "phrase": "project",
+    "pos": "n./v.",
+    "meaning": "项目；工程；投射",
+    "phonetic": "/ˈprɒdʒekt/",
+    "example": ""
+  },
+  {
+    "phrase": "injury",
+    "pos": "n.",
+    "meaning": "伤害；损伤",
+    "phonetic": "/ˈɪndʒəri/",
+    "example": ""
+  },
+  {
+    "phrase": "area",
+    "pos": "n.",
+    "meaning": "地区；领域",
+    "phonetic": "/ˈeəriə/",
+    "example": ""
+  },
+  {
+    "phrase": "construct",
+    "pos": "v.",
+    "meaning": "建造；构造",
+    "phonetic": "/kənˈstrʌkt/",
+    "example": ""
+  },
+  {
+    "phrase": "background",
+    "pos": "n.",
+    "meaning": "背景；出身",
+    "phonetic": "/ˈbæɡraʊnd/",
+    "example": ""
+  },
+  {
+    "phrase": "generation",
+    "pos": "n.",
+    "meaning": "一代；产生",
+    "phonetic": "/ˌdʒenəˈreɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "except",
+    "pos": "prep./conj.",
+    "meaning": "除…之外",
+    "phonetic": "/ɪkˈsept/",
+    "example": ""
+  },
+  {
+    "phrase": "accept",
+    "pos": "v.",
+    "meaning": "接受；认可",
+    "phonetic": "/əkˈsept/",
+    "example": ""
+  },
+  {
+    "phrase": "society",
+    "pos": "n.",
+    "meaning": "社会；社团",
+    "phonetic": "/səˈsaɪəti/",
+    "example": ""
+  },
+  {
+    "phrase": "community",
+    "pos": "n.",
+    "meaning": "社区；群体",
+    "phonetic": "/kəˈmjuːnəti/",
+    "example": ""
+  },
+  {
+    "phrase": "relationship",
+    "pos": "n.",
+    "meaning": "关系；联系",
+    "phonetic": "/rɪˈleɪʃnʃɪp/",
+    "example": ""
+  },
+  {
+    "phrase": "bring",
+    "pos": "v.",
+    "meaning": "带来；引起",
+    "phonetic": "/brɪŋ/",
+    "example": ""
+  },
+  {
+    "phrase": "release",
+    "pos": "v./n.",
+    "meaning": "释放；发布",
+    "phonetic": "/rɪˈliːs/",
+    "example": ""
+  },
+  {
+    "phrase": "response",
+    "pos": "n.",
+    "meaning": "回答；反应",
+    "phonetic": "/rɪˈspɒns/",
+    "example": ""
+  },
+  {
+    "phrase": "identify",
+    "pos": "v.",
+    "meaning": "识别；确认",
+    "phonetic": "/aɪˈdentɪfaɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "data",
+    "pos": "n.",
+    "meaning": "数据；资料",
+    "phonetic": "/ˈdeɪtə/",
+    "example": ""
+  },
+  {
+    "phrase": "opposed",
+    "pos": "adj.",
+    "meaning": "反对的；对立的",
+    "phonetic": "/əˈpəʊzd/",
+    "example": ""
+  },
+  {
+    "phrase": "disappointed",
+    "pos": "adj.",
+    "meaning": "失望的",
+    "phonetic": "/ˌdɪsəˈpɔɪntɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "frustrate",
+    "pos": "v.",
+    "meaning": "使沮丧；挫败",
+    "phonetic": "/frʌˈstreɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "anxious",
+    "pos": "adj.",
+    "meaning": "焦虑的；担忧的",
+    "phonetic": "/ˈæŋkʃəs/",
+    "example": ""
+  },
+  {
+    "phrase": "irritate",
+    "pos": "v.",
+    "meaning": "激怒；刺激",
+    "phonetic": "/ˈɪrɪteɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "prompt",
+    "pos": "v./adj.",
+    "meaning": "促使；迅速的",
+    "phonetic": "/prɒmpt/",
+    "example": ""
+  },
+  {
+    "phrase": "express",
+    "pos": "v.",
+    "meaning": "表达；表示",
+    "phonetic": "/ɪkˈspres/",
+    "example": ""
+  },
+  {
+    "phrase": "comfort",
+    "pos": "n./v.",
+    "meaning": "舒适；安慰",
+    "phonetic": "/ˈkʌmfət/",
+    "example": ""
+  },
+  {
+    "phrase": "chemical",
+    "pos": "adj./n.",
+    "meaning": "化学的；化学品",
+    "phonetic": "/ˈkemɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "balance",
+    "pos": "n./v.",
+    "meaning": "平衡；权衡",
+    "phonetic": "/ˈbæləns/",
+    "example": ""
+  },
+  {
+    "phrase": "related",
+    "pos": "adj.",
+    "meaning": "相关的；有联系的",
+    "phonetic": "/rɪˈleɪtɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "a",
+    "pos": "art.",
+    "meaning": "一（个）",
+    "phonetic": "/eɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "goal",
+    "pos": "n.",
+    "meaning": "目标；进球",
+    "phonetic": "/ɡəʊl/",
+    "example": ""
+  },
+  {
+    "phrase": "rise",
+    "pos": "v./n.",
+    "meaning": "上升；升起",
+    "phonetic": "/raɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "raise",
+    "pos": "v./n.",
+    "meaning": "举起；筹集；养育",
+    "phonetic": "/reɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "opportunity",
+    "pos": "n.",
+    "meaning": "机会；时机",
+    "phonetic": "/ˌɒpəˈtjuːnəti/",
+    "example": ""
+  },
+  {
+    "phrase": "establish",
+    "pos": "v.",
+    "meaning": "建立；确立",
+    "phonetic": "/ɪˈstæblɪʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "career",
+    "pos": "n.",
+    "meaning": "职业；事业",
+    "phonetic": "/kəˈrɪə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "affect",
+    "pos": "v.",
+    "meaning": "影响；打动",
+    "phonetic": "/əˈfekt/",
+    "example": ""
+  },
+  {
+    "phrase": "social",
+    "pos": "adj.",
+    "meaning": "社会的；社交的",
+    "phonetic": "/ˈsəʊʃl/",
+    "example": ""
+  },
+  {
+    "phrase": "media",
+    "pos": "n.",
+    "meaning": "媒体；媒介",
+    "phonetic": "/ˈmiːdiə/",
+    "example": ""
+  },
+  {
+    "phrase": "educate",
+    "pos": "v.",
+    "meaning": "教育；培养",
+    "phonetic": "/ˈedʒukeɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "development",
+    "pos": "n.",
+    "meaning": "发展；开发",
+    "phonetic": "/dɪˈveləpmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "beneficial",
+    "pos": "adj.",
+    "meaning": "有益的；有利的",
+    "phonetic": "/ˌbenɪˈfɪʃl/",
+    "example": ""
+  },
+  {
+    "phrase": "intelligence",
+    "pos": "n.",
+    "meaning": "智力；情报",
+    "phonetic": "/ɪnˈtelɪdʒəns/",
+    "example": ""
+  },
+  {
+    "phrase": "support",
+    "pos": "v./n.",
+    "meaning": "支持；支撑",
+    "phonetic": "/səˈpɔːt/",
+    "example": ""
+  },
+  {
+    "phrase": "socialise",
+    "pos": "v.",
+    "meaning": "社交；交往",
+    "phonetic": "/ˈsəʊʃəlaɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "skill",
+    "pos": "n.",
+    "meaning": "技能；技巧",
+    "phonetic": "/skɪl/",
+    "example": ""
+  },
+  {
+    "phrase": "punish",
+    "pos": "v.",
+    "meaning": "惩罚；处罚",
+    "phonetic": "/ˈpʌnɪʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "negative",
+    "pos": "adj.",
+    "meaning": "消极的；否定的",
+    "phonetic": "/ˈneɡətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "carry",
+    "pos": "v.",
+    "meaning": "携带；运送",
+    "phonetic": "/ˈkæri/",
+    "example": ""
+  },
+  {
+    "phrase": "aim",
+    "pos": "n./v.",
+    "meaning": "目标；旨在",
+    "phonetic": "/eɪm/",
+    "example": ""
+  },
+  {
+    "phrase": "psychologist",
+    "pos": "n.",
+    "meaning": "心理学家",
+    "phonetic": "/saɪˈkɒlədʒɪst/",
+    "example": ""
+  },
+  {
+    "phrase": "performance",
+    "pos": "n.",
+    "meaning": "表现；表演",
+    "phonetic": "/pəˈfɔːməns/",
+    "example": ""
+  },
+  {
+    "phrase": "issue",
+    "pos": "n./v.",
+    "meaning": "问题；发布；发行",
+    "phonetic": "/ˈɪʃuː/",
+    "example": ""
+  },
+  {
+    "phrase": "have",
+    "pos": "v.",
+    "meaning": "有；吃；进行",
+    "phonetic": "/hæv/",
+    "example": ""
+  },
+  {
+    "phrase": "an",
+    "pos": "art.",
+    "meaning": "一（个）",
+    "phonetic": "/ən/",
+    "example": ""
+  },
+  {
+    "phrase": "effect",
+    "pos": "n.",
+    "meaning": "影响；效果",
+    "phonetic": "/ɪˈfekt/",
+    "example": ""
+  },
+  {
+    "phrase": "on",
+    "pos": "prep./adv.",
+    "meaning": "在…上；继续",
+    "phonetic": "/ɒn/",
+    "example": ""
+  },
+  {
+    "phrase": "Concerned",
+    "pos": "adj.",
+    "meaning": "担心的；关注的",
+    "phonetic": "/kənˈsɜːnd/",
+    "example": ""
+  },
+  {
+    "phrase": "cognitive",
+    "pos": "adj.",
+    "meaning": "认知的",
+    "phonetic": "/ˈkɒɡnɪtɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "process",
+    "pos": "n./v.",
+    "meaning": "过程；处理",
+    "phonetic": "/ˈprəʊses/",
+    "example": ""
+  },
+  {
+    "phrase": "challenging",
+    "pos": "adj.",
+    "meaning": "有挑战性的",
+    "phonetic": "/ˈtʃælɪndʒɪŋ/",
+    "example": ""
+  },
+  {
+    "phrase": "threaten",
+    "pos": "v.",
+    "meaning": "威胁；恐吓",
+    "phonetic": "/ˈθretn/",
+    "example": ""
+  },
+  {
+    "phrase": "reward",
+    "pos": "n./v.",
+    "meaning": "奖励；报酬",
+    "phonetic": "/rɪˈwɔːd/",
+    "example": ""
+  },
+  {
+    "phrase": "punishment",
+    "pos": "n.",
+    "meaning": "惩罚",
+    "phonetic": "/ˈpʌnɪʃmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "motivation",
+    "pos": "n.",
+    "meaning": "动机；动力",
+    "phonetic": "/ˌməʊtɪˈveɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "encourage",
+    "pos": "v.",
+    "meaning": "鼓励；激励",
+    "phonetic": "/ɪnˈkʌrɪdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "effort",
+    "pos": "n.",
+    "meaning": "努力；尝试",
+    "phonetic": "/ˈefət/",
+    "example": ""
+  },
+  {
+    "phrase": "consequence",
+    "pos": "n.",
+    "meaning": "结果；后果",
+    "phonetic": "/ˈkɒnsɪkwəns/",
+    "example": ""
+  },
+  {
+    "phrase": "influential",
+    "pos": "adj.",
+    "meaning": "有影响力的",
+    "phonetic": "/ˌɪnfluˈenʃl/",
+    "example": ""
+  },
+  {
+    "phrase": "fulfilling",
+    "pos": "adj.",
+    "meaning": "令人满足的",
+    "phonetic": "/fʊlˈfɪlɪŋ/",
+    "example": ""
+  },
+  {
+    "phrase": "engage",
+    "pos": "v.",
+    "meaning": "参与；吸引；雇佣",
+    "phonetic": "/ɪnˈɡeɪdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "act",
+    "pos": "v./n.",
+    "meaning": "行动；行为；表演",
+    "phonetic": "/ækt/",
+    "example": ""
+  },
+  {
+    "phrase": "tutorial",
+    "pos": "n.",
+    "meaning": "辅导课；教程",
+    "phonetic": "/tjuːˈtɔːriəl/",
+    "example": ""
+  },
+  {
+    "phrase": "protocol",
+    "pos": "n.",
+    "meaning": "协议；礼仪",
+    "phonetic": "/ˈprəʊtəkɒl/",
+    "example": ""
+  },
+  {
+    "phrase": "mediation",
+    "pos": "n.",
+    "meaning": "调解；仲裁",
+    "phonetic": "/ˌmiːdiˈeɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "major",
+    "pos": "adj./n./v.",
+    "meaning": "主要的；专业；主修",
+    "phonetic": "/ˈmeɪdʒə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "faculty",
+    "pos": "n.",
+    "meaning": "faculty；全体教员",
+    "phonetic": "/ˈfæklti/",
+    "example": ""
+  },
+  {
+    "phrase": "elective",
+    "pos": "adj./n.",
+    "meaning": "选举的；选修课",
+    "phonetic": "/ɪˈlektɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "supplement",
+    "pos": "n./v.",
+    "meaning": "补充；增补",
+    "phonetic": "/ˈsʌplɪmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "strengthen",
+    "pos": "v.",
+    "meaning": "加强；巩固",
+    "phonetic": "/ˈstreŋθn/",
+    "example": ""
+  },
+  {
+    "phrase": "so-called",
+    "pos": "adj.",
+    "meaning": "所谓的",
+    "phonetic": "/ˌsəʊ ˈkɔːld/",
+    "example": ""
+  },
+  {
+    "phrase": "reject",
+    "pos": "v.",
+    "meaning": "拒绝；排斥",
+    "phonetic": "/rɪˈdʒekt/",
+    "example": ""
+  },
+  {
+    "phrase": "reinforce",
+    "pos": "v.",
+    "meaning": "加强；增援",
+    "phonetic": "/ˌriːɪnˈfɔːs/",
+    "example": ""
+  },
+  {
+    "phrase": "portion",
+    "pos": "n.",
+    "meaning": "部分；一份",
+    "phonetic": "/ˈpɔːʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "overeat",
+    "pos": "v.",
+    "meaning": "吃得过多",
+    "phonetic": "/ˌəʊvərˈiːt/",
+    "example": ""
+  },
+  {
+    "phrase": "ongoing",
+    "pos": "adj.",
+    "meaning": "进行中的；持续的",
+    "phonetic": "/ˈɒnɡəʊɪŋ/",
+    "example": ""
+  },
+  {
+    "phrase": "nourish",
+    "pos": "v.",
+    "meaning": "滋养；培养",
+    "phonetic": "/ˈnʌrɪʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "levy",
+    "pos": "v./n.",
+    "meaning": "征收；征税",
+    "phonetic": "/ˈlevi/",
+    "example": ""
+  },
+  {
+    "phrase": "draw",
+    "pos": "v.",
+    "meaning": "画；拉；吸引",
+    "phonetic": "/drɔː/",
+    "example": ""
+  },
+  {
+    "phrase": "divide",
+    "pos": "v.",
+    "meaning": "分开；除以",
+    "phonetic": "/dɪˈvaɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "charge",
+    "pos": "v./n.",
+    "meaning": "收费；充电；指控",
+    "phonetic": "/tʃɑːdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "additional",
+    "pos": "adj.",
+    "meaning": "额外的；附加的",
+    "phonetic": "/əˈdɪʃənl/",
+    "example": ""
+  },
+  {
+    "phrase": "acceptance",
+    "pos": "n.",
+    "meaning": "接受；认可",
+    "phonetic": "/əkˈseptəns/",
+    "example": ""
+  },
+  {
+    "phrase": "tolerant",
+    "pos": "adj.",
+    "meaning": "宽容的；容忍的",
+    "phonetic": "/ˈtɒlərənt/",
+    "example": ""
+  },
+  {
+    "phrase": "texture",
+    "pos": "n.",
+    "meaning": "质地；纹理",
+    "phonetic": "/ˈtekstʃə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "resort",
+    "pos": "v./n.",
+    "meaning": "诉诸；度假胜地",
+    "phonetic": "/rɪˈzɔːt/",
+    "example": ""
+  },
+  {
+    "phrase": "inadvertent",
+    "pos": "adj.",
+    "meaning": "不经意的；疏忽的",
+    "phonetic": "/ˌɪnədˈvɜːtənt/",
+    "example": ""
+  },
+  {
+    "phrase": "host",
+    "pos": "n./v.",
+    "meaning": "主人；主持人；主办",
+    "phonetic": "/həʊst/",
+    "example": ""
+  },
+  {
+    "phrase": "of",
+    "pos": "prep.",
+    "meaning": "…的；关于",
+    "phonetic": "/əv/",
+    "example": ""
+  },
+  {
+    "phrase": "despair",
+    "pos": "n./v.",
+    "meaning": "绝望；丧失信心",
+    "phonetic": "/dɪˈspeə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "compromise",
+    "pos": "n./v.",
+    "meaning": "妥协；折中",
+    "phonetic": "/ˈkɒmprəmaɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "surveillance",
+    "pos": "n.",
+    "meaning": "监视；监控",
+    "phonetic": "/sɜːˈveɪləns/",
+    "example": ""
+  },
+  {
+    "phrase": "stratospheric",
+    "pos": "adj.",
+    "meaning": "平流层的；极高的",
+    "phonetic": "/ˌstrætəˈsferɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "simultaneously",
+    "pos": "adv.",
+    "meaning": "同时地",
+    "phonetic": "/ˌsɪmlˈteɪniəsli/",
+    "example": ""
+  },
+  {
+    "phrase": "satellite",
+    "pos": "n.",
+    "meaning": "卫星",
+    "phonetic": "/ˈsætəlaɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "mission",
+    "pos": "n.",
+    "meaning": "任务；使命",
+    "phonetic": "/ˈmɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "aloft",
+    "pos": "adv.",
+    "meaning": "在高处；在空中",
+    "phonetic": "/əˈlɒft/",
+    "example": ""
+  },
+  {
+    "phrase": "aerodynamics",
+    "pos": "n.",
+    "meaning": "空气动力学",
+    "phonetic": "/ˌeərəʊdaɪˈnæmɪks/",
+    "example": ""
+  },
+  {
+    "phrase": "vehicle",
+    "pos": "n.",
+    "meaning": "车辆；交通工具",
+    "phonetic": "/ˈviːəkl/",
+    "example": ""
+  },
+  {
+    "phrase": "rational",
+    "pos": "adj.",
+    "meaning": "理性的；合理的",
+    "phonetic": "/ˈræʃnəl/",
+    "example": ""
+  },
+  {
+    "phrase": "mechanism",
+    "pos": "n.",
+    "meaning": "机制；机械装置",
+    "phonetic": "/ˈmekənɪzəm/",
+    "example": ""
+  },
+  {
+    "phrase": "equation",
+    "pos": "n.",
+    "meaning": "方程；等式",
+    "phonetic": "/ɪˈkweɪʒn/",
+    "example": ""
+  },
+  {
+    "phrase": "empirical",
+    "pos": "adj.",
+    "meaning": "经验的；实证的",
+    "phonetic": "/ɪmˈpɪrɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "content",
+    "pos": "n./adj.",
+    "meaning": "内容；满意的",
+    "phonetic": "/ˈkɒntent/",
+    "example": ""
+  },
+  {
+    "phrase": "capability",
+    "pos": "n.",
+    "meaning": "能力；才能",
+    "phonetic": "/ˌkeɪpəˈbɪləti/",
+    "example": ""
+  },
+  {
+    "phrase": "atmosphere",
+    "pos": "n.",
+    "meaning": "大气；气氛",
+    "phonetic": "/ˈætməsfɪə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "pursue",
+    "pos": "v.",
+    "meaning": "追求；从事",
+    "phonetic": "/pəˈsjuː/",
+    "example": ""
+  },
+  {
+    "phrase": "nanometer",
+    "pos": "n.",
+    "meaning": "纳米",
+    "phonetic": "/ˈnænəʊmiːtə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "military",
+    "pos": "adj./n.",
+    "meaning": "军事的；军队",
+    "phonetic": "/ˈmɪlətri/",
+    "example": ""
+  },
+  {
+    "phrase": "interact",
+    "pos": "v.",
+    "meaning": "相互作用；交流",
+    "phonetic": "/ˌɪntərˈækt/",
+    "example": ""
+  },
+  {
+    "phrase": "initial",
+    "pos": "adj./n.",
+    "meaning": "最初的；首字母",
+    "phonetic": "/ɪˈnɪʃl/",
+    "example": ""
+  },
+  {
+    "phrase": "impact",
+    "pos": "n./v.",
+    "meaning": "影响；冲击",
+    "phonetic": "/ˈɪmpækt/",
+    "example": ""
+  },
+  {
+    "phrase": "emerge",
+    "pos": "v.",
+    "meaning": "出现；浮现",
+    "phonetic": "/ɪˈmɜːdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "dimension",
+    "pos": "n.",
+    "meaning": "维度；方面",
+    "phonetic": "/daɪˈmenʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "speech",
+    "pos": "n.",
+    "meaning": "演讲；言语",
+    "phonetic": "/spiːtʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "recognition",
+    "pos": "n.",
+    "meaning": "识别；认可",
+    "phonetic": "/ˌrekəɡˈnɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "indistinguishable",
+    "pos": "adj.",
+    "meaning": "难以区分的",
+    "phonetic": "/ˌɪndɪˈstɪŋɡwɪʃəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "hazard",
+    "pos": "n.",
+    "meaning": "危险；危害",
+    "phonetic": "/ˈhæzəd/",
+    "example": ""
+  },
+  {
+    "phrase": "genre",
+    "pos": "n.",
+    "meaning": "类型；体裁",
+    "phonetic": "/ˈʒɒnrə/",
+    "example": ""
+  },
+  {
+    "phrase": "tremendous",
+    "pos": "adj.",
+    "meaning": "巨大的；极好的",
+    "phonetic": "/trəˈmendəs/",
+    "example": ""
+  },
+  {
+    "phrase": "budget",
+    "pos": "n./v.",
+    "meaning": "预算；安排开支",
+    "phonetic": "/ˈbʌdʒɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "talented",
+    "pos": "adj.",
+    "meaning": "有天赋的",
+    "phonetic": "/ˈtæləntɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "rehearsal",
+    "pos": "n.",
+    "meaning": "排练；彩排",
+    "phonetic": "/rɪˈhɜːsl/",
+    "example": ""
+  },
+  {
+    "phrase": "phase",
+    "pos": "n.",
+    "meaning": "阶段；时期",
+    "phonetic": "/feɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "ignore",
+    "pos": "v.",
+    "meaning": "忽视；不理睬",
+    "phonetic": "/ɪɡˈnɔː(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "fundamental",
+    "pos": "adj.",
+    "meaning": "基本的；根本的",
+    "phonetic": "/ˌfʌndəˈmentl/",
+    "example": ""
+  },
+  {
+    "phrase": "equipment",
+    "pos": "n.",
+    "meaning": "设备；装备",
+    "phonetic": "/ɪˈkwɪpmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "competent",
+    "pos": "adj.",
+    "meaning": "有能力的；胜任的",
+    "phonetic": "/ˈkɒmpɪtənt/",
+    "example": ""
+  },
+  {
+    "phrase": "meticulous",
+    "pos": "adj.",
+    "meaning": "一丝不苟的",
+    "phonetic": "/məˈtɪkjələs/",
+    "example": ""
+  },
+  {
+    "phrase": "eccentric",
+    "pos": "adj.",
+    "meaning": "古怪的；偏心的",
+    "phonetic": "/ɪkˈsentrɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "disapproval",
+    "pos": "n.",
+    "meaning": "不赞成；反对",
+    "phonetic": "/ˌdɪsəˈpruːvl/",
+    "example": ""
+  },
+  {
+    "phrase": "calligrapher",
+    "pos": "n.",
+    "meaning": "书法家",
+    "phonetic": "/kəˈlɪɡrəfə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "apprentice",
+    "pos": "n.",
+    "meaning": "学徒；实习生",
+    "phonetic": "/əˈprentɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "surreal",
+    "pos": "adj.",
+    "meaning": "超现实的；离奇的",
+    "phonetic": "/səˈriəl/",
+    "example": ""
+  },
+  {
+    "phrase": "expressive",
+    "pos": "adj.",
+    "meaning": "有表现力的；富于表情的",
+    "phonetic": "/ɪkˈspresɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "depiction",
+    "pos": "n.",
+    "meaning": "描绘；描述",
+    "phonetic": "/dɪˈpɪkʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "abstract",
+    "pos": "adj./n.",
+    "meaning": "抽象的；摘要",
+    "phonetic": "/ˈæbstrækt/",
+    "example": ""
+  },
+  {
+    "phrase": "sculpture",
+    "pos": "n.",
+    "meaning": "雕塑；雕刻",
+    "phonetic": "/ˈskʌlptʃə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "humanity",
+    "pos": "n.",
+    "meaning": "人类；人性",
+    "phonetic": "/hjuːˈmænəti/",
+    "example": ""
+  },
+  {
+    "phrase": "surface",
+    "pos": "n.",
+    "meaning": "表面；外表",
+    "phonetic": "/ˈsɜːfɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "sphere",
+    "pos": "n.",
+    "meaning": "球体；范围",
+    "phonetic": "/sfɪə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "planet",
+    "pos": "n.",
+    "meaning": "行星",
+    "phonetic": "/ˈplænɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "nuclear",
+    "pos": "adj.",
+    "meaning": "核的；原子能的",
+    "phonetic": "/ˈnjuːkliə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "absence",
+    "pos": "n.",
+    "meaning": "缺席；缺乏",
+    "phonetic": "/ˈæbsəns/",
+    "example": ""
+  },
+  {
+    "phrase": "visible",
+    "pos": "adj.",
+    "meaning": "可见的；明显的",
+    "phonetic": "/ˈvɪzəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "trace",
+    "pos": "n./v.",
+    "meaning": "痕迹；追踪",
+    "phonetic": "/treɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "species",
+    "pos": "n.",
+    "meaning": "物种；种类",
+    "phonetic": "/ˈspiːʃiːz/",
+    "example": ""
+  },
+  {
+    "phrase": "oxygen",
+    "pos": "n.",
+    "meaning": "氧气",
+    "phonetic": "/ˈɒksɪdʒən/",
+    "example": ""
+  },
+  {
+    "phrase": "organism",
+    "pos": "n.",
+    "meaning": "生物体；有机体",
+    "phonetic": "/ˈɔːɡənɪzəm/",
+    "example": ""
+  },
+  {
+    "phrase": "microbe",
+    "pos": "n.",
+    "meaning": "微生物",
+    "phonetic": "/ˈmaɪkrəʊb/",
+    "example": ""
+  },
+  {
+    "phrase": "inadequate",
+    "pos": "adj.",
+    "meaning": "不足的；不充分的",
+    "phonetic": "/ɪnˈædɪkwət/",
+    "example": ""
+  },
+  {
+    "phrase": "element",
+    "pos": "n.",
+    "meaning": "元素；要素",
+    "phonetic": "/ˈelɪmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "core",
+    "pos": "n./adj.",
+    "meaning": "核心；果心；核心的",
+    "phonetic": "/kɔː(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "constrain",
+    "pos": "v.",
+    "meaning": "限制；约束",
+    "phonetic": "/kənˈstreɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "attempt",
+    "pos": "n./v.",
+    "meaning": "尝试；企图",
+    "phonetic": "/əˈtempt/",
+    "example": ""
+  },
+  {
+    "phrase": "aspect",
+    "pos": "n.",
+    "meaning": "方面；外观",
+    "phonetic": "/ˈæspekt/",
+    "example": ""
+  },
+  {
+    "phrase": "spine",
+    "pos": "n.",
+    "meaning": "脊柱；刺",
+    "phonetic": "/spaɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "skull",
+    "pos": "n.",
+    "meaning": "头骨；颅骨",
+    "phonetic": "/skʌl/",
+    "example": ""
+  },
+  {
+    "phrase": "jaw",
+    "pos": "n.",
+    "meaning": "颌；下巴",
+    "phonetic": "/dʒɔː/",
+    "example": ""
+  },
+  {
+    "phrase": "captivity",
+    "pos": "n.",
+    "meaning": "囚禁；被俘",
+    "phonetic": "/kæpˈtɪvəti/",
+    "example": ""
+  },
+  {
+    "phrase": "aquarium",
+    "pos": "n.",
+    "meaning": "水族馆",
+    "phonetic": "/əˈkweəriəm/",
+    "example": ""
+  },
+  {
+    "phrase": "marine",
+    "pos": "adj.",
+    "meaning": "海洋的；海生的",
+    "phonetic": "/məˈriːn/",
+    "example": ""
+  },
+  {
+    "phrase": "infant",
+    "pos": "n.",
+    "meaning": "婴儿；幼儿",
+    "phonetic": "/ˈɪnfənt/",
+    "example": ""
+  },
+  {
+    "phrase": "weird",
+    "pos": "adj.",
+    "meaning": "奇怪的；怪异的",
+    "phonetic": "/wɪəd/",
+    "example": ""
+  },
+  {
+    "phrase": "physics",
+    "pos": "n.",
+    "meaning": "物理；物理学",
+    "phonetic": "/ˈfɪzɪks/",
+    "example": ""
+  },
+  {
+    "phrase": "microbiology",
+    "pos": "n.",
+    "meaning": "微生物学",
+    "phonetic": "/ˌmaɪkrəʊbaɪˈɒlədʒi/",
+    "example": ""
+  },
+  {
+    "phrase": "mechanics",
+    "pos": "n.",
+    "meaning": "力学；机械学",
+    "phonetic": "/mɪˈkænɪks/",
+    "example": ""
+  },
+  {
+    "phrase": "intricate",
+    "pos": "adj.",
+    "meaning": "复杂的；错综的",
+    "phonetic": "/ˈɪntrɪkət/",
+    "example": ""
+  },
+  {
+    "phrase": "evolve",
+    "pos": "v.",
+    "meaning": "进化；发展",
+    "phonetic": "/ɪˈvɒlv/",
+    "example": ""
+  },
+  {
+    "phrase": "elaborate",
+    "pos": "adj./v.",
+    "meaning": "复杂的；详细阐述",
+    "phonetic": "/ɪˈlæbərət/",
+    "example": ""
+  },
+  {
+    "phrase": "ecology",
+    "pos": "n.",
+    "meaning": "生态学",
+    "phonetic": "/ɪˈkɒlədʒi/",
+    "example": ""
+  },
+  {
+    "phrase": "creature",
+    "pos": "n.",
+    "meaning": "生物；动物",
+    "phonetic": "/ˈkriːtʃə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "chemistry",
+    "pos": "n.",
+    "meaning": "化学",
+    "phonetic": "/ˈkemɪstri/",
+    "example": ""
+  },
+  {
+    "phrase": "bright",
+    "pos": "adj.",
+    "meaning": "明亮的；聪明的",
+    "phonetic": "/braɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "botany",
+    "pos": "n.",
+    "meaning": "植物学",
+    "phonetic": "/ˈbɒtəni/",
+    "example": ""
+  },
+  {
+    "phrase": "bizarre",
+    "pos": "adj.",
+    "meaning": "奇异的",
+    "phonetic": "/bɪˈzɑː(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "biology",
+    "pos": "n.",
+    "meaning": "生物学",
+    "phonetic": "/baɪˈɒlədʒi/",
+    "example": ""
+  },
+  {
+    "phrase": "astronomy",
+    "pos": "n.",
+    "meaning": "天文学",
+    "phonetic": "/əˈstrɒnəmi/",
+    "example": ""
+  },
+  {
+    "phrase": "adjust",
+    "pos": "v.",
+    "meaning": "调整；适应",
+    "phonetic": "/əˈdʒʌst/",
+    "example": ""
+  },
+  {
+    "phrase": "acquire",
+    "pos": "v.",
+    "meaning": "获得；习得",
+    "phonetic": "/əˈkwaɪə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "spy",
+    "pos": "n./v.",
+    "meaning": "间谍；侦察",
+    "phonetic": "/spaɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "keep",
+    "pos": "v.",
+    "meaning": "保持；保留",
+    "phonetic": "/kiːp/",
+    "example": ""
+  },
+  {
+    "phrase": "low",
+    "pos": "adj./adv.",
+    "meaning": "低的；低声地",
+    "phonetic": "/ləʊ/",
+    "example": ""
+  },
+  {
+    "phrase": "profile",
+    "pos": "n.",
+    "meaning": "轮廓；简介",
+    "phonetic": "/ˈprəʊfaɪl/",
+    "example": ""
+  },
+  {
+    "phrase": "depressed",
+    "pos": "adj.",
+    "meaning": "沮丧的；萧条的",
+    "phonetic": "/dɪˈprest/",
+    "example": ""
+  },
+  {
+    "phrase": "unremarkable",
+    "pos": "adj.",
+    "meaning": "平凡的；不显著的",
+    "phonetic": "/ˌʌnrɪˈmɑːkəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "unintentional",
+    "pos": "adj.",
+    "meaning": "无意的；偶然的",
+    "phonetic": "/ˌʌnɪnˈtenʃənl/",
+    "example": ""
+  },
+  {
+    "phrase": "paradoxically",
+    "pos": "adv.",
+    "meaning": "自相矛盾地",
+    "phonetic": "/ˌpærəˈdɒksɪkli/",
+    "example": ""
+  },
+  {
+    "phrase": "intriguingly",
+    "pos": "adv.",
+    "meaning": "有趣地；引人入胜",
+    "phonetic": "/ɪnˈtriːɡɪŋli/",
+    "example": ""
+  },
+  {
+    "phrase": "convincing",
+    "pos": "adj.",
+    "meaning": "令人信服的",
+    "phonetic": "/kənˈvɪnsɪŋ/",
+    "example": ""
+  },
+  {
+    "phrase": "gender",
+    "pos": "n.",
+    "meaning": "性别",
+    "phonetic": "/ˈdʒendə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "introversion",
+    "pos": "n.",
+    "meaning": "内向",
+    "phonetic": "/ˌɪntrəˈvɜːʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "extroversion",
+    "pos": "n.",
+    "meaning": "外向",
+    "phonetic": "/ˌekstrəˈvɜːʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "peer",
+    "pos": "n.",
+    "meaning": "同龄人；同辈",
+    "phonetic": "/pɪə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "obedience",
+    "pos": "n.",
+    "meaning": "服从；顺从",
+    "phonetic": "/əˈbiːdiəns/",
+    "example": ""
+  },
+  {
+    "phrase": "cooperation",
+    "pos": "n.",
+    "meaning": "合作；协作",
+    "phonetic": "/kəʊˌɒpəˈreɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "conformity",
+    "pos": "n.",
+    "meaning": "一致性；顺从",
+    "phonetic": "/kənˈfɔːməti/",
+    "example": ""
+  },
+  {
+    "phrase": "commitment",
+    "pos": "n.",
+    "meaning": "承诺；投入",
+    "phonetic": "/kəˈmɪtmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "bond",
+    "pos": "n./v.",
+    "meaning": "纽带；结合",
+    "phonetic": "/bɒnd/",
+    "example": ""
+  },
+  {
+    "phrase": "attribute",
+    "pos": "v./n.",
+    "meaning": "归因于；属性",
+    "phonetic": "/əˈtrɪbjuːt/",
+    "example": ""
+  },
+  {
+    "phrase": "attitude",
+    "pos": "n.",
+    "meaning": "态度",
+    "phonetic": "/ˈætɪtjuːd/",
+    "example": ""
+  },
+  {
+    "phrase": "sympathy",
+    "pos": "n.",
+    "meaning": "同情；同情",
+    "phonetic": "/ˈsɪmpəθi/",
+    "example": ""
+  },
+  {
+    "phrase": "impulse",
+    "pos": "n.",
+    "meaning": "冲动；脉冲",
+    "phonetic": "/ˈɪmpʌls/",
+    "example": ""
+  },
+  {
+    "phrase": "empathy",
+    "pos": "n.",
+    "meaning": "共情；同理心",
+    "phonetic": "/ˈempəθi/",
+    "example": ""
+  },
+  {
+    "phrase": "distress",
+    "pos": "n./v.",
+    "meaning": "痛苦；使悲痛",
+    "phonetic": "/dɪˈstres/",
+    "example": ""
+  },
+  {
+    "phrase": "arise",
+    "pos": "v.",
+    "meaning": "出现；升起",
+    "phonetic": "/əˈraɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "altruism",
+    "pos": "n.",
+    "meaning": "利他主义",
+    "phonetic": "/ˈæltruɪzəm/",
+    "example": ""
+  },
+  {
+    "phrase": "hunt",
+    "pos": "v./n.",
+    "meaning": "打猎；搜寻",
+    "phonetic": "/hʌnt/",
+    "example": ""
+  },
+  {
+    "phrase": "notoriously",
+    "pos": "adv.",
+    "meaning": "臭名昭著地；众所周知地",
+    "phonetic": "/nəʊˈtɔːriəsli/",
+    "example": ""
+  },
+  {
+    "phrase": "irritation",
+    "pos": "n.",
+    "meaning": "恼怒；刺激",
+    "phonetic": "/ˌɪrɪˈteɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "conservative",
+    "pos": "adj.",
+    "meaning": "保守的",
+    "phonetic": "/kənˈsɜːvətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "awe",
+    "pos": "n./v.",
+    "meaning": "敬畏",
+    "phonetic": "/ɔː/",
+    "example": ""
+  },
+  {
+    "phrase": "violate",
+    "pos": "v.",
+    "meaning": "违反；侵犯",
+    "phonetic": "/ˈvaɪəleɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "undertake",
+    "pos": "v.",
+    "meaning": "承担；从事",
+    "phonetic": "/ˌʌndəˈteɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "imply",
+    "pos": "v.",
+    "meaning": "暗示；意味着",
+    "phonetic": "/ɪmˈplaɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "convert",
+    "pos": "v.",
+    "meaning": "转换；转变",
+    "phonetic": "/kənˈvɜːt/",
+    "example": ""
+  },
+  {
+    "phrase": "contribute",
+    "pos": "v.",
+    "meaning": "贡献；促成",
+    "phonetic": "/kənˈtrɪbjuːt/",
+    "example": ""
+  },
+  {
+    "phrase": "pollution",
+    "pos": "n.",
+    "meaning": "污染",
+    "phonetic": "/pəˈluːʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "habitat",
+    "pos": "n.",
+    "meaning": "栖息地",
+    "phonetic": "/ˈhæbɪtæt/",
+    "example": ""
+  },
+  {
+    "phrase": "generate",
+    "pos": "v.",
+    "meaning": "产生；发电",
+    "phonetic": "/ˈdʒenəreɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "extinction",
+    "pos": "n.",
+    "meaning": "灭绝；消亡",
+    "phonetic": "/ɪkˈstɪŋkʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "endangered",
+    "pos": "adj.",
+    "meaning": "濒危的",
+    "phonetic": "/ɪnˈdeɪndʒəd/",
+    "example": ""
+  },
+  {
+    "phrase": "greenhouse",
+    "pos": "n.",
+    "meaning": "温室",
+    "phonetic": "/ˈɡriːnhaʊs/",
+    "example": ""
+  },
+  {
+    "phrase": "gas",
+    "pos": "n.",
+    "meaning": "气体；煤气",
+    "phonetic": "/ɡæs/",
+    "example": ""
+  },
+  {
+    "phrase": "fossil",
+    "pos": "n.",
+    "meaning": "化石",
+    "phonetic": "/ˈfɒsl/",
+    "example": ""
+  },
+  {
+    "phrase": "fuels",
+    "pos": "n./v.",
+    "meaning": "燃料；给…加燃料",
+    "phonetic": "/ˈfjuːəlz/",
+    "example": ""
+  },
+  {
+    "phrase": "emission",
+    "pos": "n.",
+    "meaning": "排放；排放物",
+    "phonetic": "/ɪˈmɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "climate",
+    "pos": "n.",
+    "meaning": "气候",
+    "phonetic": "/ˈklaɪmət/",
+    "example": ""
+  },
+  {
+    "phrase": "change",
+    "pos": "n./v.",
+    "meaning": "改变；变化",
+    "phonetic": "/tʃeɪndʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "recreation",
+    "pos": "n.",
+    "meaning": "娱乐；消遣",
+    "phonetic": "/ˌrekriˈeɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "wise",
+    "pos": "adj.",
+    "meaning": "明智的；聪明的",
+    "phonetic": "/waɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "uninhabitable",
+    "pos": "adj.",
+    "meaning": "不适宜居住的",
+    "phonetic": "/ˌʌnɪnˈhæbɪtəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "unconvinced",
+    "pos": "adj.",
+    "meaning": "不信服的",
+    "phonetic": "/ˌʌnkənˈvɪnst/",
+    "example": ""
+  },
+  {
+    "phrase": "unconventional",
+    "pos": "adj.",
+    "meaning": "非传统的",
+    "phonetic": "/ˌʌnkənˈvenʃənl/",
+    "example": ""
+  },
+  {
+    "phrase": "submarine",
+    "pos": "n./adj.",
+    "meaning": "潜艇；海底的",
+    "phonetic": "/ˌsʌbməˈriːn/",
+    "example": ""
+  },
+  {
+    "phrase": "sceptical",
+    "pos": "adj.",
+    "meaning": "怀疑的",
+    "phonetic": "/ˈskeptɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "renewable",
+    "pos": "adj.",
+    "meaning": "可再生的",
+    "phonetic": "/rɪˈnjuːəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "refine",
+    "pos": "v.",
+    "meaning": "提炼；改进",
+    "phonetic": "/rɪˈfaɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "radical",
+    "pos": "adj.",
+    "meaning": "激进的；根本的",
+    "phonetic": "/ˈrædɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "priority",
+    "pos": "n.",
+    "meaning": "优先事项",
+    "phonetic": "/praɪˈɒrəti/",
+    "example": ""
+  },
+  {
+    "phrase": "pressurise",
+    "pos": "v.",
+    "meaning": "增压；迫使",
+    "phonetic": "/ˈpreʃəraɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "outdated",
+    "pos": "adj.",
+    "meaning": "过时的",
+    "phonetic": "/ˌaʊtˈdeɪtɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "minimise",
+    "pos": "v.",
+    "meaning": "使最小化；低估",
+    "phonetic": "/ˈmɪnɪmaɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "mature",
+    "pos": "adj./v.",
+    "meaning": "成熟的；成熟",
+    "phonetic": "/məˈtʃʊə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "inspire",
+    "pos": "v.",
+    "meaning": "激励；启发",
+    "phonetic": "/ɪnˈspaɪə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "innovation",
+    "pos": "n.",
+    "meaning": "创新",
+    "phonetic": "/ˌɪnəˈveɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "incompatible",
+    "pos": "adj.",
+    "meaning": "不兼容的",
+    "phonetic": "/ˌɪnkəmˈpætəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "inappropriate",
+    "pos": "adj.",
+    "meaning": "不恰当的",
+    "phonetic": "/ˌɪnəˈprəʊpriət/",
+    "example": ""
+  },
+  {
+    "phrase": "inaccurate",
+    "pos": "adj.",
+    "meaning": "不准确的",
+    "phonetic": "/ɪnˈækjərət/",
+    "example": ""
+  },
+  {
+    "phrase": "implausible",
+    "pos": "adj.",
+    "meaning": "难以置信的",
+    "phonetic": "/ɪmˈplɔːzəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "hydroelectric",
+    "pos": "adj.",
+    "meaning": "水力发电的",
+    "phonetic": "/ˌhaɪdrəʊɪˈlektrɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "global",
+    "pos": "adj.",
+    "meaning": "全球的；总体的",
+    "phonetic": "/ˈɡləʊbl/",
+    "example": ""
+  },
+  {
+    "phrase": "fluctuation",
+    "pos": "n.",
+    "meaning": "波动；起伏",
+    "phonetic": "/ˌflʌktʃuˈeɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "exploitation",
+    "pos": "n.",
+    "meaning": "开发；剥削",
+    "phonetic": "/ˌeksplɔɪˈteɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "deforestation",
+    "pos": "n.",
+    "meaning": "森林砍伐",
+    "phonetic": "/ˌdiːfɒrɪˈsteɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "withstand",
+    "pos": "v.",
+    "meaning": "承受；抵挡",
+    "phonetic": "/wɪðˈstænd/",
+    "example": ""
+  },
+  {
+    "phrase": "weave",
+    "pos": "v.",
+    "meaning": "编织；穿行",
+    "phonetic": "/wiːv/",
+    "example": ""
+  },
+  {
+    "phrase": "scale",
+    "pos": "n./v.",
+    "meaning": "规模；刻度；攀登",
+    "phonetic": "/skeɪl/",
+    "example": ""
+  },
+  {
+    "phrase": "irresistible",
+    "pos": "adj.",
+    "meaning": "不可抗拒的",
+    "phonetic": "/ˌɪrɪˈzɪstəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "feat",
+    "pos": "n.",
+    "meaning": "功绩；技艺",
+    "phonetic": "/fiːt/",
+    "example": ""
+  },
+  {
+    "phrase": "endurance",
+    "pos": "n.",
+    "meaning": "耐力；持久",
+    "phonetic": "/ɪnˈdjʊərəns/",
+    "example": ""
+  },
+  {
+    "phrase": "mine",
+    "pos": "n./v.",
+    "meaning": "矿；开采",
+    "phonetic": "/maɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "eloquent",
+    "pos": "adj.",
+    "meaning": "雄辩的；有说服力的",
+    "phonetic": "/ˈeləkwənt/",
+    "example": ""
+  },
+  {
+    "phrase": "crisis",
+    "pos": "n.",
+    "meaning": "危机；危急关头",
+    "phonetic": "/ˈkraɪsɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "captivate",
+    "pos": "v.",
+    "meaning": "迷住；吸引",
+    "phonetic": "/ˈkæptɪveɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "articulate",
+    "pos": "adj./v.",
+    "meaning": "善于表达的；明确表达",
+    "phonetic": "/ɑːˈtɪkjələt/",
+    "example": ""
+  },
+  {
+    "phrase": "vision",
+    "pos": "n.",
+    "meaning": "视力；愿景",
+    "phonetic": "/ˈvɪʒn/",
+    "example": ""
+  },
+  {
+    "phrase": "subsidiary",
+    "pos": "adj./n.",
+    "meaning": "附属的；子公司",
+    "phonetic": "/səbˈsɪdiəri/",
+    "example": ""
+  },
+  {
+    "phrase": "site",
+    "pos": "n.",
+    "meaning": "地点；场所",
+    "phonetic": "/saɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "regime",
+    "pos": "n.",
+    "meaning": "政权；制度",
+    "phonetic": "/reɪˈʒiːm/",
+    "example": ""
+  },
+  {
+    "phrase": "majority",
+    "pos": "n.",
+    "meaning": "大多数",
+    "phonetic": "/məˈdʒɒrəti/",
+    "example": ""
+  },
+  {
+    "phrase": "interaction",
+    "pos": "n.",
+    "meaning": "相互作用；交流",
+    "phonetic": "/ˌɪntərˈækʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "integrity",
+    "pos": "n.",
+    "meaning": "完整；正直",
+    "phonetic": "/ɪnˈteɡrəti/",
+    "example": ""
+  },
+  {
+    "phrase": "institution",
+    "pos": "n.",
+    "meaning": "机构；制度",
+    "phonetic": "/ˌɪnstɪˈtjuːʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "facility",
+    "pos": "n.",
+    "meaning": "设施；设备",
+    "phonetic": "/fəˈsɪləti/",
+    "example": ""
+  },
+  {
+    "phrase": "ethical",
+    "pos": "adj.",
+    "meaning": "道德的；伦理的",
+    "phonetic": "/ˈeθɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "corporation",
+    "pos": "n.",
+    "meaning": "公司；企业",
+    "phonetic": "/ˌkɔːpəˈreɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "colleague",
+    "pos": "n.",
+    "meaning": "同事",
+    "phonetic": "/ˈkɒliːɡ/",
+    "example": ""
+  },
+  {
+    "phrase": "authority",
+    "pos": "n.",
+    "meaning": "权威；当局",
+    "phonetic": "/ɔːˈθɒrəti/",
+    "example": ""
+  },
+  {
+    "phrase": "administration",
+    "pos": "n.",
+    "meaning": "管理；行政部门",
+    "phonetic": "/ədˌmɪnɪˈstreɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "accordingly",
+    "pos": "adv.",
+    "meaning": "因此；相应地",
+    "phonetic": "/əˈkɔːdɪŋli/",
+    "example": ""
+  },
+  {
+    "phrase": "leadership",
+    "pos": "n.",
+    "meaning": "领导能力；领导层",
+    "phonetic": "/ˈliːdəʃɪp/",
+    "example": ""
+  },
+  {
+    "phrase": "promote",
+    "pos": "v.",
+    "meaning": "促进；推广；晋升",
+    "phonetic": "/prəˈməʊt/",
+    "example": ""
+  },
+  {
+    "phrase": "productive",
+    "pos": "adj.",
+    "meaning": "多产的；有成效的",
+    "phonetic": "/prəˈdʌktɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "product",
+    "pos": "n.",
+    "meaning": "产品",
+    "phonetic": "/ˈprɒdʌkt/",
+    "example": ""
+  },
+  {
+    "phrase": "obtain",
+    "pos": "v.",
+    "meaning": "获得；得到",
+    "phonetic": "/əbˈteɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "distribute",
+    "pos": "v.",
+    "meaning": "分配；分布",
+    "phonetic": "/dɪˈstrɪbjuːt/",
+    "example": ""
+  },
+  {
+    "phrase": "consumption",
+    "pos": "n.",
+    "meaning": "消费；消耗",
+    "phonetic": "/kənˈsʌmpʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "consumer",
+    "pos": "n.",
+    "meaning": "消费者",
+    "phonetic": "/kənˈsjuːmə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "competitive",
+    "pos": "adj.",
+    "meaning": "竞争的；有竞争力的",
+    "phonetic": "/kəmˈpetətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "abundance",
+    "pos": "n.",
+    "meaning": "丰富；充裕",
+    "phonetic": "/əˈbʌndəns/",
+    "example": ""
+  },
+  {
+    "phrase": "superior",
+    "pos": "adj./n.",
+    "meaning": "优越的；上级",
+    "phonetic": "/suːˈpɪəriə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "capture",
+    "pos": "v./n.",
+    "meaning": "捕获；夺取",
+    "phonetic": "/ˈkæptʃə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "bombard",
+    "pos": "v.",
+    "meaning": "轰炸；大量提问",
+    "phonetic": "/bɒmˈbɑːd/",
+    "example": ""
+  },
+  {
+    "phrase": "dialogue",
+    "pos": "n.",
+    "meaning": "对话",
+    "phonetic": "/ˈdaɪəlɒɡ/",
+    "example": ""
+  },
+  {
+    "phrase": "sword",
+    "pos": "n.",
+    "meaning": "剑；刀",
+    "phonetic": "/sɔːd/",
+    "example": ""
+  },
+  {
+    "phrase": "bend",
+    "pos": "v.",
+    "meaning": "弯曲；弯腰",
+    "phonetic": "/bend/",
+    "example": ""
+  },
+  {
+    "phrase": "arc",
+    "pos": "n.",
+    "meaning": "弧；弧形",
+    "phonetic": "/ɑːk/",
+    "example": ""
+  },
+  {
+    "phrase": "sustain",
+    "pos": "v.",
+    "meaning": "维持；支撑",
+    "phonetic": "/səˈsteɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "style",
+    "pos": "n.",
+    "meaning": "风格；方式",
+    "phonetic": "/staɪl/",
+    "example": ""
+  },
+  {
+    "phrase": "investment",
+    "pos": "n.",
+    "meaning": "投资",
+    "phonetic": "/ɪnˈvestmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "individual",
+    "pos": "adj./n.",
+    "meaning": "个人的；个体",
+    "phonetic": "/ˌɪndɪˈvɪdʒuəl/",
+    "example": ""
+  },
+  {
+    "phrase": "financial",
+    "pos": "adj.",
+    "meaning": "金融的；财务的",
+    "phonetic": "/faɪˈnænʃl/",
+    "example": ""
+  },
+  {
+    "phrase": "economic",
+    "pos": "adj.",
+    "meaning": "经济的；经济学的",
+    "phonetic": "/ˌiːkəˈnɒmɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "dynamic",
+    "pos": "adj./n.",
+    "meaning": "动态的；动力",
+    "phonetic": "/daɪˈnæmɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "distinctive",
+    "pos": "adj.",
+    "meaning": "独特的；有特色的",
+    "phonetic": "/dɪˈstɪŋktɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "aspire",
+    "pos": "v.",
+    "meaning": "渴望；追求",
+    "phonetic": "/əˈspaɪə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "stress",
+    "pos": "v./n.",
+    "meaning": "强调；压力",
+    "phonetic": "/stres/",
+    "example": ""
+  },
+  {
+    "phrase": "prove",
+    "pos": "v.",
+    "meaning": "证明；证实",
+    "phonetic": "/pruːv/",
+    "example": ""
+  },
+  {
+    "phrase": "point",
+    "pos": "n./v.",
+    "meaning": "点；指出",
+    "phonetic": "/pɔɪnt/",
+    "example": ""
+  },
+  {
+    "phrase": "observe",
+    "pos": "v.",
+    "meaning": "观察；遵守",
+    "phonetic": "/əbˈzɜːv/",
+    "example": ""
+  },
+  {
+    "phrase": "note",
+    "pos": "v./n.",
+    "meaning": "注意；笔记",
+    "phonetic": "/nəʊt/",
+    "example": ""
+  },
+  {
+    "phrase": "mention",
+    "pos": "v./n.",
+    "meaning": "提及；说起",
+    "phonetic": "/ˈmenʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "inform",
+    "pos": "v.",
+    "meaning": "通知；告知",
+    "phonetic": "/ɪnˈfɔːm/",
+    "example": ""
+  },
+  {
+    "phrase": "emphasise",
+    "pos": "v.",
+    "meaning": "强调；重视",
+    "phonetic": "/ˈemfəsaɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "cast",
+    "pos": "v./n.",
+    "meaning": "投；铸造；演员阵容",
+    "phonetic": "/kɑːst/",
+    "example": ""
+  },
+  {
+    "phrase": "argue",
+    "pos": "v.",
+    "meaning": "争论；主张",
+    "phonetic": "/ˈɑːɡjuː/",
+    "example": ""
+  },
+  {
+    "phrase": "represent",
+    "pos": "v.",
+    "meaning": "代表；象征",
+    "phonetic": "/ˌreprɪˈzent/",
+    "example": ""
+  },
+  {
+    "phrase": "influence",
+    "pos": "n./v.",
+    "meaning": "影响；影响力",
+    "phonetic": "/ˈɪnfluəns/",
+    "example": ""
+  },
+  {
+    "phrase": "knock",
+    "pos": "v./n.",
+    "meaning": "敲；击",
+    "phonetic": "/nɒk/",
+    "example": ""
+  },
+  {
+    "phrase": "ingenious",
+    "pos": "adj.",
+    "meaning": "巧妙的；有独创性的",
+    "phonetic": "/ɪnˈdʒiːniəs/",
+    "example": ""
+  },
+  {
+    "phrase": "inclination",
+    "pos": "n.",
+    "meaning": "倾向；意愿",
+    "phonetic": "/ˌɪnklɪˈneɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "finalise",
+    "pos": "v.",
+    "meaning": "完成；确定",
+    "phonetic": "/ˈfaɪnəlaɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "exist",
+    "pos": "v.",
+    "meaning": "存在；生存",
+    "phonetic": "/ɪɡˈzɪst/",
+    "example": ""
+  },
+  {
+    "phrase": "demolish",
+    "pos": "v.",
+    "meaning": "拆除；推翻",
+    "phonetic": "/dɪˈmɒlɪʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "create",
+    "pos": "v.",
+    "meaning": "创造；创作",
+    "phonetic": "/kriˈeɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "conventional",
+    "pos": "adj.",
+    "meaning": "传统的；常规的",
+    "phonetic": "/kənˈvenʃənl/",
+    "example": ""
+  },
+  {
+    "phrase": "commence",
+    "pos": "v.",
+    "meaning": "开始；着手",
+    "phonetic": "/kəˈmens/",
+    "example": ""
+  },
+  {
+    "phrase": "collapse",
+    "pos": "v./n.",
+    "meaning": "倒塌；崩溃",
+    "phonetic": "/kəˈlæps/",
+    "example": ""
+  },
+  {
+    "phrase": "assemble",
+    "pos": "v.",
+    "meaning": "组装；集合",
+    "phonetic": "/əˈsembl/",
+    "example": ""
+  },
+  {
+    "phrase": "resume",
+    "pos": "v./n.",
+    "meaning": "恢复；简历",
+    "phonetic": "/rɪˈzjuːm/",
+    "example": ""
+  },
+  {
+    "phrase": "outbreak",
+    "pos": "n.",
+    "meaning": "爆发",
+    "phonetic": "/ˈaʊtbreɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "noticeable",
+    "pos": "adj.",
+    "meaning": "显而易见的",
+    "phonetic": "/ˈnəʊtɪsəbl/",
+    "example": ""
+  },
+  {
+    "phrase": "intermission",
+    "pos": "n.",
+    "meaning": "幕间休息；暂停",
+    "phonetic": "/ˌɪntəˈmɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "compress",
+    "pos": "v.",
+    "meaning": "压缩；压紧",
+    "phonetic": "/kəmˈpres/",
+    "example": ""
+  },
+  {
+    "phrase": "character",
+    "pos": "n.",
+    "meaning": "性格；角色；汉字",
+    "phonetic": "/ˈkærəktə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "aesthetic",
+    "pos": "adj.",
+    "meaning": "美学的；审美的",
+    "phonetic": "/iːsˈθetɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "serve",
+    "pos": "v.",
+    "meaning": "服务；供应",
+    "phonetic": "/sɜːv/",
+    "example": ""
+  },
+  {
+    "phrase": "sensor",
+    "pos": "n.",
+    "meaning": "传感器；感应器",
+    "phonetic": "/ˈsensə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "potential",
+    "pos": "adj./n.",
+    "meaning": "潜在的；潜力",
+    "phonetic": "/pəˈtenʃl/",
+    "example": ""
+  },
+  {
+    "phrase": "physical",
+    "pos": "adj.",
+    "meaning": "身体的；物理的",
+    "phonetic": "/ˈfɪzɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "joint",
+    "pos": "adj./n.",
+    "meaning": "联合的；关节",
+    "phonetic": "/dʒɔɪnt/",
+    "example": ""
+  },
+  {
+    "phrase": "contention",
+    "pos": "n.",
+    "meaning": "争论；论点",
+    "phonetic": "/kənˈtenʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "artificial",
+    "pos": "adj.",
+    "meaning": "人工的；人造的",
+    "phonetic": "/ˌɑːtɪˈfɪʃl/",
+    "example": ""
+  },
+  {
+    "phrase": "technical",
+    "pos": "adj.",
+    "meaning": "技术的；专业的",
+    "phonetic": "/ˈteknɪkl/",
+    "example": ""
+  },
+  {
+    "phrase": "recover",
+    "pos": "v.",
+    "meaning": "恢复；康复",
+    "phonetic": "/rɪˈkʌvə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "perform",
+    "pos": "v.",
+    "meaning": "表演；执行",
+    "phonetic": "/pəˈfɔːm/",
+    "example": ""
+  },
+  {
+    "phrase": "participate",
+    "pos": "v.",
+    "meaning": "参与；参加",
+    "phonetic": "/pɑːˈtɪsɪpeɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "outcome",
+    "pos": "n.",
+    "meaning": "结果；成果",
+    "phonetic": "/ˈaʊtkʌm/",
+    "example": ""
+  },
+  {
+    "phrase": "nutrient",
+    "pos": "n.",
+    "meaning": "营养物；养分",
+    "phonetic": "/ˈnjuːtriənt/",
+    "example": ""
+  },
+  {
+    "phrase": "involve",
+    "pos": "v.",
+    "meaning": "涉及；包含",
+    "phonetic": "/ɪnˈvɒlv/",
+    "example": ""
+  },
+  {
+    "phrase": "expert",
+    "pos": "n./adj.",
+    "meaning": "专家；熟练的",
+    "phonetic": "/ˈekspɜːt/",
+    "example": ""
+  },
+  {
+    "phrase": "enhance",
+    "pos": "v.",
+    "meaning": "提高；增强",
+    "phonetic": "/ɪnˈhɑːns/",
+    "example": ""
+  },
+  {
+    "phrase": "compete",
+    "pos": "v.",
+    "meaning": "竞争；比赛",
+    "phonetic": "/kəmˈpiːt/",
+    "example": ""
+  },
+  {
+    "phrase": "achieve",
+    "pos": "v.",
+    "meaning": "实现；达到",
+    "phonetic": "/əˈtʃiːv/",
+    "example": ""
+  },
+  {
+    "phrase": "adequate",
+    "pos": "adj.",
+    "meaning": "足够的；适当的",
+    "phonetic": "/ˈædɪkwət/",
+    "example": ""
+  },
+  {
+    "phrase": "fatigue",
+    "pos": "n./v.",
+    "meaning": "疲劳；疲乏",
+    "phonetic": "/fəˈtiːɡ/",
+    "example": ""
+  },
+  {
+    "phrase": "theme",
+    "pos": "n.",
+    "meaning": "主题；题目",
+    "phonetic": "/θiːm/",
+    "example": ""
+  },
+  {
+    "phrase": "scenario",
+    "pos": "n.",
+    "meaning": "方案；剧本",
+    "phonetic": "/səˈnɑːriəʊ/",
+    "example": ""
+  },
+  {
+    "phrase": "perspective",
+    "pos": "n.",
+    "meaning": "观点；视角",
+    "phonetic": "/pəˈspektɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "obstacle",
+    "pos": "n.",
+    "meaning": "障碍；阻碍",
+    "phonetic": "/ˈɒbstəkl/",
+    "example": ""
+  },
+  {
+    "phrase": "notion",
+    "pos": "n.",
+    "meaning": "概念；看法",
+    "phonetic": "/ˈnəʊʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "insight",
+    "pos": "n.",
+    "meaning": "洞察力；深刻见解",
+    "phonetic": "/ˈɪnsaɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "initiative",
+    "pos": "n.",
+    "meaning": "主动性；倡议",
+    "phonetic": "/ɪˈnɪʃətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "controversy",
+    "pos": "n.",
+    "meaning": "争议；争论",
+    "phonetic": "/ˈkɒntrəvɜːsi/",
+    "example": ""
+  },
+  {
+    "phrase": "challenge",
+    "pos": "n./v.",
+    "meaning": "挑战；质疑",
+    "phonetic": "/ˈtʃælɪndʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "spirit",
+    "pos": "n.",
+    "meaning": "精神；心灵",
+    "phonetic": "/ˈspɪrɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "preoccupation",
+    "pos": "n.",
+    "meaning": "全神贯注；心事",
+    "phonetic": "/priˌɒkjuˈpeɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "output",
+    "pos": "n./v.",
+    "meaning": "输出；产量",
+    "phonetic": "/ˈaʊtpʊt/",
+    "example": ""
+  },
+  {
+    "phrase": "input",
+    "pos": "n./v.",
+    "meaning": "输入；投入",
+    "phonetic": "/ˈɪnpʊt/",
+    "example": ""
+  },
+  {
+    "phrase": "hypothesis",
+    "pos": "n.",
+    "meaning": "假设；假说",
+    "phonetic": "/haɪˈpɒθəsɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "divorce",
+    "pos": "n./v.",
+    "meaning": "离婚；分离",
+    "phonetic": "/dɪˈvɔːs/",
+    "example": ""
+  },
+  {
+    "phrase": "disguise",
+    "pos": "v./n.",
+    "meaning": "伪装；掩饰",
+    "phonetic": "/dɪsˈɡaɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "diffuse",
+    "pos": "adj./v.",
+    "meaning": "弥漫的；扩散",
+    "phonetic": "/dɪˈfjuːz/",
+    "example": ""
+  },
+  {
+    "phrase": "preparedness",
+    "pos": "n.",
+    "meaning": "准备状态；战备",
+    "phonetic": "/prɪˈpeərɪdnəs/",
+    "example": ""
+  },
+  {
+    "phrase": "pilot",
+    "pos": "n./v.",
+    "meaning": "飞行员；试点",
+    "phonetic": "/ˈpaɪlət/",
+    "example": ""
+  },
+  {
+    "phrase": "outline",
+    "pos": "n./v.",
+    "meaning": "大纲；概述",
+    "phonetic": "/ˈaʊtlaɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "lack",
+    "pos": "n./v.",
+    "meaning": "缺乏；不足",
+    "phonetic": "/læk/",
+    "example": ""
+  },
+  {
+    "phrase": "imitation",
+    "pos": "n.",
+    "meaning": "模仿；仿制品",
+    "phonetic": "/ˌɪmɪˈteɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "fall",
+    "pos": "v./n.",
+    "meaning": "落下；秋天",
+    "phonetic": "/fɔːl/",
+    "example": ""
+  },
+  {
+    "phrase": "behind",
+    "pos": "prep./adv.",
+    "meaning": "在…后面",
+    "phonetic": "/bɪˈhaɪnd/",
+    "example": ""
+  },
+  {
+    "phrase": "collaborative",
+    "pos": "adj.",
+    "meaning": "合作的；协作的",
+    "phonetic": "/kəˈlæbərətɪv/",
+    "example": ""
+  },
+  {
+    "phrase": "case",
+    "pos": "n.",
+    "meaning": "情况；案例",
+    "phonetic": "/keɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "study",
+    "pos": "n./v.",
+    "meaning": "学习；研究",
+    "phonetic": "/ˈstʌdi/",
+    "example": ""
+  },
+  {
+    "phrase": "version",
+    "pos": "n.",
+    "meaning": "版本；说法",
+    "phonetic": "/ˈvɜːʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "vanish",
+    "pos": "v.",
+    "meaning": "消失；突然不见",
+    "phonetic": "/ˈvænɪʃ/",
+    "example": ""
+  },
+  {
+    "phrase": "take",
+    "pos": "v.",
+    "meaning": "拿；取；花费",
+    "phonetic": "/teɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "motivate",
+    "pos": "v.",
+    "meaning": "激励；激发",
+    "phonetic": "/ˈməʊtɪveɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "mesmerise",
+    "pos": "v.",
+    "meaning": "使着迷；催眠",
+    "phonetic": "/ˈmezməraɪz/",
+    "example": ""
+  },
+  {
+    "phrase": "intent",
+    "pos": "n./adj.",
+    "meaning": "意图；专心的",
+    "phonetic": "/ɪnˈtent/",
+    "example": ""
+  },
+  {
+    "phrase": "incredibly",
+    "pos": "adv.",
+    "meaning": "难以置信地；极其",
+    "phonetic": "/ɪnˈkredəbli/",
+    "example": ""
+  },
+  {
+    "phrase": "immediacy",
+    "pos": "n.",
+    "meaning": "即时性；直接",
+    "phonetic": "/ɪˈmiːdiəsi/",
+    "example": ""
+  },
+  {
+    "phrase": "discipline",
+    "pos": "n./v.",
+    "meaning": "纪律；学科；训练",
+    "phonetic": "/ˈdɪsəplɪn/",
+    "example": ""
+  },
+  {
+    "phrase": "convey",
+    "pos": "v.",
+    "meaning": "传达；运输",
+    "phonetic": "/kənˈveɪ/",
+    "example": ""
+  },
+  {
+    "phrase": "base",
+    "pos": "n./v.",
+    "meaning": "基础；以…为基础",
+    "phonetic": "/beɪs/",
+    "example": ""
+  },
+  {
+    "phrase": "aware",
+    "pos": "adj.",
+    "meaning": "意识到的",
+    "phonetic": "/əˈweə(r)/",
+    "example": ""
+  },
+  {
+    "phrase": "ample",
+    "pos": "adj.",
+    "meaning": "充足的；宽敞的",
+    "phonetic": "/ˈæmpl/",
+    "example": ""
+  },
+  {
+    "phrase": "aid",
+    "pos": "n./v.",
+    "meaning": "帮助；援助",
+    "phonetic": "/eɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "acknowledge",
+    "pos": "v.",
+    "meaning": "承认；致谢",
+    "phonetic": "/əkˈnɒlɪdʒ/",
+    "example": ""
+  },
+  {
+    "phrase": "assignment",
+    "pos": "n.",
+    "meaning": "任务；作业",
+    "phonetic": "/əˈsaɪnmənt/",
+    "example": ""
+  },
+  {
+    "phrase": "folk",
+    "pos": "n./adj.",
+    "meaning": "人们；民间的",
+    "phonetic": "/fəʊk/",
+    "example": ""
+  },
+  {
+    "phrase": "tale",
+    "pos": "n.",
+    "meaning": "故事；传说",
+    "phonetic": "/teɪl/",
+    "example": ""
+  },
+  {
+    "phrase": "syllable",
+    "pos": "n.",
+    "meaning": "音节",
+    "phonetic": "/ˈsɪləbl/",
+    "example": ""
+  },
+  {
+    "phrase": "rate",
+    "pos": "n./v.",
+    "meaning": "比率；速度；评价",
+    "phonetic": "/reɪt/",
+    "example": ""
+  },
+  {
+    "phrase": "quadrangle",
+    "pos": "n.",
+    "meaning": "四边形；四合院",
+    "phonetic": "/ˈkwɒdræŋɡl/",
+    "example": ""
+  },
+  {
+    "phrase": "proficiency",
+    "pos": "n.",
+    "meaning": "熟练；精通",
+    "phonetic": "/prəˈfɪʃnsi/",
+    "example": ""
+  },
+  {
+    "phrase": "perception",
+    "pos": "n.",
+    "meaning": "感知；看法",
+    "phonetic": "/pəˈsepʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "norm",
+    "pos": "n.",
+    "meaning": "规范；标准",
+    "phonetic": "/nɔːm/",
+    "example": ""
+  },
+  {
+    "phrase": "multicultural",
+    "pos": "adj.",
+    "meaning": "多元文化的",
+    "phonetic": "/ˌmʌltiˈkʌltʃərəl/",
+    "example": ""
+  },
+  {
+    "phrase": "monologue",
+    "pos": "n.",
+    "meaning": "独白",
+    "phonetic": "/ˈmɒnəlɒɡ/",
+    "example": ""
+  },
+  {
+    "phrase": "linguistic",
+    "pos": "adj.",
+    "meaning": "语言的；语言学的",
+    "phonetic": "/lɪŋˈɡwɪstɪk/",
+    "example": ""
+  },
+  {
+    "phrase": "hexagon",
+    "pos": "n.",
+    "meaning": "六边形",
+    "phonetic": "/ˈheksəɡən/",
+    "example": ""
+  },
+  {
+    "phrase": "focus",
+    "pos": "n./v.",
+    "meaning": "焦点；集中",
+    "phonetic": "/ˈfəʊkəs/",
+    "example": ""
+  },
+  {
+    "phrase": "fluent",
+    "pos": "adj.",
+    "meaning": "流利的",
+    "phonetic": "/ˈfluːənt/",
+    "example": ""
+  },
+  {
+    "phrase": "decade",
+    "pos": "n.",
+    "meaning": "十年；十年期",
+    "phonetic": "/ˈdekeɪd/",
+    "example": ""
+  },
+  {
+    "phrase": "concept",
+    "pos": "n.",
+    "meaning": "概念；观念",
+    "phonetic": "/ˈkɒnsept/",
+    "example": ""
+  },
+  {
+    "phrase": "cognition",
+    "pos": "n.",
+    "meaning": "认知；认识",
+    "phonetic": "/kɒɡˈnɪʃn/",
+    "example": ""
+  },
+  {
+    "phrase": "tend",
+    "pos": "v.",
+    "meaning": "倾向于；照料",
+    "phonetic": "/tend/",
+    "example": ""
+  },
+  {
+    "phrase": "spectrum",
+    "pos": "n.",
+    "meaning": "光谱；范围",
+    "phonetic": "/ˈspektrəm/",
+    "example": ""
+  },
+  {
+    "phrase": "resemble",
+    "pos": "v.",
+    "meaning": "像；与…相似",
+    "phonetic": "/rɪˈzembl/",
+    "example": ""
+  },
+  {
+    "phrase": "monolingual",
+    "pos": "adj.",
+    "meaning": "单语的",
+    "phonetic": "/ˌmɒnəˈlɪŋɡwəl/",
+    "example": ""
+  },
+  {
+    "phrase": "literally",
+    "pos": "adv.",
+    "meaning": "字面上；确实地",
+    "phonetic": "/ˈlɪtərəli/",
+    "example": ""
+  },
+  {
+    "phrase": "degree",
+    "pos": "n.",
+    "meaning": "程度；学位",
+    "phonetic": "/dɪˈɡriː/",
+    "example": ""
+  },
+  {
+    "phrase": "multilingual",
+    "pos": "adj.",
+    "meaning": "多语的",
+    "phonetic": "/ˌmʌltiˈlɪŋɡwəl/",
+    "example": ""
+  },
+  {
+    "phrase": "bilingual",
+    "pos": "adj.",
+    "meaning": "双语的",
+    "phonetic": "/baɪˈlɪŋɡwəl/",
+    "example": ""
+  }
+]
