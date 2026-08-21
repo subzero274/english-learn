@@ -1,0 +1,268 @@
+[
+  {
+    "phrase": "take a seat",
+    "phonetic": "/teɪk ə siːt/",
+    "pos": "v. phrase",
+    "meaning": "请坐",
+    "example": "Good morning, please take a seat. How can I help you?"
+  },
+  {
+    "phrase": "particular",
+    "phonetic": "/pəˈtɪkjələ(r)/",
+    "pos": "adj.",
+    "meaning": "特定的；某个的",
+    "example": "Had you got any particular make in mind?"
+  },
+  {
+    "phrase": "make",
+    "phonetic": "/meɪk/",
+    "pos": "n.",
+    "meaning": "（汽车）品牌；型号",
+    "example": "What make is the car you have now?"
+  },
+  {
+    "phrase": "think of",
+    "phonetic": "/ˈθɪŋk ɒv/",
+    "pos": "v. phrase",
+    "meaning": "考虑；打算",
+    "example": "I'm thinking of buying a new car."
+  },
+  {
+    "phrase": "various",
+    "phonetic": "/ˈveəriəs/",
+    "pos": "adj.",
+    "meaning": "各种各样的",
+    "example": "We've got various models."
+  },
+  {
+    "phrase": "engine size",
+    "phonetic": "/ˈendʒɪn saɪz/",
+    "pos": "n. phrase",
+    "meaning": "发动机排量",
+    "example": "What about the engine size? Any ideas?"
+  },
+  {
+    "phrase": "litre",
+    "phonetic": "/ˈliːtə(r)/",
+    "pos": "n.",
+    "meaning": "升（容量单位）",
+    "example": "The one I've got at the moment's a 1.2 litre engine."
+  },
+  {
+    "phrase": "manual",
+    "phonetic": "/ˈmænjuəl/",
+    "pos": "adj./n.",
+    "meaning": "手动的；手动挡",
+    "example": "I presume you'd want a manual?"
+  },
+  {
+    "phrase": "automatic",
+    "phonetic": "/ˌɔːtəˈmætɪk/",
+    "pos": "adj./n.",
+    "meaning": "自动的；自动挡",
+    "example": "I'd want automatic."
+  },
+  {
+    "phrase": "gear change",
+    "phonetic": "/ɡɪə(r) tʃeɪndʒ/",
+    "pos": "n. phrase",
+    "meaning": "换挡；变速器",
+    "example": "What kind of gear change do you want?"
+  },
+  {
+    "phrase": "colour chart",
+    "phonetic": "/ˈkʌlə(r) tʃɑːt/",
+    "pos": "n. phrase",
+    "meaning": "色卡；颜色表",
+    "example": "Here's the colour chart for the Max."
+  },
+  {
+    "phrase": "royal",
+    "phonetic": "/ˈrɔɪəl/",
+    "pos": "adj.",
+    "meaning": "皇家的；王室的（此处为颜色名）",
+    "example": "What's it called? 'Royal'?"
+  },
+  {
+    "phrase": "shade",
+    "phonetic": "/ʃeɪd/",
+    "pos": "n.",
+    "meaning": "色调；色度",
+    "example": "I prefer this lighter shade here—'Sky'."
+  },
+  {
+    "phrase": "sky",
+    "phonetic": "/skaɪ/",
+    "pos": "n.",
+    "meaning": "天空（此处为浅蓝色颜色名）",
+    "example": "I prefer this lighter shade here—'Sky'."
+  },
+  {
+    "phrase": "go for",
+    "phonetic": "/ɡəʊ fɔː(r)/",
+    "pos": "v. phrase",
+    "meaning": "选择；决定买",
+    "example": "I think I'll go for that."
+  },
+  {
+    "phrase": "a week or so",
+    "phonetic": "/ə wiːk ɔː(r) səʊ/",
+    "pos": "adv. phrase",
+    "meaning": "大约一周",
+    "example": "You might have to wait a week or so for that colour."
+  },
+  {
+    "phrase": "finance",
+    "phonetic": "/ˈfaɪnæns/",
+    "pos": "n.",
+    "meaning": "融资；贷款；财务安排",
+    "example": "Can I just ask you about finance?"
+  },
+  {
+    "phrase": "cash price",
+    "phonetic": "/kæʃ praɪs/",
+    "pos": "n. phrase",
+    "meaning": "现金价格",
+    "example": "The cash price is going to be somewhere in the region of seven and a half thousand."
+  },
+  {
+    "phrase": "in the region of",
+    "phonetic": "/ɪn ðə ˈriːdʒən əv/",
+    "pos": "prep. phrase",
+    "meaning": "大约；在……左右",
+    "example": "The cash price is somewhere in the region of seven and a half thousand."
+  },
+  {
+    "phrase": "seven and a half thousand",
+    "phonetic": "/ˈsevn ən ə hɑːf ˈθaʊznd/",
+    "pos": "num. phrase",
+    "meaning": "七千五百",
+    "example": "The cash price is somewhere in the region of seven and a half thousand."
+  },
+  {
+    "phrase": "credit",
+    "phonetic": "/ˈkredɪt/",
+    "pos": "n.",
+    "meaning": "信用；赊购；贷款",
+    "example": "Would you need credit?"
+  },
+  {
+    "phrase": "terms",
+    "phonetic": "/tɜːmz/",
+    "pos": "n.",
+    "meaning": "条款；条件",
+    "example": "I'd like credit provided the terms are reasonable."
+  },
+  {
+    "phrase": "colleague",
+    "phonetic": "/ˈkɒliːɡ/",
+    "pos": "n.",
+    "meaning": "同事",
+    "example": "You can discuss that with my colleague in a moment."
+  },
+  {
+    "phrase": "arrangement",
+    "phonetic": "/əˈreɪndʒmənt/",
+    "pos": "n.",
+    "meaning": "安排；协议",
+    "example": "We have various arrangements."
+  },
+  {
+    "phrase": "part exchange",
+    "phonetic": "/pɑːt ɪksˈtʃeɪndʒ/",
+    "pos": "n. phrase",
+    "meaning": "以旧换新（补差价）",
+    "example": "Would you be interested in us taking your present car as part exchange?"
+  },
+  {
+    "phrase": "valuation",
+    "phonetic": "/ˌvæljuˈeɪʃn/",
+    "pos": "n.",
+    "meaning": "估价；估值",
+    "example": "I'll just need some details from you, and then we can do a valuation."
+  },
+  {
+    "phrase": "model name",
+    "phonetic": "/ˈmɒdl neɪm/",
+    "pos": "n. phrase",
+    "meaning": "型号名称",
+    "example": "Do you know the year or the model name?"
+  },
+  {
+    "phrase": "mileage",
+    "phonetic": "/ˈmaɪlɪdʒ/",
+    "pos": "n.",
+    "meaning": "里程；英里数",
+    "example": "Mileage? Roughly?"
+  },
+  {
+    "phrase": "roughly",
+    "phonetic": "/ˈrʌfli/",
+    "pos": "adv.",
+    "meaning": "大约；粗略地",
+    "example": "Mileage? Roughly?"
+  },
+  {
+    "phrase": "condition",
+    "phonetic": "/kənˈdɪʃn/",
+    "pos": "n.",
+    "meaning": "状况；状态",
+    "example": "What sort of condition would you say it's in?"
+  },
+  {
+    "phrase": "describe",
+    "phonetic": "/dɪˈskraɪb/",
+    "pos": "v.",
+    "meaning": "描述；形容",
+    "example": "I'd probably describe it as reasonable."
+  },
+  {
+    "phrase": "reasonable",
+    "phonetic": "/ˈriːznəbl/",
+    "pos": "adj.",
+    "meaning": "合理的；还不错的",
+    "example": "I'd probably describe it as reasonable."
+  },
+  {
+    "phrase": "postcode",
+    "phonetic": "/ˈpəʊstkəʊd/",
+    "pos": "n.",
+    "meaning": "邮政编码",
+    "example": "Do you know your postcode?"
+  },
+  {
+    "phrase": "daytime phone number",
+    "phonetic": "/ˈdeɪtaɪm fəʊn ˈnʌmbə(r)/",
+    "pos": "n. phrase",
+    "meaning": "日间电话号码",
+    "example": "Do you have a daytime phone number?"
+  },
+  {
+    "phrase": "get hold of",
+    "phonetic": "/ɡet həʊld ɒv/",
+    "pos": "v. phrase",
+    "meaning": "联系到；找到",
+    "example": "It's a bit difficult to get hold of me."
+  },
+  {
+    "phrase": "get back to",
+    "phonetic": "/ɡet bæk tuː/",
+    "pos": "v. phrase",
+    "meaning": "回复；再联系",
+    "example": "I'll get back to you when I can."
+  },
+  {
+    "phrase": "Hampshire",
+    "phonetic": "/ˈhæmpʃə(r)/",
+    "pos": "n.",
+    "meaning": "汉普郡（英国地名）",
+    "example": "Oh yes, that's in Hampshire isn't it?"
+  },
+  {
+    "phrase": "Alton",
+    "phonetic": "/ˈɔːltən/",
+    "pos": "n.",
+    "meaning": "奥尔顿（英国地名）",
+    "example": "20 Green Banks, Alton."
+  }
+]
