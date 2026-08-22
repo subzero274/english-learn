@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
-"""Generate vocabulary/pte-roots.md by grouping PTE words by prefixes, suffixes and Latin/Greek roots."""
+"""Generate PTE vocabulary grouped by prefixes, suffixes and Latin/Greek roots.
+
+Outputs four focused files under vocabulary/ plus an index page:
+- pte-prefixes.md
+- pte-suffixes.md
+- pte-core-roots.md
+- pte-uncategorized.md
+- pte-roots.md (index)
+"""
 import json
 from collections import defaultdict
 from pathlib import Path
 
 
-def main():
-    pte_path = Path('pte.json')
-    out_path = Path('vocabulary/pte-roots.md')
-
-    with open(pte_path, 'r', encoding='utf-8') as f:
+def load_entries(path: Path) -> dict:
+    with open(path, 'r', encoding='utf-8') as f:
         entries = json.load(f)
+    return {e['phrase'].lower(): e for e in entries}
 
-    entry_map = {e['phrase'].lower(): e for e in entries}
 
+def build_data(entry_map: dict):
     PREFIXES = [
         ('un-', '不；相反', ['un']),
         ('re-', '再；回', ['re']),
@@ -272,64 +278,111 @@ def main():
         categorized_words.update(words)
     uncategorized = [p for p in entry_map if p not in categorized_words]
 
+    return PREFIXES, SUFFIXES, ROOTS, root_words, uncategorized
+
+
+def format_word(entry_map: dict, phrase: str) -> str:
+    e = entry_map[phrase]
+    return f"- **{e['phrase']}** {e.get('phonetic', '')} *{e.get('pos', '')}* — {e.get('meaning', '')}"
+
+
+def write_group_file(path: Path, title: str, description: str, groups, root_words: dict,
+                     entry_map: dict, min_count: int = 1):
     lines = []
-    lines.append("# PTE 单词 · 按词根/词缀分类记忆\n")
-    lines.append("> 基于 `pte.json` 中的 725 个 PTE 高频词，按常见前缀、后缀、拉丁/希腊词根归类。\n")
-    lines.append("> 目标：通过词根串记，举一反三。同一单词可能同时出现在前缀、后缀和词根下。\n")
-    lines.append("---\n")
-
-    lines.append("## 使用建议\n")
-    lines.append("1. **先看前缀/后缀**：它们出现频率最高，能帮你快速判断词性和方向。\n")
-    lines.append("2. **再攻克核心词根**：每个词根下的单词一起背，更容易建立联系。\n")
-    lines.append("3. **最后扫未归类**：多为高频基础词或外来词，单独强化。\n")
+    lines.append(f"# {title}\n")
+    lines.append(f"> {description}\n")
     lines.append("")
 
-    lines.append("## 目录\n")
-    lines.append("1. [前缀 Prefixes](#前缀-prefixes)\n")
-    lines.append("2. [后缀 Suffixes](#后缀-suffixes)\n")
-    lines.append("3. [核心词根 Core Roots](#核心词根-core-roots)\n")
-    lines.append("4. [未归类 Uncategorized](#未归类-uncategorized)\n")
-    lines.append("")
-
-    def write_section(title, groups, min_count=1):
-        lines.append(f"---\n## {title}\n")
-        for root_name, root_meaning, patterns in groups:
-            if root_name not in root_words:
-                continue
-            words = sorted(set(root_words[root_name]), key=lambda x: x.lower())
-            if len(words) < min_count:
-                continue
-            lines.append(f"### {root_name} = {root_meaning}\n")
-            for w in words:
-                e = entry_map[w]
-                lines.append(
-                    f"- **{e['phrase']}** {e.get('phonetic', '')} *{e.get('pos', '')}* — {e.get('meaning', '')}"
-                )
-            lines.append("")
-
-    write_section('前缀 Prefixes', PREFIXES)
-    write_section('后缀 Suffixes', SUFFIXES)
-    write_section('核心词根 Core Roots', ROOTS, min_count=3)
-
-    if uncategorized:
-        lines.append("---\n")
-        lines.append("## 未归类 Uncategorized\n")
-        lines.append(f"以下 {len(uncategorized)} 个单词暂未找到合适的词根/词缀归类，建议单独记忆：\n")
-        for w in sorted(set(uncategorized)):
-            e = entry_map[w]
-            lines.append(
-                f"- **{e['phrase']}** {e.get('phonetic', '')} *{e.get('pos', '')}* — {e.get('meaning', '')}"
-            )
+    for root_name, root_meaning, patterns in groups:
+        if root_name not in root_words:
+            continue
+        words = sorted(set(root_words[root_name]), key=lambda x: x.lower())
+        if len(words) < min_count:
+            continue
+        lines.append(f"## {root_name} = {root_meaning}\n")
+        for w in words:
+            lines.append(format_word(entry_map, w))
         lines.append("")
 
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(out_path, 'w', encoding='utf-8') as f:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
 
+
+def main():
+    pte_path = Path('pte.json')
+    vocab_dir = Path('vocabulary')
+
+    entry_map = load_entries(pte_path)
+    PREFIXES, SUFFIXES, ROOTS, root_words, uncategorized = build_data(entry_map)
+
+    # Write split files
+    write_group_file(
+        vocab_dir / 'pte-prefixes.md',
+        'PTE 前缀分类',
+        '按常见前缀归类 PTE 高频词，帮助快速判断词义方向。',
+        PREFIXES, root_words, entry_map
+    )
+    write_group_file(
+        vocab_dir / 'pte-suffixes.md',
+        'PTE 后缀分类',
+        '按常见后缀归类 PTE 高频词，帮助快速判断词性。',
+        SUFFIXES, root_words, entry_map
+    )
+    write_group_file(
+        vocab_dir / 'pte-core-roots.md',
+        'PTE 核心词根分类',
+        '按常见拉丁/希腊词根归类 PTE 高频词，每个词根下至少 3 个单词。',
+        ROOTS, root_words, entry_map, min_count=3
+    )
+
+    # Uncategorized file
+    uncategorized_path = vocab_dir / 'pte-uncategorized.md'
+    lines = []
+    lines.append("# PTE 未归类单词\n")
+    lines.append(f"> 以下 {len(uncategorized)} 个单词暂未找到合适的词根/词缀归类，建议单独记忆。\n")
+    lines.append("")
+    for w in sorted(set(uncategorized)):
+        lines.append(format_word(entry_map, w))
+    lines.append("")
+    with open(uncategorized_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lines))
+
+    # Index file
+    index_path = vocab_dir / 'pte-roots.md'
+    index_lines = []
+    index_lines.append("# PTE 单词 · 按词根/词缀分类记忆\n")
+    index_lines.append("> 基于 `pte.json` 中的 725 个 PTE 高频词，按常见前缀、后缀、拉丁/希腊词根归类。\n")
+    index_lines.append("> 目标：通过词根串记，举一反三。同一单词可能同时出现在多个分类中。\n")
+    index_lines.append("---\n")
+    index_lines.append("## 目录\n")
+    index_lines.append("1. [前缀 Prefixes](pte-prefixes.md)\n")
+    index_lines.append("2. [后缀 Suffixes](pte-suffixes.md)\n")
+    index_lines.append("3. [核心词根 Core Roots](pte-core-roots.md)\n")
+    index_lines.append("4. [未归类 Uncategorized](pte-uncategorized.md)\n")
+    index_lines.append("")
+    index_lines.append("## 统计\n")
+    index_lines.append(f"- 总单词数：{len(entry_map)}\n")
+    index_lines.append(f"- 已归类：{len(entry_map) - len(uncategorized)}\n")
+    index_lines.append(f"- 未归类：{len(uncategorized)}\n")
+    index_lines.append("")
+    index_lines.append("## 使用建议\n")
+    index_lines.append("1. **先看前缀/后缀**：它们出现频率最高，能帮你快速判断词性和方向。\n")
+    index_lines.append("2. **再攻克核心词根**：每个词根下的单词一起背，更容易建立联系。\n")
+    index_lines.append("3. **最后扫未归类**：多为高频基础词或外来词，单独强化。\n")
+    index_lines.append("")
+    with open(index_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(index_lines))
+
     print(f"Total words: {len(entry_map)}")
-    print(f"Categorized: {len(categorized_words)}")
+    print(f"Categorized: {len(entry_map) - len(uncategorized)}")
     print(f"Uncategorized: {len(uncategorized)}")
-    print(f"Groups written: {out_path}")
+    print("Files written:")
+    print(f"  - {vocab_dir / 'pte-roots.md'}")
+    print(f"  - {vocab_dir / 'pte-prefixes.md'}")
+    print(f"  - {vocab_dir / 'pte-suffixes.md'}")
+    print(f"  - {vocab_dir / 'pte-core-roots.md'}")
+    print(f"  - {vocab_dir / 'pte-uncategorized.md'}")
 
 
 if __name__ == '__main__':
