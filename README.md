@@ -13,9 +13,12 @@ english-learn/
 ├── speaking/           # 口语：课堂纪要/笔记、Part 1/2/3 素材、句型库、词汇自测
 ├── reading/            # 阅读：文章、课堂笔记、生词整理、长难句与答案解析
 ├── writing/            # 写作：课程要点、范文、作业、语法批改与写作复盘
+├── PTE/                # PTE 专项训练：WFD、FIB-D、SST 等题型记录
+├── vocabulary/         # 词根/词缀分类词汇本
 ├── movies/             # 影音语料：电影字幕/台词，用于听口输入与地道表达积累
 ├── notes/              # 通用跨技能笔记（同义替换汇总、答题分析等）
-├── scripts/            # 辅助脚本：PDF/HTML 导出、音标加注、听写抽查等
+├── scripts/            # 辅助脚本：PDF/HTML 导出、音标加注、听写抽查、提交校验等
+├── .githooks/          # Git hooks 模板
 └── README.md           # 本文件
 ```
 
@@ -27,9 +30,12 @@ english-learn/
 | `speaking/` | 口语话题素材与课堂复盘 | `口语准备.md`、课堂纪要 PDF、`class-N/` 笔记与句型 |
 | `reading/` | 阅读文章与精读笔记 | `class-N/` 文章与笔记、`homework/` 作业与答案解析 |
 | `writing/` | 写作方法论与练习 | 课程要点 MD/PDF、范文、作业批改、写作复盘 |
+| `PTE/` | PTE 题型专项训练 | `wfd.md`、`fib-d.md` 等题型记录 |
+| `vocabulary/` | 按词根/词缀分类的词汇本 | `pte-roots.md`、`pte-prefixes.md` 等 |
 | `movies/` | 影视语料输入 | 电影字幕（SRT/TXT）、台词文本 |
 | `notes/` | 跨维度通用知识库 | `paraphrase.md` 同义替换总库、答案解析 |
-| `scripts/` | 辅助脚本 | `md_to_pdf.py`、`add_phonetics.py`、`statistic.bash.js` |
+| `scripts/` | 辅助脚本 | `md_to_pdf.py`、`add_phonetics.py`、`verify-daily-commit.py` |
+| `.githooks/` | Git hooks 模板 | `pre-commit` |
 
 ---
 
@@ -92,6 +98,32 @@ english-learn/
 3. **音频/图片轻量管理**：大文件建议只放网盘链接或压缩包，避免仓库膨胀。
 4. **统一 class 编号**：所有课堂目录已统一为 `class-N` 格式，新增时也遵循此规则。
 5. **脚本集中管理**：新增辅助脚本统一放到 `scripts/`，避免散落在课堂目录中。
+
+---
+
+## 每日提交校验
+
+为保持训练节奏，仓库配置了 pre-commit 校验：当提交包含训练文件时，必须满足以下每日额度。
+
+| 项目 | 文件位置 | 最低数量 | 说明 |
+|------|---------|---------|------|
+| 精听练习 | `listening/精听训练/` | 1 次 | 新增或修改一份听写材料 |
+| Write From Dictation | `PTE/wfd.md` | 20 条 | 每条 = 听写原文 + 标准答案 |
+| FIB-D | `PTE/fib-d.md` | 10 条 | 每条 = 题目/段落 + 答案 |
+
+### 安装 hooks
+
+```bash
+python3 scripts/install-hooks.py
+```
+
+安装后，`git commit` 会自动校验。如本次为非训练类提交，可使用 `git commit --no-verify` 跳过。
+
+### 手动校验
+
+```bash
+python3 scripts/verify-daily-commit.py
+```
 
 ---
 
