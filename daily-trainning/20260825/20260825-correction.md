@@ -9,18 +9,18 @@
 
 | 项目 | 结果 |
 |------|------|
-| **总体正确率** | **63.2%** (447 / 707) |
+| **总体正确率** | **67.9%** (485 / 714) |
 | **综合评分** | **D** |
 
 ## 错误类型统计
 
 | 错误类型 | 数量 |
 |----------|------|
-| 漏听 | 186 |
-| 多写/幻听 | 137 |
-| 拼写错误 | 56 |
-| 语法错误/单复数 | 12 |
-| 语法错误/时态 | 6 |
+| 漏听 | 148 |
+| 多写/幻听 | 92 |
+| 拼写错误 | 59 |
+| 语法错误/单复数 | 14 |
+| 语法错误/时态 | 8 |
 
 ## 逐句批改
 
@@ -138,45 +138,58 @@
 
 **正确率：** 13/13 = **100.0%**
 
-### 11. "No, not really. It's also a question of finances. You see, my office have agreed to pay the cost of the course itself, but I would have to take unpaid leave if I want to study full-time and, well, I don't think I could afford to support myself with no salary for a whole year. you could either do the part-time course that would be over two years and you wouldn't have to take any time off work-or you could do what we call a 'modular' course. You could do that in eighteen months if you wanted-or longer, it's quite flexible and it would be up to you."
+### 11. "No, not really. It's also a question of finances. You see, my office have agreed to pay the cost of the course itself, but I would have to take unpaid leave if I want to study full-time and, well, I don't think I could afford to support myself with no salary for a whole year."
 
 **听写：** No,not really,it's also the question finacal you see my office have agree to pay the cost the course itself, but when if i take a unpay leave if i want to study full time as well, i don't think i could for it just poor my self without salary for a whole year
-**原文：** No, not really. It's also a question of finances. You see, my office have agreed to pay the cost of the course itself, but I would have to take unpaid leave if I want to study full-time and, well, I don't think I could afford to support myself with no salary for a whole year. you could either do the part-time course that would be over two years and you wouldn't have to take any time off work-or you could do what we call a 'modular' course. You could do that in eighteen months if you wanted-or longer, it's quite flexible and it would be up to you.
+**原文：** No, not really. It's also a question of finances. You see, my office have agreed to pay the cost of the course itself, but I would have to take unpaid leave if I want to study full-time and, well, I don't think I could afford to support myself with no salary for a whole year.
 
 | 类型 | 内容 |
 |------|------|
-| 漏听 | a, of, of, would, have, to, and, to, support, no, you, could, either, do, the, part, time, course, that, would, be, over, two, years, and, you, wouldn't, have, to, take, any, time, off, work, or, you, could, do, what, we, call, a, 'modular', course, you, could, do, that, in, eighteen, months, if, you, wanted, or, longer, it's, quite, flexible, and, it, would, be, up, to, you |
+| 漏听 | a, of, of, would, have, to, and, to, support, no |
 | 多写/幻听 | the, when, if, a, as, it, just, poor, my |
 | 拼写错误 | finacal → finances, unpay → unpaid, for → afford, self → myself, without → with |
 | 语法错误/时态 | agree → agreed |
-**正确率：** 40/112 = **35.7%**
+**正确率：** 40/56 = **71.4%**
 
-### 12. "Mmm. So what does the part-time course involve?"
+### 12. "OK. Well, you have two other possibilities: you could either do the part-time course that would be over two years and you wouldn't have to take any time off work-or you could do what we call a 'modular' course. You could do that in eighteen months if you wanted-or longer, it's quite flexible and it would be up to you."
 
 **听写：** Ok,well,you have resbolty you can do part-time courses that will be of two years and you can take anytime of work  or you can we called modular courses  you can do that eightten months if you want to longer i quite flexable,and it will be up to you
+**原文：** OK. Well, you have two other possibilities: you could either do the part-time course that would be over two years and you wouldn't have to take any time off work-or you could do what we call a 'modular' course. You could do that in eighteen months if you wanted-or longer, it's quite flexible and it would be up to you.
+
+| 类型 | 内容 |
+|------|------|
+| 漏听 | two, other, possibilities, could, either, the, would, over, wouldn't, have, to, time, could, do, what, a, could, in, or, it's, would |
+| 多写/幻听 | resbolty, can, will, of, can, can, can, to, i, will |
+| 语法错误/单复数 | courses → course, courses → course |
+| 拼写错误 | anytime → any, of → off, eightten → eighteen, flexable → flexible |
+| 语法错误/时态 | called → call, want → wanted |
+**正确率：** 34/63 = **54.0%**
+
+### 13. "Mmm. So what does the part-time course involve?"
+
+**听写：** So what does the part-time courses at all
 **原文：** Mmm. So what does the part-time course involve?
 
 | 类型 | 内容 |
 |------|------|
-| 漏听 | mmm, so, what, the, involve |
-| 拼写错误 | do → does |
-| 多写/幻听 | ok, well, you, have, resbolty, you, can, that, will, be, of, two, years, and, you, can, take, anytime, of, work, or, you, can, we, called, modular, courses, you, can, do, that, eightten, months, if, you, want, to, longer, i, quite, flexable, and, it, will, be, up, to, you |
+| 漏听 | mmm, involve |
 | 语法错误/单复数 | courses → course |
-**正确率：** 2/9 = **22.2%**
+| 多写/幻听 | at, all |
+**正确率：** 6/9 = **66.7%**
 
-### 13. "For that you would join an evening class and have a lecture twice a week. Then, you'd have to attend a seminar or discussion workshop one weekend a month."
+### 14. "For that you would join an evening class and have a lecture twice a week. Then, you'd have to attend a seminar or discussion workshop one weekend a month."
 
-**听写：** So what does the part-time courses at all For that you will join the evening class,and have a lecture twice a week then you'd have to attend a sila or a discussion workshop one week a mouth
+**听写：** For that you will join the evening class,and have a lecture twice a week then you'd have to attend a sila or a discussion workshop one week a mouth
 **原文：** For that you would join an evening class and have a lecture twice a week. Then, you'd have to attend a seminar or discussion workshop one weekend a month.
 
 | 类型 | 内容 |
 |------|------|
-| 多写/幻听 | so, what, does, the, part, time, courses, at, all, will, the, sila, a |
 | 漏听 | would, an, seminar |
+| 多写/幻听 | will, the, sila, a |
 | 拼写错误 | week → weekend, mouth → month |
 **正确率：** 24/29 = **82.8%**
 
-### 14. "What kind of coursework would I have to do?"
+### 15. "What kind of coursework would I have to do?"
 
 **听写：** What kind of courses where i could have to do
 **原文：** What kind of coursework would I have to do?
@@ -188,7 +201,7 @@
 | 多写/幻听 | where, could |
 **正确率：** 7/9 = **77.8%**
 
-### 15. "Well, it's a mixture. You'd be expected to write an essay each month, which counts towards your final assessment. You have a case study to do by the end of the course, which might involve doing a survey or something like that, and also you need to hand in a short report every four weeks."
+### 16. "Well, it's a mixture. You'd be expected to write an essay each month, which counts towards your final assessment. You have a case study to do by the end of the course, which might involve doing a survey or something like that, and also you need to hand in a short report every four weeks."
 
 **听写：** Well,it's mixture ,you be writing an essay a mouch which count 24 times assment,you have a case study to do but it's on end of course which liking doing a serve or something like that and also you need to handling a short report every four weeks
 **原文：** Well, it's a mixture. You'd be expected to write an essay each month, which counts towards your final assessment. You have a case study to do by the end of the course, which might involve doing a survey or something like that, and also you need to hand in a short report every four weeks.
@@ -202,7 +215,7 @@
 | 语法错误/单复数 | count → counts |
 **正确率：** 35/55 = **63.6%**
 
-### 16. "So, that's quite a lot of work, then, on top of working every day. It sounds like a lot of studying-and really tiring."
+### 17. "So, that's quite a lot of work, then, on top of working every day. It sounds like a lot of studying-and really tiring."
 
 **听写：** So that's quite lot of work then,i'm typing working ervery it sound like a lot of studying,i'm really triding
 **原文：** So, that's quite a lot of work, then, on top of working every day. It sounds like a lot of studying-and really tiring.
@@ -215,7 +228,7 @@
 | 语法错误/单复数 | sound → sounds |
 **正确率：** 15/24 = **62.5%**
 
-### 17. "Yes, you certainly wouldn't have much free time!"
+### 18. "Yes, you certainly wouldn't have much free time!"
 
 **听写：** Yes,you certainly use much free times
 **原文：** Yes, you certainly wouldn't have much free time!
@@ -227,7 +240,7 @@
 | 语法错误/单复数 | times → time |
 **正确率：** 5/8 = **62.5%**
 
-### 18. "What about the 'modular' course? What would I have to do for that?"
+### 19. "What about the 'modular' course? What would I have to do for that?"
 
 **听写：** What about the madular course what i have to do for that
 **原文：** What about the 'modular' course? What would I have to do for that?
@@ -238,7 +251,7 @@
 | 漏听 | would |
 **正确率：** 11/13 = **84.6%**
 
-### 19. "That's where you get the opportunity to study full-time for short periods. That way you can cover a lot of coursework and attend lectures and seminars during the day. And each module lasts for one term, say, about twelve weeks at a time. There are obvious advantages in this-the main one being that you can study in a much more intensive way, which suits some people much better."
+### 20. "That's where you get the opportunity to study full-time for short periods. That way you can cover a lot of coursework and attend lectures and seminars during the day. And each module lasts for one term, say, about twelve weeks at a time. There are obvious advantages in this-the main one being that you can study in a much more intensive way, which suits some people much better."
 
 **听写：** That course you will have opptunitiy to sutdy full-time for shot percr,that way you cvoer a lot of courses work and tend class during the day, and each duriing  for one term say about trem 12 weeks a time ,there are lot of advantages in this,you can study much intsive way,which suit for some people much better
 **原文：** That's where you get the opportunity to study full-time for short periods. That way you can cover a lot of coursework and attend lectures and seminars during the day. And each module lasts for one term, say, about twelve weeks at a time. There are obvious advantages in this-the main one being that you can study in a much more intensive way, which suits some people much better.
@@ -251,7 +264,7 @@
 | 语法错误/单复数 | suit → suits |
 **正确率：** 40/70 = **57.1%**
 
-### 20. "And how many of these 'modules' would I have to do to get the diploma?"
+### 21. "And how many of these 'modules' would I have to do to get the diploma?"
 
 **听写：** And how many way madura what i have to do to get this diploma
 **原文：** And how many of these 'modules' would I have to do to get the diploma?
@@ -262,7 +275,7 @@
 | 多写/幻听 | way, madura, what, this |
 **正确率：** 10/15 = **66.7%**
 
-### 21. "The current programme is two modules-and then you have to choose a topic to work in more depth-but you can base that on your job, and so you don't need to be away from the office, and how long it takes is up to you. The important thing is that you don't have to study and work. You can focus on one thing at a time."
+### 22. "The current programme is two modules-and then you have to choose a topic to work in more depth-but you can base that on your job, and so you don't need to be away from the office, and how long it takes is up to you. The important thing is that you don't have to study and work. You can focus on one thing at a time."
 
 **听写：** The current program is too mud and then you can chosse the topic to working more deep,but you can best your job and you don't away from you offce and how long it take is up to you,the important thing is you don't have to study and work,you can focus on one thing at the same time.
 **原文：** The current programme is two modules-and then you have to choose a topic to work in more depth-but you can base that on your job, and so you don't need to be away from the office, and how long it takes is up to you. The important thing is that you don't have to study and work. You can focus on one thing at a time.
@@ -276,7 +289,7 @@
 | 语法错误/单复数 | take → takes |
 **正确率：** 46/68 = **67.6%**
 
-### 22. "Yes, I can see that. It certainly sounds attractive! It would be more expensive, though. I mean, I'd have to support myself without pay for each module."
+### 23. "Yes, I can see that. It certainly sounds attractive! It would be more expensive, though. I mean, I'd have to support myself without pay for each module."
 
 **听写：** Yes i can see that it certianly sound tracktive would be more expensive though i mean i have to supose myself for pay each module
 **原文：** Yes, I can see that. It certainly sounds attractive! It would be more expensive, though. I mean, I'd have to support myself without pay for each module.

@@ -45,15 +45,14 @@ Yes. I've been working in the administration section of the local hospital for t
 I see. And are you planning to leave your current job to study, or are you thinking about just taking a year off?
 I want to know what my options are, really. I don't want to quit my job or anything and my employers are keen for me to get some more qualifications but obviously, it would be better if I could do a course without taking too much time away from work.
 Right, so you don't really want to do the full-time course, then?
-No, not really. It's also a question of finances. You see, my office have agreed to pay the cost of the course itself, but I would have to take unpaid leave if I want to study full-time and, well, I don't think I could afford to support myself with no salary for a whole year. you could either do the part-time course that would be over two years and you wouldn't have to take any time off work-or you could do what we call a 'modular' course. You could do that in eighteen months if you wanted-or longer, it's quite flexible and it would be up to you.
+No, not really. It's also a question of finances. You see, my office have agreed to pay the cost of the course itself, but I would have to take unpaid leave if I want to study full-time and, well, I don't think I could afford to support myself with no salary for a whole year. 
+OK. Well, you have two other possibilities: you could either do the part-time course that would be over two years and you wouldn't have to take any time off work-or you could do what we call a 'modular' course. You could do that in eighteen months if you wanted-or longer, it's quite flexible and it would be up to you.
 Mmm. So what does the part-time course involve?
 For that you would join an evening class and have a lecture twice a week. Then, you'd have to attend a seminar or discussion workshop one weekend a month.
 What kind of coursework would I have to do?
 Well, it's a mixture. You'd be expected to write an essay each month, which counts towards your final assessment. You have a case study to do by the end of the course, which might involve doing a survey or something like that, and also you need to hand in a short report every four weeks.
 So, that's quite a lot of work, then, on top of working every day. It sounds like a lot of studying-and really tiring.
 Yes, you certainly wouldn't have much free time!
-
-
 What about the 'modular' course? What would I have to do for that?
 That's where you get the opportunity to study full-time for short periods. That way you can cover a lot of coursework and attend lectures and seminars during the day. And each module lasts for one term, say, about twelve weeks at a time. There are obvious advantages in this-the main one being that you can study in a much more intensive way, which suits some people much better.
 And how many of these 'modules' would I have to do to get the diploma?

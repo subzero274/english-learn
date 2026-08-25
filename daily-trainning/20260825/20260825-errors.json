@@ -496,140 +496,28 @@
     "context": "句 11: poor → "
   },
   {
-    "phrase": "either",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 either"
-  },
-  {
-    "phrase": "part",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 part"
-  },
-  {
-    "phrase": "time",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 time"
-  },
-  {
     "phrase": "two",
     "phonetic": "",
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 11: 漏听 two"
+    "context": "句 12: 漏听 two"
   },
   {
-    "phrase": "years",
+    "phrase": "other",
     "phonetic": "",
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 11: 漏听 years"
+    "context": "句 12: 漏听 other"
   },
   {
-    "phrase": "wouldn't",
+    "phrase": "possibilities",
     "phonetic": "",
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 11: 漏听 wouldn't"
-  },
-  {
-    "phrase": "take",
-    "phonetic": "/teɪk/",
-    "pos": "v.",
-    "meaning": "拿；取；花费",
-    "example": "",
-    "context": "句 11: 漏听 take"
-  },
-  {
-    "phrase": "work",
-    "phonetic": "/wɜːk/",
-    "pos": "n./v.",
-    "meaning": "工作；运转",
-    "example": "",
-    "context": "句 11: 漏听 work"
-  },
-  {
-    "phrase": "call",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 call"
-  },
-  {
-    "phrase": "'modular'",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 'modular'"
-  },
-  {
-    "phrase": "eighteen",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 eighteen"
-  },
-  {
-    "phrase": "months",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 months"
-  },
-  {
-    "phrase": "wanted",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 wanted"
-  },
-  {
-    "phrase": "longer",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 longer"
-  },
-  {
-    "phrase": "it's",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 it's"
-  },
-  {
-    "phrase": "quite",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 quite"
-  },
-  {
-    "phrase": "flexible",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 11: 漏听 flexible"
+    "context": "句 12: 漏听 possibilities"
   },
   {
     "phrase": "resbolty",
@@ -640,60 +528,76 @@
     "context": "句 12: resbolty → "
   },
   {
+    "phrase": "either",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: 漏听 either"
+  },
+  {
+    "phrase": "wouldn't",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: 漏听 wouldn't"
+  },
+  {
+    "phrase": "time",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: 漏听 time"
+  },
+  {
+    "phrase": "call",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: called → call"
+  },
+  {
+    "phrase": "eighteen",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: eightten → eighteen"
+  },
+  {
+    "phrase": "wanted",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: want → wanted"
+  },
+  {
+    "phrase": "it's",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: 漏听 it's"
+  },
+  {
+    "phrase": "flexible",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: flexable → flexible"
+  },
+  {
     "phrase": "involve",
     "phonetic": "/ɪnˈvɒlv/",
     "pos": "v.",
     "meaning": "涉及；包含",
     "example": "",
-    "context": "句 12: 漏听 involve"
-  },
-  {
-    "phrase": "anytime",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 12: anytime → "
-  },
-  {
-    "phrase": "called",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 12: called → "
-  },
-  {
-    "phrase": "modular",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 12: modular → "
-  },
-  {
-    "phrase": "eightten",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 12: eightten → "
-  },
-  {
-    "phrase": "want",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 12: want → "
-  },
-  {
-    "phrase": "flexable",
-    "phonetic": "",
-    "pos": "",
-    "meaning": "",
-    "example": "",
-    "context": "句 12: flexable → "
+    "context": "句 13: 漏听 involve"
   },
   {
     "phrase": "seminar",
@@ -701,7 +605,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 13: 漏听 seminar"
+    "context": "句 14: 漏听 seminar"
   },
   {
     "phrase": "sila",
@@ -709,7 +613,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 13: sila → "
+    "context": "句 14: sila → "
   },
   {
     "phrase": "weekend",
@@ -717,7 +621,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 13: week → weekend"
+    "context": "句 14: week → weekend"
   },
   {
     "phrase": "month",
@@ -725,7 +629,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 13: mouth → month"
+    "context": "句 14: mouth → month"
   },
   {
     "phrase": "coursework",
@@ -733,7 +637,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 14: courses → coursework"
+    "context": "句 15: courses → coursework"
   },
   {
     "phrase": "you'd",
@@ -741,7 +645,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: you → you'd"
+    "context": "句 16: you → you'd"
   },
   {
     "phrase": "expected",
@@ -749,7 +653,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: 漏听 expected"
+    "context": "句 16: 漏听 expected"
   },
   {
     "phrase": "write",
@@ -757,7 +661,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: writing → write"
+    "context": "句 16: writing → write"
   },
   {
     "phrase": "counts",
@@ -765,7 +669,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: count → counts"
+    "context": "句 16: count → counts"
   },
   {
     "phrase": "towards",
@@ -773,7 +677,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: 漏听 towards"
+    "context": "句 16: 漏听 towards"
   },
   {
     "phrase": "final",
@@ -781,7 +685,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: 漏听 final"
+    "context": "句 16: 漏听 final"
   },
   {
     "phrase": "assessment",
@@ -789,7 +693,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: assment → assessment"
+    "context": "句 16: assment → assessment"
   },
   {
     "phrase": "times",
@@ -797,7 +701,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: times → "
+    "context": "句 16: times → "
   },
   {
     "phrase": "liking",
@@ -805,7 +709,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: liking → "
+    "context": "句 16: liking → "
   },
   {
     "phrase": "survey",
@@ -813,7 +717,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: serve → survey"
+    "context": "句 16: serve → survey"
   },
   {
     "phrase": "hand",
@@ -821,7 +725,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 15: handling → hand"
+    "context": "句 16: handling → hand"
   },
   {
     "phrase": "top",
@@ -829,7 +733,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 16: 漏听 top"
+    "context": "句 17: 漏听 top"
   },
   {
     "phrase": "typing",
@@ -837,7 +741,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 16: typing → "
+    "context": "句 17: typing → "
   },
   {
     "phrase": "every",
@@ -845,7 +749,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 16: ervery → every"
+    "context": "句 17: ervery → every"
   },
   {
     "phrase": "day",
@@ -853,7 +757,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 16: 漏听 day"
+    "context": "句 17: 漏听 day"
   },
   {
     "phrase": "sounds",
@@ -861,7 +765,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 16: sound → sounds"
+    "context": "句 17: sound → sounds"
   },
   {
     "phrase": "tiring",
@@ -869,7 +773,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 16: triding → tiring"
+    "context": "句 17: triding → tiring"
   },
   {
     "phrase": "use",
@@ -877,7 +781,15 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 17: use → "
+    "context": "句 18: use → "
+  },
+  {
+    "phrase": "'modular'",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 19: madular → 'modular'"
   },
   {
     "phrase": "that's",
@@ -885,7 +797,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: that → that's"
+    "context": "句 20: that → that's"
   },
   {
     "phrase": "opportunity",
@@ -893,7 +805,7 @@
     "pos": "n.",
     "meaning": "机会；时机",
     "example": "",
-    "context": "句 19: opptunitiy → opportunity"
+    "context": "句 20: opptunitiy → opportunity"
   },
   {
     "phrase": "study",
@@ -901,7 +813,7 @@
     "pos": "n./v.",
     "meaning": "学习；研究",
     "example": "",
-    "context": "句 19: sutdy → study"
+    "context": "句 20: sutdy → study"
   },
   {
     "phrase": "short",
@@ -909,7 +821,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: shot → short"
+    "context": "句 20: shot → short"
   },
   {
     "phrase": "periods",
@@ -917,7 +829,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 periods"
+    "context": "句 20: 漏听 periods"
   },
   {
     "phrase": "percr",
@@ -925,7 +837,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: percr → "
+    "context": "句 20: percr → "
   },
   {
     "phrase": "cover",
@@ -933,7 +845,15 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: cvoer → cover"
+    "context": "句 20: cvoer → cover"
+  },
+  {
+    "phrase": "work",
+    "phonetic": "/wɜːk/",
+    "pos": "n./v.",
+    "meaning": "工作；运转",
+    "example": "",
+    "context": "句 20: work → "
   },
   {
     "phrase": "attend",
@@ -941,7 +861,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: tend → attend"
+    "context": "句 20: tend → attend"
   },
   {
     "phrase": "lectures",
@@ -949,7 +869,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 lectures"
+    "context": "句 20: 漏听 lectures"
   },
   {
     "phrase": "seminars",
@@ -957,7 +877,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 seminars"
+    "context": "句 20: 漏听 seminars"
   },
   {
     "phrase": "class",
@@ -965,7 +885,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: class → "
+    "context": "句 20: class → "
   },
   {
     "phrase": "module",
@@ -973,7 +893,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 module"
+    "context": "句 20: 漏听 module"
   },
   {
     "phrase": "lasts",
@@ -981,7 +901,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 lasts"
+    "context": "句 20: 漏听 lasts"
   },
   {
     "phrase": "duriing",
@@ -989,7 +909,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: duriing → "
+    "context": "句 20: duriing → "
   },
   {
     "phrase": "twelve",
@@ -997,7 +917,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 twelve"
+    "context": "句 20: 漏听 twelve"
   },
   {
     "phrase": "trem",
@@ -1005,7 +925,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: trem → "
+    "context": "句 20: trem → "
   },
   {
     "phrase": "obvious",
@@ -1013,7 +933,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 obvious"
+    "context": "句 20: 漏听 obvious"
   },
   {
     "phrase": "lot",
@@ -1021,7 +941,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: lot → "
+    "context": "句 20: lot → "
   },
   {
     "phrase": "main",
@@ -1029,7 +949,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 main"
+    "context": "句 20: 漏听 main"
   },
   {
     "phrase": "one",
@@ -1037,7 +957,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 one"
+    "context": "句 20: 漏听 one"
   },
   {
     "phrase": "more",
@@ -1045,7 +965,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: 漏听 more"
+    "context": "句 20: 漏听 more"
   },
   {
     "phrase": "suits",
@@ -1053,7 +973,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 19: suit → suits"
+    "context": "句 20: suit → suits"
   },
   {
     "phrase": "'modules'",
@@ -1061,7 +981,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 20: 漏听 'modules'"
+    "context": "句 21: 漏听 'modules'"
   },
   {
     "phrase": "way",
@@ -1069,7 +989,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 20: way → "
+    "context": "句 21: way → "
   },
   {
     "phrase": "madura",
@@ -1077,7 +997,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 20: madura → "
+    "context": "句 21: madura → "
   },
   {
     "phrase": "programme",
@@ -1085,7 +1005,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 21: program → programme"
+    "context": "句 22: program → programme"
   },
   {
     "phrase": "modules",
@@ -1093,7 +1013,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 21: 漏听 modules"
+    "context": "句 22: 漏听 modules"
   },
   {
     "phrase": "mud",
@@ -1101,7 +1021,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 21: mud → "
+    "context": "句 22: mud → "
   },
   {
     "phrase": "choose",
@@ -1109,7 +1029,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 21: chosse → choose"
+    "context": "句 22: chosse → choose"
   },
   {
     "phrase": "depth",
@@ -1117,7 +1037,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 21: deep → depth"
+    "context": "句 22: deep → depth"
   },
   {
     "phrase": "base",
@@ -1125,7 +1045,7 @@
     "pos": "n./v.",
     "meaning": "基础；以…为基础",
     "example": "",
-    "context": "句 21: 漏听 base"
+    "context": "句 22: 漏听 base"
   },
   {
     "phrase": "need",
@@ -1133,7 +1053,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 21: 漏听 need"
+    "context": "句 22: 漏听 need"
   },
   {
     "phrase": "takes",
@@ -1141,7 +1061,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 21: take → takes"
+    "context": "句 22: take → takes"
   },
   {
     "phrase": "same",
@@ -1149,7 +1069,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 21: same → "
+    "context": "句 22: same → "
   },
   {
     "phrase": "certainly",
@@ -1157,7 +1077,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 22: certianly → certainly"
+    "context": "句 23: certianly → certainly"
   },
   {
     "phrase": "attractive",
@@ -1165,7 +1085,7 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 22: tracktive → attractive"
+    "context": "句 23: tracktive → attractive"
   },
   {
     "phrase": "i'd",
@@ -1173,6 +1093,6 @@
     "pos": "",
     "meaning": "",
     "example": "",
-    "context": "句 22: 漏听 i'd"
+    "context": "句 23: 漏听 i'd"
   }
 ]
