@@ -47,21 +47,61 @@ def load_dictionary(tsv_path: Path) -> dict:
     return data
 
 
+def split_sentences(text: str) -> List[str]:
+    """Split text into sentences. Normalize lowercase after sentence endings."""
+    # Capitalize after sentence-ending punctuation + space + lowercase letter
+    text = re.sub(r"([.!?])\s+([a-z])", lambda m: f"{m.group(1)} {m.group(2).upper()}", text)
+    # Split on sentence-ending punctuation followed by space and uppercase
+    parts = re.split(r"(?<=[.!?])\s+(?=[A-Z])", text)
+    return [p.strip() for p in parts if p.strip()]
+
+
 def parse_input(path: Path) -> Tuple[List[str], List[str]]:
     with open(path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
+    has_marker = any(line.strip() == '原文' for line in lines)
+
+    if has_marker:
+        dictation_lines = []
+        original_lines = []
+        mode = 'dictation'
+        for line in lines:
+            stripped = line.strip()
+            if stripped == '原文':
+                mode = 'original'
+                continue
+            if mode == 'dictation' and stripped and stripped != '听写记录':
+                dictation_lines.append(stripped)
+            elif mode == 'original' and stripped:
+                original_lines.append(stripped)
+        return dictation_lines, original_lines
+
+    # No marker: split at first run of 3+ blank lines
     dictation_lines = []
     original_lines = []
-    mode = 'dictation'
-    for line in lines:
+    blank_run = 0
+    split_index = None
+    for i, line in enumerate(lines):
+        if line.strip() == '':
+            blank_run += 1
+            if blank_run >= 3:
+                split_index = i
+                break
+        else:
+            blank_run = 0
+
+    if split_index is None:
+        split_index = len(lines)
+
+    for line in lines[:split_index]:
         stripped = line.strip()
-        if stripped == '原文':
-            mode = 'original'
-            continue
-        if mode == 'dictation' and stripped and stripped != '听写记录':
+        if stripped and stripped != '听写记录':
             dictation_lines.append(stripped)
-        elif mode == 'original' and stripped:
+
+    for line in lines[split_index:]:
+        stripped = line.strip()
+        if stripped:
             original_lines.append(stripped)
 
     return dictation_lines, original_lines
@@ -196,14 +236,52 @@ def grade(accuracy: float) -> str:
     return 'F'
 
 
+def line_similarity(a: str, b: str) -> float:
+    return SequenceMatcher(None, clean(a), clean(b)).ratio()
+
+
+def align_lines(dictation_lines: List[str], original_lines: List[str]) -> List[Tuple[str, str]]:
+    """Align dictation lines with original lines, allowing 1 original line to match 1-3 dictation lines."""
+    if len(dictation_lines) == len(original_lines):
+        return list(zip(dictation_lines, original_lines))
+
+    aligned: List[Tuple[str, str]] = []
+    i = 0
+    for orig_line in original_lines:
+        if i >= len(dictation_lines):
+            break
+
+        best_k = 1
+        best_score = line_similarity(dictation_lines[i], orig_line)
+        for k in [2, 3]:
+            if i + k <= len(dictation_lines):
+                combined = ' '.join(dictation_lines[i:i + k])
+                score = line_similarity(combined, orig_line)
+                if score > best_score + 0.05:
+                    best_score = score
+                    best_k = k
+
+        combined_user = ' '.join(dictation_lines[i:i + best_k])
+        aligned.append((combined_user, orig_line))
+        i += best_k
+
+    while i < len(dictation_lines):
+        aligned.append((dictation_lines[i], ''))
+        i += 1
+
+    return aligned
+
+
 def correct(input_path: Path, material: str = '') -> Tuple[Path, Path]:
     dictation_lines, original_lines = parse_input(input_path)
     if not dictation_lines or not original_lines:
         raise ValueError(f"Could not parse dictation and original text from {input_path}")
 
+    aligned = align_lines(dictation_lines, original_lines)
+
     if len(dictation_lines) != len(original_lines):
         print(
-            f"Warning: dictation ({len(dictation_lines)}) and original ({len(original_lines)}) sentence counts differ.",
+            f"Note: dictation ({len(dictation_lines)}) and original ({len(original_lines)}) line counts differ; used alignment merge.",
             file=sys.stderr,
         )
 
@@ -212,7 +290,7 @@ def correct(input_path: Path, material: str = '') -> Tuple[Path, Path]:
     total_ref = 0
     total_correct = 0
 
-    for idx, (user_sent, orig_sent) in enumerate(zip(dictation_lines, original_lines), 1):
+    for idx, (user_sent, orig_sent) in enumerate(aligned, 1):
         user_tokens = tokenize(user_sent)
         orig_tokens = tokenize(orig_sent)
         sm = SequenceMatcher(None, orig_tokens, user_tokens)
