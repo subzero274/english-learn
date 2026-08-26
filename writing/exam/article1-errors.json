@@ -1,0 +1,138 @@
+[
+  {
+    "phrase": "of travel",
+    "phonetic": "",
+    "pos": "phrase",
+    "meaning": "出行方式/旅行",
+    "example": "changes in modes of travel in England",
+    "context": "拼写错误: oftrvel → of travel"
+  },
+  {
+    "phrase": "difference",
+    "phonetic": "ˈdɪfrəns",
+    "pos": "n.",
+    "meaning": "差异；不同",
+    "example": "There was a big difference between 1985 and 2000.",
+    "context": "拼写错误: defferent → difference"
+  },
+  {
+    "phrase": "distance",
+    "phonetic": "ˈdɪstəns",
+    "pos": "n.",
+    "meaning": "距离",
+    "example": "the average distance travelled per person per year",
+    "context": "拼写错误: ditances → distance"
+  },
+  {
+    "phrase": "increase",
+    "phonetic": "ɪnˈkriːs",
+    "pos": "n./v.",
+    "meaning": "增加",
+    "example": "There was an increase in car travel.",
+    "context": "拼写错误: incress → increase"
+  },
+  {
+    "phrase": "miles",
+    "phonetic": "maɪlz",
+    "pos": "n.",
+    "meaning": "英里（mile 的复数）",
+    "example": "from 3,199 miles to 4,806 miles",
+    "context": "拼写错误: mils → miles"
+  },
+  {
+    "phrase": "from",
+    "phonetic": "frəm",
+    "pos": "prep.",
+    "meaning": "从……",
+    "example": "increased from 289 to 366 miles",
+    "context": "拼写错误: form → from"
+  },
+  {
+    "phrase": "walking",
+    "phonetic": "ˈwɔːkɪŋ",
+    "pos": "n.",
+    "meaning": "步行",
+    "example": "Walking was down from 255 to 237 miles.",
+    "context": "拼写错误: Wakling → Walking"
+  },
+  {
+    "phrase": "dramatically",
+    "phonetic": "drəˈmætɪkli",
+    "pos": "adv.",
+    "meaning": "显著地；戏剧性地",
+    "example": "A dramatic decrease can be seen in local bus use.",
+    "context": "拼写错误: domaticaly → dramatically"
+  },
+  {
+    "phrase": "there be",
+    "phonetic": "",
+    "pos": "grammar",
+    "meaning": "存在句型：There is/are / was/were",
+    "example": "An increase can be seen in car travel.",
+    "context": "语法错误: There was a increase can been seen → 句式杂糅"
+  },
+  {
+    "phrase": "can be seen",
+    "phonetic": "",
+    "pos": "grammar",
+    "meaning": "可以被看见/可以看出（被动语态）",
+    "example": "A sharp increase can be seen in the data.",
+    "context": "语法错误: can been seen → can be seen"
+  },
+  {
+    "phrase": "rise by / increase by",
+    "phonetic": "",
+    "pos": "grammar",
+    "meaning": "上升了（具体幅度）",
+    "example": "which rose by 1,605 miles",
+    "context": "语法错误: rose 1605 miles 缺少 by"
+  },
+  {
+    "phrase": "other",
+    "phonetic": "ˈʌðər",
+    "pos": "adj.",
+    "meaning": "其他的",
+    "example": "Other transport modes saw a decrease.",
+    "context": "语法错误: Another transport ways → Other transport modes"
+  },
+  {
+    "phrase": "fall",
+    "phonetic": "fɔːl",
+    "pos": "v.",
+    "meaning": "下降",
+    "example": "Bicycle use fell from 51 to 41 miles.",
+    "context": "语法错误: Bicycle was fall → Bicycle use fell"
+  },
+  {
+    "phrase": "with + n. + doing",
+    "phonetic": "",
+    "pos": "grammar",
+    "meaning": "with 复合结构，表示伴随",
+    "example": "with all modes rising from 4,740 miles to 6,475 miles",
+    "context": "语法错误: which all modes is 4740 miles → with 复合结构"
+  },
+  {
+    "phrase": "highest / lowest",
+    "phonetic": "",
+    "pos": "adj.",
+    "meaning": "最高的/最低的",
+    "example": "Car travel was the highest, while taxi use was the lowest.",
+    "context": "词汇错误: maximal/minimal → highest/lowest"
+  },
+  {
+    "phrase": "overall",
+    "phonetic": "ˌəʊvərˈɔːl",
+    "pos": "adv./adj.",
+    "meaning": "总体上",
+    "example": "Overall, the total distance travelled rose considerably.",
+    "context": "Task 1 结构: Overview 应放在第 2 段开头"
+  },
+  {
+    "phrase": "more than doubled",
+    "phonetic": "",
+    "pos": "phrase",
+    "meaning": "增加了一倍以上",
+    "example": "Long-distance bus use more than doubled.",
+    "context": "Task 1 数据描述: over 2 times → more than doubled"
+  }
+]
