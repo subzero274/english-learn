@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Task 1 · 小作文自测</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --success: #16a34a;
+      --error: #dc2626;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 28px; }
+    h1 { margin: 0 0 8px; font-size: 1.75rem; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+    h2 { margin-top: 0; font-size: 1.25rem; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+    .prompt {
+      background: #f1f5f9;
+      border-left: 4px solid var(--primary);
+      padding: 14px;
+      border-radius: 6px;
+      margin-bottom: 18px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: center;
+    }
+    th { background: #f1f5f9; }
+    .question { margin-bottom: 18px; }
+    .question-label { display: block; margin-bottom: 8px; font-weight: 500; }
+    input[type="text"], textarea, select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    .inline-input {
+      display: inline-block;
+      width: auto;
+      min-width: 140px;
+      margin: 0 4px;
+    }
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: var(--text);
+      margin-left: 10px;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .feedback { margin-top: 8px; font-size: 0.95rem; min-height: 1.4em; }
+    .feedback.correct { color: var(--success); }
+    .feedback.wrong { color: var(--error); }
+    .answer-box {
+      display: none;
+      background: #f0fdf4;
+      border-left: 4px solid var(--success);
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    .score-bar {
+      background: #e2e8f0;
+      border-radius: 999px;
+      height: 12px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+    .score-fill {
+      background: var(--primary);
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+    .score-text { font-weight: 600; text-align: center; margin-top: 6px; }
+    .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>IELTS Task 1 · 小作文自测</h1>
+      <div class="subtitle">基于 writing/exam/article1.md 的拼写、语法与数据描述训练</div>
+    </header>
+
+    <div class="card">
+      <h2>题目与数据</h2>
+      <div class="prompt">
+        <strong>The table below gives information about changes in modes of travel in England between 1985 and 2000.</strong><br>
+        Summarise the information by selecting and reporting the main features, and make comparisons where relevant.
+      </div>
+      <table>
+        <thead>
+          <tr><th></th><th>1985</th><th>2000</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Walking</strong></td><td>255</td><td>237</td></tr>
+          <tr><td><strong>Bicycle</strong></td><td>51</td><td>41</td></tr>
+          <tr><td><strong>Car</strong></td><td>3,199</td><td>4,806</td></tr>
+          <tr><td><strong>Local bus</strong></td><td>429</td><td>274</td></tr>
+          <tr><td><strong>Long distance bus</strong></td><td>54</td><td>124</td></tr>
+          <tr><td><strong>Train</strong></td><td>289</td><td>366</td></tr>
+          <tr><td><strong>Taxi</strong></td><td>13</td><td>42</td></tr>
+          <tr><td><strong>Other</strong></td><td>450</td><td>585</td></tr>
+          <tr><td><strong>All modes</strong></td><td>4,740</td><td>6,475</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>练习 1：拼写纠错</h2>
+      <p>补全句子，写出括号内单词的正确形式。</p>
+      <div class="question">
+        <label class="question-label">1. The table shows the changes in model of <input type="text" class="inline-input" id="s1"> (travel) in England.</label>
+        <div class="feedback" id="f-s1"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">2. There was a big <input type="text" class="inline-input" id="s2"> (different) between 1985 and 2000.</label>
+        <div class="feedback" id="f-s2"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">3. Long <input type="text" class="inline-input" id="s3"> (ditances) bus had a fast <input type="text" class="inline-input" id="s4"> (incress).</label>
+        <div class="feedback" id="f-s3"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">4. A <input type="text" class="inline-input" id="s5"> (domaticaly) decrease can be seen in local bus use.</label>
+        <div class="feedback" id="f-s4"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">5. Train travel increased <input type="text" class="inline-input" id="s6"> (form) 289 to 366 miles.</label>
+        <div class="feedback" id="f-s5"></div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="checkSpelling()">检查答案</button>
+        <button class="btn btn-secondary" onclick="toggleAnswers('spelling')">显示/隐藏答案</button>
+      </div>
+      <div class="answer-box" id="ans-spelling">
+        1. travel &nbsp; 2. difference &nbsp; 3. distance, increase &nbsp; 4. dramatic &nbsp; 5. from
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>练习 2：语法改错</h2>
+      <p>请改写以下句子，修正语法错误。</p>
+      <div class="question">
+        <label class="question-label">1. There was a increase can been seen in car, long distance bus and train.</label>
+        <textarea id="g1" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g1"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">2. Cars' distance had a bigger up, which rose 1605 miles.</label>
+        <textarea id="g2" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g2"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">3. Another transport ways were decrease.</label>
+        <textarea id="g3" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g3"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">4. Bicycle was fall from 51 to 41 miles.</label>
+        <textarea id="g4" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g4"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">5. Overall, the average distance had a sharp rise, which all modes is 4740 miles to 6475 miles.</label>
+        <textarea id="g5" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g5"></div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="checkGrammar()">检查答案</button>
+        <button class="btn btn-secondary" onclick="toggleAnswers('grammar')">显示/隐藏答案</button>
+      </div>
+      <div class="answer-box" id="ans-grammar">
+        1. An increase can be seen in car, long-distance bus and train travel.<br>
+        2. Car travel saw the biggest increase, rising by 1,605 miles.<br>
+        3. Other transport modes saw a decrease.<br>
+        4. Bicycle use fell from 51 to 41 miles.<br>
+        5. Overall, the average distance rose sharply, with all modes increasing from 4,740 miles to 6,475 miles.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>练习 3：同义替换</h2>
+      <p>从下拉框中选择合适的表达替换划线部分。</p>
+      <div class="question">
+        <label class="question-label">1. Car travel <strong>had a bigger up</strong>, rising by 1,605 miles.</label>
+        <select id="syn1">
+          <option value="">请选择</option>
+          <option value="saw the biggest increase">saw the biggest increase</option>
+          <option value="had a big decrease">had a big decrease</option>
+          <option value="remained the same">remained the same</option>
+        </select>
+        <div class="feedback" id="f-syn1"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">2. Long-distance bus use <strong>had a fast increase</strong>.</label>
+        <select id="syn2">
+          <option value="">请选择</option>
+          <option value="increased">increased</option>
+          <option value="fell sharply">fell sharply</option>
+          <option value="more than doubled">more than doubled</option>
+        </select>
+        <div class="feedback" id="f-syn2"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">3. Local bus <strong>was decrease</strong> dramatically.</label>
+        <select id="syn3">
+          <option value="">请选择</option>
+          <option value="rose">rose</option>
+          <option value="fell">fell</option>
+          <option value="climbed">climbed</option>
+        </select>
+        <div class="feedback" id="f-syn3"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">4. Walking <strong>was down</strong> from 255 to 237 miles.</label>
+        <select id="syn4">
+          <option value="">请选择</option>
+          <option value="increased">increased</option>
+          <option value="fell">fell</option>
+          <option value="more than doubled">more than doubled</option>
+        </select>
+        <div class="feedback" id="f-syn4"></div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="checkSynonyms()">检查答案</button>
+        <button class="btn btn-secondary" onclick="toggleAnswers('synonyms')">显示/隐藏答案</button>
+      </div>
+      <div class="answer-box" id="ans-synonyms">
+        1. saw the biggest increase &nbsp; 2. increased &nbsp; 3. fell &nbsp; 4. fell
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>练习 4：数据描述</h2>
+      <p>用完整句子描述以下数据。</p>
+      <div class="question">
+        <label class="question-label">1. Car: 3,199 → 4,806 miles</label>
+        <textarea id="d1" placeholder="在此输入完整句子"></textarea>
+        <div class="feedback" id="f-d1"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">2. Local bus: 429 → 274 miles</label>
+        <textarea id="d2" placeholder="在此输入完整句子"></textarea>
+        <div class="feedback" id="f-d2"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">3. Long-distance bus: 54 → 124 miles</label>
+        <textarea id="d3" placeholder="在此输入完整句子"></textarea>
+        <div class="feedback" id="f-d3"></div>
+      </div>
+      <div class="question">
+        <label class="question-label">4. Total: 4,740 → 6,475 miles</label>
+        <textarea id="d4" placeholder="在此输入完整句子"></textarea>
+        <div class="feedback" id="f-d4"></div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="checkData()">检查关键词</button>
+        <button class="btn btn-secondary" onclick="toggleAnswers('data')">显示/隐藏答案</button>
+      </div>
+      <div class="answer-box" id="ans-data">
+        1. Car travel increased significantly from 3,199 miles to 4,806 miles.<br>
+        2. Local bus use fell sharply from 429 miles to 274 miles.<br>
+        3. Long-distance bus travel more than doubled, rising from 54 miles to 124 miles.<br>
+        4. The total distance travelled per person per year rose from 4,740 miles to 6,475 miles.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>总得分</h2>
+      <div class="score-bar"><div class="score-fill" id="scoreFill"></div></div>
+      <div class="score-text" id="scoreText">点击各练习的「检查答案」即可更新得分</div>
+      <div class="actions">
+        <button class="btn" onclick="checkAll()">全部检查</button>
+        <button class="btn btn-secondary" onclick="resetAll()">重置</button>
+      </div>
+    </div>
+
+    <footer>
+      数据来自 writing/exam/article1.md · 配合 article1-analysis.md 使用效果更佳
+    </footer>
+  </div>
+
+  <script>
+    const normalize = s => s.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+
+    const spellingAnswers = {
+      s1: ['travel'],
+      s2: ['difference'],
+      s3: ['distance'],
+      s4: ['increase'],
+      s5: ['dramatic'],
+      s6: ['from']
+    };
+
+    const grammarKeywords = {
+      g1: ['increase can be seen', 'car', 'long distance bus', 'train'],
+      g2: ['car travel', 'biggest increase', 'by 1605', '1605 miles'],
+      g3: ['other transport modes', 'saw', 'decrease'],
+      g4: ['bicycle use', 'fell', '51', '41'],
+      g5: ['average distance', 'rose sharply', 'with all modes', '4740', '6475']
+    };
+
+    const dataKeywords = {
+      d1: ['car', 'increased', '3199', '4806'],
+      d2: ['local bus', 'fell', '429', '274'],
+      d3: ['long distance bus', 'doubled', '54', '124'],
+      d4: ['total', 'rose', '4740', '6475']
+    };
+
+    const synonymAnswers = {
+      syn1: 'saw the biggest increase',
+      syn2: 'increased',
+      syn3: 'fell',
+      syn4: 'fell'
+    };
+
+    function setFeedback(id, correct, msg) {
+      const el = document.getElementById(id);
+      el.textContent = msg;
+      el.className = 'feedback ' + (correct ? 'correct' : 'wrong');
+    }
+
+    function clearFeedback(prefix, ids) {
+      ids.forEach(k => {
+        const el = document.getElementById(prefix + k);
+        if (el) { el.textContent = ''; el.className = 'feedback'; }
+      });
+    }
+
+    let totalCorrect = 0;
+    let totalQuestions = 0;
+
+    function checkSpelling() {
+      let correct = 0;
+      const keys = ['s1','s2','s3','s4','s5','s6'];
+      totalQuestions += keys.length;
+      keys.forEach(k => {
+        const val = document.getElementById(k).value.trim().toLowerCase();
+        const ok = spellingAnswers[k].includes(val);
+        if (ok) correct++;
+        setFeedback('f-' + k, ok, ok ? '✅ 正确' : '❌ 错误，正确答案是：' + spellingAnswers[k].join(' / '));
+      });
+      totalCorrect += correct;
+      updateScore();
+      return correct;
+    }
+
+    function checkGrammar() {
+      let correct = 0;
+      const keys = ['g1','g2','g3','g4','g5'];
+      totalQuestions += keys.length;
+      keys.forEach(k => {
+        const val = normalize(document.getElementById(k).value);
+        const required = grammarKeywords[k];
+        const missing = required.filter(w => !val.includes(w));
+        const ok = missing.length === 0 && val.length > 20;
+        if (ok) correct++;
+        setFeedback('f-' + k, ok, ok ? '✅ 表达正确' : '⚠️ 建议包含：' + required.join('、'));
+      });
+      totalCorrect += correct;
+      updateScore();
+      return correct;
+    }
+
+    function checkSynonyms() {
+      let correct = 0;
+      const keys = ['syn1','syn2','syn3','syn4'];
+      totalQuestions += keys.length;
+      keys.forEach(k => {
+        const val = document.getElementById(k).value;
+        const ok = val === synonymAnswers[k];
+        if (ok) correct++;
+        setFeedback('f-' + k, ok, ok ? '✅ 正确' : '❌ 错误，正确答案是：' + synonymAnswers[k]);
+      });
+      totalCorrect += correct;
+      updateScore();
+      return correct;
+    }
+
+    function checkData() {
+      let correct = 0;
+      const keys = ['d1','d2','d3','d4'];
+      totalQuestions += keys.length;
+      keys.forEach(k => {
+        const val = normalize(document.getElementById(k).value);
+        const required = dataKeywords[k];
+        const missing = required.filter(w => !val.includes(w));
+        const ok = missing.length === 0 && val.length > 25;
+        if (ok) correct++;
+        setFeedback('f-' + k, ok, ok ? '✅ 数据描述完整' : '⚠️ 建议包含：' + required.join('、'));
+      });
+      totalCorrect += correct;
+      updateScore();
+      return correct;
+    }
+
+    function updateScore() {
+      const pct = totalQuestions ? Math.round(totalCorrect / totalQuestions * 100) : 0;
+      document.getElementById('scoreFill').style.width = pct + '%';
+      document.getElementById('scoreText').textContent = `当前得分：${totalCorrect} / ${totalQuestions}（${pct}%）`;
+    }
+
+    function checkAll() {
+      totalCorrect = 0;
+      totalQuestions = 0;
+      checkSpelling();
+      checkGrammar();
+      checkSynonyms();
+      checkData();
+    }
+
+    function resetAll() {
+      ['s1','s2','s3','s4','s5','s6','g1','g2','g3','g4','g5','d1','d2','d3','d4'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      ['syn1','syn2','syn3','syn4'].forEach(id => {
+        document.getElementById(id).selectedIndex = 0;
+      });
+      document.querySelectorAll('.feedback').forEach(el => { el.textContent = ''; el.className = 'feedback'; });
+      document.querySelectorAll('.answer-box').forEach(el => el.style.display = 'none');
+      totalCorrect = 0;
+      totalQuestions = 0;
+      updateScore();
+    }
+
+    function toggleAnswers(section) {
+      const box = document.getElementById('ans-' + section);
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Save inputs to localStorage
+    const inputIds = ['s1','s2','s3','s4','s5','s6','g1','g2','g3','g4','g5','syn1','syn2','syn3','syn4','d1','d2','d3','d4'];
+    inputIds.forEach(id => {
+      const el = document.getElementById(id);
+      const saved = localStorage.getItem('article1-' + id);
+      if (saved !== null) el.value = saved;
+      el.addEventListener('input', () => localStorage.setItem('article1-' + id, el.value));
+    });
+  </script>
+</body>
+</html>
