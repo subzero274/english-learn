@@ -1,0 +1,162 @@
+[
+  {
+    "phrase": "analyze",
+    "phonetic": "ˈænəlaɪz",
+    "pos": "v.",
+    "meaning": "分析",
+    "example": "I will analyze both the positive and negative sides.",
+    "context": "拼写错误: ananly → analyze"
+  },
+  {
+    "phrase": "replace",
+    "phonetic": "rɪˈpleɪs",
+    "pos": "v.",
+    "meaning": "取代，代替",
+    "example": "Using the Internet to replace face-to-face contact has many disadvantages.",
+    "context": "拼写错误: raplace → replace"
+  },
+  {
+    "phrase": "disadvantage",
+    "phonetic": "ˌdɪsədˈvɑːntɪdʒ",
+    "pos": "n.",
+    "meaning": "缺点；不利条件",
+    "example": "Online communication has some disadvantages.",
+    "context": "拼写错误: disadvantanges → disadvantages"
+  },
+  {
+    "phrase": "first",
+    "phonetic": "fɜːrst",
+    "pos": "adv./adj.",
+    "meaning": "首先；第一的",
+    "example": "In the first place, it may make people feel lonely.",
+    "context": "拼写错误: frist → first"
+  },
+  {
+    "phrase": "irritable",
+    "phonetic": "ˈɪrɪtəbl",
+    "pos": "adj.",
+    "meaning": "易怒的，烦躁的",
+    "example": "People may feel lonely or irritable.",
+    "context": "词汇/语法错误: irritability（名词）→ irritable（形容词）"
+  },
+  {
+    "phrase": "disease",
+    "phonetic": "dɪˈziːz",
+    "pos": "n.",
+    "meaning": "疾病",
+    "example": "Using the Internet can cause many diseases.",
+    "context": "单复数错误: disease → diseases"
+  },
+  {
+    "phrase": "buy",
+    "phonetic": "baɪ",
+    "pos": "v.",
+    "meaning": "购买",
+    "example": "People can buy products from all over the world.",
+    "context": "拼写/词汇错误: by → buy"
+  },
+  {
+    "phrase": "world",
+    "phonetic": "wɜːrld",
+    "pos": "n.",
+    "meaning": "世界",
+    "example": "from all over the world",
+    "context": "拼写错误: work → world"
+  },
+  {
+    "phrase": "possible",
+    "phonetic": "ˈpɒsəbl",
+    "pos": "adj.",
+    "meaning": "可能的",
+    "example": "It makes it possible to work from home.",
+    "context": "拼写错误: posible → possible"
+  },
+  {
+    "phrase": "spend",
+    "phonetic": "spend",
+    "pos": "v.",
+    "meaning": "花费（时间/金钱）",
+    "example": "People do not spend much time on transport.",
+    "context": "拼写/词汇错误: speed → spend"
+  },
+  {
+    "phrase": "company",
+    "phonetic": "ˈkʌmpəni",
+    "pos": "n.",
+    "meaning": "公司",
+    "example": "Many Internet companies allow remote working.",
+    "context": "拼写/单复数错误: companys → companies"
+  },
+  {
+    "phrase": "in addition",
+    "phonetic": "",
+    "pos": "phrase",
+    "meaning": "此外",
+    "example": "In addition, communicating online is often free.",
+    "context": "拼写错误: addtion → addition"
+  },
+  {
+    "phrase": "communicate",
+    "phonetic": "kəˈmjuːnɪkeɪt",
+    "pos": "v.",
+    "meaning": "交流，沟通",
+    "example": "use FaceTime to communicate just like face-to-face",
+    "context": "拼写错误: cmmunicate → communicate"
+  },
+  {
+    "phrase": "knowledge",
+    "phonetic": "ˈnɒlɪdʒ",
+    "pos": "n.",
+    "meaning": "知识",
+    "example": "learn more knowledge with the help of AI",
+    "context": "拼写错误: knowlege → knowledge"
+  },
+  {
+    "phrase": "science",
+    "phonetic": "ˈsaɪəns",
+    "pos": "n.",
+    "meaning": "科学",
+    "example": "subjects such as science, English and history",
+    "context": "拼写错误: seciens → science"
+  },
+  {
+    "phrase": "efficient",
+    "phonetic": "ɪˈfɪʃnt",
+    "pos": "adj.",
+    "meaning": "高效的",
+    "example": "This method is more efficient.",
+    "context": "拼写错误: effiecat → efficient"
+  },
+  {
+    "phrase": "everyone",
+    "phonetic": "ˈevriwʌn",
+    "pos": "pron.",
+    "meaning": "每个人",
+    "example": "I suggest that everyone use the Internet wisely.",
+    "context": "拼写错误: eveyone → everyone"
+  },
+  {
+    "phrase": "the Internet",
+    "phonetic": "",
+    "pos": "grammar",
+    "meaning": "互联网（专有名词，通常加 the）",
+    "example": "Using the Internet has both advantages and disadvantages.",
+    "context": "语法错误: 缺少定冠词 the"
+  },
+  {
+    "phrase": "make it possible",
+    "phonetic": "",
+    "pos": "grammar",
+    "meaning": "使……成为可能（it 作形式宾语）",
+    "example": "It makes it possible to work from home.",
+    "context": "语法错误: It makes posible → It makes it possible"
+  },
+  {
+    "phrase": "suggest + (that) + 主语 + 动词原形",
+    "phonetic": "",
+    "pos": "grammar",
+    "meaning": "建议……（虚拟语气）",
+    "example": "I suggest that everyone use the Internet wisely.",
+    "context": "语法错误: I suggest everyone can use → I suggest everyone use"
+  }
+]

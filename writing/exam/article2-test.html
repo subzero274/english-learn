@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Task 2 · 大作文自测</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --success: #16a34a;
+      --error: #dc2626;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 28px; }
+    h1 { margin: 0 0 8px; font-size: 1.75rem; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+    h2 { margin-top: 0; font-size: 1.25rem; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+    .prompt {
+      background: #f1f5f9;
+      border-left: 4px solid var(--primary);
+      padding: 14px;
+      border-radius: 6px;
+      margin-bottom: 18px;
+    }
+    .question { margin-bottom: 18px; }
+    .question-label { display: block; margin-bottom: 8px; font-weight: 500; }
+    input[type="text"], textarea, select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    .inline-input {
+      display: inline-block;
+      width: auto;
+      min-width: 130px;
+      margin: 0 4px;
+    }
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: var(--text);
+      margin-left: 10px;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .feedback { margin-top: 8px; font-size: 0.95rem; min-height: 1.4em; }
+    .feedback.correct { color: var(--success); }
+    .feedback.wrong { color: var(--error); }
+    .answer-box {
+      display: none;
+      background: #f0fdf4;
+      border-left: 4px solid var(--success);
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    .score-bar {
+      background: #e2e8f0;
+      border-radius: 999px;
+      height: 12px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+    .score-fill {
+      background: var(--primary);
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+    .score-text { font-weight: 600; text-align: center; margin-top: 6px; }
+    .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+    .hint { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>IELTS Task 2 · 大作文自测</h1>
+      <div class="subtitle">基于 writing/exam/article2.md 的拼写、语法与同义替换训练</div>
+    </header>
+
+    <div class="card">
+      <h2>题目</h2>
+      <div class="prompt">
+        <strong>In modern society, it is possible to shop, work, and communicate via the internet without face-to-face contact with one another. Do you think it is a positive or a negative development?</strong><br>
+        Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>练习 1：拼写纠错</h2>
+      <p>补全句子，写出括号提示单词的正确形式。</p>
+
+      <div class="question">
+        <label class="question-label">1. I will <input type="text" class="inline-input" id="s1"> (ananly) both positive and negative <input type="text" class="inline-input" id="s2"> (hand).</label>
+        <div class="feedback" id="f-s1"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">2. Using the Internet to <input type="text" class="inline-input" id="s3"> (raplace) face-to-face contact has many <input type="text" class="inline-input" id="s4"> (disadvantanges).</label>
+        <div class="feedback" id="f-s2"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">3. In the <input type="text" class="inline-input" id="s5"> (frist) place, it may make people feel irritable.</label>
+        <div class="feedback" id="f-s3"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">4. People can <input type="text" class="inline-input" id="s6"> (by) products from all over the <input type="text" class="inline-input" id="s7"> (work).</label>
+        <div class="feedback" id="f-s4"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">5. It makes it <input type="text" class="inline-input" id="s8"> (posible) to work from home and <input type="text" class="inline-input" id="s9"> (speed) less time on transport.</label>
+        <div class="feedback" id="f-s5"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">6. Many Internet <input type="text" class="inline-input" id="s10"> (companys) allow staff to work remotely.</label>
+        <div class="feedback" id="f-s6"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">7. We can use AI to learn more <input type="text" class="inline-input" id="s11"> (knowlege), such as <input type="text" class="inline-input" id="s12"> (seciens).</label>
+        <div class="feedback" id="f-s7"></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" onclick="checkSpelling()">检查答案</button>
+        <button class="btn btn-secondary" onclick="toggleAnswers('spelling')">显示/隐藏答案</button>
+      </div>
+      <div class="answer-box" id="ans-spelling">
+        1. analyze, sides &nbsp; 2. replace, disadvantages &nbsp; 3. first &nbsp; 4. buy, world &nbsp; 5. possible, spend &nbsp; 6. companies &nbsp; 7. knowledge, science
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>练习 2：语法改错</h2>
+      <p>请改写以下句子，修正语法错误。</p>
+
+      <div class="question">
+        <label class="question-label">1. There is such a phenomenon in modern society, it is possible to shop, work, and communicate via the internet.</label>
+        <textarea id="g1" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g1"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">2. I will ananly both positive hand and negative hand.</label>
+        <textarea id="g2" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g2"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">3. Using internet raplace face-to-face contact has many disadvantanges.</label>
+        <textarea id="g3" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g3"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">4. It may make people feel lonely or irritability.</label>
+        <textarea id="g4" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g4"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">5. People can by the commodity from all over the work by the cheapest price.</label>
+        <textarea id="g5" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g5"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">6. It makes posible to work from home.</label>
+        <textarea id="g6" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g6"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">7. I suggest eveyone can use internet to doing anything.</label>
+        <textarea id="g7" placeholder="在此输入正确句子"></textarea>
+        <div class="feedback" id="f-g7"></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" onclick="checkGrammar()">检查答案</button>
+        <button class="btn btn-secondary" onclick="toggleAnswers('grammar')">显示/隐藏答案</button>
+      </div>
+      <div class="answer-box" id="ans-grammar">
+        1. In modern society, people can shop, work and communicate via the Internet.<br>
+        2. I will analyze both the positive and negative sides.<br>
+        3. Using the Internet to replace face-to-face contact has many disadvantages.<br>
+        4. It may make people feel lonely or irritable.<br>
+        5. People can buy products from all over the world at the cheapest price.<br>
+        6. It makes it possible to work from home.<br>
+        7. I suggest that everyone use the Internet to do almost anything.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>练习 3：同义替换</h2>
+      <p>选择更正式或更多样的表达。</p>
+
+      <div class="question">
+        <label class="question-label">1. I think it is a <strong>positive development</strong>.</label>
+        <select id="syn1">
+          <option value="">请选择</option>
+          <option value="beneficial">beneficial development</option>
+          <option value="bad">bad development</option>
+          <option value="same">same development</option>
+        </select>
+        <div class="feedback" id="f-syn1"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">2. Using the Internet can cause many <strong>disease</strong>.</label>
+        <select id="syn2">
+          <option value="">请选择</option>
+          <option value="health">health problems</option>
+          <option value="money">money problems</option>
+          <option value="work">work problems</option>
+        </select>
+        <div class="feedback" id="f-syn2"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">3. People can <strong>buy</strong> products from all over the world.</label>
+        <select id="syn3">
+          <option value="">请选择</option>
+          <option value="purchase">purchase</option>
+          <option value="sell">sell</option>
+          <option value="lose">lose</option>
+        </select>
+        <div class="feedback" id="f-syn3"></div>
+      </div>
+
+      <div class="question">
+        <label class="question-label">4. Working from home saves time on <strong>transport</strong>.</label>
+        <select id="syn4">
+          <option value="">请选择</option>
+          <option value="shopping">shopping</option>
+          <option value="commuting">commuting</option>
+          <option value="eating">eating</option>
+        </select>
+        <div class="feedback" id="f-syn4"></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" onclick="checkSynonyms()">检查答案</button>
+        <button class="btn btn-secondary" onclick="toggleAnswers('synonyms')">显示/隐藏答案</button>
+      </div>
+      <div class="answer-box" id="ans-synonyms">
+        1. beneficial development &nbsp; 2. health problems &nbsp; 3. purchase &nbsp; 4. commuting
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>练习 4：观点扩展</h2>
+      <p>选择一个论点，用「观点 + 解释 + 例子 + 结果」结构扩展成 3-4 句话。</p>
+
+      <div class="question">
+        <label class="question-label">论点：Remote working saves commuting time.</label>
+        <textarea id="e1" placeholder="在此输入你的扩展段落"></textarea>
+        <div class="hint">建议包含：work from home, commute, spend, example, as a result</div>
+        <div class="feedback" id="f-e1"></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" onclick="checkExpansion()">检查关键词</button>
+        <button class="btn btn-secondary" onclick="toggleAnswers('expansion')">显示/隐藏答案</button>
+      </div>
+      <div class="answer-box" id="ans-expansion">
+        Working online is more efficient because employees no longer need to spend hours commuting every day. For example, many technology companies allow their staff to work from home for one or two days a week. As a result, workers can use the saved time for rest, exercise or family, which may improve both their productivity and quality of life.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>总得分</h2>
+      <div class="score-bar"><div class="score-fill" id="scoreFill"></div></div>
+      <div class="score-text" id="scoreText">点击各练习的「检查答案」即可更新得分</div>
+      <div class="actions">
+        <button class="btn" onclick="checkAll()">全部检查</button>
+        <button class="btn btn-secondary" onclick="resetAll()">重置</button>
+      </div>
+    </div>
+
+    <footer>
+      数据来自 writing/exam/article2.md · 配合 article2-analysis.md 使用效果更佳
+    </footer>
+  </div>
+
+  <script>
+    const normalize = s => s.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+
+    const spellingAnswers = {
+      s1: ['analyze', 'analyse'],
+      s2: ['sides', 'aspects'],
+      s3: ['replace'],
+      s4: ['disadvantages'],
+      s5: ['first'],
+      s6: ['buy'],
+      s7: ['world'],
+      s8: ['possible'],
+      s9: ['spend'],
+      s10: ['companies'],
+      s11: ['knowledge'],
+      s12: ['science']
+    };
+
+    const grammarKeywords = {
+      g1: ['modern society', 'people', 'shop', 'work', 'communicate', 'internet'],
+      g2: ['analyze', 'positive', 'negative', 'sides', 'aspects'],
+      g3: ['using the internet', 'replace', 'face-to-face', 'disadvantages'],
+      g4: ['feel', 'lonely', 'irritable'],
+      g5: ['buy', 'products', 'world', 'price'],
+      g6: ['makes it possible', 'work from home'],
+      g7: ['suggest', 'everyone', 'internet', 'do']
+    };
+
+    const synonymAnswers = {
+      syn1: 'beneficial',
+      syn2: 'health',
+      syn3: 'purchase',
+      syn4: 'commuting'
+    };
+
+    const expansionKeywords = ['work from home', 'commute', 'spend', 'example', 'as a result'];
+
+    function setFeedback(id, correct, msg) {
+      const el = document.getElementById(id);
+      el.textContent = msg;
+      el.className = 'feedback ' + (correct ? 'correct' : 'wrong');
+    }
+
+    let totalCorrect = 0;
+    let totalQuestions = 0;
+
+    function checkSpelling() {
+      let correct = 0;
+      const groups = [
+        ['s1','s2','f-s1'],
+        ['s3','s4','f-s2'],
+        ['s5','','f-s3'],
+        ['s6','s7','f-s4'],
+        ['s8','s9','f-s5'],
+        ['s10','','f-s6'],
+        ['s11','s12','f-s7']
+      ];
+      totalQuestions += groups.length;
+      groups.forEach((g, idx) => {
+        const k1 = g[0], k2 = g[1], fb = g[2];
+        const ok1 = spellingAnswers[k1].includes(document.getElementById(k1).value.trim().toLowerCase());
+        const ok2 = k2 === '' || spellingAnswers[k2].includes(document.getElementById(k2).value.trim().toLowerCase());
+        const ok = ok1 && ok2;
+        if (ok) correct++;
+        const ans = [spellingAnswers[k1][0], k2 ? spellingAnswers[k2][0] : null].filter(Boolean).join(', ');
+        setFeedback(fb, ok, ok ? '✅ 正确' : '❌ 错误，参考答案：' + ans);
+      });
+      totalCorrect += correct;
+      updateScore();
+      return correct;
+    }
+
+    function checkGrammar() {
+      let correct = 0;
+      const keys = ['g1','g2','g3','g4','g5','g6','g7'];
+      totalQuestions += keys.length;
+      keys.forEach(k => {
+        const val = normalize(document.getElementById(k).value);
+        const required = grammarKeywords[k];
+        const missing = required.filter(w => !val.includes(w));
+        const ok = missing.length === 0 && val.length > 20;
+        if (ok) correct++;
+        setFeedback('f-' + k, ok, ok ? '✅ 表达正确' : '⚠️ 建议包含：' + required.join('、'));
+      });
+      totalCorrect += correct;
+      updateScore();
+      return correct;
+    }
+
+    function checkSynonyms() {
+      let correct = 0;
+      const keys = ['syn1','syn2','syn3','syn4'];
+      totalQuestions += keys.length;
+      keys.forEach(k => {
+        const val = document.getElementById(k).value;
+        const ok = val === synonymAnswers[k];
+        if (ok) correct++;
+        setFeedback('f-' + k, ok, ok ? '✅ 正确' : '❌ 错误，正确答案是：' + synonymAnswers[k]);
+      });
+      totalCorrect += correct;
+      updateScore();
+      return correct;
+    }
+
+    function checkExpansion() {
+      totalQuestions += 1;
+      const val = normalize(document.getElementById('e1').value);
+      const missing = expansionKeywords.filter(w => !val.includes(w));
+      const ok = missing.length <= 2 && val.length > 60;
+      if (ok) totalCorrect++;
+      setFeedback('f-e1', ok, ok ? '✅ 结构完整' : '⚠️ 建议包含更多关键词：' + expansionKeywords.join('、'));
+      updateScore();
+      return ok ? 1 : 0;
+    }
+
+    function updateScore() {
+      const pct = totalQuestions ? Math.round(totalCorrect / totalQuestions * 100) : 0;
+      document.getElementById('scoreFill').style.width = pct + '%';
+      document.getElementById('scoreText').textContent = `当前得分：${totalCorrect} / ${totalQuestions}（${pct}%）`;
+    }
+
+    function checkAll() {
+      totalCorrect = 0;
+      totalQuestions = 0;
+      checkSpelling();
+      checkGrammar();
+      checkSynonyms();
+      checkExpansion();
+    }
+
+    function resetAll() {
+      ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','g1','g2','g3','g4','g5','g6','g7','e1'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      ['syn1','syn2','syn3','syn4'].forEach(id => {
+        document.getElementById(id).selectedIndex = 0;
+      });
+      document.querySelectorAll('.feedback').forEach(el => { el.textContent = ''; el.className = 'feedback'; });
+      document.querySelectorAll('.answer-box').forEach(el => el.style.display = 'none');
+      totalCorrect = 0;
+      totalQuestions = 0;
+      updateScore();
+    }
+
+    function toggleAnswers(section) {
+      const box = document.getElementById('ans-' + section);
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Save inputs to localStorage
+    const inputIds = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','g1','g2','g3','g4','g5','g6','g7','syn1','syn2','syn3','syn4','e1'];
+    inputIds.forEach(id => {
+      const el = document.getElementById(id);
+      const saved = localStorage.getItem('article2-' + id);
+      if (saved !== null) el.value = saved;
+      el.addEventListener('input', () => localStorage.setItem('article2-' + id, el.value));
+    });
+  </script>
+</body>
+</html>
