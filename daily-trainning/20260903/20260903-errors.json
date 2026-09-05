@@ -1,0 +1,706 @@
+[
+  {
+    "phrase": "umm",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 2: 漏听 umm"
+  },
+  {
+    "phrase": "students",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 2: student → students"
+  },
+  {
+    "phrase": "families",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 2: familaies → families"
+  },
+  {
+    "phrase": "interested",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 3: interest → interested"
+  },
+  {
+    "phrase": "sit",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 5: 漏听 sit"
+  },
+  {
+    "phrase": "steat",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 5: steat → "
+  },
+  {
+    "phrase": "i'll",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 5: 漏听 i'll"
+  },
+  {
+    "phrase": "jenny",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 8: juny → jenny"
+  },
+  {
+    "phrase": "spell",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 9: speel → spell"
+  },
+  {
+    "phrase": "address",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 11: adress → address"
+  },
+  {
+    "phrase": "sea",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: 漏听 sea"
+  },
+  {
+    "phrase": "view",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: cviews → view"
+  },
+  {
+    "phrase": "guest",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: 漏听 guest"
+  },
+  {
+    "phrase": "house",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: 漏听 house"
+  },
+  {
+    "phrase": "hill",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: 漏听 hill"
+  },
+  {
+    "phrase": "gas",
+    "phonetic": "/ɡæs/",
+    "pos": "n.",
+    "meaning": "气体；煤气",
+    "example": "",
+    "context": "句 12: gas → "
+  },
+  {
+    "phrase": "towers",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: towers → "
+  },
+  {
+    "phrase": "hero",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 12: hero → "
+  },
+  {
+    "phrase": "ummm",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 14: 漏听 ummm"
+  },
+  {
+    "phrase": "i'm",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 14: 漏听 i'm"
+  },
+  {
+    "phrase": "between",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 16: betwwen → between"
+  },
+  {
+    "phrase": "college",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 16: collage → college"
+  },
+  {
+    "phrase": "great",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 17: grent → great"
+  },
+  {
+    "phrase": "i've",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 18: 漏听 i've"
+  },
+  {
+    "phrase": "nineteenth",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 18: 漏听 nineteenth"
+  },
+  {
+    "phrase": "birthday",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 18: brathday → birthday"
+  },
+  {
+    "phrase": "19th",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 18: 19th → "
+  },
+  {
+    "phrase": "staying",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 20: stay → staying"
+  },
+  {
+    "phrase": "moment",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 20: monment → moment"
+  },
+  {
+    "phrase": "definitely",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 20: deftly → definitely"
+  },
+  {
+    "phrase": "four",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 20: 漏听 four"
+  },
+  {
+    "phrase": "extension",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 20: extention → extension"
+  },
+  {
+    "phrase": "permit",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 20: 漏听 permit"
+  },
+  {
+    "phrase": "porement",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 20: porement → "
+  },
+  {
+    "phrase": "you're",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 21: you → you're"
+  },
+  {
+    "phrase": "occupation",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 21: acupation → occupation"
+  },
+  {
+    "phrase": "studying",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 22: staying → studying"
+  },
+  {
+    "phrase": "english",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 22: engilsh → english"
+  },
+  {
+    "phrase": "'advanced'",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 24: advance → 'advanced'"
+  },
+  {
+    "phrase": "written",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 24: 漏听 written"
+  },
+  {
+    "phrase": "read",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 24: read → "
+  },
+  {
+    "phrase": "suppose",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 24: supoose → suppose"
+  },
+  {
+    "phrase": "intermediate",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 24: 漏听 intermediate"
+  },
+  {
+    "phrase": "imdamidle",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 24: imdamidle → "
+  },
+  {
+    "phrase": "advanced",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 25: advancet → advanced"
+  },
+  {
+    "phrase": "centre",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 26: center → centre"
+  },
+  {
+    "phrase": "i'd",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 26: 漏听 i'd"
+  },
+  {
+    "phrase": "north",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 26: nothwest → north"
+  },
+  {
+    "phrase": "west",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 26: 漏听 west"
+  },
+  {
+    "phrase": "shouldn't",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 27: should'n → shouldn't"
+  },
+  {
+    "phrase": "usually",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 27: 漏听 usually"
+  },
+  {
+    "phrase": "lots",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 27: lot → lots"
+  },
+  {
+    "phrase": "particular",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 28: putatulay → particular"
+  },
+  {
+    "phrase": "requirements",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 28: requirement → requirements"
+  },
+  {
+    "phrase": "diet",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 28: delrte → diet"
+  },
+  {
+    "phrase": "vegetarian",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 29: teeran → vegetarian"
+  },
+  {
+    "phrase": "avage",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 29: avage → "
+  },
+  {
+    "phrase": "shall",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 30: sall → shall"
+  },
+  {
+    "phrase": "it's",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 30: 漏听 it's"
+  },
+  {
+    "phrase": "art",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 30: art → "
+  },
+  {
+    "phrase": "easier",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 30: easy → easier"
+  },
+  {
+    "phrase": "actual",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 32: 漏听 actual"
+  },
+  {
+    "phrase": "ash",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 32: ash → "
+  },
+  {
+    "phrase": "en",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 33: 漏听 en"
+  },
+  {
+    "phrase": "suite'",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 33: it's → suite'"
+  },
+  {
+    "phrase": "sweet",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 33: sweet → "
+  },
+  {
+    "phrase": "garden",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 33: granden → garden"
+  },
+  {
+    "phrase": "somewhere",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 33: somenwhere → somewhere"
+  },
+  {
+    "phrase": "really",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 35: 漏听 really"
+  },
+  {
+    "phrase": "serious",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 35: serice → serious"
+  },
+  {
+    "phrase": "improving",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 35: imporve → improving"
+  },
+  {
+    "phrase": "prefer",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 35: perfer → prefer"
+  },
+  {
+    "phrase": "that's",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 35: that → that's"
+  },
+  {
+    "phrase": "guests",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 36: guest → guests"
+  },
+  {
+    "phrase": "get",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 36: 漏听 get"
+  },
+  {
+    "phrase": "obviously",
+    "phonetic": "/ˈɒbviəsli/",
+    "pos": "adv.",
+    "meaning": "明显地；显然",
+    "example": "",
+    "context": "句 36: 漏听 obviously"
+  },
+  {
+    "phrase": "observely",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 36: observely → "
+  },
+  {
+    "phrase": "partly",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 36: prelly → partly"
+  },
+  {
+    "phrase": "dependent",
+    "phonetic": "/dɪˈpendənt/",
+    "pos": "adj.",
+    "meaning": "依赖的；取决于…的",
+    "example": "",
+    "context": "句 36: depend → dependent"
+  },
+  {
+    "phrase": "terms",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 37: 漏听 terms"
+  },
+  {
+    "phrase": "ti",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 37: ti → "
+  },
+  {
+    "phrase": "hundred",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 37: 漏听 hundred"
+  },
+  {
+    "phrase": "we'd",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 38: 漏听 we'd"
+  },
+  {
+    "phrase": "problems",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 38: problem → problems"
+  },
+  {
+    "phrase": "move",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 41: moving → move"
+  },
+  {
+    "phrase": "approximately",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 41: appromaxily → approximately"
+  },
+  {
+    "phrase": "23rd",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 42: 漏听 23rd"
+  },
+  {
+    "phrase": "23th",
+    "phonetic": "",
+    "pos": "",
+    "meaning": "",
+    "example": "",
+    "context": "句 42: 23th → "
+  }
+]

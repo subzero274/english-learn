@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>20260903 错词掌握测试</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --primary: #1668dc;
+      --primary-soft: #eaf3ff;
+      --ok: #168a4a;
+      --ok-soft: #e9f8ef;
+      --bad: #c63535;
+      --bad-soft: #fdeeee;
+      --border: #d9e0ea;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --card: #161b26;
+        --text: #eef2f8;
+        --muted: #9aa6b5;
+        --primary: #71aefc;
+        --primary-soft: #182638;
+        --ok: #66cf91;
+        --ok-soft: #15291d;
+        --bad: #ff8080;
+        --bad-soft: #33201f;
+        --border: #303847;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 72px; }
+    header h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.25; }
+    header p { margin: 0; color: var(--muted); }
+    .notice {
+      margin-top: 18px; padding: 14px 16px; border-left: 4px solid var(--primary);
+      background: var(--primary-soft); border-radius: 8px; font-size: 14px; line-height: 1.7;
+    }
+    .summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 22px; }
+    .summary div { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+    .summary strong { display: block; font-size: 22px; margin-top: 4px; }
+    .summary span { color: var(--muted); font-size: 13px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px;
+      margin-top: 22px; box-shadow: 0 8px 28px rgba(15, 23, 42, .06);
+    }
+    .card-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--muted); font-size: 14px; }
+    .hint { margin-top: 22px; font-size: 22px; font-weight: 700; }
+    .pos { margin-left: 8px; color: var(--muted); font-size: 15px; font-weight: 400; }
+    .context { margin-top: 12px; color: var(--muted); line-height: 1.8; font-size: 15px; }
+    .context b { color: var(--text); background: var(--primary-soft); padding: 1px 5px; border-radius: 4px; }
+    .answer-row { display: flex; gap: 10px; margin-top: 20px; }
+    input {
+      flex: 1; min-width: 0; border: 1px solid var(--border); background: var(--bg); color: var(--text);
+      border-radius: 9px; padding: 12px 14px; font-size: 17px; outline: none;
+    }
+    input:focus { border-color: var(--primary); }
+    button { border: 0; border-radius: 9px; padding: 12px 16px; font-size: 15px; cursor: pointer; font-weight: 650; }
+    .primary { background: var(--primary); color: white; }
+    .ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .small { padding: 9px 12px; font-size: 14px; font-weight: 500; }
+    .feedback { display: none; margin-top: 16px; padding: 13px 15px; border-radius: 9px; line-height: 1.6; }
+    .feedback.show { display: block; }
+    .feedback.ok { background: var(--ok-soft); color: var(--ok); }
+    .feedback.bad { background: var(--bad-soft); color: var(--bad); }
+    .actions { display: flex; justify-content: space-between; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
+    .progress { height: 8px; background: var(--border); border-radius: 999px; overflow: hidden; margin-top: 24px; }
+    .progress span { display: block; height: 100%; width: 0; background: var(--primary); transition: width .2s ease; }
+    details { margin-top: 28px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+    summary { cursor: pointer; font-weight: 650; }
+    .word-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px;
+      margin-top: 14px; font-size: 14px; color: var(--muted);
+    }
+    .word-grid span { background: var(--bg); border: 1px solid var(--border); padding: 7px 9px; border-radius: 7px; }
+    @media (max-width: 680px) {
+      .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .answer-row { flex-direction: column; }
+      .actions { align-items: stretch; flex-direction: column; }
+      .actions button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>20260903 错词掌握测试</h1>
+      <p>根据中文提示和语境写出正确单词；已按要求过滤单复数、介词、地址和纯语法词形错误。</p>
+    </header>
+
+    <section class="notice">
+      本次只训练<strong>真正影响听写识别和拼写的核心词</strong>。已忽略：单复数（students / guests / problems 等）、介词、地址句 Sea View Guest House, 14 Hill Road，以及数字/日期/纯缩略形式。
+    </section>
+
+    <section class="summary">
+      <div><span>进度</span><strong id="statProgress">0 / 0</strong></div>
+      <div><span>正确</span><strong id="statCorrect">0</strong></div>
+      <div><span>错误</span><strong id="statWrong">0</strong></div>
+      <div><span>正确率</span><strong id="statAccuracy">0%</strong></div>
+    </section>
+    <div class="progress"><span id="progressBar"></span></div>
+
+    <section class="card">
+      <div class="card-head">
+        <span id="cardNumber">第 1 题</span>
+        <button class="ghost small" id="speakBtn" type="button">🔊 发音提示</button>
+      </div>
+      <div class="hint" id="wordHint"></div>
+      <div class="context" id="wordContext"></div>
+      <div class="answer-row">
+        <input id="answerInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="输入正确单词或短语" />
+        <button class="primary" id="checkBtn" type="button">检查</button>
+      </div>
+      <div class="feedback" id="feedback"></div>
+      <div class="actions">
+        <button class="ghost" id="prevBtn" type="button">上一题</button>
+        <button class="ghost" id="showBtn" type="button">看答案</button>
+        <button class="primary" id="nextBtn" type="button">下一题</button>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button class="ghost" id="shuffleBtn" type="button">重新排序</button>
+      <button class="ghost" id="resetBtn" type="button">重做全部</button>
+      <button class="ghost" id="wrongFirstBtn" type="button">只练错题</button>
+    </section>
+
+    <details>
+      <summary>已过滤的错误类型</summary>
+      <div class="word-grid" id="filteredWords"></div>
+    </details>
+  </main>
+
+  <script>
+    const words = [
+      { answer: "families", accepted: ["family", "families"], meaning: "家庭；寄宿家庭", pos: "n.",
+        context: "I understand you help fix up students with host ____.", wrong: "familaies" },
+      { answer: "interested", accepted: ["interested"], meaning: "感兴趣的", pos: "adj.", context: "That's right... are you ____ in...?", wrong: "interest" },
+      { answer: "spell", accepted: ["spell"], meaning: "拼写", pos: "v.", context: "Can you ____ that please?", wrong: "speel" },
+      { answer: "address", accepted: ["address"], meaning: "地址", pos: "n.", context: "And what is your present ____?", wrong: "adress" },
+      { answer: "between", accepted: ["between"], meaning: "在……之间", pos: "prep.", context: "I suppose ____ 9 and half-past...", wrong: "betwwen" },
+      { answer: "college", accepted: ["college"], meaning: "学院；大学", pos: "n.", context: "Before I leave for the ____.", wrong: "collage" },
+      { answer: "great", accepted: ["great"], meaning: "很好的", pos: "adj.", context: "____! And can I ask you your age?", wrong: "grent" },
+      { answer: "nineteenth", accepted: ["nineteenth", "19th"], meaning: "第十九", pos: "num.", context: "I've just had my ____ birthday.", wrong: "19th" },
+      { answer: "birthday", accepted: ["birthday"], meaning: "生日", pos: "n.", context: "I've just had my nineteenth ____.", wrong: "brathday" },
+      { answer: "moment", accepted: ["moment"], meaning: "时刻；此刻", pos: "n.", context: "But at the ____ I'm definitely here for four months only.", wrong: "monment" },
+      { answer: "definitely", accepted: ["definitely"], meaning: "肯定地；明确地", pos: "adv.", context: "At the moment I'm ____ here for four months only.", wrong: "deftly" },
+      { answer: "extension", accepted: ["extension"], meaning: "延长；延期", pos: "n.", context: "I have to get an ____ to my permit.", wrong: "extention" },
+      { answer: "permit", accepted: ["permit"], meaning: "许可证", pos: "n.", context: "I have to get an extension to my ____.", wrong: "porement" },
+      { answer: "occupation", accepted: ["occupation"], meaning: "职业", pos: "n.", context: "What will be your ____ while you're in the UK?", wrong: "acupation" },
+      { answer: "studying", accepted: ["studying"], meaning: "学习", pos: "v.", context: "____ English?", wrong: "staying" },
+      { answer: "English", accepted: ["english"], meaning: "英语", pos: "n.", context: "Studying ____?", wrong: "engilsh" },
+      { answer: "written", accepted: ["written"], meaning: "书面的", pos: "adj.", context: "My ____ work is below the level of my spoken English.", wrong: "read" },
+      { answer: "suppose", accepted: ["suppose"], meaning: "认为；推测", pos: "v.", context: "I ____ it's intermediate.", wrong: "supoose" },
+      { answer: "intermediate", accepted: ["intermediate"], meaning: "中级的", pos: "adj.", context: "I suppose it's ____.", wrong: "imdamidle" },
+      { answer: "advanced", accepted: ["advanced"], meaning: "高级的", pos: "adj.", context: "Certainly, your spoken English is ____.", wrong: "advancet" },
+      { answer: "centre", accepted: ["centre", "center"], meaning: "中心；市中心", pos: "n.", context: "I'm studying right in the ____.", wrong: "center" },
+      { answer: "north-west", accepted: ["north-west", "northwest", "north west"], meaning: "西北", pos: "n./adj.", context: "I'd really like to live in the ____.", wrong: "nothwest" },
+      { answer: "usually", accepted: ["usually"], meaning: "通常", pos: "adv.", context: "We ____ have lots of families up there.", wrong: "(漏听)" },
+      { answer: "particular", accepted: ["particular"], meaning: "特别的；具体的", pos: "adj.", context: "Do you have any ____ requirements for diet?", wrong: "putatulay" },
+      { answer: "diet", accepted: ["diet"], meaning: "饮食", pos: "n.", context: "Do you have any particular requirements for ____?", wrong: "delrte" },
+      { answer: "vegetarian", accepted: ["vegetarian"], meaning: "素食者", pos: "n.", context: "Well, I'm nearly a ____.", wrong: "teeran" },
+      { answer: "easier", accepted: ["easier"], meaning: "更容易的", pos: "adj.", context: "It's probably ____ in that way.", wrong: "easy" },
+      { answer: "garden", accepted: ["garden"], meaning: "花园", pos: "n.", context: "A real ____ rather than just a yard.", wrong: "granden" },
+      { answer: "somewhere", accepted: ["somewhere"], meaning: "某个地方", pos: "adv.", context: "____ I can sit and be peaceful.", wrong: "somenwhere" },
+      { answer: "serious", accepted: ["serious"], meaning: "认真的", pos: "adj.", context: "I'm really ____ about improving my English.", wrong: "serice" },
+      { answer: "improving", accepted: ["improving"], meaning: "改进；提高", pos: "v.", context: "I'm really serious about ____ my English.", wrong: "imporve" },
+      { answer: "prefer", accepted: ["prefer"], meaning: "更喜欢", pos: "v.", context: "I'd ____ to be the only guest.", wrong: "perfer" },
+      { answer: "obviously", accepted: ["obviously"], meaning: "显然", pos: "adv.", context: "Anyway, ____ all this is partly dependent on price.", wrong: "observely" },
+      { answer: "partly", accepted: ["partly"], meaning: "部分地", pos: "adv.", context: "All this is ____ dependent on price.", wrong: "prelly" },
+      { answer: "dependent", accepted: ["dependent"], meaning: "取决于……的", pos: "adj.", context: "All this is partly ____ on price.", wrong: "depend" },
+      { answer: "approximately", accepted: ["approximately"], meaning: "大约", pos: "adv.", context: "I'd like to move in ____ two weeks.", wrong: "appromaxily" }
+    ];
+
+    const filtered = [
+      "students（单复数）", "requirements（单复数）", "guests（单复数）", "problems（单复数）", "lots（单复数）",
+      "Sea / View / Guest / House / Hill / Road（地址句）", "gas / towers / hero（地址幻听）",
+      "for / in / of / on / about（介词）", "I'll / I'm / I've / I'd / you're / it's / we'd（缩略形式）",
+      "umm / ummm（填充词）", "19th / 23rd / hundred（数字与日期）", "stay→staying / moving→move（纯语法词形）"
+    ];
+
+    const storageKey = "word-test-20260903-v1";
+    let queue = words.map((item, index) => ({ ...item, index }));
+    let current = 0;
+    let results = {};
+
+    const el = id => document.getElementById(id);
+    const normalize = s => s.toLowerCase().replace(/[’']/g, "'").replace(/[^a-z'\s-]/g, "").replace(/\s+/g, " ").trim();
+
+    function save() {
+      localStorage.setItem(storageKey, JSON.stringify({ current, results }));
+    }
+    function restore() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+        if (saved && typeof saved.current === "number" && saved.results) {
+          current = Math.min(saved.current, queue.length - 1);
+          results = saved.results;
+        }
+      } catch (e) {}
+    }
+    function render() {
+      const item = queue[current];
+      el("cardNumber").textContent = `第 ${current + 1} / ${queue.length} 题`;
+      el("wordHint").innerHTML = `${item.meaning}<span class="pos">${item.pos}</span>`;
+      el("wordContext").innerHTML = item.context.replace("____", "<b>____</b>");
+      el("answerInput").value = results[item.index]?.input || "";
+      el("answerInput").disabled = false;
+      el("feedback").className = "feedback";
+      el("feedback").textContent = "";
+      el("answerInput").focus();
+      updateSummary();
+    }
+    function updateSummary() {
+      const answered = Object.keys(results).length;
+      const correct = Object.values(results).filter(x => x.correct).length;
+      const wrong = answered - correct;
+      el("statProgress").textContent = `${answered} / ${queue.length}`;
+      el("statCorrect").textContent = correct;
+      el("statWrong").textContent = wrong;
+      el("statAccuracy").textContent = answered ? `${Math.round(correct / answered * 100)}%` : "0%";
+      el("progressBar").style.width = `${answered / queue.length * 100}%`;
+    }
+    function check() {
+      const item = queue[current];
+      const input = el("answerInput").value;
+      const ok = item.accepted.some(ans => normalize(ans) === normalize(input));
+      results[item.index] = { input, correct: ok };
+      const fb = el("feedback");
+      fb.className = `feedback show ${ok ? "ok" : "bad"}`;
+      fb.textContent = ok
+        ? `✅ 正确。原文表达：${item.answer}`
+        : `❌ 再听一次。你的听写/输入：${input || "（空）"}；原词：${item.answer}。之前错误：${item.wrong}`;
+      save();
+      updateSummary();
+    }
+    function next() {
+      if (current < queue.length - 1) current++;
+      render();
+      save();
+    }
+    function prev() {
+      if (current > 0) current--;
+      render();
+      save();
+    }
+    function showAnswer() {
+      const item = queue[current];
+      const fb = el("feedback");
+      results[item.index] = { input: el("answerInput").value, correct: false, revealed: true };
+      fb.className = "feedback show bad";
+      fb.textContent = `答案：${item.answer}。之前错误：${item.wrong}`;
+      save();
+      updateSummary();
+    }
+    function resetAll(reshuffle) {
+      if (reshuffle) queue = [...words].map((item, index) => ({ ...item, index })).sort(() => Math.random() - .5);
+      current = 0;
+      results = {};
+      save();
+      render();
+    }
+    function wrongOnly() {
+      const wrongIndexes = Object.entries(results).filter(([, v]) => !v.correct).map(([k]) => Number(k));
+      const selected = words.flatMap((item, index) => wrongIndexes.includes(index) ? [{ ...item, index }] : []);
+      if (!selected.length) {
+        alert("目前没有错题，继续保持！");
+        return;
+      }
+      queue = selected;
+      current = 0;
+      results = Object.fromEntries(Object.entries(results).filter(([key]) => wrongIndexes.includes(Number(key))));
+      render();
+    }
+
+    el("checkBtn").onclick = check;
+    el("nextBtn").onclick = next;
+    el("prevBtn").onclick = prev;
+    el("showBtn").onclick = showAnswer;
+    el("shuffleBtn").onclick = () => resetAll(true);
+    el("resetBtn").onclick = () => resetAll(false);
+    el("wrongFirstBtn").onclick = wrongOnly;
+    el("answerInput").addEventListener("keydown", e => { if (e.key === "Enter") check(); });
+    el("speakBtn").onclick = () => {
+      const utter = new SpeechSynthesisUtterance(queue[current].answer);
+      utter.lang = "en-GB";
+      speechSynthesis.speak(utter);
+    };
+    el("filteredWords").innerHTML = filtered.map(x => `<span>${x}</span>`).join("");
+    restore();
+    render();
+  </script>
+</body>
+</html>
