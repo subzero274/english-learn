@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数字 · 日期 · 星期 · 月份 专项训练</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --success: #16a34a;
+      --error: #dc2626;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 24px; }
+    h1 { margin: 0 0 6px; font-size: 1.6rem; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+    .mode-bar { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+    .mode-btn {
+      border: 1px solid var(--border);
+      background: #f1f5f9;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.15s;
+    }
+    .mode-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .display {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 28px 12px;
+      background: #f1f5f9;
+      border-radius: 10px;
+      margin: 16px 0;
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .display .hint-text { font-size: 0.95rem; font-weight: 400; color: var(--muted); }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .btn-secondary { background: #e2e8f0; color: var(--text); }
+    .btn-secondary:hover { background: #cbd5e1; }
+    .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px; }
+    .feedback { text-align: center; margin-top: 12px; min-height: 1.5em; font-size: 1.05rem; }
+    .feedback.correct { color: var(--success); }
+    .feedback.wrong { color: var(--error); }
+    .stats { display: flex; justify-content: space-around; text-align: center; flex-wrap: wrap; gap: 12px; }
+    .stat-item { flex: 1; min-width: 100px; }
+    .stat-num { font-size: 1.6rem; font-weight: 700; }
+    .stat-label { color: var(--muted); font-size: 0.85rem; }
+    .answer-show { text-align: center; color: var(--muted); margin-top: 10px; min-height: 1.4em; }
+    .settings { display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+    select {
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    .progress-bar { background: #e2e8f0; border-radius: 999px; height: 10px; overflow: hidden; margin-top: 14px; }
+    .progress-fill { background: var(--primary); height: 100%; width: 0%; transition: width 0.3s; }
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 26px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>数字 · 日期 · 星期 · 月份 专项训练</h1>
+      <div class="subtitle">针对精听中数字、日期、星期、月份辨识与拼写的专项练习</div>
+    </header>
+
+    <div class="card">
+      <div class="mode-bar" id="modeBar">
+        <button class="mode-btn active" data-mode="weekday">星期</button>
+        <button class="mode-btn" data-mode="month">月份</button>
+        <button class="mode-btn" data-mode="number">基数词</button>
+        <button class="mode-btn" data-mode="ordinal">序数词</button>
+        <button class="mode-btn" data-mode="date">日期</button>
+        <button class="mode-btn" data-mode="price">价格</button>
+        <button class="mode-btn" data-mode="phone">电话号码</button>
+      </div>
+
+      <div class="settings">
+        <label>语速：
+          <select id="rate">
+            <option value="0.8">慢速 0.8x</option>
+            <option value="1" selected>正常 1.0x</option>
+            <option value="1.2">快速 1.2x</option>
+          </select>
+        </label>
+        <label><input type="checkbox" id="autoSpeak" checked> 自动朗读</label>
+        <label><input type="checkbox" id="showHint"> 显示中文提示</label>
+      </div>
+
+      <div class="display" id="display">
+        <div id="displayText">点击「开始」或「下一题」</div>
+        <div class="hint-text" id="hintText"></div>
+      </div>
+
+      <input type="text" id="answer" placeholder="在此输入你听到的内容" autocomplete="off" autocapitalize="off" spellcheck="false">
+
+      <div class="actions">
+        <button class="btn" id="speakBtn">🔊 重播</button>
+        <button class="btn" id="checkBtn">检查</button>
+        <button class="btn" id="nextBtn">下一题 →</button>
+        <button class="btn btn-secondary" id="revealBtn">显示答案</button>
+      </div>
+
+      <div class="feedback" id="feedback"></div>
+      <div class="answer-show" id="answerShow"></div>
+    </div>
+
+    <div class="card">
+      <div class="stats">
+        <div class="stat-item"><div class="stat-num" id="statTotal">0</div><div class="stat-label">总题数</div></div>
+        <div class="stat-item"><div class="stat-num" id="statCorrect">0</div><div class="stat-label">答对</div></div>
+        <div class="stat-item"><div class="stat-num" id="statWrong">0</div><div class="stat-label">答错</div></div>
+        <div class="stat-item"><div class="stat-num" id="statStreak">0</div><div class="stat-label">连对</div></div>
+        <div class="stat-item"><div class="stat-num" id="statAcc">--</div><div class="stat-label">正确率</div></div>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">训练说明</h3>
+      <ul style="padding-left:20px;color:var(--muted);font-size:0.92rem">
+        <li><strong>星期 / 月份</strong>：听发音，拼写完整单词（如 Wednesday、February）。</li>
+        <li><strong>基数词 / 序数词</strong>：听发音写数字（如 23、23rd）。</li>
+        <li><strong>日期</strong>：如 "23rd March"，注意英式日期顺序。</li>
+        <li><strong>价格</strong>：如 "£60-£80 a week"，符号 £ 可写可不写。</li>
+        <li><strong>电话</strong>：连续数字直接连写即可，如 2237676。</li>
+        <li>建议使用 Chrome / Edge 浏览器以获得最佳语音支持。</li>
+      </ul>
+    </div>
+
+    <footer>listening/number-date-training.html</footer>
+  </div>
+
+  <script>
+    const WEEKDAYS = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+    const WEEKDAYS_CN = ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
+    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const MONTHS_CN = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+
+    const ONES = ['','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+    const TENS = ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+    const ORDINAL_SPECIAL = {1:'first',2:'second',3:'third',5:'fifth',8:'eighth',9:'ninth',12:'twelfth'};
+
+    let mode = 'weekday';
+    let current = null; // {display, speak, answer, hint}
+    let stats = JSON.parse(localStorage.getItem('numDateStats') || '{"total":0,"correct":0,"wrong":0,"streak":0,"bestStreak":0}');
+
+    function numberToWords(n) {
+      if (n === 0) return 'zero';
+      if (n < 20) return ONES[n];
+      if (n < 100) {
+        const t = Math.floor(n / 10), r = n % 10;
+        return TENS[t] + (r ? '-' + ONES[r] : '');
+      }
+      if (n < 1000) {
+        const h = Math.floor(n / 100), r = n % 100;
+        return ONES[h] + ' hundred' + (r ? ' and ' + numberToWords(r) : '');
+      }
+      return String(n);
+    }
+
+    function ordinalToWords(n) {
+      const special = {1:'first',2:'second',3:'third',5:'fifth',8:'eighth',9:'ninth',12:'twelfth'};
+      if (special[n]) return special[n];
+      if (n >= 20 && n % 10 === 0) return numberToWords(n).replace(/y$/, 'ieth');
+      const parts = numberToWords(n).split('-');
+      const last = parts.pop();
+      let ord;
+      if (special[last]) ord = special[last];
+      else if (last.endsWith('y')) ord = last.slice(0, -1) + 'ieth';
+      else ord = last + 'th';
+      parts.push(ord);
+      return parts.join('-');
+    }
+
+    function ordinalSuffix(n) {
+      if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+      switch (n % 10) {
+        case 1: return 'st';
+        case 2: return 'nd';
+        case 3: return 'rd';
+        default: return 'th';
+      }
+    }
+
+    function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+    function pick(arr) { return arr[rand(0, arr.length - 1)]; }
+
+    function generate() {
+      switch (mode) {
+        case 'weekday': {
+          const i = rand(0, 6);
+          return {
+            speak: WEEKDAYS[i],
+            answer: WEEKDAYS[i],
+            hint: WEEKDAYS_CN[i],
+            display: '听发音，写出星期几'
+          };
+        }
+        case 'month': {
+          const i = rand(0, 11);
+          return {
+            speak: MONTHS[i],
+            answer: MONTHS[i],
+            hint: MONTHS_CN[i],
+            display: '听发音，写出月份'
+          };
+        }
+        case 'number': {
+          const n = rand(1, 999);
+          return {
+            speak: numberToWords(n),
+            answer: String(n),
+            hint: numberToWords(n),
+            display: '听发音，写出基数词（数字）'
+          };
+        }
+        case 'ordinal': {
+          const n = rand(1, 100);
+          return {
+            speak: ordinalToWords(n),
+            answer: String(n),
+            hint: ordinalToWords(n),
+            display: '听发音，写出序数词（数字）'
+          };
+        }
+        case 'date': {
+          const d = rand(1, 28);
+          const m = rand(0, 11);
+          const ordWord = ordinalToWords(d);
+          return {
+            speak: ordWord + ' ' + MONTHS[m],
+            answer: d + ordinalSuffix(d) + ' ' + MONTHS[m],
+            accept: [d + ordinalSuffix(d) + ' ' + MONTHS[m], d + ' ' + MONTHS[m], MONTHS[m] + ' ' + d + ordinalSuffix(d), MONTHS[m] + ' ' + d],
+            hint: MONTHS_CN[m] + d + '日',
+            display: '听发音，写出日期（如 23rd March）'
+          };
+        }
+        case 'price': {
+          const a = pick([20,30,40,50,60,70,80,90,100,120,150]);
+          const b = a + pick([10,20,30,40,50]);
+          return {
+            speak: a + ' to ' + b + ' pounds a week',
+            answer: '£' + a + '-£' + b,
+            accept: ['£' + a + '-£' + b, a + '-' + b, '£' + a + ' - £' + b, a + ' to ' + b, a + '-' + b + ' a week'],
+            hint: '每周 ' + a + ' 到 ' + b + ' 英镑',
+            display: '听发音，写出价格（如 £60-£80）'
+          };
+        }
+        case 'phone': {
+          let num = '';
+          for (let i = 0; i < rand(6, 8); i++) num += rand(0, 9);
+          return {
+            speak: num.split('').join(' '),
+            answer: num,
+            hint: num.split('').join(' '),
+            display: '听发音，写出电话号码'
+          };
+        }
+      }
+    }
+
+    function speak(text) {
+      if (!('speechSynthesis' in window)) {
+        setFeedback(false, '当前浏览器不支持语音朗读，请用 Chrome/Edge。');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-GB';
+      utter.rate = parseFloat(document.getElementById('rate').value);
+      const voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
+      if (voices.length) utter.voice = voices[0];
+      window.speechSynthesis.speak(utter);
+    }
+
+    function setFeedback(correct, msg) {
+      const el = document.getElementById('feedback');
+      el.textContent = msg;
+      el.className = 'feedback ' + (correct === null ? '' : (correct ? 'correct' : 'wrong'));
+    }
+
+    function normalize(s) {
+      return s.toLowerCase().replace(/[.,!?£$]/g, '').replace(/\s+/g, ' ').trim();
+    }
+
+    function nextQuestion() {
+      current = generate();
+      document.getElementById('displayText').textContent = current.display;
+      document.getElementById('hintText').textContent = document.getElementById('showHint').checked ? (current.hint || '') : '';
+      document.getElementById('answer').value = '';
+      document.getElementById('answerShow').textContent = '';
+      setFeedback(null, '');
+      if (document.getElementById('autoSpeak').checked) {
+        setTimeout(() => speak(current.speak), 200);
+      }
+    }
+
+    function check() {
+      if (!current) return;
+      const user = normalize(document.getElementById('answer').value);
+      if (!user) { setFeedback(false, '请先输入答案'); return; }
+      const accepts = current.accept || [current.answer];
+      const ok = accepts.some(a => normalize(a) === user);
+      stats.total++;
+      if (ok) {
+        stats.correct++;
+        stats.streak++;
+        stats.bestStreak = Math.max(stats.bestStreak, stats.streak);
+        setFeedback(true, '✅ 正确');
+      } else {
+        stats.wrong++;
+        stats.streak = 0;
+        setFeedback(false, '❌ 错误，正确答案是：' + current.answer);
+      }
+      saveStats();
+      updateStats();
+    }
+
+    function reveal() {
+      if (!current) return;
+      document.getElementById('answerShow').textContent = '答案：' + current.answer;
+      speak(current.speak);
+    }
+
+    function saveStats() {
+      localStorage.setItem('numDateStats', JSON.stringify(stats));
+    }
+
+    function updateStats() {
+      document.getElementById('statTotal').textContent = stats.total;
+      document.getElementById('statCorrect').textContent = stats.correct;
+      document.getElementById('statWrong').textContent = stats.wrong;
+      document.getElementById('statStreak').textContent = stats.streak;
+      const acc = stats.total ? Math.round(stats.correct / stats.total * 100) + '%' : '--';
+      document.getElementById('statAcc').textContent = acc;
+      document.getElementById('progressFill').style.width = acc === '--' ? '0%' : acc;
+    }
+
+    document.getElementById('modeBar').addEventListener('click', e => {
+      if (!e.target.classList.contains('mode-btn')) return;
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      mode = e.target.dataset.mode;
+      nextQuestion();
+    });
+
+    document.getElementById('speakBtn').addEventListener('click', () => current && speak(current.speak));
+    document.getElementById('checkBtn').addEventListener('click', check);
+    document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+    document.getElementById('revealBtn').addEventListener('click', reveal);
+    document.getElementById('answer').addEventListener('keydown', e => {
+      if (e.key === 'Enter') check();
+    });
+
+    // Preload voices
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.getVoices();
+      window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+    }
+
+    updateStats();
+    nextQuestion();
+  </script>
+</body>
+</html>
